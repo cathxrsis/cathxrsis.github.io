@@ -1,0 +1,14 @@
+# Site settings
+title: Westbury's Weblog.
+tagline: Eccentricity is the English Way.
+email: tomwestbury1@gmail.com
+description: A place on the internet where you, dear reader, can peruse the inner machinations of my mind. Here you will find posts and essays on practical politics, coding and some philosophy &amp; science.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.cathxrsis.co.uk" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  cathxrsis
+
+# Build settings
+markdown: kramdown
+
+diqus: tomwestbury

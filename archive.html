@@ -1,0 +1,35 @@
+---
+layout: page
+title: Archive
+permalink: /archive/
+---
+<p> Welcome to the Archives, here you will find a list of all the posts from this blog. Browse by <em>tag</em> or by <em>date</em></p>.
+
+<h2>Browse by Date</h2>
+<div class="search-results">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+          <p><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></p>
+
+            <p class="post-description"> {{post.description}} </p>
+
+    </li>
+      {% endfor %}
+  </ul>
+</div>
+
+<h2>Browse by Tags</h2>
+<div class="tag-results">
+    <ul class="tag-list">
+    {% for page in site.pages offset:2 %}
+    {% if page.title %}
+      <li>
+        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>

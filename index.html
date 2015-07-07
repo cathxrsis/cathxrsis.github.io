@@ -1,1 +1,34 @@
-Hello World!
+---
+layout: default
+---
+
+<div class="home">
+
+  <header class="post-header">
+    {% for post in site.posts limit:1 %}
+    <h1 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
+    {% if post.description %}
+
+    <p class="post-description">{{post.description}}</p>
+    <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}"><em>Read on...</em></a>
+    {% endif %}
+
+    {% endfor %}
+  </header>
+
+  <ul class="post-list"
+    {% for post in site.posts limit:2 offset:1 %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <p class="post-description"> {{post.description}} </p>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
