@@ -10,3 +10,5 @@ tags:
 - Computer Science
 - Economics
 ---
+
+This essay is currently being written. Apologies if you thought that I'm organised enough to actually write it :P.
