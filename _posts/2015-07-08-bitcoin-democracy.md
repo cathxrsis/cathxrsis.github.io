@@ -7,8 +7,8 @@ description: An essay on how the technology currently used for the Bitcoin netwo
 tags:
 - Bitcoin
 - Politics
+- Democracy
 - Computer Science
-- Economics
 ---
 
 *This essay is currently being written. Apologies if you thought that I'm organised enough to actually write it :P.*
@@ -20,5 +20,7 @@ From a British perspective, modern democracy leaves a lot to be desired. The "fi
 It is very evident that most ordinary people do not have a say in how the country is run. This has led to a government that is not held accountable for actions that are mainly in the interest of corporate giants. Democracy in the UK is in dire need of reform; a new democratic system that can both create more representative governments and hold legislators to account. One proposed solution to these problems would be to created a democratic system based on tokens.
 
 ### A token based democracy
+
+A token is the
 
 ### Blockchain democracy

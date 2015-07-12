@@ -5,8 +5,8 @@
     <description>A place on the internet where you, dear reader, can peruse the inner machinations of my mind. Here you will find posts and essays on practical politics, coding and some philosophy &amp;amp; science.</description>
     <link>http://blog.cathxrsis.co.uk/</link>
     <atom:link href="http://blog.cathxrsis.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Jul 2015 01:25:03 +0100</pubDate>
-    <lastBuildDate>Sun, 12 Jul 2015 01:25:03 +0100</lastBuildDate>
+    <pubDate>Sun, 12 Jul 2015 11:01:14 +0100</pubDate>
+    <lastBuildDate>Sun, 12 Jul 2015 11:01:14 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -21,6 +21,8 @@
 
 &lt;h3 id=&quot;a-token-based-democracy&quot;&gt;A token based democracy&lt;/h3&gt;
 
+&lt;p&gt;A token is the&lt;/p&gt;
+
 &lt;h3 id=&quot;blockchain-democracy&quot;&gt;Blockchain democracy&lt;/h3&gt;
 </description>
         <pubDate>Wed, 08 Jul 2015 00:00:00 +0100</pubDate>
@@ -31,9 +33,9 @@
         
         <category>Politics</category>
         
-        <category>Computer Science</category>
+        <category>Democracy</category>
         
-        <category>Economics</category>
+        <category>Computer Science</category>
         
         
         <category>blog</category>
