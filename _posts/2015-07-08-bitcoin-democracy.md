@@ -21,6 +21,6 @@ It is very evident that most ordinary people do not have a say in how the countr
 
 ### A token based democracy
 
-A token is the
+Token is the name given to a reusable form of vote. A token would be given to each eligible citizen in the country.  The proposed token based democracy would require that each piece of legislation created by the legislators (e.g. the house of commons) to be passed by the citizens of the country by placing their tokens on either the "yes" or "no" side or abstaining from the vote. Of course, a system this simple could not work in practice as the high frequency of bills being created would quickly lead to large amounts of voter apathy. 
 
-### Blockchain democracy
+### Using the Blockchain to implement tokens
