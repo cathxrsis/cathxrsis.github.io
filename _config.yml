@@ -12,3 +12,6 @@ github_username:  cathxrsis
 markdown: kramdown
 
 diqus: tomwestbury
+
+gems:
+  -jekyll-sitemap

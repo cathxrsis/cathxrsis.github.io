@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-<div class="circular">
-  <img src="http://lorempixel.com/output/abstract-q-c-200-200-7.jpg" alt='breeze' >
+<div class="avatar">
+  <img src="/assets/images/icon.jpg" alt='breeze' >
 </div>
 
 **Tom Westbury** is an engineer located in the home counties. He has a fondness for skateboarding, left wing politics, physics and motorcycle restoration.
