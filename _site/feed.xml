@@ -5,8 +5,8 @@
     <description>A place on the internet where you, dear reader, can peruse the inner machinations of my mind. Here you will find posts and essays on practical politics, coding and some philosophy &amp;amp; science.</description>
     <link>http://blog.cathxrsis.co.uk/</link>
     <atom:link href="http://blog.cathxrsis.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Jul 2015 11:01:14 +0100</pubDate>
-    <lastBuildDate>Sun, 12 Jul 2015 11:01:14 +0100</lastBuildDate>
+    <pubDate>Mon, 13 Jul 2015 12:12:18 +0100</pubDate>
+    <lastBuildDate>Mon, 13 Jul 2015 12:12:18 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -21,9 +21,11 @@
 
 &lt;h3 id=&quot;a-token-based-democracy&quot;&gt;A token based democracy&lt;/h3&gt;
 
-&lt;p&gt;A token is the&lt;/p&gt;
+&lt;p&gt;Token is the name given to a reusable form of vote. A token would be given to each eligible citizen in the country.  The proposed token based democracy would require that each piece of legislation created by the legislators (e.g. the house of commons) to be passed by the citizens of the country by placing their tokens on either the “yes” or “no” side or abstaining from the vote. &lt;/p&gt;
 
-&lt;h3 id=&quot;blockchain-democracy&quot;&gt;Blockchain democracy&lt;/h3&gt;
+&lt;p&gt;Of course, a system this simple could not work in practice as the high frequency of bills being created would quickly lead to large amounts of voter apathy, an argument usually given against direct democracy. Thanks to the nature of the token though, a way of reducing the amount of interference caused by constant legislation whilst still preserving individuals direct voting power is possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-the-blockchain-to-implement-tokens&quot;&gt;Using the Blockchain to implement tokens&lt;/h3&gt;
 </description>
         <pubDate>Wed, 08 Jul 2015 00:00:00 +0100</pubDate>
         <link>http://blog.cathxrsis.co.uk/blog/update/2015/07/08/bitcoin-democracy.html</link>
