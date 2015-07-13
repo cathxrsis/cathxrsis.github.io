@@ -202,15 +202,16 @@
 }
 
 .tag-list {
-    width: 80%;
-    margin-left: 10%;
+    font-weight: bold;
+    width: 100%;
     margin-top: 20px;
-    list-style: bullet;
+    list-style: none;
 
 
     > li {
-        margin-bottom: $spacing-unit;
-
+        font-weight: normal;
+        font-style: italic;
+        display: inline;
     }
 }
 
