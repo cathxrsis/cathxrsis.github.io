@@ -15,4 +15,11 @@ layout: default
     {{ content }}
   </article>
 
+  <ul class="tag-list">
+    Tags:
+    {% for tag in page.tags %}
+      <li> {{ tag }}, </li>
+    {% endfor %}
+  </ul>
+
 </div>
