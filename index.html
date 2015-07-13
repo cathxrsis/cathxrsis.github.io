@@ -13,7 +13,6 @@ layout: default
     <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
     <a href="{{ post.url | prepend: site.baseurl }}"><em>Read on...</em></a>
 
-    {% post.tags %}
     {% endif %}
 
     {% endfor %}
