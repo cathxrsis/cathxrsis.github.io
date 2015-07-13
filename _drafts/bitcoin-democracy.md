@@ -23,6 +23,14 @@ Token is the name given to a reusable form of vote. A token would be given to ea
 
 Of course, a system this simple could not work in practice as the high frequency of bills being created would quickly lead to large amounts of voter apathy, an argument usually given against direct democracy. Thanks to the nature of the token though, a way of reducing the amount of interference caused by constant legislation whilst still preserving individuals direct voting power is possible.
 
+To @@THINK OF THE WORDS a voter can entrust their individual token to a political party (The word "party" is used here for familiarity, a party could be any person or organisation willing to vote on behalf of people). The party would then apply the token on votes for legislation on behalf of the voter. Crucially, to maintain direct democracy, the voter can move their token at any time. There would also be a provision made so that voters could use their token against the party they are with for specific bills. This would enable people who agree with the majority of a party's policies, but have some issues close to their heart that contravene that party's views, to have their ideals accounted for.
 
+For example, a voter who has assigned their vote to the Green party could be a strong advocate of nuclear power. When the legislators have a vote on a bill on nuclear power, the voter could place his token against the Green paty's vote. The amount of tokens that the Green party has is reduced by one for that vote but reverts for all votes that the voter is not voting against the entrusted party on.
+
+### Cascading Proportional Representation
+
+The allocation of tokens to parties allows for and naturally leads to a fluid form of the Proportional Representation voting system. 
 
 ### Using the Blockchain to implement tokens
+
+To protect individual voter's privacies, tokens would have to be made untraceable.
