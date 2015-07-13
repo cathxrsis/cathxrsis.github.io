@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <div class="avatar">
-  <img src="/assets/images/icon.jpg" alt='breeze' >
+  <img src="/assets/images/icon.jpg" alt='fractal' >
 </div>
 
 **Tom Westbury** is an engineer located in the home counties. He has a fondness for skateboarding, left wing feminist politics, physics and motorcycle restoration.
