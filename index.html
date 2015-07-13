@@ -11,6 +11,9 @@ layout: default
 
     <p class="post-description">{{post.description}}</p>
     <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+    <div class="post-excerpt">
+      {{ post.content | split: '<!-- more -->' | first }}
+    </div>
     <a href="{{ post.url | prepend: site.baseurl }}"><em>Read on...</em></a>
     <ul class="tag-list">
       Tags:

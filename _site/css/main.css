@@ -68,7 +68,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font-family: Computer Modern Serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   font-weight: normal;
   color: #111111;
@@ -98,7 +98,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 15.75px; }
 
 /**
  * Lists
@@ -120,13 +120,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #1c1c1c;
-  text-decoration: none; }
-  a:visited {
-    color: black; }
+  color: #424242;
+  text-decoration: none;
+  /*  &:visited {
+        color: lighten($brand-color, 15%);
+    } */ }
   a:hover {
-    color: #111111;
-    text-decoration: underline; }
+    color: #111111; }
 
 /**
  * Blockquotes
@@ -372,7 +372,7 @@ pre {
     display: inline; }
 
 .post-meta {
-  font-size: 14px;
+  font-size: 15.75px;
   color: #828282; }
 
 .post-link {
@@ -395,6 +395,10 @@ pre {
 
 .post-description {
   font-style: italic; }
+
+.post-excerpt {
+  opacity: 0.9;
+  text-color: linear-gradient(to bottom, transparent, black); }
 
 .post-content {
   margin-bottom: 30px; }
