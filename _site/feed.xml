@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Westbury&#39;s Weblog.</title>
+    <description>A place on the internet where you, dear reader, can peruse the inner machinations of my mind. Here you will find posts and essays on practical politics, coding and some philosophy &amp;amp; science.</description>
+    <link>http://blog.cathxrsis.co.uk/</link>
+    <atom:link href="http://blog.cathxrsis.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 14 Jul 2015 16:42:35 +0100</pubDate>
+    <lastBuildDate>Tue, 14 Jul 2015 16:42:35 +0100</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Blog Under Construction</title>
+        <description>&lt;p&gt;Unfortunately this blog is under construction.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 13 Jul 2015 18:39:00 +0100</pubDate>
+        <link>http://blog.cathxrsis.co.uk/2015/07/13/page-under-construction.html</link>
+        <guid isPermaLink="true">http://blog.cathxrsis.co.uk/2015/07/13/page-under-construction.html</guid>
+        
+        <category>Construction</category>
+        
+        <category>Update</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>How the Blockchain can break our chains.</title>
+        <description>&lt;p&gt;Direct democracy has always been one of the main goals of the libertarian left but, due to issues of practicality, is often thought of as an unobtainable ideal. In this essay (the first in a series on practical politics), a model will be proposed for a practical system showing, not just that direct democracy is possible but also that it is very much implementable in today’s world.
+&lt;!-- more --&gt;
+&lt;img src=&quot;/assets/images/bitcoin.png&quot; alt=&quot;Bitcoin Symbol&quot; title=&quot;Bitcoin Symbol&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From a British perspective, modern democracy leaves a lot to be desired. The “first past the post” system means that the British majority government can be voted in by a minority of voters (e.g. our current government only received @@% of the public’s votes @@REF) and the lobbying system currently in place grants corporate voices far more swaying power over legislation. This fact is reflected in the YouGov polls showing public opinion is in favour of renationalisation of the @@REF FROM THE ESTAABLISHMENT BOOK.&lt;/p&gt;
+
+&lt;p&gt;It is very evident that most ordinary people do not have a say in how the country is run. This has led to a government that is not held accountable for actions that are mainly in the interest of corporate giants. Democracy in the UK is in dire need of reform; a new democratic system that can both create more representative governments and hold legislators to account. One proposed solution to these problems would be to created a democratic system based on tokens.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-token-based-democracy&quot;&gt;A token based democracy&lt;/h3&gt;
+
+&lt;p&gt;Token is the name given to a reusable form of vote. A token would be given to each eligible citizen in the country.  The proposed token based democracy would require that each piece of legislation created by the legislators (e.g. the house of commons) to be passed by the citizens of the country by placing their tokens on either the “yes” or “no” side or abstaining from the vote.&lt;/p&gt;
+
+&lt;p&gt;Of course, a system this simple could not work in practice as the high frequency of bills being created would quickly lead to large amounts of voter apathy, an argument usually given against direct democracy. Thanks to the nature of the token though, a way of reducing the amount of interference caused by constant legislation whilst still preserving individuals direct voting power is possible.&lt;/p&gt;
+
+&lt;p&gt;To @@THINK OF THE WORDS a voter can entrust their individual token to a political party (The word “party” is used here for familiarity, a party could be any person or organisation willing to vote on behalf of people). The party would then apply the token on votes for legislation on behalf of the voter. Crucially, to maintain direct democracy, the voter can move their token at any time. There would also be a provision made so that voters could use their token against the party they are with for specific bills. This would enable people who agree with the majority of a party’s policies, but have some issues close to their heart that contravene that party’s views, to have their ideals accounted for.&lt;/p&gt;
+
+&lt;p&gt;For example, a voter who has assigned their vote to the Green party could be a strong advocate of nuclear power. When the legislators have a vote on a bill on nuclear power, the voter could place his token against the Green paty’s vote. The amount of tokens that the Green party has is reduced by one for that vote but reverts for all votes that the voter is not voting against the entrusted party on.&lt;/p&gt;
+
+&lt;h3 id=&quot;cascading-proportional-representation&quot;&gt;Cascading Proportional Representation&lt;/h3&gt;
+
+&lt;p&gt;The allocation of tokens to parties allows for, and naturally leads towards, a fluid form of the Proportional Representation voting system.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-the-blockchain-to-implement-tokens&quot;&gt;Using the Blockchain to implement tokens&lt;/h3&gt;
+
+&lt;p&gt;To protect individual voter’s privacies, tokens would have to be made untraceable.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Jul 2015 00:00:00 +0100</pubDate>
+        <link>http://blog.cathxrsis.co.uk/2015/07/08/bitcoin-democracy.html</link>
+        <guid isPermaLink="true">http://blog.cathxrsis.co.uk/2015/07/08/bitcoin-democracy.html</guid>
+        
+        <category>Bitcoin</category>
+        
+        <category>Politics</category>
+        
+        <category>Democracy</category>
+        
+        <category>Computer Science</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -12,6 +12,7 @@ comments: true
 ---
 Direct democracy has always been one of the main goals of the libertarian left but, due to issues of practicality, is often thought of as an unobtainable ideal. In this essay (the first in a series on practical politics), a model will be proposed for a practical system showing, not just that direct democracy is possible but also that it is very much implementable in today's world.
 <!-- more -->
+![Bitcoin Symbol](/assets/images/bitcoin.png "Bitcoin Symbol")
 
 From a British perspective, modern democracy leaves a lot to be desired. The "first past the post" system means that the British majority government can be voted in by a minority of voters (e.g. our current government only received @@% of the public's votes @@REF) and the lobbying system currently in place grants corporate voices far more swaying power over legislation. This fact is reflected in the YouGov polls showing public opinion is in favour of renationalisation of the @@REF FROM THE ESTAABLISHMENT BOOK.
 
@@ -29,7 +30,7 @@ For example, a voter who has assigned their vote to the Green party could be a s
 
 ### Cascading Proportional Representation
 
-The allocation of tokens to parties allows for, and naturally leads towards, a fluid form of the Proportional Representation voting system. 
+The allocation of tokens to parties allows for, and naturally leads towards, a fluid form of the Proportional Representation voting system.
 
 ### Using the Blockchain to implement tokens
 
