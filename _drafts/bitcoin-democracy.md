@@ -29,7 +29,7 @@ For example, a voter who has assigned their vote to the Green party could be a s
 
 ### Cascading Proportional Representation
 
-The allocation of tokens to parties allows for and naturally leads to a fluid form of the Proportional Representation voting system. 
+The allocation of tokens to parties allows for, and naturally leads towards, a fluid form of the Proportional Representation voting system. 
 
 ### Using the Blockchain to implement tokens
 
