@@ -12,7 +12,6 @@ comments: true
 ---
 Direct democracy has always been one of the main goals of the libertarian left but, due to issues of practicality, is often thought of as an unobtainable ideal. In this essay (the first in a series on practical politics), a model will be proposed for a practical system showing, not just that direct democracy is possible but also that it is very much implementable in today's world.
 <!-- more -->
-![Bitcoin Symbol](/assets/images/bitcoin.png "Bitcoin Symbol")
 
 From a British perspective, modern democracy leaves a lot to be desired. The "first past the post" system means that the British majority government can be voted in by a minority of voters (e.g. our current government only received @@% of the public's votes @@REF) and the lobbying system currently in place grants corporate voices far more swaying power over legislation. This fact is reflected in the YouGov polls showing public opinion is in favour of renationalisation of the @@REF FROM THE ESTAABLISHMENT BOOK.
 
@@ -24,14 +23,24 @@ Token is the name given to a reusable form of vote. A token would be given to ea
 
 Of course, a system this simple could not work in practice as the high frequency of bills being created would quickly lead to large amounts of voter apathy, an argument usually given against direct democracy. Thanks to the nature of the token though, a way of reducing the amount of interference caused by constant legislation whilst still preserving individuals direct voting power is possible.
 
-To @@THINK OF THE WORDS a voter can entrust their individual token to a political party (The word "party" is used here for familiarity, a party could be any person or organisation willing to vote on behalf of people). The party would then apply the token on votes for legislation on behalf of the voter. Crucially, to maintain direct democracy, the voter can move their token at any time. There would also be a provision made so that voters could use their token against the party they are with for specific bills. This would enable people who agree with the majority of a party's policies, but have some issues close to their heart that contravene that party's views, to have their ideals accounted for.
+For convenience a voter can entrust their individual token to a political party (The word "party" is used here for familiarity, a party could be any person or organisation willing to vote on behalf of people). The party would then apply the token on votes for legislation on behalf of the voter. Crucially, to maintain direct democracy, the voter can move their token at any time. There would also be a provision made so that voters could use their token against the party they are with for specific bills. This would enable people who agree with the majority of a party's policies, but have some issues close to their heart that contravene that party's views, to have their ideals accounted for.
 
 For example, a voter who has assigned their vote to the Green party could be a strong advocate of nuclear power. When the legislators have a vote on a bill on nuclear power, the voter could place his token against the Green paty's vote. The amount of tokens that the Green party has is reduced by one for that vote but reverts for all votes that the voter is not voting against the entrusted party on.
 
 ### Cascading Proportional Representation
 
-The allocation of tokens to parties allows for, and naturally leads towards, a fluid form of the Proportional Representation voting system.
+The allocation of tokens to parties allows for, and naturally leads towards, a fluid form of the Proportional Representation voting system. This system would allocate seats in the house of legislators according to the amount of tokens each party holds every five (or so) years. This would ensure that the legislative house of parliament would better reflect the views of the populace. The constituency system would be changed to a similar system to that used in the EU parliament today where there would be a number of MPs representing each constituency instead of just one. Unfortunately such a system would mean that MPs for smaller parties would be most likely placed in constituencies where the percentage of voters does not reflect the percentage of MPs.
+
+One solution to this problem would be to devolve more power to each level of government. Local government could then be structured and elected in the same way as the state government. This would streamline the voting system by doing away with the need for by-elections and would ensure that voters are properly represented in every level of government.
 
 ### Using the Blockchain to implement tokens
 
-To protect individual voter's privacies, tokens would have to be made untraceable.
+* To protect individual voter's privacies, tokens would have to be made untraceable.
+
+
+
+
+
+
+* Independent candidates will find it very hard in this system.
+* It will be very hard
