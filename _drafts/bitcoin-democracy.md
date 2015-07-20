@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How the Blockchain can break our chains."
+title: "How the Block chain can break our chains."
 date: 2015-07-08
 description: An essay on how the technology currently used for the Bitcoin network could be used to provide a basis for a practical form of a more direct democracy...
 tags:
@@ -35,11 +35,18 @@ The allocation of tokens to parties allows for, and naturally leads towards, a f
 
 One solution to this problem would be to devolve more power to each level of government. Local government could then be structured and elected in the same way as the state government. This would streamline the voting system by doing away with the need for by-elections and would ensure that voters are properly represented in every level of government.
 
-###Using Blockchain technology to implement tokens
+###Using Block chain technology to implement tokens
 
-The blockchain is the name given to the system of servers that 
-For those interested, the original paper that proposed the Bitcoin system can be found [here.](https://bitcoin.org/bitcoin.pdf)
+The block chain is the name given to the system that records transactions on the bitcoin network. In basic terms, the block chain acts as a ledger recording the most recent transactions in between bitcoin wallets. Therefore it provides a record of how many bitcoins each wallet holds and a means of transferring bitcoins between wallets.  For those interested, the original paper that proposed the Bitcoin system can be found [here.](https://bitcoin.org/bitcoin.pdf) The main motivation behind using a block chain like system  is the security provided: hackers attempting to falsify votes would need more computing power than the government's systems.
+
+The bitcoin model would have to be modified to accommodate the requirements of the direct democratic system.
 
 
+* The voter can know where their token is, but the party cannot know who its tokens are from.
+* Tokens can be withdrawn from a party and placed either side in a vote.
+* Tokens are destroyed upon the death of the holder.
+* Tokens are given upon registration / eighteenth birthday of a citizen.
 
-* To protect the privacy of the individual voter, tokens would have to be made untraceable
+* Wallets are voters, when a voter makes a new vote, the transaction process revokes the old hash and creates a new one.
+* Wallet is revoked upon death.
+* Ledger can delete revoked wallets and hashes to save space on system.

@@ -5,8 +5,8 @@
     <description>A place on the internet where you, dear reader, can peruse the inner machinations of my mind. Here you will find posts and essays on practical politics, coding and some philosophy &amp;amp; science.</description>
     <link>http://blog.cathxrsis.co.uk/</link>
     <atom:link href="http://blog.cathxrsis.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 15:23:36 +0100</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 15:23:36 +0100</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 22:26:52 +0100</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 22:26:52 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -42,7 +42,7 @@
       </item>
     
       <item>
-        <title>How the Blockchain can break our chains.</title>
+        <title>How the Block chain can break our chains.</title>
         <description>&lt;p&gt;Direct democracy has always been one of the main goals of the libertarian left but is often dismissed as an unattainable ideal. In this essay (the first in a series on practical politics), a model will be proposed for a practical system denoting not only the possibility of direct democracy but also the plausibility of its implementation in today’s world.&lt;/p&gt;
 
 &lt;!-- more --&gt;
@@ -67,13 +67,22 @@
 
 &lt;p&gt;One solution to this problem would be to devolve more power to each level of government. Local government could then be structured and elected in the same way as the state government. This would streamline the voting system by doing away with the need for by-elections and would ensure that voters are properly represented in every level of government.&lt;/p&gt;
 
-&lt;h3 id=&quot;using-blockchain-technology-to-implement-tokens&quot;&gt;Using Blockchain technology to implement tokens&lt;/h3&gt;
+&lt;h3 id=&quot;using-block-chain-technology-to-implement-tokens&quot;&gt;Using Block chain technology to implement tokens&lt;/h3&gt;
 
-&lt;p&gt;The blockchain is the name given to the system of servers that 
-For those interested, the original paper that proposed the Bitcoin system can be found &lt;a href=&quot;https://bitcoin.org/bitcoin.pdf&quot;&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The block chain is the name given to the system that records transactions on the bitcoin network. In basic terms, the block chain acts as a ledger recording the most recent transactions in between bitcoin wallets. Therefore it provides a record of how many bitcoins each wallet holds and a means of transferring bitcoins between wallets.  For those interested, the original paper that proposed the Bitcoin system can be found &lt;a href=&quot;https://bitcoin.org/bitcoin.pdf&quot;&gt;here.&lt;/a&gt; The main motivation behind using a block chain like system  is the security provided: hackers attempting to falsify votes would need more computing power than the government’s systems.&lt;/p&gt;
+
+&lt;p&gt;The bitcoin model would have to be modified to accommodate the requirements of the direct democratic system.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;To protect the privacy of the individual voter, tokens would have to be made untraceable&lt;/li&gt;
+  &lt;li&gt;The voter can know where their token is, but the party cannot know who its tokens are from.&lt;/li&gt;
+  &lt;li&gt;Tokens can be withdrawn from a party and placed either side in a vote.&lt;/li&gt;
+  &lt;li&gt;Tokens are destroyed upon the death of the holder.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tokens are given upon registration / eighteenth birthday of a citizen.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Wallets are voters, when a voter makes a new vote, the transaction process revokes the old hash and creates a new one.&lt;/li&gt;
+  &lt;li&gt;Wallet is revoked upon death.&lt;/li&gt;
+  &lt;li&gt;Ledger can delete revoked wallets and hashes to save space on system.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 08 Jul 2015 00:00:00 +0100</pubDate>
