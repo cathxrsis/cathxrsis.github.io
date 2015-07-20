@@ -15,17 +15,19 @@ Direct democracy has always been one of the main goals of the libertarian left b
 
 <!-- more -->
 
-From a British perspective, contemporary democracy leaves a lot to be desired. The first-past-the-post system means that the British majority government can be voted in by a minority of voters (e.g. our current government only received @@% of the public's votes @@REF) and the lobbying system currently in place grants corporate voices far too much swaying power over legislation. This fact is reflected in current polls showing public opinion is in favour of renationalisation of the @@REF FROM THE ESTABLISHMENT BOOK.
+From a British perspective, contemporary democracy leaves a lot to be desired. The first-past-the-post system means that the British majority government can be voted in by a minority of voters (e.g. our current government only received 36.8% of the eligible public's votes[<sup>1</sup>](http://www.economist.com/blogs/graphicdetail/2015/05/britain-s-election-2015-seats-votes-calculator).) and the lobbying system currently in place grants corporate voices far too much swaying power over legislation. This fact is reflected in current polls showing public opinion is in favour of renationalisation of energy suppliers and the railways[<sup>2</sup>](https://yougov.co.uk/news/2013/11/04/nationalise-energy-and-rail-companies-say-public/).
 
-It is evident that most 'ordinary people' do not have a say in how the country is run. This has led to a government that is not held accountable for actions that are mainly in the interest of corporate giants. Democracy in the UK is in dire need of reform; a new democratic system that can both create more representative governments and hold legislators to account is needed. One proposed solution to these problems would be to create a democratic system based on tokens.
+Democracy in the UK is in dire need of reform; it is evident that most 'ordinary people' do not have a say in how the country is run. This has led to a government that is not held accountable for actions that are mainly in the interest of corporate giants. A new democratic system that can both create more representative governments and hold legislators to account is therefore required. One proposed solution to these problems would be to create a democratic system based on tokens.
 
 ###A token based democracy
 
 Token is the name given to a reusable form of vote. A token would be given to each eligible citizen in the country.  The proposed token-based democracy would require that each piece of legislation created by the legislators (e.g. the House of Commons) to be passed by the citizens of the country by placing their tokens on either the "yes" or "no" side or abstaining from the vote.
 
-Of course, a system this simple could not work in practice as the high frequency of bills being drafted would quickly lead to large amounts of voter apathy, an argument usually given against direct democracy. Thanks to the nature of the token though, a way of reducing the amount of interference caused by constant legislation whilst still preserving individuals direct voting power is possible.
+Of course, a system this simple could not work in practice as the high frequency of bills being drafted would quickly lead to ever greater voter apathy, an argument usually given against direct democracy. Thanks to the nature of the token though, a way of reducing the amount of interference caused by constant legislation whilst still preserving individuals direct voting power is possible.
 
-For convenience a voter can entrust their individual token to a political party (The word "party" is used here for familiarity, a party could be any person or organisation willing to vote on behalf of people). The party would then apply the token on votes for legislation on behalf of the voter. Crucially, to maintain direct democracy, the voter can move their token at any time. There would also be a provision made so that voters could use their token against the party they are with for specific bills. This would enable people who agree with the majority of a party's policies, but have some issues close to their heart that contravene the party line, to have their ideals accounted for. For example, a voter who has assigned their vote to the Green party could be a strong advocate of nuclear power. When the legislators have a vote on a bill on nuclear power, the voter could place his token against the Green paty's vote. The amount of tokens that the Green party has is reduced by one for that vote but reverts for all votes that the voter is not voting against the entrusted party on.
+For convenience a voter can entrust their individual token to a political party (The word "party" is used here for familiarity, a party could be any person or organisation willing to vote on behalf of people). The party would then apply the token on votes for legislation on behalf of the voter. Crucially, to maintain direct democracy, the voter can move their token at any time. There would also be a provision made so that voters could use their token against the party they are with for specific bills. This would enable people who agree with the majority of a party's policies, but have some issues close to their heart that contravene the party line, to have their ideals accounted for.
+
+To illustrate this system let's take a voter who has assigned their vote to the Green party but who is a strong advocate of nuclear power. When the legislators have a vote on a bill on nuclear power, the voter could place his token against the Green party's vote. The amount of tokens that the Green party has is reduced by one for that vote but reverts for all votes that the voter is not voting against the entrusted party on.
 
 ###Cascading Proportional Representation
 
@@ -33,16 +35,11 @@ The allocation of tokens to parties allows for, and naturally leads towards, a f
 
 One solution to this problem would be to devolve more power to each level of government. Local government could then be structured and elected in the same way as the state government. This would streamline the voting system by doing away with the need for by-elections and would ensure that voters are properly represented in every level of government.
 
-###Using the Blockchain to implement tokens
+###Using Blockchain technology to implement tokens
+
+The blockchain is the name given to the system of servers that 
+For those interested, the original paper that proposed the Bitcoin system can be found [here.](https://bitcoin.org/bitcoin.pdf)
 
 
 
-* To protect the privacy of the individual voter, tokens would have to be made untraceable.
-
-
-
-
-
-
-* Independent candidates will find it very hard in this system.
-* It will be very hard
+* To protect the privacy of the individual voter, tokens would have to be made untraceable

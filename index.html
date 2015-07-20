@@ -7,6 +7,7 @@ layout: default
   <header class="post-header">
     {% for post in site.posts limit:1 %}
     <h1 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
+
     {% if post.description %}
 
     <p class="post-description">{{post.description}}</p>
@@ -14,6 +15,11 @@ layout: default
     <div class="post-excerpt">
       {{ post.content | split: '<!-- more -->' | first }}
     </div>
+
+    {% if post.comments %}
+    <p class="post-meta"><a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a></p>
+    {% endif %}
+
     <a href="{{ post.url | prepend: site.baseurl }}"><em>Read on...</em></a>
     <ul class="tag-list">
       Tags:
@@ -32,6 +38,9 @@ layout: default
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         <p class="post-description"> {{post.description}} </p>
+        {% if post.comments %}
+        <p class="post-meta"><a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a></p>
+        {% endif %}
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       </li>
     {% endfor %}
