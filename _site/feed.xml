@@ -5,44 +5,12 @@
     <description>A place on the internet where you, dear reader, can peruse the inner machinations of my mind. Here you will find posts and essays on practical politics, coding and some philosophy &amp;amp; science.</description>
     <link>http://blog.cathxrsis.co.uk/</link>
     <atom:link href="http://blog.cathxrsis.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 22:43:59 +0100</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 22:43:59 +0100</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2015 17:53:52 +0100</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2015 17:53:52 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Blog Under Construction</title>
-        <description>&lt;p&gt;Unfortunately this blog is under construction.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 13 Jul 2015 18:39:00 +0100</pubDate>
-        <link>http://blog.cathxrsis.co.uk/2015/07/13/page-under-construction.html</link>
-        <guid isPermaLink="true">http://blog.cathxrsis.co.uk/2015/07/13/page-under-construction.html</guid>
-        
-        <category>Construction</category>
-        
-        <category>Update</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>How the Block chain can break our chains.</title>
+        <title>Democracy, directly</title>
         <description>&lt;p&gt;Direct democracy has always been one of the main goals of the libertarian left but is often dismissed as an unattainable ideal. In this essay (the first in a series on practical politics), a model will be proposed for a practical system denoting not only the possibility of direct democracy but also the plausibility of its implementation in today’s world.&lt;/p&gt;
 
 &lt;!-- more --&gt;
@@ -71,23 +39,13 @@
 
 &lt;p&gt;The block chain is the name given to the system that records transactions on the bitcoin network. In basic terms, the block chain acts as a ledger recording the most recent transactions in between bitcoin wallets. Therefore it provides a record of how many bitcoins each wallet holds and a means of transferring bitcoins between wallets.  For those interested, the original paper that proposed the Bitcoin system can be found &lt;a href=&quot;https://bitcoin.org/bitcoin.pdf&quot;&gt;here.&lt;/a&gt; The main motivation behind using a block chain like system  is the security provided: hackers attempting to falsify votes would need more computing power than the government’s systems.&lt;/p&gt;
 
-&lt;p&gt;The bitcoin model would have to be modified to accommodate the requirements of the direct democratic system.&lt;/p&gt;
+&lt;p&gt;The bitcoin model would have to be modified to accommodate the requirements of the direct democratic system. There must be mechanisms for voting, entrusting tokens and relinquishing tokens. For anonymity, voters should be able to find out who their token is entrusted to, but the party shouldn’t be able to know, necessarily, who their tokens are from. Also there will have to be a mechanism for creating new tokens and parties (when people become eligible to vote) and, conversely, a mechanism for voiding tokens and parties (in the event of death/disbanding).&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;The voter can know where their token is, but the party cannot know who its tokens are from.&lt;/li&gt;
-  &lt;li&gt;Tokens can be withdrawn from a party and placed either side in a vote.&lt;/li&gt;
-  &lt;li&gt;Tokens are destroyed upon the death of the holder.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Tokens are given upon registration / eighteenth birthday of a citizen.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Wallets are voters, when a voter makes a new vote, the transaction process revokes the old hash and creates a new one.&lt;/li&gt;
-  &lt;li&gt;Wallet is revoked upon death.&lt;/li&gt;
-  &lt;li&gt;Ledger can delete revoked wallets and hashes to save space on system.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;I hope this essay has shown that direct democracy is possible in today’s world. At a later date I would like to write a further essay on the technical side of the implementation. If you have any suggestions, criticisms or opinions on this essay I wholeheartedly encourage you to leave your comments below.❑&lt;/p&gt;
 </description>
-        <pubDate>Wed, 08 Jul 2015 00:00:00 +0100</pubDate>
-        <link>http://blog.cathxrsis.co.uk/2015/07/08/bitcoin-democracy.html</link>
-        <guid isPermaLink="true">http://blog.cathxrsis.co.uk/2015/07/08/bitcoin-democracy.html</guid>
+        <pubDate>Tue, 21 Jul 2015 00:00:00 +0100</pubDate>
+        <link>http://blog.cathxrsis.co.uk/2015/07/21/bitcoin-democracy.html</link>
+        <guid isPermaLink="true">http://blog.cathxrsis.co.uk/2015/07/21/bitcoin-democracy.html</guid>
         
         <category>Bitcoin</category>
         
