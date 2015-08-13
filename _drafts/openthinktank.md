@@ -13,3 +13,5 @@ comments: true
 Think Thanks. What are they? These institutions
 
 Some Think Tanks provide an invaluable service to policy and industry. For example, RUSI, a defence and foreign policy think tank, provides research into the future of warfare allowing the government and defense firms to
+
+Unfortunately many Think Tanks are run and backed by large corporate entities, this means that some of our most influential policy makers are in the pockets of the rich.
