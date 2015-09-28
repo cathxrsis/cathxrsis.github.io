@@ -14,3 +14,5 @@ This blog was hacked together from bits of old code using Jekyll.
 You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 
 The fonts used in this blog are from Donald Knuth's Computer Modern family and can be found at [checkmyworking.com/cm-web-fonts](http://checkmyworking.com/cm-web-fonts/).
+
+The background colour of this blog is Cosmic Latte.
