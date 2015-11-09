@@ -10,4 +10,6 @@ comments: true
 ---
 'There is no such thing as society'
 
+$$ P(B|A) = \frac{P(A|B)}{P(A)}P(A) $$
+
 **WORKERS OF THE WORLD, COOPERATE.**

@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.cathxrsis.co.uk/2015/07/21/bitcoin-democracy.html</loc>
-    <lastmod>2015-07-21T00:00:00+01:00</lastmod>
+    <loc>http://blog.cathxrsis.co.uk/2015/09/28/an-apology.html</loc>
+    <lastmod>2015-09-28T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.cathxrsis.co.uk/2015/07/23/openthinktank.html</loc>
+    <lastmod>2015-07-23T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.cathxrsis.co.uk/2015/07/23/cooperativemanifesto.html</loc>
+    <lastmod>2015-07-23T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.cathxrsis.co.uk/2015/07/23/bayesianjury.html</loc>
+    <lastmod>2015-07-23T00:00:00+01:00</lastmod>
   </url>
   <url>
     <loc>http://blog.cathxrsis.co.uk/about/</loc>
@@ -12,5 +24,21 @@
   </url>
   <url>
     <loc>http://blog.cathxrsis.co.uk/</loc>
+  </url>
+  <url>
+    <loc>http://blog.cathxrsis.co.uk/raft/archive/index.html</loc>
+    <lastmod>2015-11-09T12:06:31+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.cathxrsis.co.uk/raft/2015/09/28/an-apology.html</loc>
+    <lastmod>2015-11-09T12:06:31+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.cathxrsis.co.uk/raft/index.html</loc>
+    <lastmod>2015-11-09T12:06:31+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.cathxrsis.co.uk/raft/about/index.html</loc>
+    <lastmod>2015-11-09T12:06:31+00:00</lastmod>
   </url>
 </urlset>
