@@ -5,8 +5,8 @@
     <description>A place on the internet where you, dear reader, can peruse the inner machinations of my mind. Here you will find posts and essays on practical politics, coding and some philosophy &amp;amp; science.</description>
     <link>http://blog.cathxrsis.co.uk/</link>
     <atom:link href="http://blog.cathxrsis.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Nov 2015 12:06:54 +0000</pubDate>
-    <lastBuildDate>Mon, 09 Nov 2015 12:06:54 +0000</lastBuildDate>
+    <pubDate>Mon, 09 Nov 2015 12:35:51 +0000</pubDate>
+    <lastBuildDate>Mon, 09 Nov 2015 12:35:51 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -46,6 +46,10 @@
       <item>
         <title>The Cooperative Manifesto</title>
         <description>&lt;p&gt;‘There is no such thing as society’&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; P(B|A) = \frac{P(A|B)}{P(A)}P(A) &lt;/script&gt;
+
+&lt;p&gt;Is Maths working?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;WORKERS OF THE WORLD, COOPERATE.&lt;/strong&gt;&lt;/p&gt;
 </description>

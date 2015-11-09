@@ -12,4 +12,7 @@ comments: true
 
 $$ P(B|A) = \frac{P(A|B)}{P(A)}P(A) $$
 
+Is Maths working?
+
+
 **WORKERS OF THE WORLD, COOPERATE.**
