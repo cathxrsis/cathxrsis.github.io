@@ -2,7 +2,7 @@
 layout: post
 title: "I do apologise"
 date: 2015-09-28
-description: Just A quick excuse to why this blog (and my Github) has been rather stationary for a little to long.
+description: Just A quick excuse to why this blog (and my Github) has been rather stationary for a little too long.
 tags:
 - Personal
 comments: false
