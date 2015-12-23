@@ -11,7 +11,7 @@ comments: true
 
 $$ P(B|A) = \frac{P(A|B)}{P(A)}P(B) $$
 
-This is Bayes' Theorem. To those of you who don't have a mathematical background, it probably means nothing. To those of you that do, you will most likely recognise it as a pretty standard result of probability theory.
+This is Bayes' Theorem. To those of you who don't have a mathematical background, it probably means nothing. To those of you that do, you will most likely recognise it as a standard result of probability theory. As with many mathematical theorems, Bayes' Theorem has 
 
  It was first written down by Thomas Bayes at some point in the 17th century. It was then not published until after his death and then forgotten about for a few hundred years whilst the scientific community had better things to do.
 
