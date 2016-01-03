@@ -103,8 +103,10 @@
 
 //END OF FONTS
 
-$base-font-family: Computer Modern Serif;
-$code-font-family: Computer Modern Typewriter; //Change to code font
+$base-font-family: Computer Modern Serif; //Roman Font
+$head-font-family: TeX Gyre Heros;			//Grotesque Font
+$part-font-family: TeX Gyre Adventura;	//Geometric Font
+$code-font-family: Computer Modern Typewriter;
 $base-font-size:   18px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -114,7 +116,9 @@ $spacing-unit:     30px;
 $text-color:       #111;
 $background-color: #fff8e7;
 $brand-color:      darken(#828282, 25%);
-$head-color:			 #fff8e7;
+
+$head-color:			 #ff6b00;
+$head-text-color:	 #ffffff;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
