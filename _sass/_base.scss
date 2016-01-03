@@ -95,6 +95,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $head-font-family;
   font-weight: bold;
 }
 
@@ -213,5 +214,5 @@ pre {
   transform: scale(.9);
   /*
   transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
-  
+
 } */
