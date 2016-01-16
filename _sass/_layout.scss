@@ -12,6 +12,8 @@
 }
 
 .site-title {
+    font-family: $head-font-family;
+    color: $head-text-color;
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
@@ -20,7 +22,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $grey-color-light;
     }
 }
 
