@@ -101,10 +101,40 @@
 	font-style: italic;
 }
 
+//Adventura Font
+
+@font-face {
+	font-family: 'TeX Gyre Adventura';
+	src: url('/assets/fonts/Adventura/texgyreadventor-bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TeX Gyre Adventura';
+	src: url('/assets/fonts/Adventura/texgyreadventor-bolditalic.otf') format('opentype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'TeX Gyre Adventura';
+	src: url('/assets/fonts/Adventura/texgyreadventor-italic.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'TeX Gyre Adventura';
+	src: url('/assets/fonts/Adventura/texgyreadventor-regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 //END OF FONTS
 
 $base-font-family: Computer Modern Serif; //Roman Font
-$head-font-family: TeX Gyre Heros;			//Grotesque Font
+$head-font-family: TeX Gyre Adventura; //TeX Gyre Heros;			Grotesque Font
 $part-font-family: TeX Gyre Adventura;	//Geometric Font
 $code-font-family: Computer Modern Typewriter;
 $base-font-size:   18px;
