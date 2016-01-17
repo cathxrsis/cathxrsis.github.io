@@ -30,6 +30,8 @@
 .site-nav {
     float: right;
     line-height: 56px;
+    font-family: $head-font-family;
+    color: $head-text-color;
 
     .menu-icon {
         display: none;
