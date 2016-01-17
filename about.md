@@ -15,4 +15,6 @@ You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://gi
 
 The fonts used in this blog are from Donald Knuth's Computer Modern family and can be found at [checkmyworking.com/cm-web-fonts](http://checkmyworking.com/cm-web-fonts/).
 
+Headings are in the font TeX Gyre Adventor.
+
 The background colour of this blog is Cosmic Latte.
