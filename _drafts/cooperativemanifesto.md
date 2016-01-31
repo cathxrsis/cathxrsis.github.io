@@ -8,9 +8,11 @@ tags:
 - Cooperativism
 comments: true
 ---
-There's a spectre hanging over Earth, the spectre of solidarity.
+There is something very wrong with the current system. 
+
+<!-- more -->
+
+It wasn't always like this, after world war two, the men who came back from the war decided that enough was enough the labour movement the cooperative movement communism socialism marxism keynsianism pickettism
 
 
-
-
-**WORKERS OF THE WORLD, COOPERATE.**
+**WORKERS OF THE WORLD, CO-OPERATE.**
