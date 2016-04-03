@@ -2,13 +2,13 @@
 layout: post
 title: "The Cooperative Manifesto"
 date: 2015-07-23
-description: There's a spectre hanging over Earth...
+description: There's a spectre hanging over Europe
 tags:
 - Politics
 - Cooperativism
 comments: true
 ---
-There is something very wrong with the current system. 
+There is something very wrong with the current system.
 
 <!-- more -->
 

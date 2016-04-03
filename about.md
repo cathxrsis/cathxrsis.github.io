@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <div class="avatar">
-  <img src="/assets/images/tom.png" alt='Tom' >
+  <img src="null" alt='Tom' >
 </div>
 
 **Tom Westbury** is an engineer located in the home counties. He has a fondness for skateboarding, left wing feminist politics, physics and motorcycle restoration.
@@ -16,5 +16,3 @@ You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://gi
 The fonts used in this blog are from Donald Knuth's Computer Modern family and can be found at [checkmyworking.com/cm-web-fonts](http://checkmyworking.com/cm-web-fonts/).
 
 Headings are in the font TeX Gyre Adventor.
-
-The background colour of this blog is Cosmic Latte.
