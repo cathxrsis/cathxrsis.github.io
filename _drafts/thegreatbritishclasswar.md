@@ -10,9 +10,4 @@ tags:
 comments: true
 ---
 
-As a nation we don't like the idea of class. 
-
-
-## The Modern Working Class
-
-## Class Hatred & Disgust
+The end of the first world war saw the end of religion and imperialsms cold hard grip on the earth.

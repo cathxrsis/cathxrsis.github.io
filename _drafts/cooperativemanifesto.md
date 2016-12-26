@@ -9,6 +9,9 @@ tags:
 comments: true
 ---
 
+There is a spectre hanging over Europe, the spectre of
+
+Marx was a great thinker, possibl
 
 <!-- more -->
 
