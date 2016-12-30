@@ -15,4 +15,4 @@ You can find the source code for Jekyll at their [Github page.](https://github.c
 
 The fonts used in this blog are from Donald Knuth's Computer Modern family and can be found at [checkmyworking.com](http://checkmyworking.com/cm-web-fonts/).
 
-Headings are in the font TeX Gyre Adventor.
+Headings are in the font TeX Gyre Adventor; part of the TeX Gyre collection of fonts that can be found [here](http://www.gust.org.pl/projects/e-foundry/tex-gyre).
