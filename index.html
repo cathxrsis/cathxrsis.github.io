@@ -4,8 +4,6 @@ layout: default
 
 <div class="home">
 
-  <div class="w3-third">
-
     <header class="post-header" align="right">
       {% for post in site.posts limit:1 %}
       <h1 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
@@ -14,10 +12,6 @@ layout: default
 
       <p class="post-description" align="right">{{post.description}}</p>
       <p class="post-meta" align="right">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif   %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
-
-  </div>
-
-  <div class="w3-twothird">
 
       <div class="post-excerpt">
       {{ post.content | split: '<!-- more -->' | first }}
@@ -36,8 +30,6 @@ layout: default
     </ul>
     {% endif %}
     {% endfor %}
-
-  </div>
 
   </header>
 
