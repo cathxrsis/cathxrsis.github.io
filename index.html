@@ -10,7 +10,7 @@ layout: default
 
       {% if post.description %}
 
-      <p class="post-description" align="right">{{post.description}}</p>
+      <p class="post-description" align="left">{{post.description}}</p>
       <p class="post-meta" align="right">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif   %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
 
       <div class="post-excerpt">

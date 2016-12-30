@@ -8,7 +8,7 @@ permalink: /about/
   <img src="/assets/images/tom.jpg" alt='Tom' >
 </div>
 
-**Tom Westbury** is an engineer located in the home counties. He has a fondness for Engineering, left wing feminist politics, and physics.
+**Tom Westbury** is an engineer located in the home counties.
 
 This blog was hacked together from bits of old code using Jekyll.
 You can find the source code for Jekyll at their [Github page.](https://github.com/jekyll/jekyll)
