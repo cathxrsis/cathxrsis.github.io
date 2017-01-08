@@ -6,18 +6,24 @@ layout: default
 
   <div class="w3-third">
 
-    <header class="post-header" align="right">
-      {% for post in site.posts limit:1 %}
-      <h1 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
+    <div class="avatar">
+      <img src="/assets/images/tom.jpg" alt='Tom' >
+    </div>
 
-      {% if post.description %}
-
-      <p class="post-description" align="right">{{post.description}}</p>
-      <p class="post-meta" align="right">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif   %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
-
+  <!---
+--->
   </div>
 
   <div class="w3-twothird">
+
+    <header class="post-header" align="right">
+        {% for post in site.posts limit:1 %}
+        <h1 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
+
+        {% if post.description %}
+
+        <p class="post-description" align="left">{{post.description}}</p>
+        <p class="post-meta" align="left">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif   %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
 
       <div class="post-excerpt">
       {{ post.content | split: '<!-- more -->' | first }}
@@ -44,6 +50,18 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts limit:2 offset:1 %}
       <li>
+
+        <div class="w3-third">
+
+          <div class="avatar">
+            <img src="/assets/images/tom.jpg" alt='Tom' >
+          </div>
+
+        <!---
+      --->
+        </div>
+
+        <div class="w3-twothird">
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
@@ -52,6 +70,8 @@ layout: default
         <p class="post-meta"><a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a></p>
         {% endif %}
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div>
+
       </li>
     {% endfor %}
   </ul>

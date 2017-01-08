@@ -133,10 +133,10 @@
 
 //END OF FONTS
 
-$base-font-family: Computer Modern Serif; //Roman Font
-$head-font-family: TeX Gyre Adventura; //TeX Gyre Heros;			Grotesque Font
-$part-font-family: TeX Gyre Adventura;	//Geometric Font
-$code-font-family: Computer Modern Typewriter;
+$base-font-family: 'Computer Modern Serif'; //Roman Font
+$head-font-family: 'TeX Gyre Adventura'; //TeX Gyre Heros;			Grotesque Font
+$part-font-family: 'Computer Modern Serif';//TeX Gyre Adventura;	//Geometric Font
+$code-font-family: 'Computer Modern Typewriter';
 $base-font-size:   18px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
