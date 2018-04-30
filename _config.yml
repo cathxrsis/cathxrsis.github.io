@@ -1,8 +1,8 @@
 # Site settings
-title: Westbury's Weblog.
-tagline:
+title: "{The Category of Systems}"
+tagline: Systems thinking and dialectics
 email: tomwestbury1@gmail.com
-description:
+description: A place on the internet where anyone who cares to can read my occasional brain dumps. Here you will find posts and essays centred around systems engineering, the maths and philosophy behind it, and its applications.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://blog.cathxrsis.co.uk" # the base hostname & protocol for your site
 twitter_username: cathxrsis

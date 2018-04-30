@@ -3,29 +3,25 @@ layout: page
 title: Archive
 permalink: /archive/
 ---
-<p> Welcome to the Archives, here you will find a list of all the posts from this blog. Browse by <a href="#ptags">tag</a> or by <a href="#pdates">date</a>.</p>
 
-<h2 id="pdates">Browse by Date</h2>
-<div class="search-results">
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-          <p><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <p><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
 
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></p>
+            <p><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></p>
 
           <p class="post-description"> {{post.description}} </p>
+
+          <div class="post-excerpt">
+          {{ post.content | split: '<!-- more -->' | first }}
+          </div>
+
+          {% if post.comments %}
+          <p class="post-meta"><a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a></p>
+          {% endif %}
+
+
     </li>
       {% endfor %}
   </ul>
-</div>
-
-<h2 id="ptags" >Browse by Tags (In the works)</h2>
-<ul class="tag-list">
-  {% for tag in site.tags %}
-    <li> {{ tag.first }} </li>
-  {% endfor %}
-</ul>
-<div class="tag-results">
-
-</div>
