@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-
 <div class="avatar">
   <img src="/assets/images/tom.jpg" alt='Tom' >
 </div>

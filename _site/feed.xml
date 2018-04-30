@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{The Category of Systems}</title>
+    <description>A place on the internet where anyone who cares to can read my occasional brain dumps. Here you will find posts and essays centred around systems engineering, the maths and philosophy behind it, and its applications.</description>
+    <link>http://blog.cathxrsis.co.uk/</link>
+    <atom:link href="http://blog.cathxrsis.co.uk/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 30 Apr 2018 15:32:28 +0100</pubDate>
+    <lastBuildDate>Mon, 30 Apr 2018 15:32:28 +0100</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Cutting Class</title>
+        <description>&lt;p&gt;The class (or the block for you strange SysML lot) is an ubiquitous concept when dealing with any object-oriented language. If, like myself, you first encountered objects through the C family of languages, you’ll already know how classes act as a ‘type’ for objects.&lt;/p&gt;
+
+&lt;p&gt;In fact, in languages such as UML, it is impossible to utilise inheritance and all the lovely related stuff without it. But what if I told you that there are languages out there that have inheritance, polymorphism and all that lovely stuff without having the need for classes?&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;JavaScript is one such language. JavaScript has a strange and interesting inheritance system known as prototypal (or prototypical) inheritance. In this system there are only objects; objects that inherit from other objects. To explore how this works we’ll first jump into what we know, a classical Javaesque inheritance system.&lt;/p&gt;
+
+&lt;p&gt;For example lets say Digby is of class Dog as shown in the UML diagram:&lt;/p&gt;
+
+&lt;p&gt;Spud, his golden labrador friend is also of class Dog but Tabby, his mortal enemy, is of class cat:&lt;/p&gt;
+
+&lt;p&gt;Both dogs and cats are animals so we can add an inheritance link back to the animal class. This completes our small classical heirarchy:&lt;/p&gt;
+
+&lt;p&gt;As you can see from the diagram there are now 6 elements in this simple UML model. Now lets imagine that this heirarchy is prototypal.&lt;/p&gt;
+
+&lt;h2 id=&quot;class-struggle&quot;&gt;Class struggle&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;The history of all hithero existing OOP languages is the history of class struggles&lt;/em&gt;
+- Karl Marx (paraphrased)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Object inheritance was introduced in @@&lt;/p&gt;
+
+&lt;p&gt;If they are not needed, why were classes added to programming languages in the first place? Well, simply put, classes are fast. Having a class acts as a template for the compiler allows for optimisations. This makes the usage of classical inheritance important in situations where a programme deals with large amounts of objects.&lt;/p&gt;
+
+&lt;p&gt;In a prototypal system the compiler has to be more intelligent and in languages that support both (such as ECMAScript 2016) it can be shown that working with classes is a lot faster. But this argument doesn’t really hold for modelling languages like UML and SysML. My guess is that the architects of these languages were used to the classical system at this point, during the 90’s Java, C++ and C# ruled; JavaScript was just a language for making websites more fun.&lt;/p&gt;
+
+&lt;h2 id=&quot;balance-and-composure&quot;&gt;Balance and composure&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Favour composition over class inheritance&lt;/em&gt;
+- The infamous GoF&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So how&lt;/p&gt;
+</description>
+        <pubDate>Tue, 27 Mar 2018 00:00:00 +0100</pubDate>
+        <link>http://blog.cathxrsis.co.uk/2018/03/27/Prototypical-UML.html</link>
+        <guid isPermaLink="true">http://blog.cathxrsis.co.uk/2018/03/27/Prototypical-UML.html</guid>
+        
+        <category>Systems Engineering</category>
+        
+        <category>modelling</category>
+        
+        <category>SysML</category>
+        
+        <category>UML</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Blog Under Construction</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;This is a short paragraph to test the various features of the build.&lt;/li&gt;
+  &lt;li&gt;This text is &lt;em&gt;Emphasised&lt;/em&gt;. And this is &lt;strong&gt;Stronger&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;This is the beginning of some code:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;code&gt;public static int main()
+  {
+    printf(&#39;hello world!&#39;)
+    return 0;
+  }&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;And this is a bit of LaTeX maths:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; \frac{a}{b^{2}} = x^{i}y_{i} &lt;/script&gt;
+
+&lt;p&gt;```Let Factory = () =&amp;gt; &lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Apr 2016 00:00:00 +0100</pubDate>
+        <link>http://blog.cathxrsis.co.uk/2016/04/03/rederocorating.html</link>
+        <guid isPermaLink="true">http://blog.cathxrsis.co.uk/2016/04/03/rederocorating.html</guid>
+        
+        <category>Personal</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Blog Under Construction</title>
+        <description>
+</description>
+        <pubDate>Sun, 03 Apr 2016 00:00:00 +0100</pubDate>
+        <link>http://blog.cathxrsis.co.uk/2016/04/03/an-apology.html</link>
+        <guid isPermaLink="true">http://blog.cathxrsis.co.uk/2016/04/03/an-apology.html</guid>
+        
+        <category>Personal</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
