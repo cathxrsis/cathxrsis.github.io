@@ -2,10 +2,11 @@
 layout: post
 title: "Blog Under Construction"
 date: 2016-04-03
+effort: 2mins
 description: We're having a bit of a redecoration. Please bear-with.
 tags:
 - Personal
-comments: false
+comments: true
 ---
 
 * This is a short paragraph to test the various features of the build.
@@ -24,4 +25,4 @@ comments: false
 
 $$ \frac{a}{b^{2}} = x^{i}y_{i} $$
 
-  ```Let Factory = () => 
+  ```Let Factory = () => ({produce : 'chocolate'});```

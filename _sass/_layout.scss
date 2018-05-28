@@ -136,6 +136,7 @@
 
 .footer-heading {
     font-size: 18px;
+    font-weight: bold;
     margin-bottom: $spacing-unit / 2;
     text-align: center;
 }
@@ -148,7 +149,6 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -290,6 +290,9 @@
 }
 .post-description {
 
+  color: $text-color;
+  font-size: 30px;
+  font-family: $quote-font-family;
   font-style: italic;
   text-align: center;
 
