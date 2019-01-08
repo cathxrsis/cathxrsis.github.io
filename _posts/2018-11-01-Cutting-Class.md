@@ -36,6 +36,8 @@ From experience, one of the hardest notions to teach new systems modellers is th
 
 The constraint of requiring a class element for every new class of objects is not just a harmless inconveniece for the modelling community. Every element in a model takes up space in memory. The inclusion of classes in the language increases this @@
 
+The constraint of requiring a class element for every new class of objects is not just a harmless inconveniece for the modelling community.
+
 
 
  - Ultimately modelling languages are human consumable, not machine consumable
