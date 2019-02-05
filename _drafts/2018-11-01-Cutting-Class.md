@@ -24,6 +24,10 @@ One of the elegant things about prototypal inheritance is that it can be used to
 
 Proof by elegance is hardly a compelling argument for why a solution should be used though. To make the case for prototypal inheritance we must show that it solves the day to day problems of modellers in a simpler, more intuitive way.
 
+The first major improvement to our workflow that prototypal inheritance provides is a reduction in complexity to class heirarchies. We tend to think of class heirarchies in terms of only the classes and forget that each object on the end of it is a leaf node. For models with large numbers of 
+
+One problem that tends to afflict SysML modellers is the single-use class. Single use classes are @@. From experience, the vast majority of classes are single use.
+
 ## Class struggle
 
 > *The history of all hithero existing object-oriented design is the history of class struggle*
