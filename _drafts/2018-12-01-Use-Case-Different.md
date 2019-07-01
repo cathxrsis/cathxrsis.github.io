@@ -12,20 +12,37 @@ tags:
 comments: true
 ---
 
-Use case analysis is usually the first port of call for developing any new system, from a new app to a new service. We've become used to the familiar use case diagram showing stick men actors linked to bubble use cases within a system boundary box. But how do we interpret this semantically? Use cases themselves are classifiers in UML/SysML so we can assume that this diagram shows that each use case is communicating with an actor. Does this mean that the use case is somehow an aspect of the system? does the system under development somehow inherit the use case behaviour? In this post I'll propose a different way of modelling Use Case diagrams in UML/SysML which, in my own humble opinion, seems more semantically elegant.
+@@introduced
 
 <!-- more -->
 
-Firstly let's ask what ISO reckon's a use case is. The ISO definition of a use case is as follows: *"Description of the behavioral requirements of a system and its interaction with a user."*[1] This definition is rather hollow and doesn't get to the meat of what we know and love from UML.
+Use case analysis was developed as one of the main approaches to object-oriented software development in the 80s by Ivar Jacobson. In fact, Jacobson called his method Object-oriented software Engineering (OOSE). It was this method that introduced the stick men and bubble notation. When Jacobson was locked in a room at Rational software with Rumbaugh and Booch to make sure they came up with a unified notation for software, Jacobson's Objectory notation made it into the UML relatively unscathed. Thankfully, [Booch's class notation](https://www.slac.stanford.edu/BFROOT/www/doc/workbook_kiwi/coding/booch/class.html) didn't make the final cut.  
 
+To begin our exploration into how use cases
 
+> A description of the behavioral requirements of a system and its interaction with a user. [1]
 
-My own personal definition is a context where one or more stakeholders work with the SOI and other peer systems to achieve a goal. The aspect of the SOI that performs the functionality that achieves the goal can be known as a feature.
+> A description of a potential scenario in which a system receives an external request (such as user input) and responds to it. [2]
 
+> A list of actions or event steps typically defining the interactions between a role (known in the Unified Modeling Language (UML) as an actor) and a system to achieve a goal [3]
 
+@@
 
+None of these definitions really get to what a use case (the UML element) is though. In UML, the use case element acts like a proxy to the system under development. The use case is associated with its actors and is placed within a system boundary box (which ) 
 
+<![]()>
 
+Personally, I find it more semantically elegant to imagine use cases as a context; a microcosm of the universe where a set of actors interact with the system under development to achieve a goal. Entertaining this definition, it becomes clear that the association between a use case and an actor is now a composition relationship; actors exist and interact with our system within the scope of our use case. Another odd semantic that comes from this is that use cases must be composed of the system under development too which turns the original notation of use cases being within a system boundary on its head.
+
+The semantic elegance of this way of representing use cases really comes into its own when you represent the interactions in a use case with activities or sequences. Drawing any diagram within the @@
+
+Use cases used in this way also correspond well to the *main* variable in a Haskell program; my preferred method of system modelling is @@
+
+@@
 
 ## References
 [1] ISO/IEC/IEEE. 2011. *Systems and software engineering: Developing user documentation in an agile environment.* Geneva, Switzerland: International Organization for Standardization (ISO)/International Electrotechnical Commission (IEC)/ Institute of Electrical and Electronics Engineers (IEEE). ISO/IEC/IEEE 26515:2011.
+
+[2] From Wiktionary, Creative Commons Attribution/Share-Alike License.
+
+[3] https://en.wikipedia.org/wiki/Use_case
