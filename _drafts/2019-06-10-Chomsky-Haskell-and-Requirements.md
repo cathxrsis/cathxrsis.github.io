@@ -12,8 +12,6 @@ tags:
 comments: true
 ---
 
-This post was inspired by a talk I attended on IBM's Watson AI and its uses for requirements analysis.
-
 - ML is eq to turing machine
 - requirements need to be unambiguos
 - Linters

@@ -13,16 +13,22 @@ comments: true
 ---
 
 Progress is often a tricky subject in large organisations. Many engineers @@
+
+The story generally goes like this: an organisation has a *golden period*, makes some really good products or services and @@ After a few years the shine starts to wear off; with the same workers, processes, tools and methods the new products of the organisation begin to drop in quality and/or creep in price.
+
+- Symptoms - A luxury car is same order of magnitude of engineering time as a cheap one. If a company can only make luxury cars, its probably crap at engineering. 
+
 - everyone knows the solutions
 - management
 
 - Goal orientation fails because
 - Method orientation is good because
+- Continuous tension labour time
 - Beware the false synthesis
 
 # Beware the false synthesis!
 
-The false synthesis is an interesting idea when coming
+The false synthesis is an interesting idea when developing new processes for an organisation. A false synthesis is when changes are proposed that don't address the underlying contradictions in the dialectic.
 
 - The most important question is why? get down to the assumptions
 
