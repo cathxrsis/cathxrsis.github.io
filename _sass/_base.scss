@@ -67,6 +67,8 @@ img {
  */
 figure > img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 figcaption {
   font-size: $small-font-size;
