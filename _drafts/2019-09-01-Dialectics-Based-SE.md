@@ -16,9 +16,12 @@ Progress is often a tricky subject in large organisations. Many engineers @@
 
 The story generally goes like this: an organisation has a *golden period*, makes some really good products or services and @@ After a few years the shine starts to wear off; with the same workers, processes, tools and methods the new products of the organisation begin to drop in quality and/or creep in price.
 
-- Symptoms - A luxury car is same order of magnitude of engineering time as a cheap one. If a company can only make luxury cars, its probably crap at engineering. 
+- Alienation causes wars over need to be "the cause". People need to change the company.
+
+- Symptoms - A luxury car is same order of magnitude of engineering time as a cheap one. If a company can only make luxury cars, its probably crap at engineering.
 
 - everyone knows the solutions
+
 - management
 
 - Goal orientation fails because

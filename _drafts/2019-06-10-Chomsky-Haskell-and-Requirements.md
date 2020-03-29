@@ -1,18 +1,27 @@
 ---
 layout: post
-title: "A New Look at Use Cases"
+title: "Requirements"
 date: 2018-11-01
 description: A few thoughts on a different way of thinking about and modelling Use Cases using SysML/UML.
-effort: 10min
+effort: 5min
 tags:
 - Systems Engineering
-- modelling
-- SysML
-- UML
+- Requirements
+
 comments: true
 ---
+
+Requirements have always been the bread-and-butter of systems engineering. They are the base currency upon which the systems process operates on. We produce them on the left hand side of the V and we test against them on the right. 
+
+# Language
+The EARS requirements system is now 10 years old
+
+# Atomicity
+One rule in requirements
 
 - ML is eq to turing machine
 - requirements need to be unambiguos
 - Linters
 - WHere could AIs be used?
+
+# Conclusion
