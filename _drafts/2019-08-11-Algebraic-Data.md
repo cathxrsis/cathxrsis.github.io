@@ -13,16 +13,7 @@ comments: true
 
 This post is an introduction to an incredibly powerful pattern that is quite well established in the functional programming world but doesn't seem to have percolated back to the OOP world, let alone modelling. Interestingly enough this pattern is all about abstracting away from the way computers handle data values and bringing it up to a more human friendly level. This pattern is known as the Algebraic Data Type.
 
-The name "algebraic data type" tends to conjure up complex mathematical stuff but all it really means is that this pattern enbles the user to define new data types as the "sum" or "product" of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type
-The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types.
-
-A nice introduction to this concept can be found in the guide to the Elm programming language: [Types as Sets](https://guide.elm-lang.org/appendix/types_as_sets.html)
-
-Surprisingly, this pattern turns out to be relatively easy to replicate in UML/SysML with only a small amount of extra modelling.@@
-
-What is a data type? In software engineering, Data Types act like a translation rule between bits in the memory and some useful meaning to the user.
-
-In UML terms, however, a data type is defined as a classifier whose instances are anonymous. This means that
+What is a data type? In software engineering, Data Types act like a translation rule between bits in the memory and some useful meaning to the user. In UML terms, however, a data type is defined as a classifier whose instances are anonymous. This means that its just a class with unnamed objects. @@
 
 The current base data types of UML are:
 
@@ -33,6 +24,14 @@ The current base data types of UML are:
 - ordered set
 - bag
 - sequence
+
+The name "algebraic data type" tends to conjure up complex mathematical stuff but all it really means is that this pattern enbles the user to define new data types as the "sum" or "product" of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type
+The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types.
+
+A nice introduction to this concept can be found in the guide to the Elm programming language: [Types as Sets](https://guide.elm-lang.org/appendix/types_as_sets.html)
+
+Surprisingly, this pattern turns out to be relatively easy to replicate in UML/SysML with only a small amount of extra modelling.@@
+
 
 ## Failure in the system
 
