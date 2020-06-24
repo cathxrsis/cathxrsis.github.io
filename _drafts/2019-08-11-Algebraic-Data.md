@@ -15,25 +15,12 @@ This post is an introduction to an incredibly powerful pattern that is quite wel
 
 What is a data type? In software engineering, Data Types act like a translation rule between bits in the memory and some useful meaning to the user. In UML terms, however, a data type is defined as a classifier whose instances are anonymous. This means that its just a class with unnamed objects (the objects are unnamed as they correspond to values). @@
 
-The current base data types of UML are:
-
-- Primitive
-- Enumeration
-- Structure
-- set
-- ordered set
-- bag
-- sequence
-
-
-
 The name "algebraic data type" tends to conjure up complex mathematical stuff but all it really means is that this pattern enbles the user to define new data types as the "sum" or "product" of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type has values that are a combination of two or more other types. These are known as tuples when the constituent values are not named and are called structures or records when the constituent values are named.
 The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types.
 
 A nice introduction to this concept can be found in the guide to the Elm programming language: [Types as Sets](https://guide.elm-lang.org/appendix/types_as_sets.html)
 
-Surprisingly, this pattern turns out to be relatively easy to replicate in UML/SysML with only a small amount of extra modelling.@@
-
+Unfortuntely this pattern is not easy to replicate in UML/SysML due to the low level of abstraction that the data types have. In this respect, UML is a good example of how @@
 
 ## Failure in the system
 
@@ -77,13 +64,13 @@ To illustrate how this would be used in Haskell, the SafeDivide operation would 
 
 The first line tells us that safeDivide is a function that takes two integers and returns a Maybe Int. The second line tells us to return Nothing if the denominator is 0 and not worry about the numerator in this case (an underscore in Haskell means any value). The third line tells us that for all other input pairs, return the division wrapped in a Just. The next function can then check to see if the input is a Nothing or a Just and act accordingly.
 
-A great introduction to this programming pattern is the slide show on "Railway Oriented Programming" on [F# for fun and profit](https://fsharpforfunandprofit.com/rop/).
+A great introduction to this programming pattern is the slide show on "Railway Oriented Programming" on [F# for fun and profit](https://fsharpforfunandprofit.com/rop/). If you have a play with functions of the type ``` a -> Maybe a ``` you'll probably quickly come up against a few problems of how to chain them together. This is especially true if you're trying to concatenate errors with ```Maybe```'s cousin, ```Either```. To solve these problems we'll have to learn about more patterns such as Functors, Applicative Functors and Monads which are out of the scope of this post but I promise I'll cover them at a later date!
 
 ## Baking in ADTs
 
 Lets imagine that we could design ADTs within UML, such as the Maybe type, what could the syntax look like? As we discussed earlier, to create ADTs, we require the ability to define new data types as the sum of two others or the product of two others. In the UML spec, he values that primitive data types can take along with any mathematical functions defined is considered outside of the scope of UML. I'm going to contend this and say that these things should be well within the scope of UML as these values and allowed functions can be critical to the behaviour of any software or system design.
 
-As a starting point, lets base our data types on set theory. 
+As a starting point, lets base o @@
 
 ## Generalising it all
 
