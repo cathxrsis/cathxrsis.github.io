@@ -12,7 +12,7 @@ comments: true
 ---
 
 I've noticed something strange about the way I talk to voice assistants, perhaps you've noticed it too? Instead of the way I'd politely ask my girlfriend:
-> "Pop the light on, would you?"
+> "Could you pop the light on [REDACTED PET NAME]"
 
 I end up saying:
 > "Turn living room light on."
