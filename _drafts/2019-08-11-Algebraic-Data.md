@@ -15,19 +15,23 @@ This post is an introduction to an incredibly powerful pattern that is quite wel
 
 Before we talk about algebraic data types, lets ask what is a data type? In software engineering, Data Types act like a translation rule between bits in the memory and some useful meaning to the user. Depending on the level of your programming language, data types abstract away the actual bits and bytes in the memory being used to store your data and provide you with meaningful values such as integers, characters and strings. Some data types though force you to think a little harder about the implementation, misunderstanding floating point arithmetic has lead to a number of high profile failures including a [friendly fire incident of a missile system!](https://en.wikipedia.org/wiki/Round-off_error#Real_world_example:_Patriot_missile_failure_due_to_magnification_of_roundoff_error).
 
+There are a few categories of programming languages on how their designs treat types which I'll quickly describe before we carry on. Some programming languges are weakly typed. In these languages a programmer can feed any value int oany function and the runtime will handle the errors if there are any. Lisp, Python and Javascipt all live in this family. Other languages are strongly typed. This mean that the language's functions can only be used on a variable if the types match up. Having strong types means that the compiler prevents you from feeding values into functions that don't know what to do with them which prevents runtime errors by sacrificing some compiler efficiency. Examples of this are C (although casting allows you to be very cheeky with types), Java and the most rigid of the bunch, Ada. UML lives in this family too. Finally, it is worth mentioning that there are even more modern languages that have type systems (notably the Hindly-Milner type system) where the compiler can infer the required type signatures of function definitions. This is a significant advantage over languages such as Ada where a lot of type boilerplate code is required. Notable examples in this family are Haskell and OCaml.
 
-In UML terms, however, a data type is defined as a classifier whose instances are anonymous. This means that its just a class with unnamed objects (the objects are unnamed as they correspond to values). UML gives us three kinds of data types: structured data types (a name given to any type that contains an attribute of another type) primitives and enumerations. Enumeration is an interesting choice of name because it @@ Primitive data types are a UML cop-out @@ 
+In UML terms, however, a data type is defined as a classifier whose instances are anonymous. This means that its just a class with unnamed objects (the objects are unnamed as they correspond to values). UML gives us three kinds of data types: structured data types (a name given to any type that contains an attribute of another type) primitives and enumerations. Enumeration is an interesting choice of name because it evoques the underlying mechanism of the abstraction (though ws problably chosen to match enumeration types in C, a decision mirrored in the Rust programming language). Primitive data types are a UML cop-out:
 
+> A PrimitiveType defines a predefined DataType, without any substructure. A PrimitiveType may have algebra and operations defined outside of UML, for example, mathematically. The run-time instances of a PrimitiveType are values that correspond to mathematical elements defined outside of UML (for example, the Integers).
+
+## Algebraic Data Types
 
 The name "algebraic data type" tends to conjure up complex mathematical stuff but all it really means is that this pattern enbles the user to define new data types as the "sum" or "product" of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type has values that are a combination of two or more other types. These are known as tuples when the constituent values are not named and are called structures or records when the constituent values are named. In UML this is just the structured data type.
 
-The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types.
+The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types. In UML enumeration data types can be thought as the union of each of its enumeration literals. UML enumeration literals are @@ Some modellers try and get aound this by 
 
 A nice introduction to this concept can be found in the guide to the Elm programming language: [Types as Sets](https://guide.elm-lang.org/appendix/types_as_sets.html)
 
 ## Failure in the system
 
-To introduce algebraic data types, lets investigate a common systems engineering problem; how to represent failure in the system. Imagine an operation in a model that divides two real numbers. In a UML model we would see something like this in the browser:  
+To introduce the usefulness of algebraic data types, lets investigate a common systems engineering problem; how to represent failure in the system. Imagine an operation in a model that divides two real numbers. In a UML model we would see something like this in the browser:  
 
     Divide(a : real, b : real) : real
 
@@ -49,7 +53,7 @@ This time we will pick an unused value of the data type to represent the failure
 
 ### 3) Use the Maybe pattern
 
-The maybe pattern (or option type) is a pattern @@
+The maybe pattern (or option type) is a pattern that utilises @@
 
 @@IMAGE
 
