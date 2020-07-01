@@ -13,19 +13,27 @@ comments: true
 
 This post is an introduction to an incredibly powerful pattern that is quite well established in the functional programming world but doesn't seem to have percolated back to the OOP world, let alone modelling. Interestingly enough this pattern is all about abstracting from the way computers handle data values and bringing data description up to a more human friendly level. This pattern is known as the Algebraic Data Type.
 
+<!-- more -->
+
 Before we talk about algebraic data types, lets ask what is a data type? In software engineering, Data Types act like a translation rule between bits in the memory and some useful meaning to the user. Depending on the level of your programming language, data types abstract away the actual bits and bytes in the memory being used to store your data and provide you with meaningful values such as integers, characters and strings. Some data types though force you to think a little harder about the implementation, misunderstanding floating point arithmetic has lead to a number of high profile failures including a [friendly fire incident of a missile system!](https://en.wikipedia.org/wiki/Round-off_error#Real_world_example:_Patriot_missile_failure_due_to_magnification_of_roundoff_error).
 
-There are a few categories of programming languages on how their designs treat types which I'll quickly describe before we carry on. Some programming languges are weakly typed. In these languages a programmer can feed any value int oany function and the runtime will handle the errors if there are any. Lisp, Python and Javascipt all live in this family. Other languages are strongly typed. This mean that the language's functions can only be used on a variable if the types match up. Having strong types means that the compiler prevents you from feeding values into functions that don't know what to do with them which prevents runtime errors by sacrificing some compiler efficiency. Examples of this are C (although casting allows you to be very cheeky with types), Java and the most rigid of the bunch, Ada. UML lives in this family too. Finally, it is worth mentioning that there are even more modern languages that have type systems (notably the Hindly-Milner type system) where the compiler can infer the required type signatures of function definitions. This is a significant advantage over languages such as Ada where a lot of type boilerplate code is required. Notable examples in this family are Haskell and OCaml.
+There are a few categories of programming languages on how their designs treat types which I'll quickly describe before we carry on. Some programming languges are weakly typed. In these languages a programmer can feed any value int oany function and the runtime will handle the errors if there are any. Lisp, Python and Javascipt all live in this family. Other languages are strongly typed. This mean that the language's functions can only be used on a variable if the types match up. Having strong types means that the compiler prevents you from feeding values into functions that don't know what to do with them which prevents runtime errors by sacrificing some compiler efficiency. Examples of this are C (although casting allows you to be very cheeky with types), Java and the most rigid of the bunch, Ada. UML lives in this family too.
+
+Finally, it is worth mentioning that there are even more modern languages that have type systems (notably the Hindly-Milner type system) where the compiler can infer the required type signatures of function definitions. This is a significant advantage over languages such as Ada where a lot of type boilerplate code is required. Notable examples in this family are Haskell and OCaml.
 
 In UML terms, however, a data type is defined as a classifier whose instances are anonymous. This means that its just a class with unnamed objects (the objects are unnamed as they correspond to values). UML gives us three kinds of data types: structured data types (a name given to any type that contains an attribute of another type) primitives and enumerations. Enumeration is an interesting choice of name because it evoques the underlying mechanism of the abstraction (though ws problably chosen to match enumeration types in C, a decision mirrored in the Rust programming language). Primitive data types are a UML cop-out:
 
-> A PrimitiveType defines a predefined DataType, without any substructure. A PrimitiveType may have algebra and operations defined outside of UML, for example, mathematically. The run-time instances of a PrimitiveType are values that correspond to mathematical elements defined outside of UML (for example, the Integers).
+> A PrimitiveType defines a predefined DataType, without any substructure. A PrimitiveType may have algebra and operations defined outside of UML, for example, mathematically. The run-time instances of a PrimitiveType are values that correspond to mathematical elements defined outside of UML (for example, the Integers). [1]
+
+Part of the argument that I will try to convey in this post (but mainly the future one on typeclasses) is that knowing the possible values that a data type can take and what functions can be performed upon it are not only a critical part of a design but we can use UML/SysML model checking to ensure that we're not introducing errors @@ This blog post will introduce algebraic data types through a motivating example and a notation for defining them in UML to begin this journey.
 
 ## Algebraic Data Types
 
-The name "algebraic data type" tends to conjure up complex mathematical stuff but all it really means is that this pattern enbles the user to define new data types as the "sum" or "product" of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type has values that are a combination of two or more other types. These are known as tuples when the constituent values are not named and are called structures or records when the constituent values are named. In UML this is just the structured data type.
+The name "algebraic data type" tends to conjure up images of complex maths but its simply and abstract pattern to enable us to define new data types as the "sum" or "product" of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type has values that are a combination of two or more other types. These are known as tuples when the constituent values are not named and are called structures or records when the constituent values are named. In UML this is just the structured data type.
 
-The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types. In UML enumeration data types can be thought as the union of each of its enumeration literals. UML enumeration literals are @@ Some modellers try and get aound this by 
+The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types. In UML enumeration data types can be thought as the union of each of its enumeration literals. UML enumeration literals are @@ Some modellers try and get around this by using inheritance as a means to show that a data type can be either one value or another. The problem in this case is that the "input" data types to the sum cannot exist independently of the "output" (the super class) which does not convey the desired information to the reader of the model.
+
+@@INHERITANCEIMAGE
 
 A nice introduction to this concept can be found in the guide to the Elm programming language: [Types as Sets](https://guide.elm-lang.org/appendix/types_as_sets.html)
 
@@ -45,11 +53,13 @@ This solution just adds a seperate failure propagation output to the function. @
 
 @@IMAGE
 
-It doesn't take much extrapolation to see how quickly this would get completely out of hand, doubling up all of the lines on your diagram. @@
+It doesn't take much extrapolation to see how quickly this would get completely out of hand, doubling up all of the lines on your diagram.
 
 ### 2) Pick an arbitrary value to represent the failure
 
 This time we will pick an unused value of the data type to represent the failure. This is often the favoured approach of simulink engineers. If your data type is an int, enumerate your failures from 255 back &c. This is most likely how a good compiler will implement your software error propagations anyway, but it doesn't preserve the meaning inside the model in a meaningful way. It defeats the point of modelling somewhat as it forces the reader to think further down the abstraction layers. It also causes problems if the value range of the data type has to change.
+
+This method is also a step back from the first option in terms of reusability 
 
 ### 3) Use the Maybe pattern
 
@@ -108,3 +118,7 @@ You're probably looking at the above image right now and already thinking why sh
 As an exercise, why don't you try this out yourself and create a diagram to define a binary tree of integers using just the elements described in this section?
 
 Next time in this series I'll talk a little more about how we can generalise these data types for even greater reuse value: Data type constructors and type classes. These are the tools that we can use to create versions of maybes and eithers that can be strung together to allow us to specify systems more abstractly without having to rely on C, C++ and Java language constructs.
+
+## References
+
+[1] OMG 2017 *OMG&trade; Unified Modeling Language&trade; (OMG UML&trade;) Version 2.5.1* http://www.omg.org/spec/SysML/1.4/
