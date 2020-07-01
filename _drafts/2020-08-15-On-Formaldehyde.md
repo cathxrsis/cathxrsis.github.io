@@ -27,12 +27,14 @@ The question is never answered, to the characters in the story its rhetorical. I
 
 As a child, I went to a state comprehensive school built in the 70s. In the biology classrooms, between gaudy displays of mitosis backed with brightly coloured sugar paper were shelves with jars on. In these jars were frogs, small animals and organs. All of them a lifeless beige suspended in clear liquid. Formaldehyde. It struck me that not only were these lumps of meat dead, but in preserving their intricate structures, the formaldehyde had bleached the pigments from the specimens. Unlike the brightly patterned butterflies pinned behind glass in the other cabinets, the pickled specimens looked like they may have never been alive. The small yellowing label on each jar with the name of the species was the only clue to the fact that there was once a living being associated with each floating beige corpse.
 
-@@
+To create a pickled specimen, one has to enact violence. The animal has to be killed and drained of fluid. 
 
 We see this tendency in 
 
 ## The Green Place
 
-The green place is dead, toxic, drained of all life and colour. Without hope, Furiosa would have led the women to certain death into the aptly named plains of silence. In today's pickled society of 80's nostalgia, and cultural regurgitation, (In keeping, Mad Max itself is a revisit of an 80's cult series) Fury Road reminds us that we can't go back to the safety of childhood, and without hope we can only disappear into silence. @@ Life is change, holding onto what we've lost can only bring us death in the form of a pickled beige corpse of former society.
+The green place is dead, toxic, drained of all life and colour. Without hope, Furiosa would have led the women to certain death into the aptly named plains of silence. In today's pickled society of 80's nostalgia, and cultural regurgitation, (In keeping, Mad Max itself is a revisit of an 80's cult series) Fury Road reminds us that we can't go back to the safety of childhood, and without hope we can only disappear into silence. @@ Life is change, holding onto what we've lost can only bring us death in the form of the pickled beige corpse of the former society.
 
-From the past, Furiosa is given the seeds to build a new society and from Max, she is given hope. Furiosa does not hold @@
+From the past, Furiosa is given the seeds to build a new society. Furiosa does not clutch those seeds as relics like the Vulvalini, doomed to ride the plains of silence @@, she heroically brings them back to the citadel. This process @@
+
+As a society, we can learn from Furiosa and the women of the story; let us not clutch onto a dying system like Immortan Joe. Let us not be like the vuvalini either; clutching onto the seeds of the past @@ History hasn't ended, it hasn't even yet begun.
