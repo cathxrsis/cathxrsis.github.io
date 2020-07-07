@@ -25,13 +25,13 @@ In UML terms, however, a data type is defined as a classifier whose instances ar
 
 > A PrimitiveType defines a predefined DataType, without any substructure. A PrimitiveType may have algebra and operations defined outside of UML, for example, mathematically. The run-time instances of a PrimitiveType are values that correspond to mathematical elements defined outside of UML (for example, the Integers). [1]
 
-Part of the argument that I will try to convey in this post (but mainly the future one on typeclasses) is that knowing the possible values that a data type can take and what functions can be performed upon it are not only a critical part of a design but we can use UML/SysML model checking to ensure that we're not introducing errors @@ This blog post will introduce algebraic data types through a motivating example and a notation for defining them in UML to begin this journey.
+Part of the argument that I will try to convey in this post (but mainly the future one on typeclasses) is that knowing the possible values that a data type can take and what functions can be performed upon it are not only a critical part of a design but we can use UML/SysML model checking to ensure that we're not introducing errors: if you try to feed something of the wrong type into the wrong function in your UML model, letting the model pick that up saves some poor programmer having to try and implement contradictory requirements. This blog post will introduce algebraic data types through a motivating example and then explore a candidate notation for defining them in UML.
 
 ## Algebraic Data Types
 
 The name "algebraic data type" tends to conjure up images of complex maths but its simply and abstract pattern to enable us to define new data types as the "sum" or "product" of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type has values that are a combination of two or more other types. These are known as tuples when the constituent values are not named and are called structures or records when the constituent values are named. In UML this is just the structured data type.
 
-The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types. In UML enumeration data types can be thought as the union of each of its enumeration literals. UML enumeration literals are @@ Some modellers try and get around this by using inheritance as a means to show that a data type can be either one value or another. The problem in this case is that the "input" data types to the sum cannot exist independently of the "output" (the super class) which does not convey the desired information to the reader of the model.
+The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types. In UML enumeration data types can be thought as the union of each of its enumeration literals. UML enumeration literals are @@ Some modellers try and get around this by using inheritance as a means to show that a data type can be either one value or another. The problem in this case is that the "input" data types to the sum cannot exist independently of the "output" (the super class) which does not convey the desired information to the reader of the model. This is why we will need to introduce a new notation for this concept.
 
 @@INHERITANCEIMAGE
 
@@ -59,15 +59,12 @@ It doesn't take much extrapolation to see how quickly this would get completely 
 
 This time we will pick an unused value of the data type to represent the failure. This is often the favoured approach of simulink engineers. If your data type is an int, enumerate your failures from 255 back &c. This is most likely how a good compiler will implement your software error propagations anyway, but it doesn't preserve the meaning inside the model in a meaningful way. It defeats the point of modelling somewhat as it forces the reader to think further down the abstraction layers. It also causes problems if the value range of the data type has to change.
 
-This method is also a step back from the first option in terms of reusability 
+This method is also a step back from the first option in terms of reusability, if you are required to reuse this function in a context where the error value is required as part of the nominal range, you're going to have to define a new one with a new error value. This solution is a case of the antipattern "genetic disorder". If the implementor of the software is using a language like Haskell to code the solution (see below for the Haskell solution), you have forced their hand through the misuse of UML/SysML to create a solution in the software that is considered bad practice for that language. This happens a lot with UML when trying to implement specified behaviour in a different programming paradigm from OOP.
 
 ### 3) Use the Maybe pattern
 
-The maybe pattern (or option type) is a pattern that utilises @@
-
-@@IMAGE
-
-This may look a little clunky to the average UML modeller (though I its suggest still a better solution than the last two) but mainly because its a little bit of an abuse of the UML syntax. As a motivating example from a programming language with these concepts baked in, Haskell has a pretty elegant syntax for the Maybe concept:
+There's no diagram for this case as like case 2, we're embedding the concept of failure into the 
+As a motivating example from a programming language with these concepts baked in, Haskell has a pretty elegant syntax for the Maybe concept:
 
     Data Maybe a = Just a | Nothing
 
@@ -91,15 +88,15 @@ Lets imagine that we could design ADTs within UML, such as the Maybe type, what 
 
 Now we have made the extensions, we can use them to create definitions for all sorts of types:
 
-@@Product
+![product type](../assets/images/product.png)
 
-The name of the product relationship acts as the name of the "property" in the data type in a similar way to the way members of a class's names show on the composition association.
+Here we are using the normal composition relationship to show that this @@ The name of the product relationship acts as the name of the "property" in the data type in a similar way to the way members of a class's names show on the composition association.
 
-@@Sum
+![Sum type](../assets/images/sum.png)
 
 Again, the name of the union relationship acts as the name of the "property" of the data type, but in this case @@ 
 
-@@NaturalNumbers
+![Definition of the natural numbers](../assets/images/Nat.png)
 
 In this diagram, we are using the standard type theoretic inductive definition of the natural numbers. We can read this as: a natural number is either 0 or an increment of a natural number. This is probably the most simple type to define in this system but it shows how we can use ADTs to define data types from scratch within the language itself. Note the "Nothing" data type is a type with one value (Nothing) and is needed to make the algebra of algebraic data types an algebra (a semiring to be exact). There should also be an Empty type that acts as the identity of the union @@ You can think of Nothing as the set that contains emptiness @@
 
@@ -109,11 +106,15 @@ Let's think about this definition mathematically for a minute. What does this de
 
 Which is very much the definition of the natural numbers! Can we apply this sort of recursive definition to more exciting (and far more useful) data types? of course! Lets see how we can define the idea of a list inside of this profile:
 
-@@ListOfNaturalNumbers
+![List of Natural numbers](../assets/images/ListNats.png)
 
 In this diagram we have defined a list of natural numbers to show how even more interesting types can be defined. Here we can see that a Nat List is defined as either the empty list (another alias for the Nothing) or a product of a natural number (the head of the list) and a list of natural numbers (the tail of the list).
 
 You're probably looking at the above image right now and already thinking why should we have to define a new list type any time we need a list of things of a certain type. Especially when the pattern is such that we could replace the data type "Nat" on this diagram with any type that we could imagine (including other list types to make lists of lists). There is definitely an opening here to provide some abstraction and reuse value by creating "template" data types as we saw earlier with the Haskell maybe constructor. For now though I'll leave this for another blog post.
+
+@@MAYBE
+
+And finally, here's the definition of the MaybeReal used in the motivating example.
 
 As an exercise, why don't you try this out yourself and create a diagram to define a binary tree of integers using just the elements described in this section?
 
