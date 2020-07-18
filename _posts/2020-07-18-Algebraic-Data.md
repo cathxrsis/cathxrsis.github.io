@@ -87,15 +87,15 @@ Lets imagine that we could design ADTs within UML, such as the Maybe type, what 
 
 ![product type](../assets/images/product.png)
 
-Here we are using the normal composition relationship to show that this @@ The name of the product relationship acts as the name of the "property" in the data type in a similar way to the way members of a class's names show on the composition association.
+Here we are using the normal composition relationship to show that this type is a product of the two others. The name of the product relationship acts as the name of the "property" in the data type in a similar way to the way members of a class's names show on the composition association.
 
 ![Sum type](../assets/images/sum.png)
 
-Again, the name of the union relationship acts as the name of the "property" of the data type, but in this case @@ 
+In this case the data type is the sum of two others. This is a tagged union; the names on the sum association give us a tag that we can use to reference the values of the constituent types.
 
 ![Definition of the natural numbers](../assets/images/Nat.png)
 
-In this diagram, we are using the standard type theoretic inductive definition of the natural numbers. We can read this as: a natural number is either 0 or an increment of a natural number. This is probably the most simple type to define in this system but it shows how we can use ADTs to define data types from scratch within the language itself. Note the "Nothing" data type is a type with one value (Nothing) and is needed to make the algebra of algebraic data types an algebra (a semiring to be exact). There should also be an Empty type that acts as the identity of the union @@ You can think of Nothing as the set that contains emptiness @@
+In this diagram, we are using the standard type theoretic inductive definition of the natural numbers. We can read this as: a natural number is either 0 or an increment of a natural number. This is probably the most simple type to define in this system but it shows how we can use ADTs to define data types from scratch within the language itself. Note the "Unit" data type is a type with one value. This is needed to make the algebra of algebraic data types an algebra (a semiring to be exact). There should also be an Empty type that acts as the identity of the product type.
 
 Let's think about this definition mathematically for a minute. What does this definition actually say? Well, we can think of the nothing type as "0" and increment as "+1" so our natural numbers are:
 
