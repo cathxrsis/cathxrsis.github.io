@@ -28,6 +28,8 @@ In UML terms, however, a data type is defined as a classifier whose instances ar
 
 Part of the argument that I will try to convey in this post (but mainly the future one on typeclasses) is that knowing the possible values that a data type can take and what functions can be performed upon it are not a critical part of a UML/SysML design. This would enable use of UML/SysML model checking to ensure that we're not introducing type errors at the requirements level: if you try to feed something of the wrong type into the wrong function in your UML model, letting the model pick that up saves some poor programmer having to try and implement contradictory requirements. This blog post will introduce algebraic data types through a motivating example and then explore a candidate notation for defining them in UML.
 
+I personally object to this part of the standard and believe that types and their associated operations shouldbe brought into UML so that we can reason about which types best convey requirements and allow model checkers to catch type misuse errors. 
+
 ## Algebraic Data Types
 
 The name "algebraic data type" tends to conjure up images of complex maths but its simply and abstract pattern to enable us to define new data types as the "sum" or "product" of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type has values that are a combination of two or more other types. These are known as tuples when the constituent values are not named and are called structures or records when the constituent values are named. In UML this is just the structured data type.
