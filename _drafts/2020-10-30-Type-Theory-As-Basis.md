@@ -51,7 +51,7 @@ This isn't just a problem with UML though, it actually covers pretty much all pr
 
 ## Sets and Logic
 
-Set theory is a similar theory to type theory which is based upon the idea of sets. A set is a unique collection of objects that can be @@
+Set theory (or more formally ZFC Set Theory) is a foundational theory of maths; that is to say that all proven maths can be proven within the axioms and objects presented by ZFC. A set is a unique collection of objects that can be @@
 
 ## Correct by construction
 
@@ -80,7 +80,7 @@ If you can give ``con`` a proof of ``a`` and a proof of ``b``, ``con`` can give 
      curry : ((a, b) -> c) -> a -> b -> c
      uncurry : (a -> b -> c) -> (a,b) -> c
 
-This process of using this equivalence is known as *currying* after Haskell Curry. It becomes incredibly useful for reuse purposes. I'll explore usages of currying in SysML in a future blog post.
+This process of using this equivalence is known as *currying* after Haskell Curry. It becomes incredibly useful for reuse purposes. I'll explore usages of currying in SysML in a future blog post. For now, we can appreciate that it is soewhat of a tautology; the logical interpretation of ``a -> b -> c`` is: If you can give me a proof of ``a``, I can give you a proof of ``b -> c``. 
 
      efq : Void -> a
 
@@ -113,10 +113,16 @@ Category theory is missing a key part of what makes type theory though: the abil
 
 ### The holy trinity
 
-The approach to maths and computer science of using propositions as types, programmes as proofs and @@
+The approach to maths and computer science of using propositions as types, programmes as proofs and using category theory \& type theories together is known as computational trinitarianism. Category theory can only give us the "propositions as types" part of the equation but once we get type theory involved, we can express programmes that can act as proofs!
 
 Therefore, focussing solely on category theory for the basis of MBSE is not seeing the wood for the trees. Category theory may be the study of mathematical abstraction but type theory is the fire that breathes truth and interpretation into a category.
 
 So here is where I state the manifesto inherent in the title of this blog: I am calling for an end to the dichotomy between structure and proof; an end to the reliance on set theory as the basis of "truth" in the MBSE world. Let's replace our logic with judgements and evidence. I am calling for the construction of a category of systems!
 
 If you've stuck with me this far, you're probably the sort who's insterested in looking further. I wholeheartedly recommend diving into the Haskell and Idris programming languages which ignited my interest in this area of study. If you feel that you're ready for the bleeding edge of maths, I recommend the (Homotopy Type Theory book)[@@link]. It's a free download and I'm currently working my way through it (determinedly but slowly, I must admit) to see what treasures can be found inside for the future of systems engineering.
+
+## Conclusion: what needs to change? 
+
+First of all, its my belief that we could use a language like Idris to express our systems models completely and conherently in a way that could be easily validated. With a suitable base library (or a prelude as is called in Haskell descendents), Idris could easily be used as a specification language with mathematical proofs built in. The problem, of course, is that engineers like pictures, so Idris would need a graphical notation on top of it that could be something very UML or SysML like.
+
+UML and SysML, despite being supposedly language agnostic, are heavily Java oriented languages. A lot of the more imperative parts of UML could be transformed into a type theoretic setting but UML is so bloated with disconnected concepts that it might not be worth it.  

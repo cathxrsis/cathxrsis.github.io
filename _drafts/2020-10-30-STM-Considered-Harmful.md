@@ -39,11 +39,13 @@ Despite my clickbait title, I do not advocate for full removal of state machine 
 
 ### Expose the state
 
-Design your functionality so that the output value of your stateful functions *is* the state of the function. Model further behaviour as downstream functions. This will make errors in your state transitions far easier to spot.
+Design your functionality so that the output value of your stateful functions *is* the state of the function. Model further behaviour as downstream functions. This will make errors in your state transitions far easier to spot. To see how to stitch the exposed states together see my third point of tying behaviour together with activities.
 
 ### Break up nested or parallelised state machines
 
 This point is an extension of the previous one; if states are nested or are in parallel, which off the states do you expose and how? This question is easily avoided by disallowing nested states and parallel states. This is easy enough to say but sometimes there is no other simple way to specify the functionality. To answer this, we need a simple way to break up larger functions into smaller ones using the state machine deifinition of their behaviour.
+
+Nested states in a state machine become @@
 
 @@ Why and how to transform.
 
@@ -51,4 +53,6 @@ Following these methods of splitting out a big state machine into a set of small
 
 ### Tie it all together with activities
 
-Activity diagrams are my favourite diagrams in SysML. This bias is not without reason; activity diagrams are a great way to connect behaviours together. I plan to do a blog post about extending the power of activity diagrams in the future, so for now I will just talk about them in reference to state machines.
+Activity diagrams are my favourite diagrams in SysML. This bias is not without reason; activity diagrams are a great way to connect behaviours together. I plan to do a blog post about extending the power of activity diagrams in the future, so for now I will just talk about them in reference to state machines. Call behaviour elements in activities can be used as a way of calling out to state machines.
+
+There are no semantics currently in the UML or SysML specs about how a state machine behaviour interacts with object flow within an as a called behaviour. In fact, state machines are left out of the fUML standard! Here are a few extra semantics @@
