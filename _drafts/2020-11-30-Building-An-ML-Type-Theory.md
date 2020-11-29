@@ -15,7 +15,7 @@ This blogpost is an attempt to define a modelling language in the same vein as U
 
 <!--more -->
 
-So how does one start creating a graphical modelling language around type theory? First I must choose a type theory. To enable proofs to be expressed within the language, I'm going to pick a type theory with dependent types and therefore, I'm going to use the Idris programming language as a starting point.But even before that, I'm going to have to develop
+So how does one start creating a graphical modelling language around type theory? First I must choose a type theory. To enable proofs to be expressed within the language, I'm going to pick a type theory with dependent types and therefore, I'm going to use the Idris programming language as a starting point.But even before that, I'm going to have to develop a basic grammar with which to express concepts within 
 
 | Feature | Symbol | Language |
 |:-------:|:------:|:--------:|

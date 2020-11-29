@@ -11,7 +11,7 @@ tags:
 comments: true
 ---
 
-In the grand tradition of computer science bloggers, started by Edsgar Dijkstra himself with [*Go To statement considered harmful*](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf), it is time to trash a commonly used language feature. This time in UML \& SysML (this also applies to simulink, but this is by no means the limits of my quibbles with Matlab). SysML has a few behavioural diagram types: the use case diagram, the sequence diagram, the activity diagram, the parametrics diagram (parametrics *are* behaviour: fight me) and the state machine diagram. After the sequence diagram, the state machine diagram is probably the most used diagram for behavioural specification. In this blog post, I'm going to tell you why that's bad.
+In the grand tradition of computer science bloggers, started by Edsgar Dijkstra himself with [*Go To statement considered harmful*](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf), it is time to spill the tea on a commonly used language feature. This time in UML \& SysML (this also applies to simulink, but this is by no means the limits of my quibbles with Matlab). SysML has a few behavioural diagram types: the use case diagram (allegedly), the sequence diagram, the activity diagram, the parametrics diagram (parametrics *are* behaviour: fight me) and the state machine diagram. After the sequence diagram, the state machine diagram is probably the most used diagram for behavioural specification. In this blog post, I'm going to tell you why that's bad.
 
 <!-- more -->
 
@@ -19,9 +19,9 @@ The state machine diagram is (mostly) a representation of the computer science c
 
 ## The Problems
 
-When specifying systems, especially continuous systems, a significant portion of functionality usually ends up pure. That is to say that at any point in time, the outputs of the behaviour can be determined entirely from the values of the input variables at that point in time (ignoring lag through the system). We often refer to these purely defined variables as *states* of the system. An example of this could be the On/Off state of a system. If its input voltage is greater than 5V, then its on, otherwise it is off. @@ But a state machine is somewhat overkill here.
+When specifying systems, especially continuous systems, a significant portion of functionality usually ends up pure. That is to say that at any point in time, the outputs of the behaviour can be determined entirely from the values of the input variables at that point in time (ignoring lag through the system). We often refer to these purely defined variables as *states* of the system. An example of this could be the On/Off state of a system. If its input voltage is greater than 5V, then its on, otherwise it is off. The on/off state of the system is purely defined by the input voltage. We call this sort of relationship where the output can be defined by the value(s) of its inputs at any point in time a *pure* behaviour.
 
-Let's imagine what a state machine diagram for a pure system would look like. As a pure system is one where @@
+Let's imagine what a state machine diagram for a pure system would look like. To ensure that the at any point in time, the output is entirely defined by the input values, then we need a transition from each state to every other state. @@
 
 This is the crux of why I believe that state machine diagrams are dangerous: *missed transitions on a state machine diagram are very hard to spot and can have bad consequences*. If a transition is missed, any method used to translate that into requirements is going to inherit that missed transition into a medium where its going to be harder to spot. Of course, state machine diagrams can be executable, but to spot a missed transition, with @@ In the case of pure functions, what can we do?
 
