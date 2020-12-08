@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Think Declaritively"
-date: 2018-05-05
-description: Or how to ask for things nicely.
+title: "Are you thinking like a machine?"
+date: 2020-12-30
+description: "Perhaps the 90s weren't the zenith of programming."
 effort: 5min
 tags:
 - Systems Engineering
