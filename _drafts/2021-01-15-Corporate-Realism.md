@@ -30,7 +30,7 @@ This shows us that the problem of reorganising a product architecture is actuall
 
 - Systems are inherently resistant ot change​
 
-The matrix organsiation is one solution to this problem. In a matrix organisation, a company is split into two or more distinct organisational hierarchies; skills groups and projects. The skills hierarchies are responsible for hiring, training, developing best practice for, and managing tools for a pool of specialists. The project heirarchy then "hires" their talent needs from the pools of each talent group. This ensures that organisational structures don't get in the way of @@
+The matrix organsiation is one solution to this problem. In a matrix organisation, a company is split into two or more distinct organisational hierarchies; skills groups and projects. The skills hierarchies are responsible for hiring, training, developing best practice for, and managing tools for a pool of specialists. The project heirarchy then "hires" their talent needs from the pools of each talent group. This ensures that organisational structures don't get in the way of the optimal project architectures. Those in the talent pool who aren't currently on projects can be employed in training and researching to ensure that the organisation is always at the top of its game.
 
 Engineers have a tendency to believe that their field is mathematically rational; that there is a *correct* way to do things and that way can be found through individual endeavour. To a certain extent, this is true but, as we have explored, once that solution is found, implementing it is an exercise in organisational politics. While we're at, let's explore some of the more insidious effects of workplace politics upon engineering.
 

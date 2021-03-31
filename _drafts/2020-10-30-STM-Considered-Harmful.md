@@ -21,9 +21,9 @@ The state machine diagram is (mostly) a representation of the computer science c
 
 When specifying systems, especially continuous systems, a significant portion of functionality usually ends up pure. That is to say that at any point in time, the outputs of the behaviour can be determined entirely from the values of the input variables at that point in time (ignoring lag through the system). We often refer to these purely defined variables as *states* of the system. An example of this could be the On/Off state of a system. If its input voltage is greater than 5V, then its on, otherwise it is off. The on/off state of the system is purely defined by the input voltage. We call this sort of relationship where the output can be defined by the value(s) of its inputs at any point in time a *pure* behaviour.
 
-Let's imagine what a state machine diagram for a pure system would look like. To ensure that the at any point in time, the output is entirely defined by the input values, then we need a transition from each state to every other state. @@
+Let's imagine what a state machine diagram for a pure system would look like. To ensure that the at any point in time, the output is entirely defined by the input values, then we need a transition from each state to every other state to completely specify a pure function. 
 
-This is the crux of why I believe that state machine diagrams are dangerous: *missed transitions on a state machine diagram are very hard to spot and can have bad consequences*. If a transition is missed, any method used to translate that into requirements is going to inherit that missed transition into a medium where its going to be harder to spot. Of course, state machine diagrams can be executable, but to spot a missed transition, with @@ In the case of pure functions, what can we do?
+This is the crux of why I believe that state machine diagrams are dangerous: *missed transitions on a state machine diagram are very hard to spot and can have bad consequences*. If a transition is missed, any method used to translate that into requirements is going to inherit that missed transition into a medium where its going to be harder to spot. Of course, state machine diagrams can be executable, but to spot a missed transition, one has to exercise it with test cases that would cover it. As Edsgar Dijkstra famously put it: *"Program testing can be used to show the presence of bugs, but never to show their absence!"* In the case of pure functions, what can we do?
 
 ## The Path to Totality
 
@@ -35,7 +35,7 @@ This is the crux of why I believe that state machine diagrams are dangerous: *mi
 
 ## Conclusion: Babies \& Bathwater
 
-Despite my clickbait title, I do not advocate for full removal of state machine diagrams from systems engineering process; instead I urge engineers to take a nuanced approach to where they're useful. Using truth tables and pattern matching to describe functional behaviour is great for defining pure functionality but falls down quickly when the value of a function's output depends on a previous output value. This is the case where state machine diagrams truly shine. The catch is that we must ensure that our state machines remain small and comprehensible to reviewers and consumers. For this reason I have put together a few best practice guidelines for the safer use of state machines in behavioural models:
+Despite my clickbait title, I do not advocate for full removal of state machine diagrams from systems engineering process; instead I urge engineers to take a nuanced approach to understanding where they're useful and where they're not the best way to present behaviour. Using truth tables and pattern matching to describe functional behaviour is great for defining pure functionality but falls down quickly when the value of a function's output depends on a previously stored value. This is the case where state machine diagrams truly shine. The catch is that we must ensure that our state machines remain small and comprehensible to reviewers and consumers. For this reason I have put together a few best practice guidelines for the safer use of state machines in behavioural models:
 
 ### Expose the state
 
@@ -55,4 +55,4 @@ Following these methods of splitting out a big state machine into a set of small
 
 Activity diagrams are my favourite diagrams in SysML. This bias is not without reason; activity diagrams are a great way to connect behaviours together. I plan to do a blog post about extending the power of activity diagrams in the future, so for now I will just talk about them in reference to state machines. Call behaviour elements in activities can be used as a way of calling out to state machines.
 
-There are no semantics currently in the UML or SysML specs about how a state machine behaviour interacts with object flow within an as a called behaviour. In fact, state machines are left out of the fUML standard! Here are a few extra semantics @@
+There are no semantics currently in the UML or SysML specs about how a state machine behaviour interacts with object flow within an as a called behaviour. In fact, state machines are left out of the xUML standard! Here are a few extra semantics @@
