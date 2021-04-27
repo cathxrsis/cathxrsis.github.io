@@ -15,9 +15,9 @@ In the grand tradition of computer science bloggers, started by Edsgar Dijkstra 
 
 <!-- more -->
 
-The state machine diagram is (mostly) a representation of the computer science concept of a *Finite State Automaton*. This is a model of computation where the computer passes through a number of states. In each state, the computer can accept one of a number of predetermined stimuli which causes the computer to transition into another state. Although not turing complete, finite state machines can be used as a model for any terminating (not running forever) computation. There is nothing wrong with using FSMs for modelling behaviour, but their representation in SysML has a few problems that I shall detail below.
+The state machine diagram is (mostly) a representation of the computer science concept of a *Finite State Automaton*. This is a model of computation where the computer passes through a number of states. In each state, the computer can accept one of a number of predetermined stimuli which causes the computer to transition into another state. Although not turing complete, finite state machines can be used as a model for any terminating (not running forever) computation. There is nothing wrong with using FSMs for modelling behaviour, but their diagrammatical representation in SysML has a few problems that I shall detail below. Note that an activity diagram with certain constraints applied could also be used to model an FSM.
 
-## The Problems
+# The Problems
 
 When specifying systems, especially continuous systems, a significant portion of functionality usually ends up pure. That is to say that at any point in time, the outputs of the behaviour can be determined entirely from the values of the input variables at that point in time (ignoring lag through the system). We often refer to these purely defined variables as *states* of the system. An example of this could be the On/Off state of a system. If its input voltage is greater than 5V, then its on, otherwise it is off. The on/off state of the system is purely defined by the input voltage. We call this sort of relationship where the output can be defined by the value(s) of its inputs at any point in time a *pure* behaviour.
 
@@ -25,34 +25,63 @@ Let's imagine what a state machine diagram for a pure system would look like. To
 
 This is the crux of why I believe that state machine diagrams are dangerous: *missed transitions on a state machine diagram are very hard to spot and can have bad consequences*. If a transition is missed, any method used to translate that into requirements is going to inherit that missed transition into a medium where its going to be harder to spot. Of course, state machine diagrams can be executable, but to spot a missed transition, one has to exercise it with test cases that would cover it. As Edsgar Dijkstra famously put it: *"Program testing can be used to show the presence of bugs, but never to show their absence!"* In the case of pure functions, what can we do?
 
-## The Path to Totality
+# The Path to Totality
 
-@@
+So what would be the best way to @@
 
-## The Truth
+| | True | False |
+|-|------|-------|
+| True | False | True |
+| False | True | False |
 
-@@ truth tables and pattern matching
+As the number of inputs to the function increases, the number of dimensions on the table required to fully specify the function increases to. This makes truth tables unwieldy for pretty much any function with more than two inputs. There are, of course, other ways of totally specifying the output of a function for pure functions. One of these ways is using pattern matching syntax used in some programming languages. Below are some examples of pattern matching written in the language Idris:
 
-## Conclusion: Babies \& Bathwater
+```Haskell
+getChar : Int -> Char
+getChar 0 = 'a'
+getChar 1 = 'b'
+...
+```
 
-Despite my clickbait title, I do not advocate for full removal of state machine diagrams from systems engineering process; instead I urge engineers to take a nuanced approach to understanding where they're useful and where they're not the best way to present behaviour. Using truth tables and pattern matching to describe functional behaviour is great for defining pure functionality but falls down quickly when the value of a function's output depends on a previously stored value. This is the case where state machine diagrams truly shine. The catch is that we must ensure that our state machines remain small and comprehensible to reviewers and consumers. For this reason I have put together a few best practice guidelines for the safer use of state machines in behavioural models:
 
-### Expose the state
+```Haskell
+fibonacci : Int -> Int
+fibonacci 0 = 1
+fibonacci x = fibonacci (x-1)
+```
+
+# Conclusion: Babies \& Bathwater
+
+Despite my clickbait title, I do not advocate for full removal of state machine diagrams from systems engineering process; instead I urge engineers to take a nuanced approach to understanding where they're useful and where they're not the best way to present behaviour. Abstract is a relative term; always remember what parts of reality your are ignoring with your model.
+
+Using truth tables and pattern matching to describe functional behaviour is great for defining pure functionality but falls down quickly when the value of a function's output depends on a previously stored value. This is the case where state machine diagrams truly shine. The catch is that we must ensure that our state machines remain small and comprehensible to reviewers and consumers. For this reason I have put together a few best practice guidelines for the safer use of state machines in behavioural models:
+
+## Expose the state
 
 Design your functionality so that the output value of your stateful functions *is* the state of the function. Model further behaviour as downstream functions. This will make errors in your state transitions far easier to spot. To see how to stitch the exposed states together see my third point of tying behaviour together with activities.
 
-### Break up nested or parallelised state machines
+## Break up nested or parallelised state machines
 
-This point is an extension of the previous one; if states are nested or are in parallel, which off the states do you expose and how? This question is easily avoided by disallowing nested states and parallel states. This is easy enough to say but sometimes there is no other simple way to specify the functionality. To answer this, we need a simple way to break up larger functions into smaller ones using the state machine deifinition of their behaviour.
+This point is an extension of the previous one; if states are nested or are in parallel, which off the states do you expose and how? This  question is easily avoided by disallowing nested states and parallel states. This is easy enough to say but sometimes there is no other simple way to specify the functionality. To answer this, we need a simple way to break up larger behaviours into smaller ones using the state machine definition of their behaviour.
 
-Nested states in a state machine become @@
+With nested states, the encompassing level of states becomes an "upstream" behaviours of the state machines nested inside of them. Another valid method could be to flatten the states by keeping only the innermost layers of nesting and prepend the names of the  @@
 
-@@ Why and how to transform.
+Parallel state machines are easily separated into different, interdependent behaviours by seperating down the dotted line.
 
-Following these methods of splitting out a big state machine into a set of smaller interconnected state machines is also a great way of creating a broken down set of functions for allocations to subsystems if you've defined your overall system's behaviour with a state machine.
+By breaking up state diagrams in this way, @@
 
-### Tie it all together with activities
+Following these methods of splitting out a big state machine into a set of smaller interconnected state machines is also a great way of creating a broken down set of functions for allocations to subsystems if you've defined your overall system's behaviour with a state machine. Performing these methods, however, leaves us with an interesting problem: how do we tie these behaviours back together in SysML so that a user can understand the interdependencies?
+
+## Tie it all together with activities
 
 Activity diagrams are my favourite diagrams in SysML. This bias is not without reason; activity diagrams are a great way to connect behaviours together. I plan to do a blog post about extending the power of activity diagrams in the future, so for now I will just talk about them in reference to state machines. Call behaviour elements in activities can be used as a way of calling out to state machines.
 
-There are no semantics currently in the UML or SysML specs about how a state machine behaviour interacts with object flow within an as a called behaviour. In fact, state machines are left out of the xUML standard! Here are a few extra semantics @@
+There are no semantics currently in the UML or SysML specs about how a state machine behaviour interacts with object flow within an as a called behaviour. In fact, state machines are left out of the xUML standard! Here are a few extra semantics that "make sense" to me to tie these different representations together:
+
+- Interpret the state as the RETURN value of a «stream» object flow from the called behaviour. (Animation of this can be achieved in many SysML tools by adding an action on entry to a state to set the functions output.).
+- Use object flow to link stateful functions. This has the added bonus of allowing you to spoof activities with internal block diagrams if your SysML tool doesn't support the standard well enough.
+
+# Final thoughts
+
+
+
