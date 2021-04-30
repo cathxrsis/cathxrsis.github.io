@@ -2,7 +2,7 @@
 layout: post
 title: "State Machine Diagram Considered Harmful"
 date: 2020-10-30
-description: The state machine diagram is one of the most popular diagrams for behaviour in SysML/UML \& Simulink. It's dangerous and and here's why.
+description: The state machine diagram is one of the most popular diagrams for behaviour in SysML/UML & Simulink. It's dangerous and and here's why.
 tags:
 - Systems Engineering
 - Modelling
@@ -49,10 +49,19 @@ fibonacci : Int -> Int
 fibonacci 0 = 1
 fibonacci x = fibonacci (x-1)
 ```
+## Requirements Authoring
 
-# Conclusion: Babies \& Bathwater
+An interesting outcome of this is the effect that using state machines or pattern matching has on requirements authoring. Sticking to the EARS grammar of requirements writing, we find that we require, at most, one requirement for each possible output of the system. However with a state machine diagram, we require at least one requirement for each transition. Guards on the transitions and the source state become the 'while' conditions of the requirement and the trigger, if one exists, becomes the 'when' condition. Have a go at specifying a simple pure function with at least 3 output states using both methods if you need convincing.
+
+Because of the previous points, we can conclude that if a state machine diagram is used to specify a pure function with \[n\] output values, we will end up writing \[n!\] requirements. This argument often holds for lines of code too. The reason for this is that requirements authors and software engineers often write to the structure of the input information; it is very rare that an engineer will absorb a state machine diagram, ruminate on it and then produce a nicely refactored piece of work from it. If there is a time pressure involved or the state machine is complex beyond first-glance comprehension, this problem can be exacerbated.
+
+# Conclusion: Church \& State
 
 Despite my clickbait title, I do not advocate for full removal of state machine diagrams from systems engineering process; instead I urge engineers to take a nuanced approach to understanding where they're useful and where they're not the best way to present behaviour. Abstract is a relative term; always remember what parts of reality your are ignoring with your model.
+
+State machines
+- Hysteresis
+- Memory
 
 Using truth tables and pattern matching to describe functional behaviour is great for defining pure functionality but falls down quickly when the value of a function's output depends on a previously stored value. This is the case where state machine diagrams truly shine. The catch is that we must ensure that our state machines remain small and comprehensible to reviewers and consumers. For this reason I have put together a few best practice guidelines for the safer use of state machines in behavioural models:
 
@@ -83,5 +92,4 @@ There are no semantics currently in the UML or SysML specs about how a state mac
 
 # Final thoughts
 
-
-
+Finally, I would like to discuss why state machine diagrams are so prevalent in the systems engineering community despite the pitfalls described above. We can thank Dave Harel at I-Logix who developed the notation of finite state machines and developed a tool for their execution, StateMate, all the way back in 1987. Even though StateMate was considered defunct in 2006, its influence is still felt through UML/SysML state machine diagrams (1997) and Simulink stateflow (2018). This is probably due to the simplicity of the notation making it easy to understand and teach. The Rhapsody UML tool, also created by I-Logix, also has a heavy bias towards animation using state machine diagrams, most likely due to I-Logix's strong pedigree with StateMate.
