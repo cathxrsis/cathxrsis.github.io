@@ -2,7 +2,7 @@
 layout: post
 title: "State Machine Diagram Considered Harmful"
 date: 2021-05-06
-description: The state machine diagram is one of the most popular diagrams for behaviour in SysML/UML & Simulink. It's dangerous and and here's why.
+description: The state machine diagram is one of the most popular diagrams for behaviour in SysML/UML & Simulink. It's dangerous and here's why.
 tags:
 - Systems Engineering
 - Modelling
@@ -63,7 +63,7 @@ An interesting outcome of this is the effect that using state machines or patter
 
 Because of the previous points, we can conclude that if a state machine diagram is used to specify a pure function with \[n\] output values, we will end up writing \[n!\] requirements. This argument often holds for lines of code too. The reason for this is that requirements authors and software engineers often write to the structure of the input information; it is very rare that an engineer will absorb a state machine diagram, ruminate on it and then produce a nicely refactored piece of work from it. If there is a time pressure involved or the state machine is complex beyond first-glance comprehension, this problem can be exacerbated.
 
-# Conclusion: Church \& State
+# Conclusion: Church & State
 
 Despite my clickbait title, I do not advocate for full removal of state machine diagrams from systems engineering process; instead I urge engineers to take a nuanced approach to understanding where they're useful and where they're not the best way to present behaviour. Abstract is a relative term; always remember what parts of reality your are ignoring with your model.
 
