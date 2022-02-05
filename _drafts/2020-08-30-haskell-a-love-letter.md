@@ -9,7 +9,7 @@ tags:
 comments: true
 ---
 
-Its been over ten years since EARS was introduced to the engineering world from its inception in Rolls Royce. In that time the Easy Approach to Requirements Syntax has become a de facto standard for best practice in the engineering industry. I
+Its been over ten years since EARS was introduced to the engineering world from its inception in Rolls Royce. In that time the Easy Approach to Requirements Syntax has become a de facto standard for best practice in the engineering industry. 
 
 
 > A requirements grammar is a way of expressing statements of need for behaviour, performance and/or structure, unambiguously to a human in a human readable format.

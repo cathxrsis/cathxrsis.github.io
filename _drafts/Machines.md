@@ -11,13 +11,14 @@ tags:
 comments: true
 ---
 
-I've noticed something strange about the way I talk to voice assistants, perhaps you've noticed it too? Instead of the way I'd politely ask my girlfriend:
-> "Could you pop the light on [REDACTED PET NAME]"
+I've noticed something strange about the way I talk to voice assistants, perhaps you've noticed it too? Instead of the way I'd politely ask my wife:
+> "Could you pop the light on [REDACTED PET NAME] for me?"
 
-I end up saying:
+To my voice assistant I say:
+
 > "Turn living room light on."
 
-This usually involves the same tone of voice used to speak to a hard of hearing person on the third repeat. Of course, the silicon valley lot are feeding countless recorded conversations into their machine learning algorithms to improve their capability of understanding -eavesdropped conversations for advertising purposes- normal speech patterns to make interacting with these as assistants as close to human interaction as possible.
+This usually involves the same tone of voice used to speak to a hard of hearing person on the third repeat.  Of course, the silicon valley lot are feeding countless recorded conversations into their machine learning algorithms to improve their capability of understanding -eavesdropped conversations for advertising purposes- normal speech patterns to make interacting with these as assistants as close to human interaction as possible.
 
 This got me thinking, what if the tech giants didn't have an ulterior motive for understanding the nuances of natural speech? We're all relatively happy now talking to our living room lights as if they're half deaf, so would we worry? @@
 

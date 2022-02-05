@@ -25,9 +25,9 @@ The question is never answered, to the characters in the story its rhetorical. I
 
 ## Formaldehyde
 
-As a child, I went to a state comprehensive school built in the 70s. In the biology classrooms, between gaudy displays of mitosis backed with brightly coloured sugar paper were shelves with jars on. In these jars were frogs, small animals and organs. All of them a lifeless beige suspended in clear liquid. Formaldehyde. It struck me that not only were these lumps of meat dead, but in preserving their intricate structures, the formaldehyde had bleached the pigments from the specimens. Unlike the brightly patterned butterflies pinned behind glass in the other cabinets, the pickled specimens looked like they may have never been alive. The small yellowing label on each jar with the name of the species was the only clue to the fact that there was once a living being associated with each floating beige corpse.
+As a child, I went to a state comprehensive school built in the 70s. In the biology classrooms, between gaudy displays of mitosis backed with brightly coloured sugar paper were shelves with jars on. In these jars were frogs, small animals and organs. All of them a lifeless beige suspended in clear liquid. Formaldehyde. Unlike the brightly patterned butterflies pinned behind glass in the other cabinets, the pickled specimens looked like they may have never been alive--the formaldehyde having turned them the colour of old plastic over the years. The small yellowing label on each jar with the name of the species was the only clue to the fact that there was once a living being associated with each suspended semi-translucent corpse.
 
-To create a pickled specimen, one has to enact violence. The animal has to be killed and drained of fluid. 
+To create a pickled specimen, one has to enact violence. The animal has to be killed and drained of fluid. The dissection of a frog is a cultural rite of passage in the mythology of the british state system along with putting a condom on a banana.
 
 We see this tendency in 
 
