@@ -40,7 +40,7 @@ allowed us to perform analyses to catch emergent behaviours of the
 feature; more easily perform failure analysis and gives us a standard
 "currency" with which to cascade requirements to subsystems.
 
-Introduction {#introduction .unnumbered}
+Introduction
 ============
 
 Performing a functional analysis for a system is a common step in the
@@ -70,7 +70,7 @@ where causality flows from inputs to output. It is not a good fit for
 modelling the physics of the use case where a parametric model could be
 better used.
 
-A Novel Method for Functional Decomposition {#a-novel-method-for-functional-decomposition .unnumbered}
+A Novel Method for Functional Decomposition 
 ===========================================
 
 Features often have large overlaps with each other; they respond to the
@@ -105,10 +105,8 @@ output.
 
 The key idea behind the Miso method was the question:
 
-::: {#concerns-for-functional-analysis-methods}
-*Concerns for Functional Analysis Methods* {#concerns-for-functional-analysis-methods .unnumbered}
+*Concerns for Functional Analysis Methods* 
 ------------------------------------------
-:::
 
 Before developing a new method for functional analysis, we identified
 stakeholder concerns that would need to be addressed by the method.
@@ -123,10 +121,8 @@ letting the solution inform the decomposition which can cause no longer
 applicable constraints to affect the requirements; and help avoid
 decomposition to the wrong level of abstraction.
 
-::: {#miso-functions}
-*Miso Functions* {#miso-functions .unnumbered}
+*Miso Functions* 
 ----------------
-:::
 
 A sign of a good method is repeatability: two engineers with the same
 inputs, separated so they can't communicate, should produce the same
@@ -183,7 +179,6 @@ you an understanding of the 'size' of the computation a function
 represents (in rough big O notation) and can inform allocation if
 computing power is a constraint.
 
-::: {#a-whole-system-functional-architecture}
 *A Whole-System Functional Architecture* {#a-whole-system-functional-architecture .unnumbered}
 ----------------------------------------
 :::
@@ -262,10 +257,8 @@ conditions where there is no stimulus and that they are easily
 understood. This convention was inspired by the Maybe type used in many
 functional programming languages \[Lipovača 2011\].
 
-::: {#stateful-functions}
-*Stateful Functions* {#stateful-functions .unnumbered}
+*Stateful Functions* 
 --------------------
-:::
 
 An important part of the Miso method is the identification of whether an
 information flow is a token (event based) or a stream (continuous) as it
@@ -300,10 +293,8 @@ created to encompass this pattern. We then encouraged engineers to draw
 state diagrams to represent the behaviour of these new functions to
 improve comprehension and communication of requirements.
 
-::: {#summary-of-the-miso-method}
-*Summary of the Miso Method* {#summary-of-the-miso-method .unnumbered}
+*Summary of the Miso Method* 
 ----------------------------
-:::
 
 Finally, presented is a summary of the steps to the Miso method of
 functional analysis:

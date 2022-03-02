@@ -81,7 +81,7 @@ If you can give ``con`` a proof of ``a`` and a proof of ``b``, ``con`` can give 
      curry : ((a, b) -> c) -> a -> b -> c
      uncurry : (a -> b -> c) -> (a,b) -> c
 
-This process of using this equivalence is known as *currying* after Haskell Curry. It becomes incredibly useful for reuse purposes. I'll explore usages of currying in SysML in a future blog post. For now, we can appreciate that it is soewhat of a tautology; the logical interpretation of ``a -> b -> c`` is: If you can give me a proof of ``a``, I can give you a proof of ``b -> c``.
+This process of using this equivalence is known as *currying* after Haskell Curry. It becomes incredibly useful for reuse purposes. I'll explore usages of currying in SysML in a future blog post. For now, we can appreciate that it is somewhat of a tautology; the logical interpretation of ``a -> b -> c`` is: If you can give me a proof of ``a``, I can give you a proof of ``b -> c``.
 
      efq : Void -> a
 
@@ -96,7 +96,7 @@ Some programming languages (Such as Idris, Coq and Agda) give you a really usefu
     Equality : a -> b -> Type where
       reflex : Equality x x
 
-This statement uses a new notational semantic, the ``where`` keyword, that tells us that ``reflex`` is a constructor function for ``Equality``. ``Equality`` itself is a type that states: If you can give me two values one of type ``a`` and one of type ``b``, I can give you back a new type, but only if the two values that you give me are the same (The ``reflex`` constructor is only defined for values that are the same). Therefore, type theory gives us a way to express equality in type signatures within programmes! You may have already noticed the use of equality (in its symbolic guise '``=``') in the earlier rulse for categories.
+This statement uses a new notational semantic, the ``where`` keyword, that tells us that ``reflex`` is a constructor function for ``Equality``. ``Equality`` itself is a type that states: If you can give me two values one of type ``a`` and one of type ``b``, I can give you back a new type, but only if the two values that you give me are the same (The ``reflex`` constructor is only defined for values that are the same). Therefore, type theory gives us a way to express equality in type signatures within programmes! You may have already noticed the use of equality (in its symbolic guise '``=``') in the earlier rules for categories.
 
 We already know that UML (especially the executable subset fUML) gives us a specification for structure and behaviour, adding the additional ability to express propositions in UML without having to resort to the complexities of OCL would mean that we wouldn't have to learn two languages to fully specify our designs and domain specific languages in MBSE.
 
@@ -118,7 +118,7 @@ Therefore, focussing solely on category theory for the basis of MBSE is not seei
 
 So here is where I state the manifesto inherent in the title of this blog: I am calling for an end to the dichotomy between structure and proof; an end to the reliance on set theory as the basis of "truth" in the MBSE world. Let's replace our logic with judgements and evidence. I am calling for the construction of a category of systems!
 
-If you've stuck with me this far, you're probably the sort who's insterested in looking further. I wholeheartedly recommend diving into the Haskell and Idris programming languages which ignited my interest in this area of study. If you feel that you're ready for the bleeding edge of maths, I recommend the [Homotopy Type Theory book](https://homotopytypetheory.org/2013/06/20/the-hott-book/). It's a free download and I'm currently working my way through it (determinedly but slowly, I must admit) to see what treasures can be found inside for the future of systems engineering.
+If you've stuck with me this far, you're probably the sort who's interested in learning further. I wholeheartedly recommend diving into the Haskell and Idris programming languages which ignited my interest in this area of study. If you feel that you're ready for the bleeding edge of maths, I recommend the [Homotopy Type Theory book](https://homotopytypetheory.org/2013/06/20/the-hott-book/). It's a free download and I'm currently working my way through it (determinedly but slowly, I must admit) to see what treasures can be found inside for the future of systems engineering.
 
 ## Conclusion: what needs to change?
 
