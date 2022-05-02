@@ -41,7 +41,7 @@ Let's now explore another side-effect of this model of hierarchical management t
 
 @@
 
-Eventually, Tim finds himself a few levels below the CEO of his company with a few hundred engineers working for him. He begins to feel safe in his job and no longer @@ When he's in meetings with his subordinates, Tim begins to crack the odd antisemitic joke. Some of the engineers belly-laugh, some nervously titter. Tim makes an unconscious mental note of the engineers that don't laugh; they're boring and stuck-up and they'll not be promoted by him. The Jewish engineer in that meeting suddenly feels that they're an outsider in space that used to feel safe to them. The engineers who want to be in Tim's good books for promotions may even start cracking racist jokes too to impress Tim.
+Eventually, Tim finds himself a few levels below the CEO of his company with a few hundred engineers working for him. He begins to feel safe in his job and no longer has to hold back on his obscene views. When he's in meetings with his subordinates, Tim begins to crack the odd antisemitic joke. Some of the engineers belly-laugh, some nervously titter. Tim makes an unconscious mental note of the engineers that don't laugh; they're boring and stuck-up and they'll not be promoted by him. The Jewish engineer in that meeting suddenly feels that they're an outsider in space that used to feel safe to them. The engineers who want to be in Tim's good books for promotions may even start cracking racist jokes too to impress Tim.
 
 All too often, in situations like this, the sufferers of aggression and micro-aggression will up sticks and leave the company. In cases where they take their grievances to HR, they can also come up against a wall as management will find it hard to admit that they have not only hired a racist but put them in a high position of power. 
 
@@ -50,7 +50,7 @@ The mechanism above shows one likely path that an organisation can become instit
 Part 4: Communication vs Power
 ------------------------------
 
-There is no way of getting around the fact that a complex project requires a communication structure that allows for strategy and tactics to coexist. We see this most obviously with armies where 
+There is no way of getting around the fact that a complex project requires a communication structure that allows for strategy and tactics to coexist. We see this most obviously with the armed forces where @@
 
 Part 5: The Micro-Service Architecture
 --------------------------------------
