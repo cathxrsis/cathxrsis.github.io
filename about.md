@@ -10,7 +10,7 @@ permalink: /about/
 
 > **Tom Westbury**
 
-is a systems engineer located in the midlands, currently working for a well known british car firm. This blog contains his ideas on the subject of systems thinking and functional architecture. In his spare time Tom enjoys bellringing, climbing and trying to get his classic motorcycle to run.
+is a systems engineer located in the midlands, currently working in an exciting engineering startup. This blog contains his ideas on the subject of systems thinking and functional architecture. In his spare time Tom enjoys bellringing, climbing and trying to get his classic motorcycle to run.
 
 This blog was hacked together from bits of old code using Jekyll.
 You can find the source code for Jekyll at their [Github page.](https://github.com/jekyll/jekyll)
