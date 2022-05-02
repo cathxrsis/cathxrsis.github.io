@@ -217,12 +217,15 @@ pre {
   margin-left: auto;
   margin-right: auto;
 
-  @include media-query($on-palm) {
-      width: 100px;
-      height:100px;
+/**  @include media-query($on-palm) {
+      width: 99px;
+      height:99px;
   }
-  @include card(3);
+  @include card(2);
 }
+
+*/
+
 .home-logo img {
   border-radius: 50%;
   transition: transform 0.5s ease;
