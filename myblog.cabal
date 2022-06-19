@@ -1,11 +1,11 @@
-name:                myblog
+name:                a category of systems
 version:             0.1.0.0
--- synopsis:
+-- synopsis:         Tom Westbury's personal blog
 -- description:
-homepage:            https://github.com/githubuser/myblog#readme
+homepage:            https://www.categoryofsystems.co.uk/
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
+author:              Tom Westbury
 maintainer:          example@example.com
 copyright:           2022 Author name here
 category:            Web

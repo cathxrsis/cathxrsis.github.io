@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="5cm" height="11cm" viewBox="-201 63 83 204" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-200" y="144.5" width="80" height="36" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-200" y="144.5" width="80" height="36" rx="10" ry="10"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-160" y="166.4">
+      <tspan x="-160" y="166.4"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-160" y="160">
+    <tspan x="-160" y="160">«Animal»</tspan>
+    <tspan x="-160" y="176">Mammal</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="-200" y="230" width="80" height="36" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-200" y="230" width="80" height="36" rx="10" ry="10"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-160" y="251.9">
+      <tspan x="-160" y="251.9"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-161" y="244">
+    <tspan x="-161" y="244">«Mammal»</tspan>
+    <tspan x="-161" y="260">Dog</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-160,198.736 -160,197.5 -160,229 -160,230 "/>
+    <polygon style="fill: #ffffff" points="-152,198.736 -160,182.736 -168,198.736 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-152,198.736 -160,182.736 -168,198.736 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-200" y="64.5" width="80" height="36" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-200" y="64.5" width="80" height="36" rx="10" ry="10"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-160" y="86.4">
+      <tspan x="-160" y="86.4"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-160" y="80">
+    <tspan x="-160" y="80">«Object»</tspan>
+    <tspan x="-160" y="96">Animal</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-160,118.736 -160,117.5 -160,142.491 -160,143.491 "/>
+    <polygon style="fill: #ffffff" points="-152,118.736 -160,102.736 -168,118.736 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-152,118.736 -160,102.736 -168,118.736 "/>
+  </g>
+</svg>
