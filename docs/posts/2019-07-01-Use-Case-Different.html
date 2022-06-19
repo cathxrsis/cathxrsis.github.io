@@ -42,7 +42,7 @@
 </blockquote>
 <p>Each of these definitions describe the use case as the scenario surrounding the interations between actors and the system we would like to design. We could even interpret a use case as a container for an instance of the system under development and it’s actors; a microcosm of the universe where the goal our design will meet is the only thing that matters.</p>
 <p>Now look at the SysML/UML use case diagram:</p>
-<p><img src="../assets/images/olduc.svg" alt="Old Use Case" />
+<p><img src="../images/olduc.svg" alt="Old Use Case" />
 &gt; An example of a UML/SysML use case diagram.</p>
 <p>The notation of use cases suggests a rather different interpretation of the use case than the definitions. The use cases are inside the system boundary, suggesting that use cases are somehow contained inside the system. Possibly as system behaviours? To muddy the waters further, the SysML specification seems to agree with the other definitions:</p>
 <blockquote>
@@ -59,7 +59,7 @@
 </blockquote>
 <p>So what happens if we reconcile the SysML/UML use case with the interpretation gleaned from the internet definitions? In this section we’ll take a look at what happens to use cases when we try to model the use case as a microcosm that is composed of the actors and a version of the system.</p>
 <p>It becomes clear that the association between a use case and an actor is now a composition relationship; actors exist and interact with our system within the scope of our use case. Another odd semantic that comes from this is that use cases must be composed of the system under development too. This turns the original notation of use cases being within a system boundary on its head. Below is an example block definition diagram of the relationships to illustrate the advocated relationships.</p>
-<p><img src="../assets/images/newuc.svg" alt="New Use Case" />
+<p><img src="../images/newuc.svg" alt="New Use Case" />
 &gt; An illustration of my suggested use of use case elements.</p>
 <p>The semantic elegance of this way of representing use cases really comes into its own when you represent the interactions in a use case with activities or sequences. Internal block diagrams can then be used to represent a context diagram showing interfaces between the instances of the actors and system under development. All of the elements are neatly withing scope. The scope also applies to swimlanes in activities and lifelines in sequences. A block definition diagram can be used to illustrate an overview of the use cases and the actors at the top level if required.</p>
 <p>In my own head, I like to imagine the use cases as the “main functions” of a model. Use cases form that top level entry point to a model where the interpreter can “run” the overall behaviour, drilling down through the composition relationships if they would like to understand the lower levels of abstraction.</p>

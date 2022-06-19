@@ -36,8 +36,8 @@
 </blockquote>
 <p>In the last post we explored how primitive types can be expressed using a few new pieces of UML syntax. Now though, I’d like to explore the second sentence of the definition: <em>A primitive type may have algebra and operations defined outside of UML…</em> I’d like to ask the question: why shouldn’t we define algebras and operations inside of UML? and explore what that might entail.</p>
 <h2 id="what-is-an-algebra">What is an Algebra?</h2>
-<p>To start with lets talk about how mathematicians,physicists and computer scientists model the world: through algebra. The concept of algebraic structures is usually new to engineers who aren’t usually taught abstract maths at university level even when it becomes extremely useful. This fact is probably why academic computer scientists can be found geeking out over new developments in category theory whilst even the most academic mechanical engineers wouldn’t be able to tell you what a division ring is despite having used them since primary school.</p>
-<p>An algebraic structure is a set of objects, a set of operations that you can use with them and a set of laws that they must conform to. Let’s have a look at the example of a <em>Monoid</em> t show you what I mean. A <em>Monoid</em> is any set where two members of the set can be combined with a “multiplication” operation to create another member of the set. There must also be an <em>Id</em> element that when combined with other elements, returns the other element unscathed. Let’s use the programming language “Idris” to illustrate this:</p>
+<p>To start with lets talk about how mathematicians,physicists and computer scientists model the world: through algebra. The concept of algebraic structures is usually new to engineers who aren’t normally taught abstract maths at university level.</p>
+<p>An algebraic structure is a set of objects, a set of operations that you can use with them and a set of laws that they must conform to. Let’s have a look at the example of a <em>Monoid</em> to show you what I mean. A <em>Monoid</em> is any set where two members of the set can be combined with a “multiplication” operation to create another member of the set. There must also be an <em>Id</em> element that when combined with other elements, returns the other element unscathed. Let’s use the programming language “Idris” to illustrate this:</p>
 <pre><code> interface Monoid m where   -- m is any type that we're defining a monoid for
    mId : m                  -- mId is the identity
    mPlus : m -&gt; m -&gt; m      -- mPlus is our combining operation</code></pre>
@@ -53,11 +53,11 @@
 <p>To hammer the point home, here are a couple of other well used monoids:</p>
 <pre><code>implementation Monoid NatMult where -- A multiplicative monoid for the natural numbers
   mId = 1       -- 1 is the identity
-  mPlus = (*)   -- Multiplication is the operator
+  mPlus = (*)   -- Multiplication is the binary operator
 
 implementation Monoid Bool where
   mId = True    -- True is the identity
-  mPlus = (&amp;&amp;)  -- Boolean AND is the operator
+  mPlus = (&amp;&amp;)  -- Boolean AND is the binary operator
 
 implementation Monoid String where
   mId = &quot;&quot;      -- The identity is the empty string
@@ -65,11 +65,11 @@ implementation Monoid String where
 <p>The power of knowing what sort of algebraic structure you are playing with is that, almost certainly, mathematicians have shown all sorts of interesting and useful results for that structure. Just by showing that the problem you are facing conforms to a certain algebraic structure gives you a lot of information for free. From a programming point of view it enables us to use the same functional chain for different data types: if the behaviour of our program uses only functions from algebraic structures, we can change the underlying type of data being fed through the “pipeline” without having to modify too much of the functionality. This can also apply to UML and SysML, take the example of the join node in activity diagrams.</p>
 <p>There is a good reason why I started by mentioning the Monoid. Not only is the Monoid possibly the simplest intuitive algebraic structure, it could be used to give meaning to the join node in activity diagrams for object flows.</p>
 <figure>
-<img src="../assets/images/join.png" alt="Activity diagram fragment showing two object flows connecting to a join node" />
+<img src="../images/join.png" alt="Activity diagram fragment showing two object flows connecting to a join node" />
 <figcaption aria-hidden="true">Activity diagram fragment showing two object flows connecting to a join node</figcaption>
 </figure>
-<p>In the current UML/SysML interpretation of join nodes, they cannot be used easily with object flows as in the diagram above. This is because if two tokens reach the node, what value do we give the outgoing token? Specifying that all of the incoming flows must be of the same type with a defined monoid solves this problem. We simply define the value of the outgoing token as the “mPlus” of the values of the incoming tokens. As a monoid must be associative, this pattern would work for any number of incoming object flows.</p>
-<p>There are far more useful and interesting algebraic structures that embody many patterns that arise in engineering situations. I’ll explore a few in some future blog posts, perhaps I may even try to tackle the dreaded Monad in UML (after all, its just a monoid over the category of endofunctors, right?).</p>
+<p>In the current UML/SysML interpretation of join nodes, they cannot be used easily with object flows as in the diagram above. This is because if two tokens reach the node, what value do we give the outgoing token? In the current spec, you have to define each join node with a constraint detailing how it combines the inputs Specifying that all of the incoming flows must be of the same type with a defined monoid solves this problem. We simply define the value of the outgoing token as the “mPlus” of the values of the incoming tokens. As a monoid must be associative, this pattern would work for any number of incoming object flows.</p>
+<p>There are far more useful and interesting algebraic structures that embody many patterns that arise in engineering situations. I’ll explore a few in some future blog posts, perhaps I may even try to tackle the dreaded Monad in UML.</p>
 <h2 id="a-uml-implementation-for-algebraic-structures">A UML implementation for Algebraic Structures</h2>
 <p>So how would we implement such thing as an algebraic structure in UML? We’re going to need to work out a way to represent the aspects of the Set, the operations and the laws. We’re also going to have to ensure that one algebraic structure can be applied to multiple different sets possibly multiple times (e.g. multiplication and addition monoids of natural numbers).</p>
 <h3 id="the-set">The Set</h3>
@@ -85,7 +85,7 @@ implementation Monoid String where
  inv:    self -&gt; forAll(m | exists(mZero | mAdd(mZero, m) == m))
  inv:    self -&gt; forAll(m | exists(mZero | mAdd(m, mZero) == m))
  inv:    self -&gt; forAll(m | forAll (n | forAll (o | mAdd(m, mAdd(n, o)) == mAdd(mAdd(m, n), o))))</code></pre>
-<p>Personally, I find the OCL a lot harder to read than Idris. Its somewhat unfortunate that the UML and OCL developers hadn’t encountered the ML family of languages as OCL could be have been understandable to the average engineer without losing its formality. Perhaps we’d have had a UML based on category theory; the third part of the Curry-Howard-Lambek Isomorphism.</p>
+<p>Personally, I find the OCL a lot harder to read than Idris. Its somewhat unfortunate that the UML and OCL developers hadn’t encountered the ML family of languages as OCL could be have been more easily grokkable to the average engineer without losing its formality. Perhaps we’d have had a UML based on category theory; the third part of the Curry-Howard-Lambek Isomorphism.</p>
 <h2 id="conclusion">conclusion</h2>
 <p>In this post, we explored what algebraic structures are and how they can be useful to us as engineers attempting to model systems. This resulted in a proposal for a way of modelling something analogous to type classes in UML using stereotypes as a base. We were, however, left with one aspect of type classes that UML can’t handle: how to implement the laws. Implementing laws and proofs is outside the scope of UML and for now we’ll have to settle for OCL constraints to implement our laws. Wouldn’t it be nice, though, to have one language? To have a graphical equivalent of “Idris”? I’ll explore what makes Idris Idris in another blog post where we’ll explore dependent types and what a modelling language would have to be to include them.</p>
 <h2 id="references">References</h2>

@@ -109,8 +109,8 @@ composeIdR : compose f id = f</code></pre></li>
 <p>This process of using this equivalence is known as <em>currying</em> after Haskell Curry. It becomes incredibly useful for reuse purposes. I’ll explore usages of currying in SysML in a future blog post. For now, we can appreciate that it is somewhat of a tautology; the logical interpretation of <code>a -&gt; b -&gt; c</code> is: If you can give me a proof of <code>a</code>, I can give you a proof of <code>b -&gt; c</code>.</p>
 <pre><code> efq : Void -&gt; a</code></pre>
 <p>If you can give <code>efq</code> a member of the Void type, <code>efq</code> can give you anything. The logical principle of explosion. Effectively, this statement means that you can prove anything true if you start from a lie.</p>
-<pre><code>absurd : a -&gt; Void</code></pre>
-<p>If you can give <code>absurd</code> a value of <code>a</code>, <code>absurd</code> will give you a value of <code>Void</code>. Since this is is impossible, <code>absurd</code> represents the type of proofs of falsity: being able to obtain a value of <code>a</code> is an absurd proposition.</p>
+<pre><code>not : a -&gt; Void</code></pre>
+<p>If you can give <code>not</code> a value of <code>a</code>, <code>not</code> will give you a value of <code>Void</code>. Since this is is impossible, <code>not</code> represents the logical Not operator: being able to obtain a value of <code>a -&gt; Void</code> (find a mapping from an inhabited type to the empty type) is an absurd proposition. Therefore, if <code>a</code> contains values, <code>Not a</code> will not.</p>
 <p>Some programming languages (Such as Idris, Coq and Agda) give you a really useful type called equality that allows you to prove that two propositions are equal:</p>
 <pre><code>Equality : a -&gt; b -&gt; Type where
   reflex : Equality x x</code></pre>
