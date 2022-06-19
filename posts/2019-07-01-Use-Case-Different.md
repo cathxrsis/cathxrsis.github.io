@@ -28,7 +28,7 @@ Each of these definitions describe the use case as the scenario surrounding the 
 
 Now look at the SysML/UML use case diagram:
 
-![Old Use Case](/assets/images/olduc.svg)
+![Old Use Case](/images/olduc.svg)
 > An example of a UML/SysML use case diagram.
 
 The notation of use cases suggests a rather different interpretation of the use case than the definitions. The use cases are inside the system boundary, suggesting that use cases are somehow contained inside the system. Possibly as system behaviours? To muddy the waters further, the SysML specification seems to agree with the other definitions:
@@ -51,7 +51,7 @@ So what happens if we reconcile the SysML/UML use case with the interpretation g
 
 It becomes clear that the association between a use case and an actor is now a composition relationship; actors exist and interact with our system within the scope of our use case. Another odd semantic that comes from this is that use cases must be composed of the system under development too. This turns the original notation of use cases being within a system boundary on its head. Below is an example block definition diagram of the relationships to illustrate the advocated relationships.
 
-![New Use Case](/assets/images/newuc.svg)
+![New Use Case](/images/newuc.svg)
 > An illustration of my suggested use of use case elements.
 
 The semantic elegance of this way of representing use cases really comes into its own when you represent the interactions in a use case with activities or sequences. Internal block diagrams can then be used to represent a context diagram showing interfaces between the instances of the actors and system under development. All of the elements are neatly withing scope. The scope also applies to  swimlanes in activities and lifelines in sequences. A block definition diagram can be used to illustrate an overview of the use cases and the actors at the top level if required.

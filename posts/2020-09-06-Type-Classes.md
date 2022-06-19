@@ -23,9 +23,9 @@ In the last post we explored how primitive types can be expressed using a few ne
 
 ## What is an Algebra?
 
-To start with lets talk about how mathematicians,physicists and computer scientists model the world: through algebra. The concept of algebraic structures is usually new to engineers who aren't usually taught abstract maths at university level even when it becomes extremely useful. This fact is probably why academic computer scientists can be found geeking out over new developments in category theory whilst even the most academic mechanical engineers wouldn't be able to tell you what a division ring is despite having used them since primary school.
+To start with lets talk about how mathematicians,physicists and computer scientists model the world: through algebra. The concept of algebraic structures is usually new to engineers who aren't normally taught abstract maths at university level.
 
-An algebraic structure is a set of objects, a set of operations that you can use with them and a set of laws that they must conform to. Let's have a look at the example of a *Monoid* t show you what I mean. A *Monoid* is any set where two members of the set can be combined with a "multiplication" operation to create another member of the set. There must also be an *Id* element that when combined with other elements, returns the other element unscathed. Let's use the programming language "Idris" to illustrate this:
+An algebraic structure is a set of objects, a set of operations that you can use with them and a set of laws that they must conform to. Let's have a look at the example of a *Monoid* to show you what I mean. A *Monoid* is any set where two members of the set can be combined with a "multiplication" operation to create another member of the set. There must also be an *Id* element that when combined with other elements, returns the other element unscathed. Let's use the programming language "Idris" to illustrate this:
 
      interface Monoid m where   -- m is any type that we're defining a monoid for
        mId : m                  -- mId is the identity
@@ -49,11 +49,11 @@ To hammer the point home, here are a couple of other well used monoids:
 
     implementation Monoid NatMult where -- A multiplicative monoid for the natural numbers
       mId = 1       -- 1 is the identity
-      mPlus = (*)   -- Multiplication is the operator
+      mPlus = (*)   -- Multiplication is the binary operator
 
     implementation Monoid Bool where
       mId = True    -- True is the identity
-      mPlus = (&&)  -- Boolean AND is the operator
+      mPlus = (&&)  -- Boolean AND is the binary operator
 
     implementation Monoid String where
       mId = ""      -- The identity is the empty string
@@ -63,11 +63,11 @@ The power of knowing what sort of algebraic structure you are playing with is th
 
 There is a good reason why I started by mentioning the Monoid. Not only is the Monoid possibly the simplest intuitive algebraic structure, it could be used to give meaning to the join node in activity diagrams for object flows.
 
-![Activity diagram fragment showing two object flows connecting to a join node](../assets/images/join.png)
+![Activity diagram fragment showing two object flows connecting to a join node](/images/join.png)
 
-In the current UML/SysML interpretation of join nodes, they cannot be used easily with object flows as in the diagram above. This is because if two tokens reach the node, what value do we give the outgoing token? Specifying that all of the incoming flows must be of the same type with a defined monoid solves this problem. We simply define the value of the outgoing token as the "mPlus" of the values of the incoming tokens. As a monoid must be associative, this pattern would work for any number of incoming object flows.
+In the current UML/SysML interpretation of join nodes, they cannot be used easily with object flows as in the diagram above. This is because if two tokens reach the node, what value do we give the outgoing token? In the current spec, you have to define each join node with a constraint detailing how it combines the inputs Specifying that all of the incoming flows must be of the same type with a defined monoid solves this problem. We simply define the value of the outgoing token as the "mPlus" of the values of the incoming tokens. As a monoid must be associative, this pattern would work for any number of incoming object flows.
 
-There are far more useful and interesting algebraic structures that embody many patterns that arise in engineering situations. I'll explore a few in some future blog posts, perhaps I may even try to tackle the dreaded Monad in UML (after all, its just a monoid over the category of endofunctors, right?).
+There are far more useful and interesting algebraic structures that embody many patterns that arise in engineering situations. I'll explore a few in some future blog posts, perhaps I may even try to tackle the dreaded Monad in UML.
 
 ## A UML implementation for Algebraic Structures
 
@@ -96,7 +96,7 @@ Laws are quite easily added to the new classifier in the form of OCL constraints
      inv:    self -> forAll(m | exists(mZero | mAdd(m, mZero) == m))
      inv:    self -> forAll(m | forAll (n | forAll (o | mAdd(m, mAdd(n, o)) == mAdd(mAdd(m, n), o))))
 
-Personally, I find the OCL a lot harder to read than Idris. Its somewhat unfortunate that the UML and OCL developers hadn't encountered the ML family of languages as OCL could be have been understandable to the average engineer without losing its formality. Perhaps we'd have had a UML based on category theory; the third part of the Curry-Howard-Lambek Isomorphism.
+Personally, I find the OCL a lot harder to read than Idris. Its somewhat unfortunate that the UML and OCL developers hadn't encountered the ML family of languages as OCL could be have been more easily grokkable to the average engineer without losing its formality. Perhaps we'd have had a UML based on category theory; the third part of the Curry-Howard-Lambek Isomorphism.
 
 ## conclusion
 

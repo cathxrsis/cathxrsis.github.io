@@ -87,9 +87,9 @@ This process of using this equivalence is known as *currying* after Haskell Curr
 
 If you can give ```efq``` a member of the Void type, ```efq``` can give you anything. The logical principle of explosion. Effectively, this statement means that you can prove anything true if you start from a lie.
 
-    absurd : a -> Void
+    not : a -> Void
 
-If you can give ```absurd``` a value of ```a```, ```absurd``` will give you a value of ```Void```. Since this is is impossible, ```absurd``` represents the type of proofs of falsity: being able to obtain a value of ```a``` is an absurd proposition.
+If you can give ```not``` a value of ```a```, ```not``` will give you a value of ```Void```. Since this is is impossible, ```not``` represents the logical Not operator: being able to obtain a value of ```a -> Void``` (find a mapping from an inhabited type to the empty type) is an absurd proposition. Therefore, if ```a``` contains values, ```Not a``` will not.
 
 Some programming languages (Such as Idris, Coq and Agda) give you a really useful type called equality that allows you to prove that two propositions are equal:
 

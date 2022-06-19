@@ -18,17 +18,19 @@ This post is an introduction to an incredibly powerful pattern that is quite wel
 
 Before we talk about algebraic data types, lets ask what is a data type? In software engineering, Data Types act like a translation rule between bits in the memory and some useful meaning to the user. Depending on the level of your programming language, data types abstract away the actual bits and bytes in the memory being used to store your data and provide you with meaningful values such as integers, characters and strings. Some data types though force you to think a little harder about the implementation, misunderstanding floating point arithmetic has lead to a number of high profile failures including a [friendly fire incident of a missile system!](https://en.wikipedia.org/wiki/Round-off_error#Real_world_example:_Patriot_missile_failure_due_to_magnification_of_roundoff_error).
 
-There are a few different ways that programming languages treat types and values which I'll go over quickly before we move on. Some programming languages are weakly typed. In these languages a programmer can feed any value into any function and the runtime will handle the errors if there are any. Lisp, Python and Javascript all live in this family. Other languages are strongly typed. This mean that the language's functions can only be used on a variable if the types match up. Having strong types means that the compiler prevents you from feeding values into functions that don't know what to do with them preventing runtime errors but sacrificing some compiler efficiency. Examples of this are C (although casting allows you to be very cheeky with types), Java and the most rigid of the bunch, Ada. UML lives in this family too.
+There are a few different ways that programming languages treat types and values which I'll go over quickly before we move on. Some programming languages are weakly typed. In these languages a programmer can feed any value into any function and the runtime will handle the errors if there are any. Lisp, Python and Javascript all live in this family.
 
-Finally, it is worth mentioning that there are even more modern languages that have type systems (notably the Hindly-Milner type system) where the compiler can infer the required type signatures of function definitions. This is a significant advantage over languages such as Ada where a lot of type boilerplate code is required. Notable examples in this family are Haskell and OCaml. Some of these types systems are powerful enough to be used as mathematical theorem provers like Agda and Idris which may pave the way to provably safe code in the future once the paradigm has taken hold.
+Other languages are strongly typed. This mean that the language's functions can only be used on a variable if the types match up. Having strong types means that the compiler prevents you from feeding values into functions that don't know what to do with them preventing runtime errors but sacrificing some compiler efficiency. Examples of this are C (although casting allows you to be very cheeky with types), Java and the most rigid of the bunch, Ada. UML lives in this family too.
+
+Finally, it is worth mentioning that there are strongly typed languages that have type systems (notably the Hindly-Milner type system) where the compiler can infer the required type signatures of function definitions. This is a significant advantage over languages such as Ada where a lot of type boilerplate code is required. Notable examples in this family are Haskell and OCaml. Some of these types systems are powerful enough to be used as mathematical theorem provers like Agda and Idris which may pave the way to provably safe code in the future once the paradigm has taken hold.
 
 In UML terms, however, a data type is defined as a classifier whose instances are anonymous. This means that its just a class with unnamed objects (the objects are unnamed as they correspond to values). UML gives us three kinds of data types: structured data types (a name given to any type that contains an attribute of another type) primitives and enumerations. Enumeration is an interesting choice of name because it evokes the underlying mechanism of the abstraction (though was probably chosen to match enumeration types in C, a decision mirrored in the Rust programming language). Primitive data types are a UML cop-out:
 
 > A PrimitiveType defines a predefined DataType, without any substructure. A PrimitiveType may have algebra and operations defined outside of UML, for example, mathematically. The run-time instances of a PrimitiveType are values that correspond to mathematical elements defined outside of UML (for example, the Integers). [1]
 
-Part of the argument that I will try to convey in this post (but mainly the future one on typeclasses) is that knowing the possible values that a data type can take and what functions can be performed upon it are not a critical part of a UML/SysML design. This would enable use of UML/SysML model checking to ensure that we're not introducing type errors at the requirements level: if you try to feed something of the wrong type into the wrong function in your UML model, letting the model pick that up saves some poor programmer having to try and implement contradictory requirements. This blog post will introduce algebraic data types through a motivating example and then explore a candidate notation for defining them in UML.
+I personally object to this part of the standard and believe that types and their associated operations shouldbe brought into UML so that we can reason about which types best convey requirements and allow model checkers to catch type misuse errors.
 
-I personally object to this part of the standard and believe that types and their associated operations shouldbe brought into UML so that we can reason about which types best convey requirements and allow model checkers to catch type misuse errors. 
+Part of the argument that I will try to convey in this post (but mainly the future one on typeclasses) is that knowing the possible values that a data type can take and what functions can be performed upon it are not a critical part of a UML/SysML design. This would enable use of UML/SysML model checking to ensure that we're not introducing type errors at the requirements level: if you try to feed something of the wrong type into the wrong function in your UML model, letting the model pick that up saves some poor programmer having to try and implement contradictory requirements. This blog post will introduce algebraic data types through a motivating example and then explore a candidate notation for defining them in UML.
 
 ## Algebraic Data Types
 
@@ -36,7 +38,7 @@ The name "algebraic data type" tends to conjure up images of complex maths but i
 
 The sum of two (or more) types, sometimes called a "union", is a new type that has all of the values of both of the types. In UML enumeration data types can be thought as the union of each of its enumeration literals. UML enumeration literals are not quite suited for this purpose as they mst have a defined set of values that cannot be generated by a function. Some modellers try and get around this by using inheritance as a means to show that a data type can be either one value or another. The problem in this case is that the "input" data types to the sum cannot exist independently of the "output" (the super class) which does not convey the desired information to the reader of the model. This is why we will need to introduce a new notation for this concept.
 
-![Sum type using inheritance, not really worth it](../assets/images/inheritedMaybe.png)
+![Sum type using inheritance, not really worth it](/images/inheritedMaybe.png)
 
 A nice introduction to this concept can be found in the guide to the Elm programming language: [Types as Sets](https://guide.elm-lang.org/appendix/types_as_sets.html)
 
@@ -54,7 +56,7 @@ Don't panic though, this is easily caught by the operation itself if we check to
 
 Probably the most trivial answer, this solution just adds a separate failure propagation output to the function.
 
-![A uml call operation with the signature safeDivide(a : real, b : real, * f : failure) : real](../assets/images/function.png)
+![A uml call operation with the signature safeDivide(a : real, b : real, * f : failure) : real](/images/function.png)
 
 It doesn't take much extrapolation to see how quickly this would get completely out of hand, doubling up all of the lines on your diagram. UML only allows one return type, in the diagram the failure is considered an "argument by reference" but the failure could have been the return type instead. The language does not have a convention in this case making reusability awkward. Now imagine if the upstream function could fail too, we'd need to add another two inputs! And how would these received failures map to the output? This approach is definitely not scaleable.
 
@@ -87,15 +89,15 @@ A great introduction to this programming pattern is the slide show on "Railway O
 
 Lets imagine that we could design ADTs within UML, such as the Maybe type, what could the syntax look like? As we discussed earlier, to create ADTs, we require the ability to define new data types as the sum of two others or the product of two others. As a starting point, lets create two specialisations of directed associations to represent our constructors: one called «product» to represent the cartesian product of 2 or more types and an n-ary association called «union» to represent that the owning type is a union of two or more types. The product type is relatively familiar as it already exists in UML as a structure, we are just using the associations to make it diagrammatically explicit. Now we have defined an extension for sum types, we can use them to create definitions for all sorts of new types:
 
-![product type](../assets/images/product.png)
+![product type](/images/product.png)
 
 Here we are using the normal composition relationship to show that this type is a product of the two others. The name of the product relationship acts as the name of the "property" in the data type in a similar way to the way members of a class's names show on the composition association.
 
-![Sum type](../assets/images/sum.png)
+![Sum type](/images/sum.png)
 
 In this case the data type is the sum of two others. This is a tagged union; the names on the sum association give us a tag that we can use to reference the values of the constituent types.
 
-![Definition of the natural numbers](../assets/images/Nat.png)
+![Definition of the natural numbers](/images/Nat.png)
 
 In this diagram, we are using the standard type theoretic inductive definition of the natural numbers. We can read this as: a natural number is either 0 or an increment of a natural number. This is probably the most simple type to define in this system but it shows how we can use ADTs to define data types from scratch within the language itself. Note the "Unit" data type is a type with one value. This is needed to make the algebra of algebraic data types an algebra (a semiring to be exact). There should also be an Empty type that acts as the identity of the product type.
 
@@ -105,13 +107,13 @@ Let's think about this definition mathematically for a minute. What does this de
 
 Which is very much the definition of the natural numbers! Can we apply this sort of recursive definition to more exciting (and far more useful) data types? of course! Lets see how we can define the idea of a list inside of this profile:
 
-![List of Natural numbers](../assets/images/ListNats.png)
+![List of Natural numbers](/images/ListNats.png)
 
-In this diagram we have defined a list of natural numbers to show how even more interesting types can be defined. Here we can see that a Nat List is defined as either the empty list (another alias for the Nothing) or a product of a natural number (the head of the list) and a list of natural numbers (the tail of the list).
+In this diagram we have defined a list of natural numbers to show how even more interesting types can be defined. Here we can see that a Nat List is defined as either the empty list or a product of a natural number (the head of the list) and a list of natural numbers (the tail of the list). In a way, the list type is a Maybe type that can contain more than one value.
 
 You're probably looking at the above image right now and already thinking why should we have to define a new list type any time we need a list of things of a certain type. Especially when the pattern is such that we could replace the data type "Nat" on this diagram with any type that we could imagine (including other list types to make lists of lists). There is definitely an opening here to provide some abstraction and reuse value by creating "template" data types as we saw earlier with the Haskell maybe constructor. For now though I'll leave this for another blog post.
 
-![Definition of the maybe type using the sum association](../assets/images/NewMaybe.png)
+![Definition of the maybe type using the sum association](/images/NewMaybe.png)
 
 And finally, here's the definition of the MaybeReal used in the motivating example.
 

@@ -153,7 +153,7 @@ thinking of functions in this way.
 ![**An example SysML activity diagram of the behaviour of a toaster
 developed using the Miso method. This view would be complemented by a
 set of views showing the possible values for each Data
-Type.**](media/image1.png){width="\\textwidth"}
+Type.**](images/image1.png){width="\\textwidth"}
 
 With the Miso method, writing requirements becomes an exercise in
 stating which value is produced by the function for each combination of
