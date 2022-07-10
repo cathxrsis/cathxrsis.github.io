@@ -20,6 +20,8 @@ In a larger context, this loop could be the user's expressed desire for the abil
 
 Whilst coaching systems engineers within that previous role, I often found that they would start their requirements analysis at a very low level---perhaps even starting by writing one requirement for a box that only did a portion of the behaviour required for a user feature.
 
+
+
 # A Brief Aside Into Notation and Method
 
 To describe the patterns in this post, I will use a minimalist notation that I've settled upon for describing dynamic systems. This is a simplified version of stock and flow diagrams used in systems dynamics. Rounded rectangles are used to represent variables and diamonds for processes that evolve them.
@@ -46,16 +48,21 @@ Ashby's law of requisite variety states that a good regulator must have at least
 
 This *Understanding* model represents our understanding (funny, that) of the laws of physics and/or the environment which the system controls. It allows our feedback loop to become a *feedforward* loop. This means that instead of course correcting our systems interventions on the current state of the environment, we can predict where the environment will be and make our interventions based on that.
 
-We must ask ourselves though, where does our *Understanding* come from? There's only one place it can come from---the *Environment*.
-@@Apply the darkness principle
+We must ask ourselves though, where does our *Understanding* come from? There's only one place it can come from---the *Environment*. However, our knowledge of the environment is incomplete; there will always be edge behaviours that will surprise us. The fact that we can never *completely* model a system is known as *the darkness principle*. 
 
-The pattern that we now have 
+Because of this, we cannot take our *understanding* model for granted---we must add another loop that modifies our *understanding* based on surprises (unencountered phenomena) from the *environment*. We can call this loop *learning*.
+
+@@CYBERNETICLOOP
+
+The pattern that we now have is sometimes called the *Double loop learning* model. This pattern corresponds to places where we are actively updating our mental model---where we are improving our *feedforward* with *feedback*. This is a well understood pattern within Cybernetics and has permeated a lot of modern organisational thinking. It could be said that this pattern is the quintessential Cybernetic pattern.
 
 ## The Arrow of Desire
 
-So far, we've developed a standard pattern for an adaptive system. There is a concept, though, that we've been implicitly talking about that we haven't accounted for in our pattern. That concept is the *purpose* or *goal* of the system. @@POASIWID
+So far, we've developed a standard pattern for an adaptive system. There is a concept, though, that we've been implicitly talking about that we haven't accounted for in our pattern. That concept is the *purpose* or *goal* of the system.
 
-To begin with talking about purpose and goals, we should first make a distinction in the *Understanding* model. If our system has a goal then it must be encoded in the *Understanding* therefore we can cut part of our *Understanding* with a distinction and call it *the Ideal*. Its
+To begin with talking about purpose and goals, we should first make a distinction in the *Understanding* model. If our system has a goal then it must be encoded in the *Understanding* therefore we can cut part of our *Understanding* with a distinction and call it *the Ideal*. This new distinction brings with it a new relationship that we'll call *Desire*. This new relationship is an input to both the *learning* and *action* releationships.
+
+The idea behind destinguishing *Desire* and *The Ideal* from *Understnding* is to model
 
 ## Critique
 
