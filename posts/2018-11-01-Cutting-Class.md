@@ -26,7 +26,7 @@ Attempting to model prototypal inheritance in a classical way is a far messier e
 
 ## Class struggle
 
-> *The history of all hithero existing object-oriented design is the history of class struggle*
+> *The history of all hitherto existing object-oriented design is the history of class struggle*
 > Karl Marx (paraphrased)
 
 So how come classes became such an integral part of inheritance in programming? The answer is compiler optimisation. Having a class gives the machine a template telling it exactly how much memory to allocate each time it makes a new object. This is why the class pattern came to prominence in C where there were no compiler optimisations for object orientation. The C++ language, which originally transpiled to C, inherited this way of doing things.
