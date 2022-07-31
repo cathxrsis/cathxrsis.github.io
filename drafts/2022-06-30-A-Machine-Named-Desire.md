@@ -53,19 +53,21 @@ The pattern that we now have is sometimes called the *Double loop learning* mode
 
 ## The Arrow of Desire
 
-So far, we've developed a standard pattern for an adaptive system. There is a concept, though, that we've been implicitly talking about that we haven't accounted for in our pattern. That concept is the *purpose* or *goal* of the system.
+So far, we've developed a standard pattern for an adaptive system. There is a concept, though, that we've been implicitly talking about that we haven't accounted for in our pattern. That concept is the *purpose* or *goal* of the system. From this point forward, we will make the constraint that only *Action* and *Learning* can be used to 
 
 To begin with talking about purpose and goals, we should first make a distinction in the *Understanding* model. If our system has a goal then it must be encoded in the *Understanding* therefore we can cut part of our *Understanding* with a distinction and call it *the Ideal*. However, it is also equally valid to make this distinction out of *the Real* too---*the Ideal* could just as easily be outside of the scope of our system's perspective. This is why I've neglected the systems part of DSRP because, depending on the situation, the desiring machine pattern can be cut up by system boundaries in many ways. This new distinction brings with it a new relationship that we'll call *Desire*. This new relationship is an input to the *Action* process.
 
 ![Adding desire](../images/desire_desire.png){width=300px}
 
-*Desire* is the difference between *Understanding* and *the Ideal*. 
+*Desire* is the difference between *Understanding* and *the Ideal*. It therefore acts as an error signal that drives *Action*. That is to say that if *the Ideal* and *Understanding* do not differ, there will be no desire and therefore *Action* will not occur. A larger difference between *Understanding* and *the Ideal* creates a larger *Desire* signal and therefore drives greater *Action*. Depending on the desiring machine, *Desire* can be a multi-dimensional vector whose basis may not be orthogonal---that is to say, that more complex desiring machines can produce conflicting *Desire* which is caused by inconsistencies in *The ideal* and/or *Understanding*.
+
+*Desire* is not the only relationship between *the Real*, *Understanding* and *the Ideal*. The *Learning* process is also guided by the difference between *Understanding* and *the Ideal*.
 
 ![Adding meaning](../images/desire_meaning.png){width=300px}
 
 ## Critique
 
-The final relationship to create on the diagram is the one that changes *the Ideal*. 
+The final relationship to create on the diagram is the one that changes *the Ideal*. As a desiring machine only has access to *the Real* through *Learning* and *Action*
 
 ![The whole desiring machine](../images/desire_machinefull.png){width=300px}
 
@@ -75,7 +77,7 @@ The model described above is
 
 @@ONLY THE Action and Learning loops can interact with the environment
 
-One point to keep in mind when identifying *the Ideal* of a desiring machine in reality is that what may at first appear to be an organisation's goal may not be its goal at all. Stafford Beer's rule *the purpose of a system is what it does* is incredibly useful in this context for identifying the actual *Ideal* of a system. An organisation may have a stated goal and set of values but identifying what information a system accepts or rejects into its *understanding* (its *Meaning* process) and identifying what causes changes in its *Action* processes (its *Desire*) will give you pointers to what the true *Ideal* of that system is.
+One point to keep in mind when identifying *the Ideal* of a desiring machine in reality is that what may at first appear to be an organisation's goal may not be its goal at all. Stafford Beer's rule *the purpose of a system is what it does* is incredibly useful in this context for identifying the actual *Ideal* of a system. An organisation may have a stated goal and set of values but identifying what information a system accepts or rejects into its *understanding* (its *Meaning* process) and identifying what causes changes in its *Action* processes (its *Desire*) will give you pointers to what the true *Ideal* of that system is. Understanding the true *Desire* of a desiring machine is probably one of the sublest but most important analyses to conduct on a desiring machine system.
 
 ## Self Similarity
 
