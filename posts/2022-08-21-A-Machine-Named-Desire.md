@@ -11,7 +11,7 @@ tags:
 comments: true
 ---
 
-In this post, I will describe a pattern that I have identified in numerous places during my time as a systems engineer. This pattern sits somewhere between the traditional double-loop learning system and a viable system. I call this pattern the *Desiring Machine* as a nod to Deleuze as I feel that this pattern *feels* somewhat like a Deleuzian desiring machine. This post focusses mainly on the derivation of the pattern but I hope to expand on its uses as a framework for understanding and enquiry in future posts.  
+In this post, I will describe a pattern that I have identified in numerous places during my time as a systems engineer. This pattern sits somewhere between the traditional double-loop learning system and a viable system. I call this pattern the *Desiring Machine* as a nod to Deleuze as I feel that this pattern *feels* somewhat like a Deleuzian desiring machine. This post focusses mainly on the derivation of the pattern but I hope to expand on its uses as a framework for understanding and enquiry in future posts. I will add that I do not believe that this pattern is anything new; I have seen aspects of it expressed in various systems thinking texts. However, I don't think the pattern has been addressed by name or given the recognition as a useful pattern in the way I believe it deserves.
 
 # A Brief Aside Into Notation and Method
 
@@ -53,7 +53,7 @@ The pattern that we now have is sometimes called the *Double loop learning* mode
 
 ## The Arrow of Desire
 
-So far, we've developed a standard pattern for an adaptive system. There is a concept, though, that we've been implicitly talking about that we haven't accounted for in our pattern. That concept is the *purpose* or *goal* of the system. From this point forward, we will make the constraint that only *Action* and *Learning* can be used to 
+So far, we've developed a standard pattern for an adaptive system. There is a concept, though, that we've been implicitly talking about that we haven't accounted for in our pattern. That concept is the *purpose* or *goal* of the system. From this point forward, we will define that only *Action* and *Learning* can be used to interact with *the Real*. This constraint is justified by the assumption that internal processes of a system can only operate upon the *understanding* of the system.
 
 To begin with talking about purpose and goals, we should first make a distinction in the *Understanding* model. If our system has a goal then it must be encoded in the *Understanding* therefore we can cut part of our *Understanding* with a distinction and call it *the Ideal*. However, it is also equally valid to make this distinction out of *the Real* too---*the Ideal* could just as easily be outside of the scope of our system's perspective. This is why I've neglected the systems part of DSRP because, depending on the situation, the desiring machine pattern can be cut up by system boundaries in many ways. This new distinction brings with it a new relationship that we'll call *Desire*. This new relationship is an input to the *Action* process.
 
@@ -61,36 +61,31 @@ To begin with talking about purpose and goals, we should first make a distinctio
 
 *Desire* is the difference between *Understanding* and *the Ideal*. It therefore acts as an error signal that drives *Action*. That is to say that if *the Ideal* and *Understanding* do not differ, there will be no desire and therefore *Action* will not occur. A larger difference between *Understanding* and *the Ideal* creates a larger *Desire* signal and therefore drives greater *Action*. Depending on the desiring machine, *Desire* can be a multi-dimensional vector whose basis may not be orthogonal---that is to say, that more complex desiring machines can produce conflicting *Desire* which is caused by inconsistencies in *The ideal* and/or *Understanding*.
 
-*Desire* is not the only relationship between *the Real*, *Understanding* and *the Ideal*. The *Learning* process is also guided by the difference between *Understanding* and *the Ideal*.
+*Desire* is not the only relationship between *the Real*, *Understanding* and *the Ideal*. The *Learning* process is also guided by the difference between *Understanding* and *the Ideal*. This signal is analogous to the idea of attention--it acts as a filter of what information from *the Real* is worth incorporating into *Understanding*. For now we will call it *Meaning*:
 
 ![Adding meaning](../images/desire_meaning.png){width=300px}
 
+*Meaning* is an important signal within the desiring machine as it ensures that the *understanding* does not get overwhelmed with information that is not relevant to the goals of the system. Along with *Desire*, *Meaning* can be used as a lens to understand many pathologies of systems.
+
 ## Critique
 
-The final relationship to create on the diagram is the one that changes *the Ideal*. As a desiring machine only has access to *the Real* through *Learning* and *Action*
+The final relationship to create on the diagram is the one that changes *the Ideal*. As a desiring machine only has access to *the Real* through *Learning* and *Action*. This is added as the process that creates and modifies *the Ideal* and therefore sets the goals of the desiring machine. Without it, there could be no *Ideal* as this process is the one that creates the distinction internally to the *Understanding* between what is and what is *Ideal*. On the diagram, it looks like this:
 
 ![The whole desiring machine](../images/desire_machinefull.png){width=300px}
 
-# The Desiring Machine
-
-The model described above is 
-
-@@ONLY THE Action and Learning loops can interact with the environment
-
-One point to keep in mind when identifying *the Ideal* of a desiring machine in reality is that what may at first appear to be an organisation's goal may not be its goal at all. Stafford Beer's rule *the purpose of a system is what it does* is incredibly useful in this context for identifying the actual *Ideal* of a system. An organisation may have a stated goal and set of values but identifying what information a system accepts or rejects into its *understanding* (its *Meaning* process) and identifying what causes changes in its *Action* processes (its *Desire*) will give you pointers to what the true *Ideal* of that system is. Understanding the true *Desire* of a desiring machine is probably one of the sublest but most important analyses to conduct on a desiring machine system.
+This diagram demonstrates the pattern of the desiring machine. In future posts I will explore how this pattern can be used as a lens to understand some pathologies within systems but first we will explore how different desiring machines can interact as different levels of abstraction hierarchy.
 
 ## Self Similarity
 
-Like many systems, Desiring machines are often self-similar---the processes within desiring machines are often themselves desiring machines.
+Like many systems, Desiring machines are often self-similar---the processes within desiring machines are often themselves desiring machines. When we're working as an engineering firm, we embody a desiring machine. Our customers, be they individuals or organisations, also embody desiring machines. From the customer's perspective, our engineering firm looks like one of their *Action* processes (remember the part about how each of the processes may be a desiring machine itself). Note that it's not 'Desiring Machines all the way down'; the end of the chain of Desire is often just a single or double cybernetic loop acting upon *the Real*. 
 
-When we're working as an engineering firm, we embody a desiring machine. Our customers, be they individuals or organisations, also embody desiring machines. From the customer's perspective, our engineering firm looks like one of their *Action* processes (remember the part about how each of the processes may be a desiring machine itself). Note that it's not 'Desiring Machines all the way down'; the end of the chain of Desire is often just a single or double cybernetic loop acting upon *the Real*. 
-
-Now our viewpoint is an interesting one to take---we can either view the customer's requirements as a part of our environment or we can cut the customer's desiring machine out of the environment using a new distinction. The following diagram shows what that looks like:
+The viewpoint of an *Action* process as a desiring machine is an interesting one to take---we can think of the example of an engineering firm that's developing a system for a customer organisation. We can either view the customer's requirements as a part of our environment or we can distinguish the customer's desiring machine out of the environment using a new distinction. The following diagram shows what that looks like:
 
 
 ![Hierarchy of desiring machines](../images/desire_net.png){width=750px}
 
-This is just one place where the framework of desiring machines becomes useful in understanding problems of engineering. From the diagram we can see that we have no direct measure of our customer's desire; what we think of as their requirements
+The primes show the process and parts of the customer desiring machine. We can use this diagram as a lens to understand some of the pathologies caused by the hierarchy of two
+desiring machines. For example, the desire of the customer is filtered through both the customer's *understanding*, the engineering firm's *meaning* and the engineering firm's *understanding*. This means that the less the two understandings match (and the less meaningful engineer's find the requirements) the less the engineered solution will meet the customer's desire. This is an effect that I'd like to explore further in a future post.
 
 # Conclusion
 

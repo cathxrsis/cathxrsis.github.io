@@ -3,6 +3,7 @@
 ### Haskell ###
 dist
 cabal-dev
+*.pdf
 *.o
 *.hi
 *.chi

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{A Category of Systems - A Machine Named Desire}</title>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="../">A Category of Systems</a>
+            </div>
+            <div id="navigation">
+                <a href="../">Home</a>
+                <a href="../bits/about.html">About</a>
+                <a href="../archive.html">Archive</a>
+                <a href="../bits/antipatterns.html">Antipatterns</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>A Machine Named Desire</h1>
+
+            <div class="info">
+    Posted on June 30, 2022
+    
+</div>
+
+<p>In this post, I will describe a pattern that I have identified in numerous places during my time as a systems engineer. This pattern sits somewhere between the traditional double-loop learning system and a viable system. I call this pattern the <em>Desiring Machine</em> as a nod to Deleuze as I feel that this pattern <em>feels</em> somewhat like a Deleuzian desiring machine. This post focusses mainly on the derivation of the pattern but I hope to expand on its uses as a framework for understanding and enquiry in future posts. I will add that I do not believe that this pattern is anything new; I have seen aspects of it expressed in various systems thinking texts. However, I don’t think the pattern has been addressed by name or given the recognition as a useful pattern in the way I believe it deserves.</p>
+<h1 id="a-brief-aside-into-notation-and-method">A Brief Aside Into Notation and Method</h1>
+<p>To describe the patterns in this post, I will use a minimalist notation that I’ve settled upon for describing dynamic systems. This is a simplified version of stock and flow diagrams used in systems dynamics. Rounded rectangles are used to represent variables and diamonds for processes that evolve them.</p>
+<p>For example, here’s a simple system:</p>
+<figure>
+<img src="../images/desire_example.png" width="200" alt="Notational example" />
+<figcaption aria-hidden="true">Notational example</figcaption>
+</figure>
+<p>For the methodology, I’ll be showing my working as subsequent applications of DSRP. Although it is <a href="http://dx.doi.org/10.1016/j.evalprogplan.2008.04.002">disputed</a> whether DSRP is complete, it is a definitely simple framework and good enough for the purposes here. I have also used a few laws from various systems thinkers, a great summary of these laws can be found in the book <a href="https://www.scio.org.uk/resources/grammar-systems-order-chaos-back">The Grammar of Systems: From Order to Chaos &amp; Back</a>.</p>
+<h1 id="the-loop">The Loop</h1>
+<p>Initially, we’ll start from the most simple loop of <em>The Real</em> and the process by which it changes which we’ll call <em>Evolution</em>. This leads us to a trivial system looking like this:</p>
+<figure>
+<img src="../images/base.png" width="100" alt="The simplest system" />
+<figcaption aria-hidden="true">The simplest system</figcaption>
+</figure>
+<p>I hope that you’ll agree that this is an incredibly low resolution model of the universe. The reason why I’ve started here is because all systems are inscribed within the real. It’s good to keep in mind that applications of DSRP are all about imposing structure on a Volatile, Unknowable, Complex and Ambiguous reality—everything that exists is already within this model, we just need recursive subsequent applications of DSRP to carve our more subtle patterns from it.</p>
+<p>Ashby’s law of requisite variety states that a good regulator must have at least as much variety as the environment it controls. Therefore, alongside the environment, there must be a model of that environment that we can use to control it. This model is part of <em>the Real</em> so we’ll carve it out of the <em>Real</em> with a distinction. For reasons explained later, we’ll call it <em>Understanding</em>:</p>
+<figure>
+<img src="../images/desire_understanding.png" width="200" alt="Adding understanding" />
+<figcaption aria-hidden="true">Adding understanding</figcaption>
+</figure>
+<p>If we were following DSRP to the letter, the creation of a distinction across an element would cause the creation of two new elements within the system of the original. For the simplicity of the diagrams, we’re ignoring the system part for now, as we’re operating from the perspective of the desiring machine that we’re deriving. I hope that this omission will not cause too much confusion.</p>
+<p>The third part of making a distinction is the creation of the relationships between the two new elements created by the distinction. These relationships are what we used to define the purpose of our distinction so we must interrogate our motives. The reason for this enquiry is to understand a general pattern for systems that seek to modify the environment in the way they see fit, so the first relationship should be <em>Action</em>. <em>Action</em> is a process that takes in <em>The Real</em> and <em>Understanding</em> and modifies <em>The Real</em> towards some goal based on <em>Understanding</em>.</p>
+<h2 id="doubling-the-loop">Doubling the Loop</h2>
+<p>This <em>Understanding</em> model represents our understanding (funny, that) of the laws of physics and/or the environment which the system controls. It allows our feedback loop to become a <em>feedforward</em> loop. This means that instead of course correcting our systems interventions on the current state of the environment, we can predict where the environment will be and make our interventions based on that.</p>
+<p>We must ask ourselves though, where does our <em>Understanding</em> come from? There’s only one place it can come from—<em>the Real</em>. However, our knowledge of <em>the Real</em> is incomplete; there will always be edge behaviours that will surprise us. The fact that we can never <em>completely</em> model a system is known as <em>the darkness principle</em>.</p>
+<p>Because of this, we cannot take our <em>understanding</em> model for granted—we must add another loop that modifies our <em>understanding</em> based on surprises (unencountered phenomena) from <em>the Real</em>. We can call this new process <em>learning</em>.</p>
+<figure>
+<img src="../images/desire_learning.png" width="250" alt="Adding learning" />
+<figcaption aria-hidden="true">Adding learning</figcaption>
+</figure>
+<p>The pattern that we now have is sometimes called the <em>Double loop learning</em> model. This pattern corresponds to places where we are actively updating our mental model—where we are improving our <em>feedforward</em> with <em>feedback</em>. This is a well understood pattern within Cybernetics and has permeated a lot of modern organisational thinking. It could be said that this pattern is the quintessential Cybernetic pattern. For example, this pattern generalises the ubiquitous OODA loop model.</p>
+<h2 id="the-arrow-of-desire">The Arrow of Desire</h2>
+<p>So far, we’ve developed a standard pattern for an adaptive system. There is a concept, though, that we’ve been implicitly talking about that we haven’t accounted for in our pattern. That concept is the <em>purpose</em> or <em>goal</em> of the system. From this point forward, we will define that only <em>Action</em> and <em>Learning</em> can be used to interact with <em>the Real</em>. This constraint is justified by the assumption that internal processes of a system can only operate upon the <em>understanding</em> of the system.</p>
+<p>To begin with talking about purpose and goals, we should first make a distinction in the <em>Understanding</em> model. If our system has a goal then it must be encoded in the <em>Understanding</em> therefore we can cut part of our <em>Understanding</em> with a distinction and call it <em>the Ideal</em>. However, it is also equally valid to make this distinction out of <em>the Real</em> too—<em>the Ideal</em> could just as easily be outside of the scope of our system’s perspective. This is why I’ve neglected the systems part of DSRP because, depending on the situation, the desiring machine pattern can be cut up by system boundaries in many ways. This new distinction brings with it a new relationship that we’ll call <em>Desire</em>. This new relationship is an input to the <em>Action</em> process.</p>
+<figure>
+<img src="../images/desire_desire.png" width="300" alt="Adding desire" />
+<figcaption aria-hidden="true">Adding desire</figcaption>
+</figure>
+<p><em>Desire</em> is the difference between <em>Understanding</em> and <em>the Ideal</em>. It therefore acts as an error signal that drives <em>Action</em>. That is to say that if <em>the Ideal</em> and <em>Understanding</em> do not differ, there will be no desire and therefore <em>Action</em> will not occur. A larger difference between <em>Understanding</em> and <em>the Ideal</em> creates a larger <em>Desire</em> signal and therefore drives greater <em>Action</em>. Depending on the desiring machine, <em>Desire</em> can be a multi-dimensional vector whose basis may not be orthogonal—that is to say, that more complex desiring machines can produce conflicting <em>Desire</em> which is caused by inconsistencies in <em>The ideal</em> and/or <em>Understanding</em>.</p>
+<p><em>Desire</em> is not the only relationship between <em>the Real</em>, <em>Understanding</em> and <em>the Ideal</em>. The <em>Learning</em> process is also guided by the difference between <em>Understanding</em> and <em>the Ideal</em>. This signal is analogous to the idea of attention–it acts as a filter of what information from <em>the Real</em> is worth incorporating into <em>Understanding</em>. For now we will call it <em>Meaning</em>:</p>
+<figure>
+<img src="../images/desire_meaning.png" width="300" alt="Adding meaning" />
+<figcaption aria-hidden="true">Adding meaning</figcaption>
+</figure>
+<p><em>Meaning</em> is an important signal within the desiring machine as it ensures that the <em>understanding</em> does not get overwhelmed with information that is not relevant to the goals of the system. Along with <em>Desire</em>, <em>Meaning</em> can be used as a lens to understand many pathologies of systems.</p>
+<h2 id="critique">Critique</h2>
+<p>The final relationship to create on the diagram is the one that changes <em>the Ideal</em>. As a desiring machine only has access to <em>the Real</em> through <em>Learning</em> and <em>Action</em>. This is added as the process that creates and modifies <em>the Ideal</em> and therefore sets the goals of the desiring machine. Without it, there could be no <em>Ideal</em> as this process is the one that creates the distinction internally to the <em>Understanding</em> between what is and what is <em>Ideal</em>. On the diagram, it looks like this:</p>
+<figure>
+<img src="../images/desire_machinefull.png" width="300" alt="The whole desiring machine" />
+<figcaption aria-hidden="true">The whole desiring machine</figcaption>
+</figure>
+<p>This diagram demonstrates the pattern of the desiring machine. In future posts I will explore how this pattern can be used as a lens to understand some pathologies within systems but first we will explore how different desiring machines can interact as different levels of abstraction hierarchy.</p>
+<h2 id="self-similarity">Self Similarity</h2>
+<p>Like many systems, Desiring machines are often self-similar—the processes within desiring machines are often themselves desiring machines. When we’re working as an engineering firm, we embody a desiring machine. Our customers, be they individuals or organisations, also embody desiring machines. From the customer’s perspective, our engineering firm looks like one of their <em>Action</em> processes (remember the part about how each of the processes may be a desiring machine itself). Note that it’s not ‘Desiring Machines all the way down’; the end of the chain of Desire is often just a single or double cybernetic loop acting upon <em>the Real</em>.</p>
+<p>The viewpoint of an <em>Action</em> process as a desiring machine is an interesting one to take—we can think of the example of an engineering firm that’s developing a system for a customer organisation. We can either view the customer’s requirements as a part of our environment or we can distinguish the customer’s desiring machine out of the environment using a new distinction. The following diagram shows what that looks like:</p>
+<figure>
+<img src="../images/desire_net.png" width="750" alt="Hierarchy of desiring machines" />
+<figcaption aria-hidden="true">Hierarchy of desiring machines</figcaption>
+</figure>
+<p>The primes show the process and parts of the customer desiring machine. We can use this diagram as a lens to understand some of the pathologies caused by the hierarchy of two
+desiring machines. For example, the desire of the customer is filtered through both the customer’s <em>understanding</em>, the engineering firm’s <em>meaning</em> and the engineering firm’s <em>understanding</em>. This means that the less the two understandings match (and the less meaningful engineer’s find the requirements) the less the engineered solution will meet the customer’s desire. This is an effect that I’d like to explore further in a future post.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I have found the <em>Desiring Machine</em> pattern model useful in my own practice for understanding and diagnosing problems of systems engineering. I hope that I have explained it well enough here for others to understand it and to apply it in their own systems practice. I do not believe that I have added anything new during this inquiry, but I think the pattern is useful enough to warrant being named.</p>
+<p>I’d be especially interested to know where it doesn’t work well and additions/subtractions are greatly appreciated. Please put any thoughts that you might have in the comments below.</p>
+<p>In future posts, I hope to expand on my ideas around the desiring machine, showing how it can be used to understand the viable systems model as well as other concepts in systems engineering. I’d also like to augment my model of the desiring machine with the idea of system cadences or rhythms to gain understanding of how the pattern changes when information flows at different rates around the system. There’s also some interesting insights to be had when the S part of DSRP is put back in so that we have different ways of cutting up the desiring machine with system boundaries.</p>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-cathxrsis-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+        <div id="footer">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
+            Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+        </div>
+    </body>
+</html>
