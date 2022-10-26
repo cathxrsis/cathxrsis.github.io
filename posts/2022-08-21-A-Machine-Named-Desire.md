@@ -37,6 +37,8 @@ Ashby's law of requisite variety states that a good regulator must have at least
 
 If we were following DSRP to the letter, the creation of a distinction across an element would cause the creation of two new elements within the system of the original. For the simplicity of the diagrams, we're ignoring the system part for now, as we're operating from the perspective of the desiring machine that we're deriving. I hope that this omission will not cause too much confusion.
 
+*ERRATUM: I have come to the realisation that the Real should be replaced by the Environment in the following diagrams. The Environment being a small part of the Real that we care about. The Darkness principle (a result of Ashby's law) prevents us from making a Desiring Machine that can cope with all of the Real despite what the MIT school might attempt* 
+
 The third part of making a distinction is the creation of the relationships between the two new elements created by the distinction. These relationships are what we used to define the purpose of our distinction so we must interrogate our motives. The reason for this enquiry is to understand a general pattern for systems that seek to modify the environment in the way they see fit, so the first relationship should be *Action*. *Action* is a process that takes in *The Real* and *Understanding* and modifies *The Real* towards some goal based on *Understanding*.
 
 ## Doubling the Loop
@@ -83,6 +85,8 @@ The viewpoint of an *Action* process as a desiring machine is an interesting one
 
 
 ![Hierarchy of desiring machines](../images/desire_net.png){width=750px}
+
+*ERRATA: The Customer Desiring Machine should be connected to the Learning Process of the lower-level Desiring Machine*
 
 The primes show the process and parts of the customer desiring machine. We can use this diagram as a lens to understand some of the pathologies caused by the hierarchy of two
 desiring machines. For example, the desire of the customer is filtered through both the customer's *understanding*, the engineering firm's *meaning* and the engineering firm's *understanding*. This means that the less the two understandings match (and the less meaningful engineer's find the requirements) the less the engineered solution will meet the customer's desire. This is an effect that I'd like to explore further in a future post.
