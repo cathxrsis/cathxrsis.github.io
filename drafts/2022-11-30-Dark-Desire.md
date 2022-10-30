@@ -26,6 +26,7 @@ Understanding
 Desiring Machines as an OODA loop
 ---------------------------------
 
+The OODA loop is a pattern for understanding how to win competitions between cybernetic systems. The acronym stands for Observe, Orient, Decide and Act---the four stages that any system has to go through to make changes in its environment. The Desiring Machine pattern's Learning process covers the Observe and Orient while Action covers Decide and Act.  
 
 Viable Desiring Machines
 ------------------------
@@ -50,7 +51,7 @@ System 4
 
 System 5
 
-  : This sub-system maintains the 'ethos' of the system. It does acts as th @@ In terms of the Desiring Machine, System 5 comprises the Ideal and the processes of Critique, Desire and Meaning.
+  : This sub-system maintains the 'ethos' of the system. It does acts as th @@ In terms of the Desiring Machine, System 5 comprises the Ideal and the processes of Critique, Desire and Meaning. An important point to make here 
 
 Of course, pa
 
@@ -58,4 +59,8 @@ Pathologies of the Desiring Machine
 -----------------------------------
 
 We have covered the relations between the OODA loop, VSM and the Desiring Machine. The OODA loop is a great model for understanding how to win inter-system conflicts whereas the VSM is a model for understanding how to build cohesive and resilient (viable) systems. The desiring machine, sits in between these two in this sense too by giving us a framework to understand intra-system conflicts, namely those that happen between levels of hierarchy.
+
+One such pathology occurs when one desiring machine in a heirarchy of desiring machines becomes viable when it shouldn't. To illustrate this point, imagine a car engineering firm which designs internal combustion engine driven vehicles. The company itself is a viable desiring machine and so are the engineers who work in the firm. Between the level of the firm and the level of the employee, however, is the departmental level. In this example, one of these departments is the engine design department.
+
+The engine design department is itself a viable desiring machine with its Desire, Meaning and Critique processes conducted by the Engine Design Chief Engineer and their team of managers.
 
