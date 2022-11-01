@@ -20,7 +20,33 @@ The Environment
 
 Understanding
 
-  : The Desiring Machine's model of 
+  : The Desiring Machine's model of its environment.
+
+Ideal
+
+  : A model of what an ideal environment looks like to the desiring machine with regards to its understanding.
+
+And the key processes of the Desiring Machine are:
+
+Learning
+
+  : The ability for the system to produce and update an Understanding from observations on the environment.
+
+Action
+
+  : The ability for the system to make changes on its environment using its Understanding and observing the environment.
+
+Meaning
+
+  : The ability for a system to filter its learning based on what is important for it to understand based on its ideals
+
+Desire
+
+  : The ability for the system to guide its actions based on moving the environment towards its ideal state
+
+Critique
+
+  : The ability for a system to develop and evolve an ideal.
 
 
 Desiring Machines as an OODA loop
