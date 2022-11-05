@@ -59,6 +59,19 @@ It is worth noting that this central role of a project means that systems engine
 
 This mechanism may explain why systems engineers make up a large part of the management in companies with longer histories of systems engineering. This mechanism also gives systems engineering a draw factor to those who have ambitions for management. 
 
+Paternalism
+-----------
+
+Perhaps because of the academic landscape, the demographics of the community or the industries that dominate the discipline, systems engineering has a problem with paternalism. What do I mean by this? 
+
+- Lack of dissemination of systems thinking and theory
+- Lots of dumbing down into frameworks by well meaning 
+- Circular causation with the lack of passion in SE?
+- Training becomes paternalistic
+
 How might we go about fixing this?
 ----------------------------------
+
+To reiterate the premise in different terms, systems engineering as a discipline needs to foster a greater number of *vocational* systems engineers to ensure that it can innovate and solve the ever-complex problems of the future. Above I have explored what may be causing this perceived problem, so now its time to suggest some ways forward to fixing it.
+
 
