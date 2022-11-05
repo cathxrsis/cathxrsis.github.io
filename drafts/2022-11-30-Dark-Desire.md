@@ -12,7 +12,7 @@ The Desiring Machine is a pattern to which some systems may conform. It typifies
 
 ![The Desiring Machine](../images/desire_machinefull.png){width=500px}
 
-The key objects in a desiring machine are:
+The key states in a desiring machine are:
 
 The Environment
 
