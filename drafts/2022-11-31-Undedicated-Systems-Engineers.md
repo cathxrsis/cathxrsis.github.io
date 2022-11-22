@@ -60,7 +60,9 @@ This mechanism may explain why systems engineers make up a large part of the man
 
 ### Box Tickers
 
-Finally for this section, I have to talk about the most soul-crushing places a systems engineer can find themselves. In the a box-ticking excercise. 
+Finally for this section, I have to talk about the most soul-crushing places a systems engineer can find themselves. In the a box-ticking excercise.
+
+- Being here can crush the light from a budding vocational systems engineer into a cynical husk.
 
 Paternalism
 -----------
