@@ -46,13 +46,13 @@ Desire
 
 Critique
 
-  : The ability for a system to develop and evolve an ideal.
+  : The ability for a system to develop and evolve an ideal state.
 
 
 Desiring Machines as an OODA loop
 ---------------------------------
 
-The OODA loop is a pattern for understanding how to win competitions between cybernetic systems. The acronym stands for Observe, Orient, Decide and Act---the four stages that any system has to go through to make changes in its environment. The Desiring Machine pattern's Learning process covers the Observe and Orient while Action covers Decide and Act.  
+The OODA loop is a pattern for understanding how to win competitions between cybernetic systems. The acronym stands for Observe, Orient, Decide and Act---the four stages that any system has to go through to make changes in its environment. The Desiring Machine pattern's Learning process covers the Observe and Orient while Action covers Decide and Act.
 
 Viable Desiring Machines
 ------------------------
@@ -61,19 +61,19 @@ Stafford Beer's Viable system model is a cybernetic pattern that allows us under
 
 System 1
 
-  : The sub-system that brings value by acting upon the environment of the system. This is the Action process of the Desiring Machine.
+  : The sub-system that brings value by acting upon the environment of the system. This is the Action and learning processes of the Desiring Machine. However, we will see later, that it is not the entirety of that loop as System 1 only deals with the day-to-day tasks that it has been 
 
 System 2
 
-  : The sub-system that monitors the multiple System 1s and ensures that there are no contradictions between the actions of these systems.
+  : The sub-system that monitors the multiple System 1s and ensures that there are no contradictions between the actions of these systems. It therefore monitors the operating environments of each of the system 1s and compares these with an understanding of these environments
 
 System 3
 
-  : This sub system 
+  : @@ System 3 monitors the understandings of the  
 
 System 4
 
-  : This sub-system monitors the environment and attempts to 
+  : This sub-system monitors the environment and attempts to adapt the whole system to cope with foreseen environmental changes. Where system 2 reacts to shock and system 3 perfects the system to @@ Therefore, system 4 can be envisioned by making another distinction within the *Understanding*; this time, creating a  
 
 System 5
 
@@ -89,4 +89,11 @@ We have covered the relations between the OODA loop, VSM and the Desiring Machin
 One such pathology occurs when one desiring machine in a heirarchy of desiring machines becomes viable when it shouldn't. To illustrate this point, imagine a car engineering firm which designs internal combustion engine driven vehicles. The company itself is a viable desiring machine and so are the engineers who work in the firm. Between the level of the firm and the level of the employee, however, is the departmental level. In this example, one of these departments is the engine design department.
 
 The engine design department is itself a viable desiring machine with its Desire, Meaning and Critique processes conducted by the Engine Design Chief Engineer and their team of managers.
+
+Desiring Machine Reach-through
+------------------------------
+
+
+
+
 
