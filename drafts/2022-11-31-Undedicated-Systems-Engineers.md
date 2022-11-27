@@ -60,7 +60,9 @@ This mechanism may explain why systems engineers make up a large part of the man
 
 ### Box Tickers
 
-Finally for this section, I have to talk about the most soul-crushing places a systems engineer can find themselves. In the a box-ticking excercise.
+Finally for this section, I have to talk about the most soul-crushing places a systems engineer can find themselves. In the a box-ticking excercise. @@
+
+The experience of @@
 
 - Being here can crush the light from a budding vocational systems engineer into a cynical husk.
 
@@ -77,6 +79,12 @@ Perhaps because of the academic landscape, the demographics of the community or 
 How might we go about fixing this?
 ----------------------------------
 
-To reiterate the premise in different terms, systems engineering as a discipline needs to foster a greater number of *vocational* systems engineers to ensure that it can innovate and solve the ever-complex problems of the future. Above I have explored what may be causing this perceived problem, so now its time to suggest some ways forward to fixing it.
+To reiterate the premise in different terms, systems engineering as a discipline needs to foster a greater number of *vocational* systems engineers to ensure that it can innovate and solve the ever-complex problems of the future. Above I have explored what may be causing this perceived problem, so now its time to suggest some ways forward to fixing it. Below are a few ideas that I've had on the topic but I'd welcome any challenges to these ideas in the comments.
 
+#### Hackathons
 
+Competitions are a great way to 
+
+#### Better Communities
+
+Belonging to a
