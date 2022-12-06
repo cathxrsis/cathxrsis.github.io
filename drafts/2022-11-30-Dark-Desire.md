@@ -3,7 +3,7 @@ layout: post
 title: "Desire and Viability or When is a Desiring machine Viable"
 ---
 
-I mentioned in a previous post that the Desiring Machine pattern lies somewhere between a cybernetic loop and a Beerian Viable System in the zoo of cybernetic patterns. In this post, I would like to expain what I meant by that as well as using the framework of interacting desiring machines to understand some system pathologies. First, however, lets have a refresh of what a desiring machine is.
+I mentioned in a previous post that the Desiring Machine pattern lies somewhere between a cybernetic loop and a Beerian Viable System in the zoo of cybernetic patterns. In this post, I would like to explain what I meant by that as well as using the framework of interacting desiring machines to understand some system pathologies. First, however, lets have a refresh of what a desiring machine is.
 
 The Desiring Machine
 --------------------
@@ -38,11 +38,11 @@ Action
 
 Meaning
 
-  : The ability for a system to filter its learning based on what is important for it to understand based on its ideals
+  : The ability for a system to filter its learning based on what is important for it to understand based on its ideals. This process tags all parts of the understanding with whether the Desiring Machine cares about it and whether or not its good for the desiring machine.
 
 Desire
 
-  : The ability for the system to guide its actions based on moving the environment towards its ideal state
+  : The ability for the system to guide its actions based on moving the environment towards its ideal state.
 
 Critique
 
@@ -52,7 +52,7 @@ Critique
 Desiring Machines as an OODA loop
 ---------------------------------
 
-The OODA loop is a pattern for understanding how to win competitions between cybernetic systems. The acronym stands for Observe, Orient, Decide and Act---the four stages that any system has to go through to make changes in its environment. The Desiring Machine pattern's Learning process covers the Observe and Orient while Action covers Decide and Act.  
+The OODA loop is a pattern for understanding how to win competitions between cybernetic systems. The acronym stands for Observe, Orient, Decide and Act---the four stages that any system has to go through to make changes in its environment. The Desiring Machine pattern's Learning process covers the Observe and Orient while Action covers Decide and Act.
 
 Viable Desiring Machines
 ------------------------
@@ -65,21 +65,19 @@ System 1
 
 System 2
 
-  : The sub-system that monitors the multiple System 1s and ensures that there are no contradictions between the actions of these systems.
+  : The sub-system that monitors the multiple System 1s and ensures that there are no contradictions between the actions of these systems. This maps to the Learning process of desiring machine with the caveat that it works on the immediate (in time) environment.
 
 System 3
 
-  : This sub system 
+  : This sub system monitors the multiple system 1s of the viable system and improves them to become more efficient and coherent (according to the ethos of system five) over time. In terms of the Desiring Machine, this system 
 
 System 4
 
-  : This sub-system monitors the environment and attempts to 
+  : This sub-system monitors the environment and attempts to predict the challenges of the future as well as learning from the failures of the preceding systems. It then modifies the preceding systems to better deal with the challenges of the future. Like System 2, System 4 maps to the Learning and Meaning processes of the Desiring Machine with the caveat that it monitors the wider environment in both time and space.
 
 System 5
 
-  : This sub-system maintains the 'ethos' of the system. It does acts as th @@ In terms of the Desiring Machine, System 5 comprises the Ideal and the processes of Critique, Desire and Meaning. An important point to make here 
-
-Of course, pa
+  : This sub-system maintains the 'ethos' of the system. It acts almost like a conscience of the system, guiding which actions are 'right' and 'wrong' for the viable system. In terms of the Desiring Machine, System 5 comprises the Ideal and the processes of Critique, Desire and Meaning.
 
 Pathologies of the Desiring Machine
 -----------------------------------
