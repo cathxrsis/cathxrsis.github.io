@@ -12,7 +12,7 @@ The first definition of government that I came across that made sense to me was 
 
 > A compulsory political organization with continuous operations will be called a 'state' [if and] insofar as its administrative staff successfully upholds a claim to the monopoly of the legitimate use of physical force (das Monopol legitimen physischen Zwanges) in the enforcement of its order.
 
-Weber here was talking about modern states (at least during the modern era). By 'monopoly of legitimate physical force' he was talking about how the state is imbued with @@
+Weber here was talking about modern states (at least during the modern era). By 'monopoly of legitimate physical force' he was talking about how the state is imbued with the 'right' to grant which acts of violence are deemed legitimate and which aren't. 
 
 Ashby's Law and Requisite Violence
 ----------------------------------
@@ -22,7 +22,7 @@ Being a system,
 The Oldest Profession
 ---------------------
 
-The problem of requisite violence is one that plagued the early city-states of the Bronze age. To protect their granaries and farmlands, these states required armies. To ensure their armies could 
+The problem of requisite violence is one that plagued the early city-states of the Bronze age. To protect their granaries and farmlands, these states required armies. To ensure their armies could remain supplied with their needs, a vast logistics system is required. 
 
 These early states were typified by their vast (for the time) temple bureacracies. To ensure that the 
 
@@ -59,6 +59,8 @@ For most of human civilisation,
 Outsourced Minting and Deffered Decision Making
 -----------------------------------------------
 
+
+
 Over-Attenuation: Currency Cannot Convey Information
 ----------------------------------------------------
 
@@ -66,3 +68,4 @@ For most of human history, currency has provided a pretty
 
 Conclusion: Is It Time to Ditch Currency?
 -----------------------------------------
+

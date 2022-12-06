@@ -46,7 +46,7 @@ Desire
 
 Critique
 
-  : The ability for a system to develop and evolve an ideal.
+  : The ability for a system to develop and evolve an ideal state.
 
 
 Desiring Machines as an OODA loop
@@ -61,7 +61,7 @@ Stafford Beer's Viable system model is a cybernetic pattern that allows us under
 
 System 1
 
-  : The sub-system that brings value by acting upon the environment of the system. This is the Action process of the Desiring Machine.
+  : The sub-system that brings value by acting upon the environment of the system. This is the Action and learning processes of the Desiring Machine. However, we will see later, that it is not the entirety of that loop as System 1 only deals with the day-to-day tasks that it has been 
 
 System 2
 
@@ -87,4 +87,11 @@ We have covered the relations between the OODA loop, VSM and the Desiring Machin
 One such pathology occurs when one desiring machine in a heirarchy of desiring machines becomes viable when it shouldn't. To illustrate this point, imagine a car engineering firm which designs internal combustion engine driven vehicles. The company itself is a viable desiring machine and so are the engineers who work in the firm. Between the level of the firm and the level of the employee, however, is the departmental level. In this example, one of these departments is the engine design department.
 
 The engine design department is itself a viable desiring machine with its Desire, Meaning and Critique processes conducted by the Engine Design Chief Engineer and their team of managers.
+
+Desiring Machine Reach-through
+------------------------------
+
+
+
+
 
