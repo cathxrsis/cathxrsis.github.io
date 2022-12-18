@@ -12,7 +12,7 @@ The Desiring Machine is a pattern to which some systems may conform. It typifies
 
 ![The Desiring Machine](../images/desire_machinefull.png){width=500px}
 
-The key states in a desiring machine are:
+The key substrates of a desiring machine are:
 
 The Environment
 
@@ -90,8 +90,4 @@ The engine design department is itself a viable desiring machine with its Desire
 
 Desiring Machine Reach-through
 ------------------------------
-
-
-
-
 
