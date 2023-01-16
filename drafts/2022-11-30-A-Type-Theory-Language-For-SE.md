@@ -57,7 +57,7 @@ This is a concept that can be hard to get your head around, so here's a few exam
 ( --| Definition of the Maybe type constructor
 Maybe : (\A : Type) -> Type
 Nothing : Maybe A
-Just : (\a:A) -> Maybe A
+Just : (\a : A) -> Maybe A
 )
 ```
 The maybe @@

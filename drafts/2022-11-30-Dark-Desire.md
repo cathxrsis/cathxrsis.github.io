@@ -52,7 +52,11 @@ Critique
 Desiring Machines as an OODA loop
 ---------------------------------
 
-The OODA loop is a pattern for understanding how to win competitions between cybernetic systems. The acronym stands for Observe, Orient, Decide and Act---the four stages that any system has to go through to make changes in its environment. The Desiring Machine pattern's Learning process covers the Observe and Orient while Action covers Decide and Act.
+The OODA loop is a pattern for understanding how to win competitions between cybernetic systems. The acronym stands for Observe, Orient, Decide and Act---the four stages that any system has to go through to make changes in its environment. The Action process of the desiring machine can be understood as an OODA loop and so can the Desiring machine in its entirety.
+
+@@Explain
+
+The purpose of the OODA loop is to understand 
 
 Viable Desiring Machines
 ------------------------
