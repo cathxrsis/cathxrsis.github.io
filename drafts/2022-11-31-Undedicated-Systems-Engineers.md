@@ -26,7 +26,7 @@ The community is also very aerospace and defence focussed. This is understandabl
 
 Perhaps because of the academic landscape, the demographics of the community or the industries that dominate the discipline, systems engineering has a problem with paternalism.
 
-What do I mean by this? I'm referring to the general feeling of  
+What do I mean by this? I'm referring to the general feeling that
 
 - Lack of dissemination of systems thinking and theory
 - Lots of dumbing down into frameworks by well meaning 
@@ -99,7 +99,7 @@ I believe that this attitude is a cause to burden of simplification that systems
 Conclusion
 ----------
 
-I believe that the factors explained above have culminated in a 'general vibe' that systems engineering is not a vocation of real consequence
+I believe that the factors explained above have culminated in a 'general vibe' that systems engineering is not a vocation of real consequence which acts as a barrier that ultimately reduces the number of systems engineers who make the discipline a large part of their identity. This is partly due to there being a number of filters already around engineering for class and gender as well as the lack of systems education and awareness in education before masters degree level or graduate scheme education. After this, the factors above push systems engineers away from engaging with the praxis of the discipline and prevent people from feeling that they can improve it and/or identify with it.
 
 ### How might we go about fixing this?
 
@@ -109,12 +109,16 @@ To reiterate the premise in different terms, systems engineering as a discipline
 
 Competitions are a great way to trial new ideas, methods etc. in a critical but fun environment. Hackathons embody this 
 
-SCiO, a systems thinking practitioners' group, has a great bimonthly online development session where systems practitioners can bring real-life or interesting problems. These sessions contain 
+SCiO, a systems thinking practitioners' group, has a great bimonthly online development session where systems practitioners can bring real-life or interesting problems. These sessions contain experts in the field who are more than happy to apply their knowledge and explain concepts to less experienced practioners. I thoroughly recommend that systems engineers join SCiO as the knowledge of systems theory that the experienced members hold is invaluable. You can join here: (https://www.systemspractice.org/membership)[https://www.systemspractice.org/membership].
 
 #### Better Communities
 
-A sense of belonging 
+A sense of belonging  
 
 Last year, Zsolt Sandor started a systems engineering professionals Discord server that has become an incredibly vibrant community for discussing practice and theory in systems engineering.@@
 
 Of course, any community comes with the risk of hardening into an exclusionary clique. It is therefore imperative that we must identify and 
+
+#### Democratisation of Praxis
+
+As mentioned in previous posts, I'm personally tinkering away at an MBSE language that uses category theory and dependent type theory as a base. My understanding of category theory is through the lens^[figurative, not Van Laarhoven or Profunctor!] of programming languages such as Haskell where category theory allows programmers to understand and discover powerful abstractions to solve real world problems. Let's be like Prometheus and share our knowledge rather than fervently clutch it to our chests as a secret weapon to assert dominance at the next INCOSE conference banquet.
