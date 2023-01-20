@@ -107,7 +107,7 @@ To reiterate the premise in different terms, systems engineering as a discipline
 
 #### Hackathons & Collaborative Development 
 
-Competitions are a great way to trial new ideas, methods etc. in a critical but fun environment. Hackathons embody this 
+Competitions are a great way to trial new ideas, methods etc. in a critical but fun environment. Hackathons embody this by creating a 
 
 SCiO, a systems thinking practitioners' group, has a great bimonthly online development session where systems practitioners can bring real-life or interesting problems. These sessions contain experts in the field who are more than happy to apply their knowledge and explain concepts to less experienced practioners. I thoroughly recommend that systems engineers join SCiO as the knowledge of systems theory that the experienced members hold is invaluable. You can join here: (https://www.systemspractice.org/membership)[https://www.systemspractice.org/membership].
 
@@ -115,9 +115,11 @@ SCiO, a systems thinking practitioners' group, has a great bimonthly online deve
 
 A sense of belonging  
 
-Last year, Zsolt Sandor started a systems engineering professionals Discord server that has become an incredibly vibrant community for discussing practice and theory in systems engineering.@@
+Last year, Systems engineer Zsolt Sandor started a systems engineering professionals Discord server that has become an incredibly vibrant community for discussing practice and theory in systems engineering.
 
-Of course, any community comes with the risk of hardening into an exclusionary clique. It is therefore imperative that we must identify and 
+Of course, any community comes with the risk of hardening into an exclusionary clique. It is therefore imperative that we must put in place processes and measures to ensure that these communities remain open and democratic and do not develop exclusionary features from shibboleths to outright discrimination. Any community must ensure that it promotes diversity and that it takes novel contributions in good faith rather than rejecting them because they weren't developed by someone in the 'in-crowd'.
+
+The balance between providing a sense of belonging through distinction and ensuring that this distinction doesn't become discriminatory is a tricky one to maintain. @@
 
 #### Democratisation of Praxis
 
