@@ -17,13 +17,15 @@ An example of this is systems engineering tools procurement in large companies. 
 Organisational Pressures
 ------------------------
 
-The above problem is compounded by the desires of the management chain within a customer @@ Afterall, noone is ever fired for buying IBM...
+The above problem is compounded by the desires of the management chain within a customer---again, often the customer does not have enough information (whether through incompetence or the law of requisite variety) to make a fully informed decision on a procurement. Sometimes that information is clouded by advertising propaganda (afterall, noone is ever fired for buying IBM...). Traditionally, customers tend to commit large sum of money in an initial contract negotiation with the supplier. THe requirements in this negotiation are the ones that the supplier will commit to even if the customer needs are likely to change in the future.
+
+Therefore, an initiation of a project always comes with the risk that the supplier cannot meet your needs and you effectively lose that large chunk of cash. There is nothing wrong with this---as the old saying goes "There's nothing wrong with being wrong but everything wrong with staying wrong". Individuals who are managing the project on  the customer side though are often pressured into "staying wrong" due to the sunk cost fallacy.
 
 The sunk cost fallacy is a well documented phemonemon of human behaviour. As quoted in wikipedia:
 
-> (People demonstrate "a greater tendency to continue an endeavor once an investment in money, effort, or time has been made.")[https://en.wikipedia.org/wiki/Sunk_cost]
+> [People demonstrate "a greater tendency to continue an endeavor once an investment in money, effort, or time has been made."](https://en.wikipedia.org/wiki/Sunk_cost)
 
-Basically, we are irrationally predisposed to put more time, effort and money into projects that we've already put a lot of resources into despite the fact that the best course of action in these cases would be to abort the project. One cause of this is the fact that aborting a failing project is tantamount to admitting the project is failing. We don't like being wrong, even if, at the point where the incorrect decision was made, there was insufficient information for us to know that the project would fail.
+Basically, we are irrationally predisposed to put more time, effort and money into projects that we've already put a lot of resources into despite the fact that the best course of action in these cases would be to abort the project. One cause of this is the fact that aborting a failing project is tantamount to admitting the project is failing. We don't like being wrong, even if, at the point where the incorrect decision was made, there was insufficient information for us to know that the project would fail. This thinking may apply to the person making the decision to sign a contract with a supplier or their management, in which case, they may be pressured to continue with that supplier at risk ot losing their job---heavily disciplinarian work cultures often incentivise people to hide problems from their superiors and lead to the [Thermocline of Truth](https://www.cfgs.org.uk/managing-performance-and-the-thermocline-of-truth). 
 
 Intimidation
 ------------
@@ -41,6 +43,8 @@ The customer is left feeling helpless and ultimately, the end users have to work
 Possible solutions
 ------------------
 
-As the 
+As the anti-pattern described here is mostly a manifestation of the sunk cost fallacy, one possible solution is to 
+
+A second possible solution is for the the supplier to work according to empiricism and keep frequent communication with the customer. As with some process approaches like Scrum, the customer is engaged to validate an evolving representation of the final product/service in frequent reviews. This creates a validation control loop which can steer the project towards the customer needs with each review. Balance needs to be found between the length of time it takes to develop a reviewable representation in the project and the frequency of which the customer's needs change to ensure that this loop isn't driven at resonance. This approach can also be susceptible to *Gaffer Dazzling* where a supplier keeps a separate, unrepresentative version of the project going to misinform the customer.
 
 What do you think? Does the above explanation fit with your experiences? Do you think the proposed solutions are practical, workable or just plain wrong? Please leave any thoughts that you have in the comments below! 
