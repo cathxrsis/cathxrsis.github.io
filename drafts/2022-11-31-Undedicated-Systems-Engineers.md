@@ -26,12 +26,14 @@ The community is also very aerospace and defence focussed. This is understandabl
 
 Perhaps because of the academic landscape, the demographics of the community or the industries that dominate the discipline, systems engineering has a problem with paternalism.
 
-What do I mean by this? I'm referring to the general feeling that
+What do I mean by this? I'm referring to the general feeling that, as a systems engineer, your job is not to develop better ways of doing things, leave that to the really clever people in INCOSE. No, seriously, they're probably 9999 times more intelligent than you (:sarcasm:). I think this point is well illustrated by an example from the INCOSE systems engineering principles document. 
 
 - Lack of dissemination of systems thinking and theory
 - Lots of dumbing down into frameworks by well meaning 
 - Circular causation with the lack of passion in SE?
 - Training becomes paternalistic
+
+As Stafford Beer points out in *Brain of The Firm*, training is a conservative endeavour---the trainer is an authority whose role it is to 
 
 Systems Engineering within Companies
 ------------------------------------
@@ -107,20 +109,20 @@ To reiterate the premise in different terms, systems engineering as a discipline
 
 #### Hackathons & Collaborative Development 
 
-Competitions are a great way to trial new ideas, methods etc. in a critical but fun environment. Hackathons embody this by creating a 
+Competitions are a great way to trial new ideas, methods etc. in a critical but fun environment. Hackathons embody this by creating a safe environment to try new ideas while adding an element of competition to drive innovation. 
 
 SCiO, a systems thinking practitioners' group, has a great bimonthly online development session where systems practitioners can bring real-life or interesting problems. These sessions contain experts in the field who are more than happy to apply their knowledge and explain concepts to less experienced practioners. I thoroughly recommend that systems engineers join SCiO as the knowledge of systems theory that the experienced members hold is invaluable. You can join here: (https://www.systemspractice.org/membership)[https://www.systemspractice.org/membership].
 
 #### Better Communities
 
-A sense of belonging  
+A sense of belonging 
 
 Last year, Systems engineer Zsolt Sandor started a systems engineering professionals Discord server that has become an incredibly vibrant community for discussing practice and theory in systems engineering.
 
 Of course, any community comes with the risk of hardening into an exclusionary clique. It is therefore imperative that we must put in place processes and measures to ensure that these communities remain open and democratic and do not develop exclusionary features from shibboleths to outright discrimination. Any community must ensure that it promotes diversity and that it takes novel contributions in good faith rather than rejecting them because they weren't developed by someone in the 'in-crowd'.
 
-The balance between providing a sense of belonging through distinction and ensuring that this distinction doesn't become discriminatory is a tricky one to maintain. @@
+The balance between providing a sense of belonging through distinction and ensuring that this distinction doesn't become discriminatory is a tricky one to maintain. Finding new interested people and encouraging them to bring their own thoughts to the conversation is an important part of finding this balance. I believe that allowing people to feel like they are part of the development of systems theory and practice over time is the key to this which leads me to my final point:
 
 #### Democratisation of Praxis
 
-As mentioned in previous posts, I'm personally tinkering away at an MBSE language that uses category theory and dependent type theory as a base. My understanding of category theory is through the lens^[figurative, not Van Laarhoven or Profunctor!] of programming languages such as Haskell where category theory allows programmers to understand and discover powerful abstractions to solve real world problems. Let's be like Prometheus and share our knowledge rather than fervently clutch it to our chests as a secret weapon to assert dominance at the next INCOSE conference banquet.
+Systems engineering theory cannot be the preserve of a few individuals in big defence companies who write the books and to whom the rest of us must blindly follow. The paternal 
