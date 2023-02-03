@@ -26,7 +26,7 @@ The community is also very aerospace and defence focussed. This is understandabl
 
 Perhaps because of the academic landscape, the demographics of the community or the industries that dominate the discipline, systems engineering has a problem with paternalism.
 
-What do I mean by this? I'm referring to the general feeling that, as a systems engineer, your job is not to develop better ways of doing things, leave that to the really clever people in INCOSE. No, seriously, they're probably 9999 times more intelligent than you (:sarcasm:). I think this point is well illustrated by an example from the INCOSE systems engineering principles document. 
+What do I mean by this? I'm referring to the general feeling that, as a systems engineer, your job is not to develop better ways of doing things, leave that to the really clever people in INCOSE. 
 
 - Lack of dissemination of systems thinking and theory
 - Lots of dumbing down into frameworks by well meaning 
@@ -34,6 +34,8 @@ What do I mean by this? I'm referring to the general feeling that, as a systems 
 - Training becomes paternalistic
 
 As Stafford Beer points out in *Brain of The Firm*, training is a conservative endeavour---the trainer is an authority whose role it is to 
+
+This paternalism problem is in circular causality with the problem of the 
 
 Systems Engineering within Companies
 ------------------------------------
@@ -92,7 +94,7 @@ This problem can be exacerbated if the systems team is firefighting or a box-tic
 
 ### It's just common sense
 
-The final anti-pattern that I want to cover is the perception that systems engineering is "not a real engineering discipline". The phrase that I think typifies this perception is the phrase "Systems engineering is just common sense". Apart from the fact that appealing to common sense is often used as justification for some of the most objectionable views in our society, common sense is hard to define. Common sense seems to be the preserve of middle-aged white men---the people who make up the majority of british managers. In fact, our society attributes oodles of common sense to those middle-aged, no-nonsence, "I'm just saying what everyone's thinking" types.
+The final anti-pattern that I want to cover is the perception that systems engineering is "not a real engineering discipline". The phrase that I think typifies this perception is the phrase "Systems engineering is just common sense". Apart from the fact that appealing to common sense is often used as justification for some of the most objectionable views in our society, common sense is hard to define. Common sense seems to be the preserve of middle-aged white men---the people who make up the majority of british managers. In fact, our society attributes oodles of common sense to those middle-aged, no-nonsense, "I'm just saying what everyone's thinking" types.
 
 When we say "systems engineering is just common sense" these manager types (especially those with little knowledge of systems thinking) think "I've got a lot of common sense" which leads them to deduce that they must be really good at systems engineering. I've heard people with this attitude claim that systems engineering is not real engineering as it has no theoretical or mathematical foundation.
 
