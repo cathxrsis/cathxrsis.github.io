@@ -126,4 +126,4 @@ The balance between providing a sense of belonging through distinction and ensur
 
 #### Democratisation of Praxis
 
-Systems engineering theory cannot be the preserve of a few individuals in big defence companies who write the books and to whom the rest of us must blindly follow. We must break the paternalism and ensure that our peers are empowered to be true systems thinkers. If we do, I believe that there will be a revolution in new tools, processes and methods within the discipline that will allow it to meet the problems of domains which systems engineering hasn't quite got a foothold yet. I fear that id this not happen, systems engineering will dwindle and the world will be worse off for it.
+Systems engineering theory cannot be the preserve of a few individuals in big defence companies who write the books and to whom the rest of us must blindly follow. We must break the paternalism and ensure that our peers are empowered to be true systems thinkers. If we do, I believe that there will be a revolution in new tools, processes and methods within the discipline that will allow it to meet the complex problems of the future.
