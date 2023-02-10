@@ -112,7 +112,7 @@ To reiterate the premise in different terms, systems engineering as a discipline
 
 Competitions are a great way to trial new ideas, methods etc. in a critical but fun environment. Hackathons embody this by creating a safe environment to try new ideas while adding an element of competition to drive innovation. 
 
-SCiO, a systems thinking practitioners' group, has a great bimonthly online development session where systems practitioners can bring real-life or interesting problems. These sessions contain experts in the field who are more than happy to apply their knowledge and explain concepts to less experienced practitioners. I thoroughly recommend that systems engineers join SCiO as the knowledge of systems theory that the experienced members hold is invaluable. You can join here: (https://www.systemspractice.org/membership)[https://www.systemspractice.org/membership].
+SCiO, a systems thinking practitioners' group, has a great bimonthly online development session where systems practitioners can bring real-life or interesting problems. These sessions contain experts in the field who are more than happy to apply their knowledge and explain concepts to less experienced practitioners. I thoroughly recommend that systems engineers join SCiO as the knowledge of systems theory that the experienced members hold is invaluable. You can join here: [https://www.systemspractice.org/membership](https://www.systemspractice.org/membership).
 
 #### Better Communities
 
