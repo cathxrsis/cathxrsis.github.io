@@ -88,6 +88,11 @@ h2 {
     font-family: 'Alegreya', serif;
 }
 
+blockquote {
+    font-style: italic;
+    font-family: 'Alegreya', serif;
+}
+
 code {
     font-family: 'Ubuntu Mono', monospace;
 }
