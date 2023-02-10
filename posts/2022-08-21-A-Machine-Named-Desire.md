@@ -84,7 +84,7 @@ Like many systems, Desiring machines are often self-similar---the processes with
 The viewpoint of an *Action* process as a desiring machine is an interesting one to take---we can think of the example of an engineering firm that's developing a system for a customer organisation. We can either view the customer's requirements as a part of our environment or we can distinguish the customer's desiring machine out of the environment using a new distinction. The following diagram shows what that looks like:
 
 
-![Hierarchy of desiring machines](../images/desire_net.png){width=750px}
+![Hierarchy of desiring machines](../images/desire_net.png){width=600px}
 
 *ERRATA: The Customer Desiring Machine should be connected to the Learning Process of the lower-level Desiring Machine*
 
