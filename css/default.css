@@ -81,11 +81,15 @@ div#footer {
 h1 {
     font-size: 30px;
     font-family: 'Alegreya', serif;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2 {
     font-size: 20px;
     font-family: 'Alegreya', serif;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 blockquote {
@@ -106,6 +110,9 @@ div.info {
 
 figure {
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 figcaption {
