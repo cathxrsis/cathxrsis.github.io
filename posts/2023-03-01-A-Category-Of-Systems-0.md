@@ -11,9 +11,9 @@ So, without much further ado, here is a short outline of the features, language 
 Features
 --------
 
-Mathematically Rigourous Grammar
+Mathematically Rigorous Grammar
 
- : The grammar and concepts within the language should be built on top of mathematically rigourous concepts. This would mean that the language would be formal and therefore suitable for the use of mathematical proofs around certain aspects of the language. I hope to show how much easier Category/dependent Type Theory makes formal methods.
+ : The grammar and concepts within the language should be built on top of mathematically rigorous concepts. This would mean that the language would be formal and therefore suitable for the use of mathematical proofs around certain aspects of the language. I hope to show how much easier Category/dependent Type Theory makes formal methods.
  
 First Class Patterns
 
@@ -21,7 +21,7 @@ First Class Patterns
 
 First Class Constraints
 
- : The Curry-Howard-Lambek isomorphism proves that Category Theory, Depenedent Type Theory (Martin-Löf) and Constructive Logic are one and the same. What does this mean for us? No dichotomy between contraint and modelling language. Instead of needing UML and OCL, we get one neat complete package.
+ : The Curry-Howard-Lambek isomorphism proves that Category Theory, Dependent Type Theory (Martin-Löf) and Constructive Logic are one and the same. What does this mean for us? No dichotomy between constraint and modelling language. Instead of needing UML and OCL, we get one neat complete package.
 
 First Class Views
 
