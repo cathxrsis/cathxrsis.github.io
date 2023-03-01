@@ -6,28 +6,26 @@ This is the first post in a series looking into the creation of a Model Based Sy
 
 The goal of this post is to lay out the features that such a language would have and to outline the concept of a possible solution to meet these features.
 
+So, without much further ado, here is a short outline of the features, language concept and tool concept to whet your appetite for the rest of the series:
+
 Features
 --------
 
 Mathematically Rigourous Grammar
 
- : The grammar and concepts within the language should be built on top of mathematically rigourous concepts. 
+ : The grammar and concepts within the language should be built on top of mathematically rigourous concepts. This would mean that the language would be formal and therefore suitable for the use of mathematical proofs around certain aspects of the language. I hope to show how much easier Category/dependent Type Theory makes formal methods.
  
 First Class Patterns
 
- : 
+ : The concept of the lambda cube (which will be described in a later post) allows for special functions that means the metalanguage of a type-theoretic language can be self-extending. This means that what would have been profiles in UML will be expressed as libraries in the new language. Functions and types (including function types) will all be first class and therefore can be defined in-language.
 
 First Class Constraints
 
- :
-
-Typed Holes
-
- :
+ : The Curry-Howard-Lambek isomorphism proves that Category Theory, Depenedent Type Theory (Martin-Löf) and Constructive Logic are one and the same. What does this mean for us? No dichotomy between contraint and modelling language. Instead of needing UML and OCL, we get one neat complete package.
 
 First Class Views
 
- :
+ : The categorical concept of functors is quite a nice analogue for describing views. In this way, the language should be able to self-describe its own diagrammatic, tabular matriculative(?) &c. views.
 
 Language Concept
 ----------------
