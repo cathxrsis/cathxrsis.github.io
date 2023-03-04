@@ -32,31 +32,31 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 300px 300px;
+  grid-template-columns: 20em 20em;
 }
 
 .grid-item {
     text-align: justify;
-    padding: 4px;
+    padding: 0.5em;
 }
 
 .grid-item-centre {
     text-align: center;
-    padding: 4px;
+    padding: 0.5em;
 }
 
 body {
     color: black;
-    font-size: 16px;
+    font-size: 12pt;
     font-family: 'Pagella';
     line-height: 150%;
     margin: 0px auto 0px auto;
-    width: 600px;
+    width: 40em;
 }
 
 div#header {
     border-bottom: 2px solid black;
-    margin-bottom: 30px;
+    margin-bottom: 2em;
     padding: 12px 0px 12px 0px;
     font-family: 'Alegreya', serif;
 }
@@ -64,7 +64,7 @@ div#header {
 div#logo a {
     color: black;
     float: left;
-    font-size: 18px;
+    font-size: 16pt;
     font-weight: SemiBold;
     text-decoration: none;
     font-family: 'Alegreya', serif;
@@ -76,9 +76,9 @@ div#header #navigation {
 
 div#header #navigation a {
     color: black;
-    font-size: 18px;
+    font-size: 16pt;
     font-weight: SemiBold;
-    margin-left: 12px;
+    margin-left: 1em;
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Alegreya', serif;
@@ -87,8 +87,8 @@ div#header #navigation a {
 div#footer {
     border-top: solid 2px black;
     color: #555;
-    font-size: 12px;
-    margin-top: 30px;
+    font-size: 10pt;
+    margin-top: 1em;
     padding: 12px 0px 12px 0px;
     text-align: right;
 }
@@ -96,20 +96,20 @@ div#footer {
 div#disqus_thread {
     border-top: solid 2px black;
     color: #555;
-    font-size: 12px;
+    font-size: 10pt;
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 24pt;
     font-family: 'Alegreya', serif;
     margin-left: auto;
     margin-right: auto;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 18pt;
     font-family: 'Alegreya', serif;
     margin-left: auto;
     margin-right: auto;
@@ -126,7 +126,7 @@ code {
 
 div.info {
     color: #555;
-    font-size: 14px;
+    font-size: 16pt;
     font-style: italic;
     font-family: 'Alegreya', serif;
 }
@@ -142,7 +142,7 @@ div.avatar img {
 }
 
 figcaption {
-    font-size: 12px;
+    font-size: 11pt;
     font-style: italic;
     font-family: 'Alegreya', serif;
 }
