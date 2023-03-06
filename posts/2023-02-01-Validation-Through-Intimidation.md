@@ -36,7 +36,7 @@ Unfortunately, systems engineering organisations may be aware of this fact and c
 
 This is especially true if the organisation in question has a monopoly over the product/service, is a large donor to the political party in power or has a powerful union that will pressure the government into buying from them. Think of the hold that a shipbuilding company may have over a government if its the only shipbuilder in the country and happens to be the only large employer in a city that votes for the party in power.
 
-This is a monopoly-monopoly dialectic, neither can buy from nor sell to anyone else, the quality of requirements, products and services suffers and the resentment between the two organisations continues to grow. 
+This is a monopoly-monopsony dialectic, neither can buy from nor sell to anyone else, the quality of requirements, products and services suffers and the resentment between the two organisations continues to grow. 
 
 The customer is left feeling helpless and ultimately, the end users have to work around their desires not being met. Here are some examples: G4S security at the 2012 Olympics; the General Dynamics Ajax APC; The UK COVID Test and Trace system delivered by Serco amongst others; the list goes on. I would put money on these companies continuing to receive contracts in the future despite these failures.
 
