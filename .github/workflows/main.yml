@@ -1,13 +1,39 @@
-# Verify correct branch
-git checkout master
+name: Deploy Hakyll website to GitHub Pages
 
-# Build new files
-stack exec myblog clean
-stack exec myblog build
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
 
-# Commit
-git add -A
-git commit -m "Publish."
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-# Push
-git push origin master:master
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Build with Hakyll
+        uses: stephenswat/hakyll-build-pages@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
