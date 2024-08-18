@@ -13,7 +13,7 @@ comments: true
 
 In the grand tradition of computer science bloggers, started by Edsgar Dijkstra himself with [*Go To statement considered harmful*](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf), it is time to critique a commonly used language feature. This time in UML \& SysML (this also applies to simulink, but this is by no means the limits of my quibbles with Matlab). SysML has a few behavioural diagram types: the use case diagram (allegedly), the sequence diagram, the activity diagram, the parametrics diagram (though they're considered different for some reason?) and the state machine diagram. After the sequence diagram, the state machine diagram is probably the most used diagram for behavioural specification. In this blog post, I'm going to tell you why that's bad.
 
-<!-- more -->
+<!--more-->
 
 The state machine diagram is (mostly) a representation of the computer science concept of a *Finite State Automaton*. This is a model of computation where the computer passes through a number of states. In each state, the computer can accept one of a number of predetermined stimuli which causes the computer to transition into another state. Although not turing complete, finite state machines can be used as a model for any terminating (not running forever) computation. There is nothing wrong with using FSMs for modelling behaviour, but their diagrammatical representation in SysML has a few problems that I shall detail below. Note that an activity diagram with certain constraints applied could also be used to model an FSM.
 

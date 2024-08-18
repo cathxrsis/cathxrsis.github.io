@@ -14,7 +14,7 @@ comments: true
 
 Classes (or *Blocks* as they are known in SysML) are a useful and almost unavoidable concept in UML. They are the modelling concept that allows for object-oriented inheritance in the language and its dialects. In fact it is impossible to utilise inheritance as a pattern for reuse without it. However, classes are not as crucial to object oriented design as you may think. In this post I will make the case for a different form of object orientation which does away with classes altogether.
 
-<!-- more -->
+<!--more-->
 
 In the object-oriented programming paradigm, there are two main patterns for inheritance: classical and prototypal. Classical inheritance requires no introduction. For those who don't know it, Prototypal inheritance is a very different beast.
 

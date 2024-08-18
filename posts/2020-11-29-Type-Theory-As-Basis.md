@@ -14,7 +14,7 @@ comments: true
 
 This post is a response to a flurry of activity in systems engineering academia around using category theory as a theoretical basis for SysML. A number of papers exploring this idea have appeared in th literature recently and as someone who is passionate about category theory and systems engineeering, I can't help but contribute my thoughts on the matter. In this post I'd like to explore the basics of category theory and the closely related type theory and explain the power that this theoretical basis could bring to model based systems engineering.
 
-<!-- more -->
+<!--more-->
 
 ## What is Category Theory?
 

@@ -8,7 +8,7 @@ comments: true
 
 What follows is a paper that  I submitted for INCOSE UK's ASEC 2021 Conference. Unfortunately, the paper was not accepted which is fair enough as the presentations that made it into the conference were all incredibly interesting, useful and well presented. However, despite my presentation skills, this method brought a lot of benefit when used at Jaguar Land Rover and I present it here so that others can benefit from it too.
 
-<!-- more -->
+<!--more-->
 
 Many systems processes leave most of their integration activities on the
 right-hand-side of the Vee. This can result in functionality being lost

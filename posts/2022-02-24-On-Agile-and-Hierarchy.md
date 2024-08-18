@@ -14,7 +14,7 @@ comments: true
 
 This post is not here to share a solution to a problem in the same way as my others. Instead, I would like to pose a question around agile and traditional systems architecture and hopefully spark a discussion on a concept that is almost fundamental to modern systems thinking---the systems hierarchy.
 
-<!-- more -->
+<!--more-->
 
 To frame my question, I would like to start by making a distinction between 'tall' and 'wide' systems. Tall systems are those that you tend to encounter in the defense industry. These systems have systems within systems within systems. Usally, the parts of a tall system become more specialised as you go down the abstraction layers requiring more specialised engineers as you get into the lower layers of techology.
 

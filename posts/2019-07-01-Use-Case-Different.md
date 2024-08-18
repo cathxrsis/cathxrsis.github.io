@@ -14,7 +14,7 @@ comments: true
 
 This is the second in a quasi-series of posts in which I moan about bits that I don't like in SysML/UML. This time, I'm taking a look at the use case diagram and arguing for a different way of modelling the concept to the UML and SysML specs.
 
-<!-- more -->
+<!--more-->
 
 To begin our exploration into how use cases, here are three definitions of use case from around the internet:
 

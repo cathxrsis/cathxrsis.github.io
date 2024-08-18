@@ -36,6 +36,11 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
+    
+--    match "patterns/*" $ do
+--        route $ setExtension "html"
+--        compile pandocCompiler
+--            >>= loadAndApplyTemplate 
 
     create ["archive.html"] $ do
         route idRoute
@@ -47,7 +52,7 @@ main = hakyllWith config $ do
                     defaultContext
 
             makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/post-archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
 

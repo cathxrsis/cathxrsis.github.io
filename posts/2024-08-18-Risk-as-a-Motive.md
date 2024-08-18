@@ -16,6 +16,8 @@ In this blog post, I'd like to explore the idea of risk and to Make the point th
 
 On the way, we'll explore concepts from the scrum framework and a contender for the philosophical definition of life itself.
 
+<!--more-->
+
 # What is Risk?
 
 Risk is a measure of known unknowns. We define it by identifying a set of scenarios that may happen, understanding the impact that such a scenario would cause and the likelihood that such a scenario could come about. The measure of risk is then usually defined with 3 or 5 levels based on an impact and likelihood scoring system.

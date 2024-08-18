@@ -13,7 +13,7 @@ comments: true
 
 In my last post, I showed how, with a little additional syntax, Data Types can be given a lot more power within a UML/SysML model. In this post I'd like to dial up the power one step further and talk about how we can spot patterns in the usage of certain Data Types and encode this as an addition to UML/SysML that will give us better insight into the correctness of our models and allow us to define patterns we use again and again in an abstract way. This pattern is sometimes called the "trait" (in the Rust language) or the "type class" (in Haskell/Scala/Idris).
 
-<!-- more -->
+<!--more-->
 
 Let's return to the UML definition of a primitive Data Type:
 

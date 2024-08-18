@@ -7,6 +7,8 @@ This post describes a phenomenon that I and some other systems engineers that I'
 
 My null hypothesis is this: compared to other disciplines of engineering, there are proportionally far fewer *vocational* systems engineers. By *vocational*, I am referring to the idea of engineers who see the subject of their job as more than just what they do 9-5 to pay the bills.
 
+<!--more-->
+
 Vocational engineers are those who  spend considerable time outside of their job working on related hobbies and/or contributing to their discipline. Examples are mechanical engineers who restore cars, electronic engineers who automate their homes or software engineers who contribute to open source projects. You know the types---in large companies, they often band together and spend lunchtimes drone racing, soapbox racer building or organising an inter-departmental hackathon. 
 
 Amongst the systems engineering discipline, though, there seems to be far fewer of these vocational types. The systems engineering community is indeed smaller than the other engineering disciplines but is the *proportion* that I'm concerned about. Most other systems engineers that I've worked with would often rather be down in a discipline such as electronics or mechanics.
