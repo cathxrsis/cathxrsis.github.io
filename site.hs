@@ -101,6 +101,15 @@ main = hakyllWith config $ do
 
     match "templates/*" $ compile templateCompiler
 
+--    create ["atom.xml"] $ do
+--        route idRoute
+--        compile $ do
+--            let feedCtx = postCtx <> constField "description" "This is the post description"
+--
+--            posts <- fmap(take 10) . recentFirst =<<  loadAllSnapshots "posts/*" "content"
+--
+--            renderAtom myFeedConfiguration feedCtx posts
+
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
