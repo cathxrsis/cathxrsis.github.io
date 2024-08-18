@@ -158,3 +158,6 @@ figcaption {
     font-family: 'Alegreya', serif;
     text-align: center;  
 }
+
+a {color: black;}
+a:hover {color: #555;}
