@@ -4,7 +4,7 @@ author: "Tom Westbury"
 layout: post
 ---
 
->**Risk** noun - A potential scenario in a project that is recorded in a risk management plan and forgotten about until it manifests as an issue.
+>**Risk** [noun]---A potential scenario in a project that is recorded in a risk management plan and forgotten about until it manifests as an issue.
 
 I'm being facetious but this doesn't seem too off the mark as a definition in many engineering organisations. Risk and risk management are fundamental to systems engineering--after all, Risk Management is one of the ISO 15288 processes which defines its purpose as:
 
@@ -31,7 +31,7 @@ Let me explain why.
 
 I'll begin with a slightly different model of engineering than most are used to---The cybernetic loop model of engineering.
 
-![[images/Screenshot_20240816-112645.png]]
+![The diagram of the Cybernetic Loop](../images/Screenshot_20240816-112645.png){width=300px}
 
 Unlike the Vee model, the cybernetic loop shows the dependencies of engineering-rather than the chronology. I like to think of it as a Vee shown from above. The cybernetic loop is made of the relationships between an environment (En) and a model of that environment (Und for Understanding). Evolution is the change of the Environment with time; Learning is the process of changing our understanding based on how the environment changes; Development are activities that improve our understanding internally; and Action is changing the environment based upon our understanding.
 

@@ -1,7 +1,34 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
-import           Hakyll
+import Hakyll
+    ( getResourceBody,
+      makeItem,
+      loadAll,
+      defaultConfiguration,
+      copyFileCompiler,
+      idRoute,
+      setExtension,
+      compile,
+      create,
+      match,
+      route,
+      hakyllWith,
+      compressCssCompiler,
+      relativizeUrls,
+      pandocCompiler,
+      constField,
+      dateField,
+      defaultContext,
+      listField,
+      applyAsTemplate,
+      loadAndApplyTemplate,
+      templateCompiler,
+      recentFirst,
+      saveSnapshot,
+      loadAllSnapshots,
+      Configuration(destinationDirectory),
+      Context, teaserField )
 
 
 --------------------------------------------------------------------------------
@@ -33,6 +60,7 @@ main = hakyllWith config $ do
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
@@ -45,10 +73,10 @@ main = hakyllWith config $ do
     create ["archive.html"] $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- recentFirst =<< loadAllSnapshots "posts/*" "content"
             let archiveCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Archives"            `mappend`
+                    listField "posts" teaserCtx (return posts) <>
+                    constField "title" "Archives"            <>
                     defaultContext
 
             makeItem ""
@@ -80,3 +108,4 @@ postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
 
+teaserCtx = teaserField "teaser" "content" <> postCtx

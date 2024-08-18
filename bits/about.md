@@ -1,6 +1,9 @@
 ---
 title: About
 ---
+
+# About
+
 <div class="grid-container">
 <div class="grid-item">
 **Tom Westbury** is a systems engineer located in the midlands, currently helping to design the next generation of supercars. This blog contains his ideas on the subject of systems engineering and the theory behind it.

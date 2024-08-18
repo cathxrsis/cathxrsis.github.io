@@ -14,3 +14,9 @@ The tendency for system architecture to focus on the containment hierarchy of fu
 # Validation through Intimidation
 
 The phenomenon where stakeholders sign off on systems that do not meet their needs due to external pressure. This may be because their job or reputation is at risk if they don't sign-off on the system. Often closely coupled with and an outcome of the sunk cost fallacy.
+
+# 'Productive' Meetings
+
+A bad pattern that meetings such as daily standups can devolve into if the wrong people are invited. Certain managers expect any issues and blockers to be raised to be solved there and then in the meeting. The meeting degenerates into a concurrent solving of issues that could all have been solved outside the meeting. Often, the meeting overruns and the important manager who derailed it is whisked off to another meeting before the issue they were brought into discuss is even brought up. Unfortunately, these meetings feel incredibly productive to that disruptive manager because of how many issues were solved!
+
+To break this antipattern, ensure that you don't invite such disruptive managers to the meetings. To ensure that trust is maintained, it may be useful to arrange a new meeting with the higher manager outside the standup where only the higher level issues can be raised. 
