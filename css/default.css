@@ -136,6 +136,7 @@ div.info {
     font-size: 16pt;
     font-style: italic;
     font-family: 'Alegreya', serif;
+    border-bottom: 1px solid #6b6b6b;
 }
 
 img {
