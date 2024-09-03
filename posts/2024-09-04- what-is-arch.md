@@ -138,7 +138,7 @@ If you find yourself using SysML or UML, stereotypes, tags and profiles work wel
 
 Connected to our modelling but to also cover patterns in other areas, we created a pattern wiki. A pattern wiki is a searchable repository for patterns that your team discovers. Any searchable tool is good for this. Common corporate tools that are great for this are Atlassian confluence or Microsoft Office One Note---it just needs to be a searchable, linkable, shared repository of knowledge.
 
-Each pattern should have its own linkable section or page. Here's the pattern that I use for patterns (A meta pattern!) as a start point. As Cunningham's [1](the inventor of Wikis) law states, the best way to elicit a correct answer is to present a wrong answer. This metapattern is presented hoping that you'll adapt it to your own needs.
+Each pattern should have its own linkable section or page. Here's the pattern that I use for patterns (A meta pattern!) as a start point. As Cunningham's [^1](the inventor of Wikis) law states, the best way to elicit a correct answer is to present a wrong answer. This metapattern is presented hoping that you'll adapt it to your own needs.
 
 ### A Template for Patterns
 
