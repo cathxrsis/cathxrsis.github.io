@@ -35,6 +35,16 @@
   grid-template-columns: repeat( auto-fill, minmax( 20em, 1fr) );
 }
 
+.archive-container {
+    display: grid;
+    grid-template-columns: 30em 8em;
+}
+
+.archive-item {
+  text-align: left;
+  border-bottom: 2px solid #555;
+}
+
 .grid-item {
     text-align: justify;
     padding: 0.5em;
@@ -110,21 +120,33 @@ div#disqus_thread {
 h1 {
     font-size: 24pt;
     font-family: 'Alegreya', serif;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
 h2 {
     font-size: 18pt;
     font-family: 'Alegreya', serif;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+}
+
+h3 {
+    font-size: 16pt;
+    font-family: 'Alegreya', serif;
+    text-align: center;
+}
+
+h4 {
+    font-size: 12pt;
+    font-family: 'Alegreya', serif;
+    text-align: center;
 }
 
 blockquote {
     font-style: italic;
     font-size: 16pt;
     font-family: 'Alegreya', serif;
+    text-align: center;
+
 }
 
 code {
@@ -135,6 +157,7 @@ div.info {
     color: #555;
     font-size: 16pt;
     font-style: italic;
+    text-align: center;
     font-family: 'Alegreya', serif;
     border-bottom: 1px solid #6b6b6b;
 }

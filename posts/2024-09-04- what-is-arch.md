@@ -1,11 +1,8 @@
 ---
 title: "What is Architecture?"
 author: "Tom Westbury"
+icon: "../images/arch.png"
 ---
-
-<div class="avatar">
-![An arch, courtesy of DALL-E](../images/arch.png){width=200px}
-</div>
 
 Back in 2021, I interviewed for a job in Model Based systems Engineering. During the interview, one of the interviewers hit me with the question:
 
@@ -17,7 +14,7 @@ He clarified by asking what distinguishes architecture from design. A daunting q
 
 Later, the man who interviewed me explained that he saw architecture as a tendency distinct from design but still intrinsically linked---whereas design moves towards solving the problem at hand, architecture abstracts, finds patterns (keep this word in mind!). At the time this was revelatory. Architecture to me before then was a stage before design but somehow less so. You must excuse young Tom---I'd just got my CSEP badge and was locked into a very chronologically strict Vee model in thinking. This thought wedged a crowbar into the cracks in that mental model.  I am an engineer and a modeler, so I couldn't leave this at the level of fuzzy things like 'tendencies'. I needed a precise model of the dialectic of architecture and design.
 
-# The Architect
+## The Architect
 
 In the 70s the architecture world was dominated by modernism. Driven by advances in art, philosophy, developments in materials and, of course, the necessity of rebuilding from two disastrous world wars, cubic concrete buildings began appearing everywhere. Though some in the architecture world were critical of Brutalism and similar styles. One such dissident was Christopher Alexander.
 
@@ -45,7 +42,7 @@ However, the software engineering world took Alexander's ideas and ran with them
 
 This idea of finding patterns in design and abstracting up is not new---Alexander often alluded to his work as discovery rather than invention. In the mid-70s, while Alexander was writing his trilogy, an American ex-pilot was beginning his work that would revolutionize war.
 
-# Snowmobiles
+## Snowmobiles
 
 As Alexander was developing architectural pattern languages, an Officer in the US Air Force was ruminating on the aftermath of the Vietnam and Korean Wars. John Boyd had already made a name for himself with his development of Energy-Manoeuvrability theory in the 1960s which influenced the design of the F-15. A maverick, he was known for stealing computer time to run simulations of his theory. His nickname, 40 second Boyd, was earned from his application of E-M Theory enabling him to win simulated dog fights by baiting opponents into a tail chase---something that was believed to be a certain kill scenario---before using his opponent's own energy against them to shoot them down.
 
@@ -53,7 +50,7 @@ In 1976, Boyd published a paper entitled [*Destruction and creation*](https://ww
 
 Boyd's Destruction & Creation map to the ideas of Deduction & Induction or Abstraction & Reification. It's all about continuously building a playbook of moves (Patterns!) which you can use to apply to new situations. Boyd continued this thinking forward into his later work on the OODA loop framework and his patterns of conflict presentation. His contribution to modern Manoeuvre warfare cannot be understated and the use of tactics such as thunder runs with devastating effect in Iraq and Ukraine, draw on Boyd's legacy.
 
-# Modelling Boyd & Alexander
+## Modelling Boyd & Alexander
 
 I'm a model based systems engineer---this gives me a drive to give the fuzzy precise definition, especially if done in a pictorial manner. We'll start, as in previous posts, with the Cybernetic loop model of engineering:
 
@@ -99,7 +96,7 @@ Let's see how that looks as a diagram.
 
 I've given the name *wisdom* to the Pattern library as a more generic name. It is worth noting that Deduction is not required for an engineering process to build understanding via Induction. I'd like to dig into this at a later date by using this simple model as a diagnostic framework, especially with how it links to the concept of technical debt, but for now we'll focus on architecture.
 
-# What is architecture vs design?
+## What is architecture vs design?
 
 Before we answer the question originally posed in this essay, we should probably make a point on the descriptive nature of the English Language. The Oxford English Dictionary takes a descriptivist approach to English---it records the English language as it's used, not how it should be used. Despite what your English teacher told you, there is no correct way to use English, just keep in mind that others need to faithfully understand what you write. 
 
@@ -117,14 +114,14 @@ I believe that the definition proposed here somewhat matches the common usage an
 
 Before we finish here, I'd like to leave you with a couple of ways that I incorporate this thinking into my day-to-day work.
 
-# Systems Architecture Praxis
+## Systems Architecture Praxis
 
 There are two main ways that I incorporate this idea of architecture into my team's praxis. The first relies on our use of MBSE, but the second is applicable to any area of engineering (or even life!). Before I explain those though, its worth noting that the documentation of processes, methods & standards is an important part of the Architecture loop---after all a process or standard is a pattern that's indispensable.
 
 Otherwise, the two ways that I incorporate architecture into my team's praxis are a domain specific language and a pattern
 library.
 
-## Living Domain Specific Language
+### Living Domain Specific Language
 
 One way to think of a pattern language is as a form of information compression for human communication---a pattern being understood by two individuals allows the short Utterance of a few words to unfold into a whole host of attributes & relationships in the listeners' head.
 
@@ -134,13 +131,13 @@ Our deduction loop comes into play when we find ourselves unable to easily model
 
 If you find yourself using SysML or UML, stereotypes, tags and profiles work well for this purpose. In fact, I have a strongly held opinion of little consequence that profiles are necessary for SysML modelling to reduce ambiguity. The key is to ensure that you are continuously evaluating and updating your profile and refactoring your model as it changes. Otherwise, your profile will become overly constraining and make work harder than it needs to be.
 
-## A Pattern Wiki
+### A Pattern Wiki
 
 Connected to our modelling but to also cover patterns in other areas, we created a pattern wiki. A pattern wiki is a searchable repository for patterns that your team discovers. Any searchable tool is good for this. Common corporate tools that are great for this are Atlassian confluence or Microsoft Office One Note---it just needs to be a searchable, linkable, shared repository of knowledge.
 
 Each pattern should have its own linkable section or page. Here's the pattern that I use for patterns (A meta pattern!) as a start point. As Cunningham's ^[the inventor of Wikis] law states, the best way to elicit a correct answer is to present a wrong answer. This metapattern is presented hoping that you'll adapt it to your own needs.
 
-### A Template for Patterns
+#### A Template for Patterns
 
 Summary
 
