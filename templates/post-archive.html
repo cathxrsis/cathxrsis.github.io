@@ -1,9 +1,8 @@
 <h1>Archive</h1>
 
-Here's a list of previous posts:
-
+<div class="grid-container">
     $for(posts)$
-    <div class="post-item">
+    <div class="grid-item">
             <a href="$url$"><h2>$title$</h2></a> 
             <p>$date$</p>
 $if(teaser)$
@@ -15,5 +14,12 @@ $else$
             <a href="$url$"> Read here... </a>
 $endif$
     </div>
+
+    <div class="grid-item">
+        $if(icon)$
+           <div class="avatar"><img src="$icon$" width="150px"></div>
+        $endif$
+    </div>
     $endfor$
+</div>
 
