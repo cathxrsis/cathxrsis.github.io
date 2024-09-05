@@ -29,6 +29,7 @@ import Hakyll
       loadAllSnapshots,
       Configuration(destinationDirectory),
       Context, teaserField )
+import Hakyll.Contrib.Hyphenation (hyphenateHtml, english_US)
 
 
 --------------------------------------------------------------------------------
@@ -61,6 +62,7 @@ main = hakyllWith config $ do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= saveSnapshot "content"
+            >>= hyphenateHtml english_US
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls

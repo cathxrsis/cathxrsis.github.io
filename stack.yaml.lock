@@ -3,10 +3,17 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: hakyll-contrib-hyphenation-0.1.0.3@sha256:df9185074fa2eb4eeb6ebd8aaad4434a177cb0f65e0350832ef2eecebc216d10,1371
+    pantry-tree:
+      sha256: c8bc155bfc4fc1a2ace6989018293b5b8da97dd77f28963802e7f6e2f08f4f82
+      size: 297
+  original:
+    hackage: hakyll-contrib-hyphenation-0.1.0.3
 snapshots:
 - completed:
+    sha256: 692668712aa3a6638401ce921cd043f5f9a8b018af9ba13ae350871196b047d6
     size: 619152
     url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/11.yaml
-    sha256: 692668712aa3a6638401ce921cd043f5f9a8b018af9ba13ae350871196b047d6
   original: lts-19.11
