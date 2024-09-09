@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>A Category of Systems</title>
+    <link href="https://categoryofsystems.co.uk/atom.xml" rel="self" />
+    <link href="https://categoryofsystems.co.uk" />
+    <id>https://categoryofsystems.co.uk/atom.xml</id>
+    <author>
+        <name>Tom Westbury</name>
+        <email>tomwestbury@protonmail.com</email>
+    </author>
+    <updated>2024-09-04T00:00:00Z</updated>
+    <entry>
+    <title>What is Architecture?</title>
+    <link href="https://categoryofsystems.co.uk/posts/2024-09-04-%20what-is-arch.html" />
+    <id>https://categoryofsystems.co.uk/posts/2024-09-04-%20what-is-arch.html</id>
+    <published>2024-09-04T00:00:00Z</published>
+    <updated>2024-09-04T00:00:00Z</updated>
+    <summary type="html"><![CDATA[This is the post description]]></summary>
+</entry>
+<entry>
+    <title>Risk as a motive for systems Engineering</title>
+    <link href="https://categoryofsystems.co.uk/posts/2024-08-18-Risk-as-a-Motive.html" />
+    <id>https://categoryofsystems.co.uk/posts/2024-08-18-Risk-as-a-Motive.html</id>
+    <published>2024-08-18T00:00:00Z</published>
+    <updated>2024-08-18T00:00:00Z</updated>
+    <summary type="html"><![CDATA[This is the post description]]></summary>
+</entry>
+<entry>
+    <title>How organisations incentivise failure</title>
+    <link href="https://categoryofsystems.co.uk/posts/2023-12-28-Incentivising-Failure.html" />
+    <id>https://categoryofsystems.co.uk/posts/2023-12-28-Incentivising-Failure.html</id>
+    <published>2023-12-28T00:00:00Z</published>
+    <updated>2023-12-28T00:00:00Z</updated>
+    <summary type="html"><![CDATA[This is the post description]]></summary>
+</entry>
+<entry>
+    <title>On the Phenomenon of 9-5 Systems Engineers</title>
+    <link href="https://categoryofsystems.co.uk/posts/2023-02-10-Undedicated-Systems-Engineers.html" />
+    <id>https://categoryofsystems.co.uk/posts/2023-02-10-Undedicated-Systems-Engineers.html</id>
+    <published>2023-02-10T00:00:00Z</published>
+    <updated>2023-02-10T00:00:00Z</updated>
+    <summary type="html"><![CDATA[This is the post description]]></summary>
+</entry>
+<entry>
+    <title>Validation Through Intimidation</title>
+    <link href="https://categoryofsystems.co.uk/posts/2023-02-01-Validation-Through-Intimidation.html" />
+    <id>https://categoryofsystems.co.uk/posts/2023-02-01-Validation-Through-Intimidation.html</id>
+    <published>2023-02-01T00:00:00Z</published>
+    <updated>2023-02-01T00:00:00Z</updated>
+    <summary type="html"><![CDATA[This is the post description]]></summary>
+</entry>
+<entry>
+    <title>A Machine Named Desire</title>
+    <link href="https://categoryofsystems.co.uk/posts/2022-08-21-A-Machine-Named-Desire.html" />
+    <id>https://categoryofsystems.co.uk/posts/2022-08-21-A-Machine-Named-Desire.html</id>
+    <published>2022-06-30T00:00:00Z</published>
+    <updated>2022-06-30T00:00:00Z</updated>
+    <summary type="html"><![CDATA[A general pattern for understanding whether you're seeing the whole picture]]></summary>
+</entry>
+<entry>
+    <title>Agile Systems Engineering and System Hierarchies</title>
+    <link href="https://categoryofsystems.co.uk/posts/2022-02-24-On-Agile-and-Hierarchy.html" />
+    <id>https://categoryofsystems.co.uk/posts/2022-02-24-On-Agile-and-Hierarchy.html</id>
+    <published>2022-02-24T00:00:00Z</published>
+    <updated>2022-02-24T00:00:00Z</updated>
+    <summary type="html"><![CDATA[Is systems hierarchy an anti-pattern?.]]></summary>
+</entry>
+<entry>
+    <title>Gaining Composure by Losing Control</title>
+    <link href="https://categoryofsystems.co.uk/posts/2021-11-30-Gaining-Composure.html" />
+    <id>https://categoryofsystems.co.uk/posts/2021-11-30-Gaining-Composure.html</id>
+    <published>2021-11-30T00:00:00Z</published>
+    <updated>2021-11-30T00:00:00Z</updated>
+    <summary type="html"><![CDATA[A novel method for functional architecture that enables composition of features into a larger whole.]]></summary>
+</entry>
+<entry>
+    <title>State Machine Diagram Considered Harmful</title>
+    <link href="https://categoryofsystems.co.uk/posts/2021-05-06-STM-Considered-Harmful.html" />
+    <id>https://categoryofsystems.co.uk/posts/2021-05-06-STM-Considered-Harmful.html</id>
+    <published>2021-05-06T00:00:00Z</published>
+    <updated>2021-05-06T00:00:00Z</updated>
+    <summary type="html"><![CDATA[The state machine diagram is one of the most popular diagrams for behaviour in SysML/UML & Simulink. It's dangerous and here's why.]]></summary>
+</entry>
+<entry>
+    <title>Type theory as a basis for MBSE</title>
+    <link href="https://categoryofsystems.co.uk/posts/2020-11-29-Type-Theory-As-Basis.html" />
+    <id>https://categoryofsystems.co.uk/posts/2020-11-29-Type-Theory-As-Basis.html</id>
+    <published>2020-11-29T00:00:00Z</published>
+    <updated>2020-11-29T00:00:00Z</updated>
+    <summary type="html"><![CDATA[What is type theory? How does it relate to category theory? How does this all relate to MBSE?]]></summary>
+</entry>
+
+</feed>

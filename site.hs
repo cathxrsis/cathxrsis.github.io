@@ -28,8 +28,9 @@ import Hakyll
       saveSnapshot,
       loadAllSnapshots,
       Configuration(destinationDirectory),
-      Context, teaserField )
+      Context, teaserField)
 import Hakyll.Contrib.Hyphenation (hyphenateHtml, english_US)
+import Hakyll.Web.Feed
 
 
 --------------------------------------------------------------------------------
@@ -67,10 +68,12 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
     
---    match "patterns/*" $ do
---        route $ setExtension "html"
---        compile pandocCompiler
---            >>= loadAndApplyTemplate 
+    match "patterns/*" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/pattern.html" postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
 
     create ["archive.html"] $ do
         route idRoute
@@ -103,14 +106,14 @@ main = hakyllWith config $ do
 
     match "templates/*" $ compile templateCompiler
 
---    create ["atom.xml"] $ do
---        route idRoute
---        compile $ do
---            let feedCtx = postCtx <> constField "description" "This is the post description"
---
---            posts <- fmap(take 10) . recentFirst =<<  loadAllSnapshots "posts/*" "content"
---
---            renderAtom myFeedConfiguration feedCtx posts
+    create ["atom.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx <> constField "description" "This is the post description"
+
+            posts <- fmap(take 10) . recentFirst =<<  loadAllSnapshots "posts/*" "content"
+
+            renderAtom myFeedConfiguration feedCtx posts
 
 
 --------------------------------------------------------------------------------
@@ -120,3 +123,12 @@ postCtx =
     defaultContext
 
 teaserCtx = teaserField "teaser" "content" <> postCtx
+
+myFeedConfiguration :: FeedConfiguration
+myFeedConfiguration = FeedConfiguration
+    { feedTitle       = "A Category of Systems"
+    , feedDescription = "Feed of Tom Westbury's Systems Engineering Blog"
+    , feedAuthorName  = "Tom Westbury"
+    , feedAuthorEmail = "tomwestbury@protonmail.com"
+    , feedRoot        = "https://categoryofsystems.co.uk"
+    }
