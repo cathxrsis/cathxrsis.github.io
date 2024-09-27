@@ -4,6 +4,7 @@ title: "Agile Systems Engineering and System Hierarchies"
 date: 2022-02-24
 description: Is systems hierarchy an anti-pattern?.
 effort: 4min
+icon: "../images/killtree.png"
 tags:
 - Systems Engineering
 - System Architecture

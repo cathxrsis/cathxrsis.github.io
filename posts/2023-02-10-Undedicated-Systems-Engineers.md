@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "On the Phenomenon of 9-5 Systems Engineers"
+icon: "../images/nintofive.png"
 ---
 
 This post describes a phenomenon that I and some other systems engineers that I've spoken too have noticed about our discipline. This phenomenon is entirely anecdotal so I could be working in outlier companies or completely wrong. If this post rings true or false for you, however, I'd love to hear from you in the comments to help understand whether my experience is universal in this respect.
