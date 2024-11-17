@@ -3,78 +3,106 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - A New Look at Use Cases}</title>
+        <title>A Category of Systems - A New Look at Use Cases</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">A New Look at Use Cases</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2019-07-01
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-<h1>A New Look at Use Cases</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on July  1, 2019
-    
-</div>
-
-<p>This is the second in a quasi-series of posts in which I moan about bits that I don’t like in SysML/UML. This time, I’m taking a look at the use case diagram and arguing for a different way of modelling the concept to the UML and SysML specs.</p>
+<p>This is the sec­ond in a qua­si­-series of posts in which I moan about bits that I don’t like in SysM­L/UML. This time, I’m tak­ing a look at the use case di­a­gram and ar­gu­ing for a dif­fer­ent way of mod­el­ling the con­cept to the UML and SysML specs.</p>
 <!--more-->
-<p>To begin our exploration into how use cases, here are three definitions of use case from around the internet:</p>
+<p>To be­gin our ex­plo­ration into how use cas­es, here are three de­f­i­n­i­tions of use case from around the in­ter­net:</p>
 <blockquote>
-<p>A description of the behavioral requirements of a system and its interaction with a user. [1]</p>
+<p>A de­scrip­tion of the be­hav­ioral re­quire­ments of a sys­tem and its in­ter­ac­tion with a user. [1]</p>
 </blockquote>
 <blockquote>
-<p>A description of a potential scenario in which a system receives an external request (such as user input) and responds to it. [2]</p>
+<p>A de­scrip­tion of a po­ten­tial sce­nario in which a sys­tem re­ceives an ex­ter­nal re­quest (such as user in­put) and re­sponds to it. [2]</p>
 </blockquote>
 <blockquote>
-<p>A list of actions or event steps typically defining the interactions between a role (known in the Unified Modeling Language (UML) as an actor) and a system to achieve a goal [3]</p>
+<p>A list of ac­tions or event steps typ­i­cally defin­ing the in­ter­ac­tions be­tween a role (known in the Uni­fied Mod­el­ing Lan­guage (UML) as an ac­tor) and a sys­tem to achieve a goal [3]</p>
 </blockquote>
-<p>Each of these definitions describe the use case as the scenario surrounding the interations between actors and the system we would like to design. We could even interpret a use case as a container for an instance of the system under development and it’s actors; a microcosm of the universe where the goal our design will meet is the only thing that matters.</p>
-<p>Now look at the SysML/UML use case diagram:</p>
+<p>Each of these de­f­i­n­i­tions de­scribe the use case as the sce­nario sur­round­ing the in­ter­a­tions be­tween ac­tors and the sys­tem we would like to de­sign. We could even in­ter­pret a use case as a con­tainer for an in­stance of the sys­tem un­der de­vel­op­ment and it’s ac­tors; a mi­cro­cosm of the uni­verse where the goal our de­sign will meet is the only thing that mat­ters.</p>
+<p>Now look at the SysM­L/UML use case di­a­gram:</p>
 <p><img src="../images/olduc.svg" alt="Old Use Case" />
-&gt; An example of a UML/SysML use case diagram.</p>
-<p>The notation of use cases suggests a rather different interpretation of the use case than the definitions. The use cases are inside the system boundary, suggesting that use cases are somehow contained inside the system. Possibly as system behaviours? To muddy the waters further, the SysML specification seems to agree with the other definitions:</p>
+&gt; An ex­am­ple of a UM­L/SysML use case di­a­gram.</p>
+<p>The no­ta­tion of use cases sug­gests a rather dif­fer­ent in­ter­pre­ta­tion of the use case than the de­f­i­n­i­tions. The use cases are in­side the sys­tem bound­ary, sug­gest­ing that use cases are some­how con­tained in­side the sys­tem. Pos­si­bly as sys­tem be­hav­iours? To muddy the wa­ters fur­ther, the SysML spec­i­fi­ca­tion seems to agree with the other de­f­i­n­i­tions:</p>
 <blockquote>
-<p>The use case diagram describes the usage of a system (subject) by its actors (environment) to achieve a goal, that is realized by the subject providing a set of services to selected actors. The use case can also be viewed as functionality and/or capabilities that are accomplished through the interaction between the subject and its actors. [4]</p>
+<p>The use case di­a­gram de­scribes the us­age of a sys­tem (sub­ject) by its ac­tors (en­vi­ron­ment) to achieve a goal, that is re­al­ized by the sub­ject pro­vid­ing a set of ser­vices to se­lected ac­tors. The use case can also be viewed as func­tion­al­ity and/or ca­pa­bil­i­ties that are ac­com­plished through the in­ter­ac­tion be­tween the sub­ject and its ac­tors. [4]</p>
 </blockquote>
-<p>An important point to make about modelling languages is that they are not just diagram notation. Each element in a model exists in an underlying ontology with which diagrams (and other engineering artefacts) can be produced. When we look at the underlying relationships between the elements in this diagram we don’t find much useful meaning. Actors are related to the use case with a simple association. This denotes that the actors communicate with the use case in some way. This doesn’t give us much to go on unless we impose meaning that’s not in the specification. The system boundary simply has no relation to other elements in many modelling tools.</p>
-<p>This can also manifest as confusion when putting use cases in the modelling tool. Where do the use case elements live? Inside the block/class of the system under development? Generally the use case analysis is done in a different package to the rest of the modelling. But this feels like a bit of a cop-out when we’re supposed to be moving from a document-based to a integrated architecture-view based way of sytems engineering.</p>
-<p>So where did this diagram come from? The clearest answer that I can find is that the notation and its meanings are relics from the birth of UML.</p>
-<p>Use case analysis was developed as one of the main approaches to object-oriented software development in the 80s by Ivar Jacobson. In fact, Jacobson called his method Object-oriented software Engineering (OOSE). It was this method that introduced the stick men and bubble notation. When Jacobson was locked in a room at Rational software with Rumbaugh and Booch to make sure they came up with a unified notation for software, Jacobson’s Objectory notation made it into the UML relatively unscathed. Thankfully, <a href="https://www.slac.stanford.edu/BFROOT/www/doc/workbook_kiwi/coding/booch/class.html">Booch’s class notation</a> didn’t make the final cut.</p>
-<h1 id="microcosmic-use-cases">Microcosmic Use Cases</h1>
+<p>An im­por­tant point to make about mod­el­ling lan­guages is that they are not just di­a­gram no­ta­tion. Each el­e­ment in a model ex­ists in an un­der­ly­ing on­tol­ogy with which di­a­grams (and other en­gi­neer­ing arte­facts) can be pro­duced. When we look at the un­der­ly­ing re­la­tion­ships be­tween the el­e­ments in this di­a­gram we don’t find much use­ful mean­ing. Ac­tors are re­lated to the use case with a sim­ple as­so­ci­a­tion. This de­notes that the ac­tors com­mu­ni­cate with the use case in some way. This does­n’t give us much to go on un­less we im­pose mean­ing that’s not in the spec­i­fi­ca­tion. The sys­tem bound­ary sim­ply has no re­la­tion to other el­e­ments in many mod­el­ling tools.</p>
+<p>This can also man­i­fest as con­fu­sion when putting use cases in the mod­el­ling tool. Where do the use case el­e­ments live? In­side the block­/­class of the sys­tem un­der de­vel­op­ment? Gen­er­ally the use case analy­sis is done in a dif­fer­ent pack­age to the rest of the mod­el­ling. But this feels like a bit of a cop-out when we’re sup­posed to be mov­ing from a doc­u­men­t-based to a in­te­grated ar­chi­tec­ture-view based way of sytems en­gi­neer­ing.</p>
+<p>So where did this di­a­gram come from? The clear­est an­swer that I can find is that the no­ta­tion and its mean­ings are relics from the birth of UML.</p>
+<p>Use case analy­sis was de­vel­oped as one of the main ap­proaches to ob­jec­t-ori­ented soft­ware de­vel­op­ment in the 80s by Ivar Ja­cob­son. In fact, Ja­cob­son called his method Ob­jec­t-ori­ented soft­ware En­gi­neer­ing (OOSE). It was this method that in­tro­duced the stick men and bub­ble no­ta­tion. When Ja­cob­son was locked in a room at Ra­tio­nal soft­ware with Rum­baugh and Booch to make sure they came up with a uni­fied no­ta­tion for soft­ware, Ja­cob­son’s Ob­jec­tory no­ta­tion made it into the UML rel­a­tively un­scathed. Thank­ful­ly, <a href="https://www.slac.stanford.edu/BFROOT/www/doc/workbook_kiwi/coding/booch/class.html">Booch’s class no­ta­tion</a> did­n’t make the fi­nal cut.</p>
+<h1 id="microcosmic-use-cases">Mi­cro­cos­mic Use Cases</h1>
 <blockquote>
-<p><strong>To be no part of any body, is to be nothing.</strong>
+<p><strong>To be no part of any body, is to be noth­ing.</strong>
 <em>John Donne</em></p>
 </blockquote>
-<p>So what happens if we reconcile the SysML/UML use case with the interpretation gleaned from the internet definitions? In this section we’ll take a look at what happens to use cases when we try to model the use case as a microcosm that is composed of the actors and a version of the system.</p>
-<p>It becomes clear that the association between a use case and an actor is now a composition relationship; actors exist and interact with our system within the scope of our use case. Another odd semantic that comes from this is that use cases must be composed of the system under development too. This turns the original notation of use cases being within a system boundary on its head. Below is an example block definition diagram of the relationships to illustrate the advocated relationships.</p>
+<p>So what hap­pens if we rec­on­cile the SysM­L/UML use case with the in­ter­pre­ta­tion gleaned from the in­ter­net de­f­i­n­i­tions? In this sec­tion we’ll take a look at what hap­pens to use cases when we try to model the use case as a mi­cro­cosm that is com­posed of the ac­tors and a ver­sion of the sys­tem.</p>
+<p>It be­comes clear that the as­so­ci­a­tion be­tween a use case and an ac­tor is now a com­po­si­tion re­la­tion­ship; ac­tors ex­ist and in­ter­act with our sys­tem within the scope of our use case. An­other odd se­man­tic that comes from this is that use cases must be com­posed of the sys­tem un­der de­vel­op­ment too. This turns the orig­i­nal no­ta­tion of use cases be­ing within a sys­tem bound­ary on its head. Be­low is an ex­am­ple block de­f­i­n­i­tion di­a­gram of the re­la­tion­ships to il­lus­trate the ad­vo­cated re­la­tion­ships.</p>
 <p><img src="../images/newuc.svg" alt="New Use Case" />
-&gt; An illustration of my suggested use of use case elements.</p>
-<p>The semantic elegance of this way of representing use cases really comes into its own when you represent the interactions in a use case with activities or sequences. Internal block diagrams can then be used to represent a context diagram showing interfaces between the instances of the actors and system under development. All of the elements are neatly withing scope. The scope also applies to swimlanes in activities and lifelines in sequences. A block definition diagram can be used to illustrate an overview of the use cases and the actors at the top level if required.</p>
-<p>In my own head, I like to imagine the use cases as the “main functions” of a model. Use cases form that top level entry point to a model where the interpreter can “run” the overall behaviour, drilling down through the composition relationships if they would like to understand the lower levels of abstraction.</p>
-<p>I hope that this post and the last post inspire the systems engineering community to critique the UML/SysML languages instead of taking them for granted. In many ways, UML and SysML are held in the 90’s “Java/C#/Classical OOP is the zenith of programming” mindset. As the software world boldly steps into the new paradigm of functional programming with Haskell, Elm, Kotlin, Scala &amp;c. I feel the time is right for systems engineers to shed the trends of the 90s too<sup>1</sup>. In a future post, I will show how patterns from functional programming can be used to design for failure in activity diagrams.</p>
-<h2 id="references">References</h2>
-<p>[1] ISO/IEC/IEEE. 2011. <em>Systems and software engineering: Developing user documentation in an agile environment.</em> Geneva, Switzerland: International Organization for Standardization (ISO)/International Electrotechnical Commission (IEC)/ Institute of Electrical and Electronics Engineers (IEEE). ISO/IEC/IEEE 26515:2011.</p>
-<p>[2] From Wiktionary, Creative Commons Attribution/Share-Alike License.</p>
-<p>[3] https://en.wikipedia.org/wiki/Use_case</p>
-<p>[4] OMG 2015 <em>OMG Systems Modeling Language (OMG SysML™)
-Version 1.4</em> http://www.omg.org/spec/SysML/1.4/</p>
+&gt; An il­lus­tra­tion of my sug­gested use of use case el­e­ments.</p>
+<p>The se­man­tic el­e­gance of this way of rep­re­sent­ing use cases re­ally comes into its own when you rep­re­sent the in­ter­ac­tions in a use case with ac­tiv­i­ties or se­quences. In­ter­nal block di­a­grams can then be used to rep­re­sent a con­text di­a­gram show­ing in­ter­faces be­tween the in­stances of the ac­tors and sys­tem un­der de­vel­op­ment. All of the el­e­ments are neatly with­ing scope. The scope also ap­plies to swim­lanes in ac­tiv­i­ties and life­lines in se­quences. A block de­f­i­n­i­tion di­a­gram can be used to il­lus­trate an overview of the use cases and the ac­tors at the top level if re­quired.</p>
+<p>In my own head, I like to imag­ine the use cases as the “main func­tions” of a mod­el. Use cases form that top level en­try point to a model where the in­ter­preter can “run” the over­all be­hav­iour, drilling down through the com­po­si­tion re­la­tion­ships if they would like to un­der­stand the lower lev­els of ab­strac­tion.</p>
+<p>I hope that this post and the last post in­spire the sys­tems en­gi­neer­ing com­mu­nity to cri­tique the UM­L/SysML lan­guages in­stead of tak­ing them for grant­ed. In many ways, UML and SysML are held in the 90’s “Java/C#/­Clas­si­cal OOP is the zenith of pro­gram­ming” mind­set. As the soft­ware world boldly steps into the new par­a­digm of func­tional pro­gram­ming with Haskell, Elm, Kotlin, Scala &amp;c. I feel the time is right for sys­tems en­gi­neers to shed the trends of the 90s too<sup>1</sup>. In a fu­ture post, I will show how pat­terns from func­tional pro­gram­ming can be used to de­sign for fail­ure in ac­tiv­ity di­a­grams.</p>
+<h2 id="references">Ref­er­ences</h2>
+<p>[1] ISO/IEC/IEEE. 2011. <em>Sys­tems and soft­ware en­gi­neer­ing: De­vel­op­ing user doc­u­men­ta­tion in an ag­ile en­vi­ron­ment.</em> Geneva, Switzer­land: In­ter­na­tional Or­ga­ni­za­tion for Stan­dard­iza­tion (ISO)/In­ter­na­tional Elec­trotech­ni­cal Com­mis­sion (IEC)/ In­sti­tute of Elec­tri­cal and Elec­tron­ics En­gi­neers (IEEE). ISO/IEC/IEEE 26515:2011.</p>
+<p>[2] From Wik­tionary, Cre­ative Com­mons At­tri­bu­tion/Share-A­like Li­cense.</p>
+<p>[3] http­s://en.wikipedi­a.org/wik­i/Use_­case</p>
+<p>[4] OMG 2015 <em>OMG Sys­tems Mod­el­ing Lan­guage (OMG SysM­L™)
+Ver­sion 1.4</em> http://www.omg.org/spec/SysM­L/1.4/</p>
 <hr />
 <ol type="1">
-<li>After all, did anyone <em>really</em> enjoy <a href="https://www.youtube.com/watch?v=y6120QOlsfU">trance</a> without the chemical encouragement?</li>
+<li>Af­ter all, did any­one <em>re­ally</em> en­joy <a href="https://www.youtube.com/watch?v=y6120QOlsfU">trance</a> with­out the chem­i­cal en­cour­age­ment?</li>
 </ol>
 
 <div id="disqus_thread"></div>
@@ -99,9 +127,16 @@ Version 1.4</em> http://www.omg.org/spec/SysML/1.4/</p>
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

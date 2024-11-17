@@ -1,24 +1,30 @@
-<h1>Archive</h1>
-
-<div class="grid-container">
-    $for(posts)$
-    <div class="grid-item">
-        $if(icon)$
-           <div class="avatar"><img src="$icon$" width="150px"></div>
-        $endif$
-    </div>
-    <div class="grid-item">
-            <a href="$url$"><h2>$title$</h2></a> 
-            <p>$date$</p>
-$if(teaser)$
-            <p>$teaser$</p>
-
-            <a href="$url$"> Read more...</a>
-$else$
- 
-            <a href="$url$"> Read here... </a>
-$endif$
-    </div>
-    $endfor$
-</div>
-
+$for(posts)$
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="$url$">$title$</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     $if(icon)$
+     <div class="avatar"><img src="$icon$" width="200"></div>
+     $endif$
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        $date$
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+    $if(teaser)$
+    <tr><td colspan="4">$teaser$</td></tr>
+    $endif$
+</table>
+$endfor$

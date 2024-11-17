@@ -3,83 +3,111 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - Risk as a motive for systems Engineering}</title>
+        <title>A Category of Systems - Risk as a motive for systems Engineering</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
-
-<h1>Risk as a motive for systems Engineering</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on August 18, 2024
-    
-     |  by Tom Westbury
-    
-</div>
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">Risk as a motive for systems Engineering</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+     <div class="avatar"><img src="../images/risk.png" width="200"></div>
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2024-08-18
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
 <blockquote>
-<p><strong>Risk</strong> [noun]—A potential scenario in a project that is recorded in a risk management plan and forgotten about until it manifests as an issue.</p>
+<p><strong>Risk</strong> [noun]—A po­ten­tial sce­nario in a project that is recorded in a risk man­age­ment plan and for­got­ten about un­til it man­i­fests as an is­sue.</p>
 </blockquote>
-<p>I’m being facetious but this doesn’t seem too off the mark as a definition in many engineering organisations. Risk and risk management are fundamental to systems engineering–after all, Risk Management is one of the ISO 15288 processes which defines its purpose as:</p>
+<p>I’m be­ing face­tious but this does­n’t seem too off the mark as a de­f­i­n­i­tion in many en­gi­neer­ing or­gan­i­sa­tions. Risk and risk man­age­ment are fun­da­men­tal to sys­tems en­gi­neer­ing–after all, Risk Man­age­ment is one of the ISO 15288 processes which de­fines its pur­pose as:</p>
 <blockquote>
-<p>… to identify, analyse, treat and monitor the risks continually.</p>
+<p>… to iden­ti­fy, analy­se, treat and mon­i­tor the risks con­tin­u­al­ly.</p>
 </blockquote>
-<p>Risk management as usually practiced certainly fails this definition. This proposes the question: what is risk and how should it be managed? Although following ISO 15288 and the SE handbook will get you through a project’s risk management adequately, I believe treating risk this way alienates the concept from the engineering process.</p>
-<p>In this blog post, I’d like to explore the idea of risk and to Make the point that risk is not just something to be managed on the side of an engineering project but a fundamental part of engineering that provides a motive, measure and direction for an engineering project itself in a way that other measures cannot.</p>
-<p>On the way, we’ll explore concepts from the scrum framework and a contender for the philosophical definition of life itself.</p>
+<p>Risk man­age­ment as usu­ally prac­ticed cer­tainly fails this de­f­i­n­i­tion. This pro­poses the ques­tion: what is risk and how should it be man­aged? Al­though fol­low­ing ISO 15288 and the SE hand­book will get you through a pro­jec­t’s risk man­age­ment ad­e­quate­ly, I be­lieve treat­ing risk this way alien­ates the con­cept from the en­gi­neer­ing process.</p>
+<p>In this blog post, I’d like to ex­plore the idea of risk and to Make the point that risk is not just some­thing to be man­aged on the side of an en­gi­neer­ing project but a fun­da­men­tal part of en­gi­neer­ing that pro­vides a mo­tive, mea­sure and di­rec­tion for an en­gi­neer­ing project it­self in a way that other mea­sures can­not.</p>
+<p>On the way, we’ll ex­plore con­cepts from the scrum frame­work and a con­tender for the philo­soph­i­cal de­f­i­n­i­tion of life it­self.</p>
 <!--more-->
 <h1 id="what-is-risk">What is Risk?</h1>
-<p>Risk is a measure of known unknowns. We define it by identifying a set of scenarios that may happen, understanding the impact that such a scenario would cause and the likelihood that such a scenario could come about. The measure of risk is then usually defined with 3 or 5 levels based on an impact and likelihood scoring system.
-Risks inhabit all parts of a system lifecycle. Understanding operational risk gives us the core of Functional Safety, Cyber security and Reliability engineering (HARA, TARA and EMEA respectively, for examples). In this post, however, we’re going to focus on
-programme risk, in other words, risks that, if they come to
-fruition, cause project costs and timings to increase. What constitutes a risk to a programme? Answering this question is my fundamental break with traditional risk management.</p>
-<p>My proposal is that <em>every</em> engineering artefact carries a risk.</p>
-<p>Let me explain why.</p>
-<p>I’ll begin with a slightly different model of engineering than most are used to—The cybernetic loop model of engineering.</p>
+<p>Risk is a mea­sure of known un­knowns. We de­fine it by iden­ti­fy­ing a set of sce­nar­ios that may hap­pen, un­der­stand­ing the im­pact that such a sce­nario would cause and the like­li­hood that such a sce­nario could come about. The mea­sure of risk is then usu­ally de­fined with 3 or 5 lev­els based on an im­pact and like­li­hood scor­ing sys­tem.
+Risks in­habit all parts of a sys­tem life­cy­cle. Un­der­stand­ing op­er­a­tional risk gives us the core of Func­tional Safe­ty, Cy­ber se­cu­rity and Re­li­a­bil­ity en­gi­neer­ing (HARA, TARA and EMEA re­spec­tive­ly, for ex­am­ples). In this post, how­ev­er, we’re go­ing to fo­cus on
+pro­gramme risk, in other words, risks that, if they come to
+fruition, cause project costs and tim­ings to in­crease. What con­sti­tutes a risk to a pro­gram­me? An­swer­ing this ques­tion is my fun­da­men­tal break with tra­di­tional risk man­age­ment.</p>
+<p>My pro­posal is that <em>every</em> en­gi­neer­ing arte­fact car­ries a risk.</p>
+<p>Let me ex­plain why.</p>
+<p>I’ll be­gin with a slightly dif­fer­ent model of en­gi­neer­ing than most are used to—The cy­ber­netic loop model of en­gi­neer­ing.</p>
 <figure>
 <img src="../images/Screenshot_20240816-112645.png" width="300" alt="The diagram of the Cybernetic Loop" />
-<figcaption aria-hidden="true">The diagram of the Cybernetic Loop</figcaption>
+<figcaption aria-hidden="true">The di­a­gram of the Cy­ber­netic Loop</figcaption>
 </figure>
-<p>Unlike the Vee model, the cybernetic loop shows the dependencies of engineering-rather than the chronology. I like to think of it as a Vee shown from above. The cybernetic loop is made of the relationships between an environment (En) and a model of that environment (Und for Understanding). Evolution is the change of the Environment with time; Learning is the process of changing our understanding based on how the environment changes; Development are activities that improve our understanding internally; and Action is changing the environment based upon our understanding.</p>
-<p>The story of any engineering project is the assumption that the environment is problematic for some key stakeholder. The engin­eering project then resolves to make some action in the environment to resolve this problem. This requires learning and development to ensure that our final action solves the problem-Actions are expensive! We can think of the Development loop as a mirror to the Evolution loop. This is where we do our designing. However, as development is performed entirely on the understanding, any places where the understanding does not correspond to the Environment will be amplified. If our development loop runs away with itself for ages, when our action is finally made, it is highly unlikely that it will make the desired impact on the environment. We will be surprised.</p>
-<p>In nature, as well as business, suprisal is expensive and dangerous. Those ‘things’ that minimise suprisal tend to last (survive) longer. This is known as the principle of Minimal Surprisal Or, less evocatively, the Free Energy Principle.</p>
-<p>where does risk fit into all this? Thinking of it this way, risk is a measure of how likely our actions will surprise us, multiplied by the extra effort and time required to rectify the state of Surprisal. We can be surprised because every piece of information created by the development cycle is an assumption.</p>
-<p>This idea is reflected in the Agile idea of Riskiest Assumption Tested Soonest (RATS). RATS is the simple idea that the goal of any engineering project is to validate your riskiest assumptions as soon as possible. In fact, engineering should only be the development of tests of riskiest assumption. This may seem a bit extreme at first glance, but once we’ve explored what this means, I hope that you’ll see that it’s the only sensible motive for engineering.</p>
-<p>I mentioned earlier that all results of the development process are assumptions. Taking this universally, this means all personal, scientific, in fact, the sum total of human knowledge is assumption. A bunch of risky assumptions at that! In the engineering world, all design decisions and requirements carry around two assumptions:</p>
+<p>Un­like the Vee mod­el, the cy­ber­netic loop shows the de­pen­den­cies of en­gi­neer­ing-rather than the chronol­o­gy. I like to think of it as a Vee shown from above. The cy­ber­netic loop is made of the re­la­tion­ships be­tween an en­vi­ron­ment (En) and a model of that en­vi­ron­ment (Und for Un­der­stand­ing). Evo­lu­tion is the change of the En­vi­ron­ment with time; Learn­ing is the process of chang­ing our un­der­stand­ing based on how the en­vi­ron­ment changes; De­vel­op­ment are ac­tiv­i­ties that im­prove our un­der­stand­ing in­ter­nal­ly; and Ac­tion is chang­ing the en­vi­ron­ment based upon our un­der­stand­ing.</p>
+<p>The story of any en­gi­neer­ing project is the as­sump­tion that the en­vi­ron­ment is prob­lem­atic for some key stake­hold­er. The en­g­in­eer­ing project then re­solves to make some ac­tion in the en­vi­ron­ment to re­solve this prob­lem. This re­quires learn­ing and de­vel­op­ment to en­sure that our fi­nal ac­tion solves the prob­lem-Ac­tions are ex­pen­sive! We can think of the De­vel­op­ment loop as a mir­ror to the Evo­lu­tion loop. This is where we do our de­sign­ing. How­ev­er, as de­vel­op­ment is per­formed en­tirely on the un­der­stand­ing, any places where the un­der­stand­ing does not cor­re­spond to the En­vi­ron­ment will be am­pli­fied. If our de­vel­op­ment loop runs away with it­self for ages, when our ac­tion is fi­nally made, it is highly un­likely that it will make the de­sired im­pact on the en­vi­ron­ment. We will be sur­prised.</p>
+<p>In na­ture, as well as busi­ness, suprisal is ex­pen­sive and dan­ger­ous. Those ‘things’ that min­imise suprisal tend to last (sur­vive) longer. This is known as the prin­ci­ple of Min­i­mal Sur­prisal Or, less evoca­tive­ly, the Free En­ergy Prin­ci­ple.</p>
+<p>where does risk fit into all this? Think­ing of it this way, risk is a mea­sure of how likely our ac­tions will sur­prise us, mul­ti­plied by the ex­tra ef­fort and time re­quired to rec­tify the state of Sur­prisal. We can be sur­prised be­cause every piece of in­for­ma­tion cre­ated by the de­vel­op­ment cy­cle is an as­sump­tion.</p>
+<p>This idea is re­flected in the Ag­ile idea of Riski­est As­sump­tion Tested Soon­est (RAT­S). RATS is the sim­ple idea that the goal of any en­gi­neer­ing project is to val­i­date your riski­est as­sump­tions as soon as pos­si­ble. In fact, en­gi­neer­ing should only be the de­vel­op­ment of tests of riski­est as­sump­tion. This may seem a bit ex­treme at first glance, but once we’ve ex­plored what this means, I hope that you’ll see that it’s the only sen­si­ble mo­tive for en­gi­neer­ing.</p>
+<p>I men­tioned ear­lier that all re­sults of the de­vel­op­ment process are as­sump­tions. Tak­ing this uni­ver­sal­ly, this means all per­son­al, sci­en­tific, in fact, the sum to­tal of hu­man knowl­edge is as­sump­tion. A bunch of risky as­sump­tions at that! In the en­gi­neer­ing world, all de­sign de­ci­sions and re­quire­ments carry around two as­sump­tions:</p>
 <ol type="1">
-<li><p>This will satisfy the stakeholders’ desire</p></li>
-<li><p>This is feasible within the laws of the land, fiscal constraints &amp; physics</p></li>
+<li><p>This will sat­isfy the stake­hold­ers’ de­sire</p></li>
+<li><p>This is fea­si­ble within the laws of the land, fis­cal con­straints &amp; physics</p></li>
 </ol>
-<p>Therefore, to answer this section’s question; what is a Risk?</p>
-<p>Everything Engineers create!</p>
+<p>There­fore, to an­swer this sec­tion’s ques­tion; what is a Risk?</p>
+<p>Every­thing En­gi­neers cre­ate!</p>
 <h1 id="rats-as-praxis">RATS as Praxis</h1>
-<p>An engineering project can often consist of 10,000-100,000 requirements, or even more! managing that many risks in a risk register would be incredibly tedious. Close related to RATS is the concept of a Minimum Viable Product. MVP is an oft-misunderstood concept, here we’re using it to mean a ‘cheap’ action in the environment that allows us to test an assumption.</p>
-<p>Good, practical, examples for MVP’s are User stories and Use cases. User stories can be used to capture stakeholder needs and near-instantly replay them to the stakeholder for validation. Use cases add a bit of concept work to this to gain stakeholder validation on the concept.</p>
-<p>An issue that I’ve seen play out a few times is the tendency for organisations to ritualise engineering. Most engineering companies go through the motions of an experimental prototype, Hardware-in-loop prototype, validation prototype, production prototype &amp;c. Every industry has this procession in various forms. Often the question of which features
-to implement on each of the prototypes is often vaguely answered. RATS fixes this straight away. Which features go on the XP? The riskiest ones. The features that all others depend on, the primary use Cases &amp;c.</p>
-<p>To calculate our risk, for each feature, we can use a measure of how complex the engineering problem is—often called likelihood or exposure— and our impact of the system going to production without it or it being incorrectly implemented on a scale of the user not noticing to the system being illegal /unsafe.</p>
-<p>There’s a meta risk of this impact/exposure score being uncorrespondent to your engineers/stakeholder’s reality—make sure they’re involved in the discussion!</p>
-<h1 id="risk-in-motion">Risk in Motion</h1>
-<p>One final definition for risk is that its an error bar for the project cost &amp; timing forecasts. By their very nature, you can never say which risks will become issues, but, on aggregate, many of them will. Therefore, the faster risk is burnt down’ the sooner project forecasts can converge towards a more accurate estimate.</p>
-<p>Thinking along these lines leads us to understanding that risk is a suitable lodestar for engineering projects. Traditionally project gateways are usually conducted by understanding which tasks have been completed, with a gateway criteria defining a completion and quality. Risk through this lens provides a ‘why’ for these criteria and also helps us understand whether to pass a gateway, postpone it or abandon the project- Using risk as an error bar, we can propose expected cost &amp; timing overruns to the purse holding stakeholder and let them make an informed decision.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>This post has been a brief exploration of a more integrated approach to risk than usually taken. In my own engineering Projects, I’ve been pushing and implementing such an approach to risk to help inform stakeholders, build trust and understand the prioritisation of work.</p>
-<p>I hope that I will be able to provide some practical evidence and examples of treating risk in this manner in the future. Until then, I hope this post has helped clarify your thinking about risk, for or against my proposal-let me know if you have any thoughts below!</p>
+<p>An en­gi­neer­ing project can of­ten con­sist of 10,000-100,000 re­quire­ments, or even more! man­ag­ing that many risks in a risk reg­is­ter would be in­cred­i­bly te­dious. Close re­lated to RATS is the con­cept of a Min­i­mum Vi­able Prod­uct. MVP is an oft-misun­der­stood con­cept, here we’re us­ing it to mean a ‘cheap’ ac­tion in the en­vi­ron­ment that al­lows us to test an as­sump­tion.</p>
+<p>Good, prac­ti­cal, ex­am­ples for MVP’s are User sto­ries and Use cas­es. User sto­ries can be used to cap­ture stake­holder needs and near-in­stantly re­play them to the stake­holder for val­i­da­tion. Use cases add a bit of con­cept work to this to gain stake­holder val­i­da­tion on the con­cept.</p>
+<p>An is­sue that I’ve seen play out a few times is the ten­dency for or­gan­i­sa­tions to rit­u­alise en­gi­neer­ing. Most en­gi­neer­ing com­pa­nies go through the mo­tions of an ex­per­i­men­tal pro­to­type, Hard­ware-in-loop pro­to­type, val­i­da­tion pro­to­type, pro­duc­tion pro­to­type &amp;c. Every in­dus­try has this pro­ces­sion in var­i­ous forms. Of­ten the ques­tion of which fea­tures
+to im­ple­ment on each of the pro­to­types is of­ten vaguely an­swered. RATS fixes this straight away. Which fea­tures go on the XP? The riski­est ones. The fea­tures that all oth­ers de­pend on, the pri­mary use Cases &amp;c.</p>
+<p>To cal­cu­late our risk, for each fea­ture, we can use a mea­sure of how com­plex the en­gi­neer­ing prob­lem is—often called like­li­hood or ex­po­sure— and our im­pact of the sys­tem go­ing to pro­duc­tion with­out it or it be­ing in­cor­rectly im­ple­mented on a scale of the user not notic­ing to the sys­tem be­ing il­le­gal /un­safe.</p>
+<p>There’s a meta risk of this im­pact/­ex­po­sure score be­ing un­cor­re­spon­dent to your en­gi­neer­s/s­take­hold­er’s re­al­i­ty—­make sure they’re in­volved in the dis­cus­sion!</p>
+<h1 id="risk-in-motion">Risk in Mo­tion</h1>
+<p>One fi­nal de­f­i­n­i­tion for risk is that its an er­ror bar for the project cost &amp; tim­ing fore­casts. By their very na­ture, you can never say which risks will be­come is­sues, but, on ag­gre­gate, many of them will. There­fore, the faster risk is burnt down’ the sooner project fore­casts can con­verge to­wards a more ac­cu­rate es­ti­mate.</p>
+<p>Think­ing along these lines leads us to un­der­stand­ing that risk is a suit­able lodestar for en­gi­neer­ing pro­jects. Tra­di­tion­ally project gate­ways are usu­ally con­ducted by un­der­stand­ing which tasks have been com­plet­ed, with a gate­way cri­te­ria defin­ing a com­ple­tion and qual­i­ty. Risk through this lens pro­vides a ‘why’ for these cri­te­ria and also helps us un­der­stand whether to pass a gate­way, post­pone it or aban­don the pro­ject- Us­ing risk as an er­ror bar, we can pro­pose ex­pected cost &amp; tim­ing over­runs to the purse hold­ing stake­holder and let them make an in­formed de­ci­sion.</p>
+<h1 id="conclusion">Con­clu­sion</h1>
+<p>This post has been a brief ex­plo­ration of a more in­te­grated ap­proach to risk than usu­ally tak­en. In my own en­gi­neer­ing Pro­jects, I’ve been push­ing and im­ple­ment­ing such an ap­proach to risk to help in­form stake­hold­ers, build trust and un­der­stand the pri­ori­ti­sa­tion of work.</p>
+<p>I hope that I will be able to pro­vide some prac­ti­cal ev­i­dence and ex­am­ples of treat­ing risk in this man­ner in the fu­ture. Un­til then, I hope this post has helped clar­ify your think­ing about risk, for or against my pro­pos­al-let me know if you have any thoughts be­low!</p>
 
 <div id="disqus_thread"></div>
 <script>
@@ -103,9 +131,16 @@ to implement on each of the prototypes is often vaguely answered. RATS fixes thi
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

@@ -3,114 +3,142 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - A better type of type}</title>
+        <title>A Category of Systems - A better type of type</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">A better type of type</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2020-07-18
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-<h1>A better type of type</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on July 18, 2020
-    
-</div>
-
-<p>This post is an introduction to an incredibly powerful pattern that is quite well established in the functional programming world but doesn’t seem to have percolated back to the OOP world, let alone modelling. Interestingly enough this pattern is all about abstracting from the way computers handle data values and bringing data description up to a more human friendly level. This pattern is known as the Algebraic Data Type.</p>
+<p>This post is an in­tro­duc­tion to an in­cred­i­bly pow­er­ful pat­tern that is quite well es­tab­lished in the func­tional pro­gram­ming world but does­n’t seem to have per­co­lated back to the OOP world, let alone mod­el­ling. In­ter­est­ingly enough this pat­tern is all about ab­stract­ing from the way com­put­ers han­dle data val­ues and bring­ing data de­scrip­tion up to a more hu­man friendly lev­el. This pat­tern is known as the Al­ge­braic Data Type.</p>
 <!--more-->
-<p>Before we talk about algebraic data types, lets ask what is a data type? In software engineering, Data Types act like a translation rule between bits in the memory and some useful meaning to the user. Depending on the level of your programming language, data types abstract away the actual bits and bytes in the memory being used to store your data and provide you with meaningful values such as integers, characters and strings. Some data types though force you to think a little harder about the implementation, misunderstanding floating point arithmetic has lead to a number of high profile failures including a <a href="https://en.wikipedia.org/wiki/Round-off_error#Real_world_example:_Patriot_missile_failure_due_to_magnification_of_roundoff_error">friendly fire incident of a missile system!</a>.</p>
-<p>There are a few different ways that programming languages treat types and values which I’ll go over quickly before we move on. Some programming languages are weakly typed. In these languages a programmer can feed any value into any function and the runtime will handle the errors if there are any. Lisp, Python and Javascript all live in this family.</p>
-<p>Other languages are strongly typed. This mean that the language’s functions can only be used on a variable if the types match up. Having strong types means that the compiler prevents you from feeding values into functions that don’t know what to do with them preventing runtime errors but sacrificing some compiler efficiency. Examples of this are C (although casting allows you to be very cheeky with types), Java and the most rigid of the bunch, Ada. UML lives in this family too.</p>
-<p>Finally, it is worth mentioning that there are strongly typed languages that have type systems (notably the Hindly-Milner type system) where the compiler can infer the required type signatures of function definitions. This is a significant advantage over languages such as Ada where a lot of type boilerplate code is required. Notable examples in this family are Haskell and OCaml. Some of these types systems are powerful enough to be used as mathematical theorem provers like Agda and Idris which may pave the way to provably safe code in the future once the paradigm has taken hold.</p>
-<p>In UML terms, however, a data type is defined as a classifier whose instances are anonymous. This means that its just a class with unnamed objects (the objects are unnamed as they correspond to values). UML gives us three kinds of data types: structured data types (a name given to any type that contains an attribute of another type) primitives and enumerations. Enumeration is an interesting choice of name because it evokes the underlying mechanism of the abstraction (though was probably chosen to match enumeration types in C, a decision mirrored in the Rust programming language). Primitive data types are a UML cop-out:</p>
+<p>Be­fore we talk about al­ge­braic data types, lets ask what is a data type? In soft­ware en­gi­neer­ing, Data Types act like a trans­la­tion rule be­tween bits in the mem­ory and some use­ful mean­ing to the user. De­pend­ing on the level of your pro­gram­ming lan­guage, data types ab­stract away the ac­tual bits and bytes in the mem­ory be­ing used to store your data and pro­vide you with mean­ing­ful val­ues such as in­te­gers, char­ac­ters and strings. Some data types though force you to think a lit­tle harder about the im­ple­men­ta­tion, mis­un­der­stand­ing float­ing point arith­metic has lead to a num­ber of high pro­file fail­ures in­clud­ing a <a href="https://en.wikipedia.org/wiki/Round-off_error#Real_world_example:_Patriot_missile_failure_due_to_magnification_of_roundoff_error">friendly fire in­ci­dent of a mis­sile sys­tem!</a>.</p>
+<p>There are a few dif­fer­ent ways that pro­gram­ming lan­guages treat types and val­ues which I’ll go over quickly be­fore we move on. Some pro­gram­ming lan­guages are weakly typed. In these lan­guages a pro­gram­mer can feed any value into any func­tion and the run­time will han­dle the er­rors if there are any. Lisp, Python and Javascript all live in this fam­i­ly.</p>
+<p>Other lan­guages are strongly typed. This mean that the lan­guage’s func­tions can only be used on a vari­able if the types match up. Hav­ing strong types means that the com­piler pre­vents you from feed­ing val­ues into func­tions that don’t know what to do with them pre­vent­ing run­time er­rors but sac­ri­fic­ing some com­piler ef­fi­cien­cy. Ex­am­ples of this are C (although cast­ing al­lows you to be very cheeky with type­s), Java and the most rigid of the bunch, Ada. UML lives in this fam­ily too.</p>
+<p>Fi­nal­ly, it is worth men­tion­ing that there are strongly typed lan­guages that have type sys­tems (no­tably the Hind­ly-Mil­ner type sys­tem) where the com­piler can in­fer the re­quired type sig­na­tures of func­tion de­f­i­n­i­tions. This is a sig­nif­i­cant ad­van­tage over lan­guages such as Ada where a lot of type boil­er­plate code is re­quired. No­table ex­am­ples in this fam­ily are Haskell and OCaml. Some of these types sys­tems are pow­er­ful enough to be used as math­e­mat­i­cal the­o­rem provers like Agda and Idris which may pave the way to prov­ably safe code in the fu­ture once the par­a­digm has taken hold.</p>
+<p>In UML terms, how­ev­er, a data type is de­fined as a clas­si­fier whose in­stances are anony­mous. This means that its just a class with un­named ob­jects (the ob­jects are un­named as they cor­re­spond to val­ues). UML gives us three kinds of data types: struc­tured data types (a name given to any type that con­tains an at­tribute of an­other type) prim­i­tives and enu­mer­a­tions. Enu­mer­a­tion is an in­ter­est­ing choice of name be­cause it evokes the un­der­ly­ing mech­a­nism of the ab­strac­tion (though was prob­a­bly cho­sen to match enu­mer­a­tion types in C, a de­ci­sion mir­rored in the Rust pro­gram­ming lan­guage). Prim­i­tive data types are a UML cop-out:</p>
 <blockquote>
-<p>A PrimitiveType defines a predefined DataType, without any substructure. A PrimitiveType may have algebra and operations defined outside of UML, for example, mathematically. The run-time instances of a PrimitiveType are values that correspond to mathematical elements defined outside of UML (for example, the Integers). [1]</p>
+<p>A Prim­i­tiveType de­fines a pre­de­fined DataType, with­out any sub­struc­ture. A Prim­i­tiveType may have al­ge­bra and op­er­a­tions de­fined out­side of UML, for ex­am­ple, math­e­mat­i­cal­ly. The run-­time in­stances of a Prim­i­tiveType are val­ues that cor­re­spond to math­e­mat­i­cal el­e­ments de­fined out­side of UML (for ex­am­ple, the In­te­gers). [1]</p>
 </blockquote>
-<p>I personally object to this part of the standard and believe that types and their associated operations shouldbe brought into UML so that we can reason about which types best convey requirements and allow model checkers to catch type misuse errors.</p>
-<p>Part of the argument that I will try to convey in this post (but mainly the future one on typeclasses) is that knowing the possible values that a data type can take and what functions can be performed upon it are not a critical part of a UML/SysML design. This would enable use of UML/SysML model checking to ensure that we’re not introducing type errors at the requirements level: if you try to feed something of the wrong type into the wrong function in your UML model, letting the model pick that up saves some poor programmer having to try and implement contradictory requirements. This blog post will introduce algebraic data types through a motivating example and then explore a candidate notation for defining them in UML.</p>
-<h2 id="algebraic-data-types">Algebraic Data Types</h2>
-<p>The name “algebraic data type” tends to conjure up images of complex maths but its simply and abstract pattern to enable us to define new data types as the “sum” or “product” of existing data types. The product of types is already familiar to most modellers and programmers, it occurs when one type has values that are a combination of two or more other types. These are known as tuples when the constituent values are not named and are called structures or records when the constituent values are named. In UML this is just the structured data type.</p>
-<p>The sum of two (or more) types, sometimes called a “union”, is a new type that has all of the values of both of the types. In UML enumeration data types can be thought as the union of each of its enumeration literals. UML enumeration literals are not quite suited for this purpose as they mst have a defined set of values that cannot be generated by a function. Some modellers try and get around this by using inheritance as a means to show that a data type can be either one value or another. The problem in this case is that the “input” data types to the sum cannot exist independently of the “output” (the super class) which does not convey the desired information to the reader of the model. This is why we will need to introduce a new notation for this concept.</p>
+<p>I per­son­ally ob­ject to this part of the stan­dard and be­lieve that types and their as­so­ci­ated op­er­a­tions shouldbe brought into UML so that we can rea­son about which types best con­vey re­quire­ments and al­low model check­ers to catch type mis­use er­rors.</p>
+<p>Part of the ar­gu­ment that I will try to con­vey in this post (but mainly the fu­ture one on type­class­es) is that know­ing the pos­si­ble val­ues that a data type can take and what func­tions can be per­formed upon it are not a crit­i­cal part of a UM­L/SysML de­sign. This would en­able use of UM­L/SysML model check­ing to en­sure that we’re not in­tro­duc­ing type er­rors at the re­quire­ments lev­el: if you try to feed some­thing of the wrong type into the wrong func­tion in your UML mod­el, let­ting the model pick that up saves some poor pro­gram­mer hav­ing to try and im­ple­ment con­tra­dic­tory re­quire­ments. This blog post will in­tro­duce al­ge­braic data types through a mo­ti­vat­ing ex­am­ple and then ex­plore a can­di­date no­ta­tion for defin­ing them in UML.</p>
+<h2 id="algebraic-data-types">Al­ge­braic Data Types</h2>
+<p>The name “al­ge­braic data type” tends to con­jure up im­ages of com­plex maths but its sim­ply and ab­stract pat­tern to en­able us to de­fine new data types as the “sum” or “pro­duct” of ex­ist­ing data types. The prod­uct of types is al­ready fa­mil­iar to most mod­ellers and pro­gram­mers, it oc­curs when one type has val­ues that are a com­bi­na­tion of two or more other types. These are known as tu­ples when the con­stituent val­ues are not named and are called struc­tures or records when the con­stituent val­ues are named. In UML this is just the struc­tured data type.</p>
+<p>The sum of two (or more) types, some­times called a “u­nion”, is a new type that has all of the val­ues of both of the types. In UML enu­mer­a­tion data types can be thought as the union of each of its enu­mer­a­tion lit­er­als. UML enu­mer­a­tion lit­er­als are not quite suited for this pur­pose as they mst have a de­fined set of val­ues that can­not be gen­er­ated by a func­tion. Some mod­ellers try and get around this by us­ing in­her­i­tance as a means to show that a data type can be ei­ther one value or an­oth­er. The prob­lem in this case is that the “in­put” data types to the sum can­not ex­ist in­de­pen­dently of the “out­put” (the su­per class) which does not con­vey the de­sired in­for­ma­tion to the reader of the mod­el. This is why we will need to in­tro­duce a new no­ta­tion for this con­cept.</p>
 <figure>
 <img src="../images/inheritedMaybe.png" alt="Sum type using inheritance, not really worth it" />
-<figcaption aria-hidden="true">Sum type using inheritance, not really worth it</figcaption>
+<figcaption aria-hidden="true">Sum type us­ing in­her­i­tance, not re­ally worth it</figcaption>
 </figure>
-<p>A nice introduction to this concept can be found in the guide to the Elm programming language: <a href="https://guide.elm-lang.org/appendix/types_as_sets.html">Types as Sets</a></p>
-<h2 id="failure-in-the-system">Failure in the system</h2>
-<p>To introduce the usefulness of algebraic data types, lets investigate a common systems engineering problem; how to represent failure in the system. Imagine an operation in a model that divides two real numbers. In a UML model we would see something like this in the browser:</p>
-<pre><code>Divide(a : real, b : real) : real</code></pre>
-<p>Now imagine that we have performed some sort of HAZOPS process on the model and found that this function cause some quite spectacular problems when we try and divide by 0.</p>
-<p>Don’t panic though, this is easily caught by the operation itself if we check to see if b is 0. We can catch that error easily, but how do we communicate to downstream functions that Divide has failed? Here are a few solutions:</p>
-<h3 id="add-an-extra-failure-line">1) Add an extra failure line</h3>
-<p>Probably the most trivial answer, this solution just adds a separate failure propagation output to the function.</p>
+<p>A nice in­tro­duc­tion to this con­cept can be found in the guide to the Elm pro­gram­ming lan­guage: <a href="https://guide.elm-lang.org/appendix/types_as_sets.html">Types as Sets</a></p>
+<h2 id="failure-in-the-system">Fail­ure in the sys­tem</h2>
+<p>To in­tro­duce the use­ful­ness of al­ge­braic data types, lets in­ves­ti­gate a com­mon sys­tems en­gi­neer­ing prob­lem; how to rep­re­sent fail­ure in the sys­tem. Imag­ine an op­er­a­tion in a model that di­vides two real num­bers. In a UML model we would see some­thing like this in the browser:</p>
+<pre><code>Di­vide(a : re­al, b : re­al) : real</code></pre>
+<p>Now imag­ine that we have per­formed some sort of HA­ZOPS process on the model and found that this func­tion cause some quite spec­tac­u­lar prob­lems when we try and di­vide by 0.</p>
+<p>Don’t panic though, this is eas­ily caught by the op­er­a­tion it­self if we check to see if b is 0. We can catch that er­ror eas­i­ly, but how do we com­mu­ni­cate to down­stream func­tions that Di­vide has failed? Here are a few so­lu­tions:</p>
+<h3 id="add-an-extra-failure-line">1) Add an ex­tra fail­ure line</h3>
+<p>Prob­a­bly the most triv­ial an­swer, this so­lu­tion just adds a sep­a­rate fail­ure prop­a­ga­tion out­put to the func­tion.</p>
 <figure>
 <img src="../images/function.png" alt="A uml call operation with the signature safeDivide(a : real, b : real, * f : failure) : real" />
-<figcaption aria-hidden="true">A uml call operation with the signature safeDivide(a : real, b : real, * f : failure) : real</figcaption>
+<figcaption aria-hidden="true">A uml call op­er­a­tion with the sig­na­ture safe­Di­vide(a : re­al, b : re­al, * f : fail­ure) : real</figcaption>
 </figure>
-<p>It doesn’t take much extrapolation to see how quickly this would get completely out of hand, doubling up all of the lines on your diagram. UML only allows one return type, in the diagram the failure is considered an “argument by reference” but the failure could have been the return type instead. The language does not have a convention in this case making reusability awkward. Now imagine if the upstream function could fail too, we’d need to add another two inputs! And how would these received failures map to the output? This approach is definitely not scaleable.</p>
-<h3 id="pick-an-arbitrary-value-to-represent-the-failure">2) Pick an arbitrary value to represent the failure</h3>
-<p>This time we will pick an unused value of the data type to represent the failure. This is often the favoured approach of simulink engineers. If your data type is an int, enumerate your failures from 255 back &amp;c. This is most likely how a good compiler will implement your software error propagations anyway, but it doesn’t preserve the meaning inside the model in a meaningful way. It defeats the point of modelling somewhat as it forces the reader to think further down the abstraction layers. It also causes problems if the value range of the data type has to change.</p>
-<p>This method is also a step back from the first option in terms of reusability, if you are required to reuse this function in a context where the error value is required as part of the nominal range, you’re going to have to define a new one with a new error value. This solution is a case of the antipattern “genetic disorder”. If the implementor of the software is using a language like Haskell to code the solution (see below for the Haskell solution), you have forced their hand through the misuse of UML/SysML to create a solution in the software that is considered bad practice for that language. This happens a lot with UML when trying to implement specified behaviour in a different programming paradigm from OOP.</p>
-<h3 id="use-the-maybe-pattern">3) Use the Maybe pattern</h3>
-<p>There’s no diagram for this case as like case 2, we’re embedding the concept of failure into the very data type itself. except in this case, the language is powerful enough to let us embed the idea of failure into the data type without the use of a unscaleable bodge.
-As a motivating example from a programming language with these concepts baked in, Haskell has a pretty elegant syntax for the Maybe concept:</p>
-<pre><code>Data Maybe a = Just a | Nothing</code></pre>
-<p>This is a Haskell type constructor declaration that tells us that we can create a Maybe type for any existing type (the <em>a</em> term in the declation which is basically a template parameter) which, when fed a type (such as Int) creates a type that may be an Int or may be nothing.</p>
-<p>To illustrate how this would be used in Haskell, the SafeDivide operation would be implemented using the following syntax:</p>
-<pre><code>safeDivide :: (Int, Int) -&gt; Maybe Int
-safeDivide (_ , 0) = Nothing
-safeDivide (a , b) = Just (a/b)</code></pre>
-<p>The first line tells us that safeDivide is a function that takes two integers and returns a Maybe Int. The second line tells us to return Nothing if the denominator is 0 and not worry about the numerator in this case (an underscore in Haskell means any value). The third line tells us that for all other input pairs, return the division wrapped in a Just. The next function can then check to see if the input is a Nothing or a Just and act accordingly.</p>
-<p>A great introduction to this programming pattern is the slide show on “Railway Oriented Programming” on <a href="https://fsharpforfunandprofit.com/rop/">F# for fun and profit</a>. If you have a play with functions of the type <code>a -&gt; Maybe a</code> you’ll probably quickly come up against a few problems of how to chain them together. This is especially true if you’re trying to concatenate errors with <code>Maybe</code>’s cousin, <code>Either</code>. To solve these problems we’ll have to learn about more patterns such as Functors, Applicative Functors and Monads which are out of the scope of this post but I promise I’ll cover them at a later date!</p>
-<h2 id="baking-in-adts">Baking in ADTs</h2>
-<p>Lets imagine that we could design ADTs within UML, such as the Maybe type, what could the syntax look like? As we discussed earlier, to create ADTs, we require the ability to define new data types as the sum of two others or the product of two others. As a starting point, lets create two specialisations of directed associations to represent our constructors: one called «product» to represent the cartesian product of 2 or more types and an n-ary association called «union» to represent that the owning type is a union of two or more types. The product type is relatively familiar as it already exists in UML as a structure, we are just using the associations to make it diagrammatically explicit. Now we have defined an extension for sum types, we can use them to create definitions for all sorts of new types:</p>
+<p>It does­n’t take much ex­trap­o­la­tion to see how quickly this would get com­pletely out of hand, dou­bling up all of the lines on your di­a­gram. UML only al­lows one re­turn type, in the di­a­gram the fail­ure is con­sid­ered an “ar­gu­ment by ref­er­ence” but the fail­ure could have been the re­turn type in­stead. The lan­guage does not have a con­ven­tion in this case mak­ing reusabil­ity awk­ward. Now imag­ine if the up­stream func­tion could fail too, we’d need to add an­other two in­puts! And how would these re­ceived fail­ures map to the out­put? This ap­proach is def­i­nitely not scaleable.</p>
+<h3 id="pick-an-arbitrary-value-to-represent-the-failure">2) Pick an ar­bi­trary value to rep­re­sent the fail­ure</h3>
+<p>This time we will pick an un­used value of the data type to rep­re­sent the fail­ure. This is of­ten the favoured ap­proach of simulink en­gi­neers. If your data type is an int, enu­mer­ate your fail­ures from 255 back &amp;c. This is most likely how a good com­piler will im­ple­ment your soft­ware er­ror prop­a­ga­tions any­way, but it does­n’t pre­serve the mean­ing in­side the model in a mean­ing­ful way. It de­feats the point of mod­el­ling some­what as it forces the reader to think fur­ther down the ab­strac­tion lay­ers. It also causes prob­lems if the value range of the data type has to change.</p>
+<p>This method is also a step back from the first op­tion in terms of reusabil­i­ty, if you are re­quired to reuse this func­tion in a con­text where the er­ror value is re­quired as part of the nom­i­nal range, you’re go­ing to have to de­fine a new one with a new er­ror val­ue. This so­lu­tion is a case of the an­tipat­tern “ge­netic dis­or­der”. If the im­ple­men­tor of the soft­ware is us­ing a lan­guage like Haskell to code the so­lu­tion (see be­low for the Haskell so­lu­tion), you have forced their hand through the mis­use of UM­L/SysML to cre­ate a so­lu­tion in the soft­ware that is con­sid­ered bad prac­tice for that lan­guage. This hap­pens a lot with UML when try­ing to im­ple­ment spec­i­fied be­hav­iour in a dif­fer­ent pro­gram­ming par­a­digm from OOP.</p>
+<h3 id="use-the-maybe-pattern">3) Use the Maybe pat­tern</h3>
+<p>There’s no di­a­gram for this case as like case 2, we’re em­bed­ding the con­cept of fail­ure into the very data type it­self. ex­cept in this case, the lan­guage is pow­er­ful enough to let us em­bed the idea of fail­ure into the data type with­out the use of a un­scaleable bodge.
+As a mo­ti­vat­ing ex­am­ple from a pro­gram­ming lan­guage with these con­cepts baked in, Haskell has a pretty el­e­gant syn­tax for the Maybe con­cept:</p>
+<pre><code>Data Maybe a = Just a | Noth­ing</code></pre>
+<p>This is a Haskell type con­struc­tor de­c­la­ra­tion that tells us that we can cre­ate a Maybe type for any ex­ist­ing type (the <em>a</em> term in the de­cla­tion which is ba­si­cally a tem­plate pa­ra­me­ter) which, when fed a type (such as Int) cre­ates a type that may be an Int or may be noth­ing.</p>
+<p>To il­lus­trate how this would be used in Haskell, the Safe­Di­vide op­er­a­tion would be im­ple­mented us­ing the fol­low­ing syn­tax:</p>
+<pre><code>safe­Di­vide :: (Int, Int) -&gt; Maybe Int
+safe­Di­vide (_ , 0) = Noth­ing
+safe­Di­vide (a , b) = Just (a/b)</code></pre>
+<p>The first line tells us that safe­Di­vide is a func­tion that takes two in­te­gers and re­turns a Maybe Int. The sec­ond line tells us to re­turn Noth­ing if the de­nom­i­na­tor is 0 and not worry about the nu­mer­a­tor in this case (an un­der­score in Haskell means any val­ue). The third line tells us that for all other in­put pairs, re­turn the di­vi­sion wrapped in a Just. The next func­tion can then check to see if the in­put is a Noth­ing or a Just and act ac­cord­ing­ly.</p>
+<p>A great in­tro­duc­tion to this pro­gram­ming pat­tern is the slide show on “Rail­way Ori­ented Pro­gram­ming” on <a href="https://fsharpforfunandprofit.com/rop/">F# for fun and profit</a>. If you have a play with func­tions of the type <code>a -&gt; Maybe a</code> you’ll prob­a­bly quickly come up against a few prob­lems of how to chain them to­geth­er. This is es­pe­cially true if you’re try­ing to con­cate­nate er­rors with <code>Maybe</code>’s cous­in, <code>Ei­ther</code>. To solve these prob­lems we’ll have to learn about more pat­terns such as Func­tors, Ap­plica­tive Func­tors and Mon­ads which are out of the scope of this post but I promise I’ll cover them at a later date!</p>
+<h2 id="baking-in-adts">Bak­ing in ADTs</h2>
+<p>Lets imag­ine that we could de­sign ADTs within UML, such as the Maybe type, what could the syn­tax look like? As we dis­cussed ear­lier, to cre­ate ADTs, we re­quire the abil­ity to de­fine new data types as the sum of two oth­ers or the prod­uct of two oth­ers. As a start­ing point, lets cre­ate two spe­cial­i­sa­tions of di­rected as­so­ci­a­tions to rep­re­sent our con­struc­tors: one called «pro­duct» to rep­re­sent the carte­sian prod­uct of 2 or more types and an n-ary as­so­ci­a­tion called «u­nion» to rep­re­sent that the own­ing type is a union of two or more types. The prod­uct type is rel­a­tively fa­mil­iar as it al­ready ex­ists in UML as a struc­ture, we are just us­ing the as­so­ci­a­tions to make it di­a­gram­mat­i­cally ex­plic­it. Now we have de­fined an ex­ten­sion for sum types, we can use them to cre­ate de­f­i­n­i­tions for all sorts of new types:</p>
 <figure>
 <img src="../images/product.png" alt="product type" />
-<figcaption aria-hidden="true">product type</figcaption>
+<figcaption aria-hidden="true">prod­uct type</figcaption>
 </figure>
-<p>Here we are using the normal composition relationship to show that this type is a product of the two others. The name of the product relationship acts as the name of the “property” in the data type in a similar way to the way members of a class’s names show on the composition association.</p>
+<p>Here we are us­ing the nor­mal com­po­si­tion re­la­tion­ship to show that this type is a prod­uct of the two oth­ers. The name of the prod­uct re­la­tion­ship acts as the name of the “prop­er­ty” in the data type in a sim­i­lar way to the way mem­bers of a class’s names show on the com­po­si­tion as­so­ci­a­tion.</p>
 <figure>
 <img src="../images/sum.png" alt="Sum type" />
 <figcaption aria-hidden="true">Sum type</figcaption>
 </figure>
-<p>In this case the data type is the sum of two others. This is a tagged union; the names on the sum association give us a tag that we can use to reference the values of the constituent types.</p>
+<p>In this case the data type is the sum of two oth­ers. This is a tagged union; the names on the sum as­so­ci­a­tion give us a tag that we can use to ref­er­ence the val­ues of the con­stituent types.</p>
 <figure>
 <img src="../images/Nat.png" alt="Definition of the natural numbers" />
-<figcaption aria-hidden="true">Definition of the natural numbers</figcaption>
+<figcaption aria-hidden="true">De­f­i­n­i­tion of the nat­ural num­bers</figcaption>
 </figure>
-<p>In this diagram, we are using the standard type theoretic inductive definition of the natural numbers. We can read this as: a natural number is either 0 or an increment of a natural number. This is probably the most simple type to define in this system but it shows how we can use ADTs to define data types from scratch within the language itself. Note the “Unit” data type is a type with one value. This is needed to make the algebra of algebraic data types an algebra (a semiring to be exact). There should also be an Empty type that acts as the identity of the product type.</p>
-<p>Let’s think about this definition mathematically for a minute. What does this definition actually say? Well, we can think of the nothing type as “0” and increment as “+1” so our natural numbers are:</p>
+<p>In this di­a­gram, we are us­ing the stan­dard type the­o­retic in­duc­tive de­f­i­n­i­tion of the nat­ural num­bers. We can read this as: a nat­ural num­ber is ei­ther 0 or an in­cre­ment of a nat­ural num­ber. This is prob­a­bly the most sim­ple type to de­fine in this sys­tem but it shows how we can use ADTs to de­fine data types from scratch within the lan­guage it­self. Note the “U­nit” data type is a type with one val­ue. This is needed to make the al­ge­bra of al­ge­braic data types an al­ge­bra (a semi­ring to be ex­ac­t). There should also be an Empty type that acts as the iden­tity of the prod­uct type.</p>
+<p>Let’s think about this de­f­i­n­i­tion math­e­mat­i­cally for a minute. What does this de­f­i­n­i­tion ac­tu­ally say? Well, we can think of the noth­ing type as “0” and in­cre­ment as “+1” so our nat­ural num­bers are:</p>
 <p>0 or 0+1 or (0+1)+1 or ((0+1)+1)+1 or …</p>
-<p>Which is very much the definition of the natural numbers! Can we apply this sort of recursive definition to more exciting (and far more useful) data types? of course! Lets see how we can define the idea of a list inside of this profile:</p>
+<p>Which is very much the de­f­i­n­i­tion of the nat­ural num­bers! Can we ap­ply this sort of re­cur­sive de­f­i­n­i­tion to more ex­cit­ing (and far more use­ful) data types? of course! Lets see how we can de­fine the idea of a list in­side of this pro­file:</p>
 <figure>
 <img src="../images/ListNats.png" alt="List of Natural numbers" />
-<figcaption aria-hidden="true">List of Natural numbers</figcaption>
+<figcaption aria-hidden="true">List of Nat­ural num­bers</figcaption>
 </figure>
-<p>In this diagram we have defined a list of natural numbers to show how even more interesting types can be defined. Here we can see that a Nat List is defined as either the empty list or a product of a natural number (the head of the list) and a list of natural numbers (the tail of the list). In a way, the list type is a Maybe type that can contain more than one value.</p>
-<p>You’re probably looking at the above image right now and already thinking why should we have to define a new list type any time we need a list of things of a certain type. Especially when the pattern is such that we could replace the data type “Nat” on this diagram with any type that we could imagine (including other list types to make lists of lists). There is definitely an opening here to provide some abstraction and reuse value by creating “template” data types as we saw earlier with the Haskell maybe constructor. For now though I’ll leave this for another blog post.</p>
+<p>In this di­a­gram we have de­fined a list of nat­ural num­bers to show how even more in­ter­est­ing types can be de­fined. Here we can see that a Nat List is de­fined as ei­ther the empty list or a prod­uct of a nat­ural num­ber (the head of the list) and a list of nat­ural num­bers (the tail of the list). In a way, the list type is a Maybe type that can con­tain more than one val­ue.</p>
+<p>You’re prob­a­bly look­ing at the above im­age right now and al­ready think­ing why should we have to de­fine a new list type any time we need a list of things of a cer­tain type. Es­pe­cially when the pat­tern is such that we could re­place the data type “Nat” on this di­a­gram with any type that we could imag­ine (in­clud­ing other list types to make lists of list­s). There is def­i­nitely an open­ing here to pro­vide some ab­strac­tion and reuse value by cre­at­ing “tem­plate” data types as we saw ear­lier with the Haskell maybe con­struc­tor. For now though I’ll leave this for an­other blog post.</p>
 <figure>
 <img src="../images/NewMaybe.png" alt="Definition of the maybe type using the sum association" />
-<figcaption aria-hidden="true">Definition of the maybe type using the sum association</figcaption>
+<figcaption aria-hidden="true">De­f­i­n­i­tion of the maybe type us­ing the sum as­so­ci­a­tion</figcaption>
 </figure>
-<p>And finally, here’s the definition of the MaybeReal used in the motivating example.</p>
-<p>As an exercise, why don’t you try this out yourself and create a diagram to define a binary tree of integers using just the elements described in this section?</p>
-<p>Next time in this series I’ll talk a little more about how we can generalise these data types for even greater reuse value: Data type constructors and type classes. These are the tools that we can use to create versions of maybes and eithers that can be strung together to allow us to specify systems more abstractly without having to rely on C, C++ and Java language constructs.</p>
-<h2 id="references">References</h2>
-<p>[1] OMG 2017 <em>OMG™ Unified Modeling Language™ (OMG UML™) Version 2.5.1</em> http://www.omg.org/spec/SysML/1.4/</p>
+<p>And fi­nal­ly, here’s the de­f­i­n­i­tion of the May­be­Real used in the mo­ti­vat­ing ex­am­ple.</p>
+<p>As an ex­er­cise, why don’t you try this out your­self and cre­ate a di­a­gram to de­fine a bi­nary tree of in­te­gers us­ing just the el­e­ments de­scribed in this sec­tion?</p>
+<p>Next time in this se­ries I’ll talk a lit­tle more about how we can gen­er­alise these data types for even greater reuse val­ue: Data type con­struc­tors and type class­es. These are the tools that we can use to cre­ate ver­sions of maybes and ei­thers that can be strung to­gether to al­low us to spec­ify sys­tems more ab­stractly with­out hav­ing to rely on C, C++ and Java lan­guage con­structs.</p>
+<h2 id="references">Ref­er­ences</h2>
+<p>[1] OMG 2017 <em>OMG™ Uni­fied Mod­el­ing Lan­guage™ (OMG UM­L™) Ver­sion 2.5.1</em> http://www.omg.org/spec/SysM­L/1.4/</p>
 
 <div id="disqus_thread"></div>
 <script>
@@ -134,9 +162,16 @@ safeDivide (a , b) = Just (a/b)</code></pre>
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

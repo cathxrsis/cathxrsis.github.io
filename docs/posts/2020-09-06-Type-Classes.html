@@ -3,95 +3,123 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - Patterns for types}</title>
+        <title>A Category of Systems - Patterns for types</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">Patterns for types</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2020-09-06
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-<h1>Patterns for types</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on September  6, 2020
-    
-</div>
-
-<p>In my last post, I showed how, with a little additional syntax, Data Types can be given a lot more power within a UML/SysML model. In this post I’d like to dial up the power one step further and talk about how we can spot patterns in the usage of certain Data Types and encode this as an addition to UML/SysML that will give us better insight into the correctness of our models and allow us to define patterns we use again and again in an abstract way. This pattern is sometimes called the “trait” (in the Rust language) or the “type class” (in Haskell/Scala/Idris).</p>
+<p>In my last post, I showed how, with a lit­tle ad­di­tional syn­tax, Data Types can be given a lot more power within a UM­L/SysML mod­el. In this post I’d like to dial up the power one step fur­ther and talk about how we can spot pat­terns in the us­age of cer­tain Data Types and en­code this as an ad­di­tion to UM­L/SysML that will give us bet­ter in­sight into the cor­rect­ness of our mod­els and al­low us to de­fine pat­terns we use again and again in an ab­stract way. This pat­tern is some­times called the “trait” (in the Rust lan­guage) or the “type class” (in Haskel­l/S­cala/Idris).</p>
 <!--more-->
-<p>Let’s return to the UML definition of a primitive Data Type:</p>
+<p>Let’s re­turn to the UML de­f­i­n­i­tion of a prim­i­tive Data Type:</p>
 <blockquote>
-<p>A PrimitiveType defines a predefined DataType, without any substructure. A PrimitiveType may have algebra and operations defined outside of UML, for example, mathematically. The run-time instances of a PrimitiveType are values that correspond to mathematical elements defined outside of UML (for example, the Integers). [1]</p>
+<p>A Prim­i­tiveType de­fines a pre­de­fined DataType, with­out any sub­struc­ture. A Prim­i­tiveType may have al­ge­bra and op­er­a­tions de­fined out­side of UML, for ex­am­ple, math­e­mat­i­cal­ly. The run-­time in­stances of a Prim­i­tiveType are val­ues that cor­re­spond to math­e­mat­i­cal el­e­ments de­fined out­side of UML (for ex­am­ple, the In­te­gers). [1]</p>
 </blockquote>
-<p>In the last post we explored how primitive types can be expressed using a few new pieces of UML syntax. Now though, I’d like to explore the second sentence of the definition: <em>A primitive type may have algebra and operations defined outside of UML…</em> I’d like to ask the question: why shouldn’t we define algebras and operations inside of UML? and explore what that might entail.</p>
-<h2 id="what-is-an-algebra">What is an Algebra?</h2>
-<p>To start with lets talk about how mathematicians,physicists and computer scientists model the world: through algebra. The concept of algebraic structures is usually new to engineers who aren’t normally taught abstract maths at university level.</p>
-<p>An algebraic structure is a set of objects, a set of operations that you can use with them and a set of laws that they must conform to. Let’s have a look at the example of a <em>Monoid</em> to show you what I mean. A <em>Monoid</em> is any set where two members of the set can be combined with a “multiplication” operation to create another member of the set. There must also be an <em>Id</em> element that when combined with other elements, returns the other element unscathed. Let’s use the programming language “Idris” to illustrate this:</p>
-<pre><code> interface Monoid m where   -- m is any type that we're defining a monoid for
-   mId : m                  -- mId is the identity
-   mPlus : m -&gt; m -&gt; m      -- mPlus is our combining operation</code></pre>
-<p>I’ve chosen the Idris language as it can be used to define the laws associate with a monoid. These are illustrated below:</p>
-<pre><code>   mIdIsIdR         : mPlus mId m = m                           -- mPlussing the Id to anything returns that thing
-   mIdIsIdL         : mPlus m mId = m                           -- Same as last, but left-handed because monoids don't necesssarily commute
-   mPlusAssociates : mPlus a (mPlus b c) = mPlus (mPlus a b) c  -- mPlus is associative</code></pre>
-<p>Those who’ve read my previous blog post on algebraic data types might notice that these monad laws are being expressed as propositions as the type of a function. This is a cool aspect of a few programming languages that enable you to mathematically prove aspects of your programme (for instance, this Idris interface for monoid forces you to provide a proof for each of the monad laws before you can use it). Proofs are beyond the scope of this article, but if you’d like to know more, the wikipedia article on the <a href="https://en.wikipedia.org/wiki/Curry–Howard_correspondence">Curry-Howard-Lambek Isomorphism is a good place ot start.</a></p>
-<p>By this point, you’ve probably already thought of a few monoids that we use in daily life. Possibly the most ubiquitous example is the monoid of the natural numbers and addition. In this case, mPlus is plain old addition and mId is 0. In Idris, this would look something like:</p>
-<pre><code>implementation Monoid Nat where
-  mId = 0       -- The additive identity is 0
-  mPlus = (+)   -- The combining operator is normal addition</code></pre>
-<p>To hammer the point home, here are a couple of other well used monoids:</p>
-<pre><code>implementation Monoid NatMult where -- A multiplicative monoid for the natural numbers
-  mId = 1       -- 1 is the identity
-  mPlus = (*)   -- Multiplication is the binary operator
+<p>In the last post we ex­plored how prim­i­tive types can be ex­pressed us­ing a few new pieces of UML syn­tax. Now though, I’d like to ex­plore the sec­ond sen­tence of the de­f­i­n­i­tion: <em>A prim­i­tive type may have al­ge­bra and op­er­a­tions de­fined out­side of UML…</em> I’d like to ask the ques­tion: why should­n’t we de­fine al­ge­bras and op­er­a­tions in­side of UML? and ex­plore what that might en­tail.</p>
+<h2 id="what-is-an-algebra">What is an Al­ge­bra?</h2>
+<p>To start with lets talk about how math­e­mati­cian­s,­physi­cists and com­puter sci­en­tists model the world: through al­ge­bra. The con­cept of al­ge­braic struc­tures is usu­ally new to en­gi­neers who aren’t nor­mally taught ab­stract maths at uni­ver­sity lev­el.</p>
+<p>An al­ge­braic struc­ture is a set of ob­jects, a set of op­er­a­tions that you can use with them and a set of laws that they must con­form to. Let’s have a look at the ex­am­ple of a <em>Monoid</em> to show you what I mean. A <em>Monoid</em> is any set where two mem­bers of the set can be com­bined with a “mul­ti­pli­ca­tion” op­er­a­tion to cre­ate an­other mem­ber of the set. There must also be an <em>Id</em> el­e­ment that when com­bined with other el­e­ments, re­turns the other el­e­ment un­scathed. Let’s use the pro­gram­ming lan­guage “Idris” to il­lus­trate this:</p>
+<pre><code> in­ter­face Monoid m where   -- m is any type that we're defin­ing a monoid for
+   mId : m                  -- mId is the iden­tity
+   mPlus : m -&gt; m -&gt; m      -- mPlus is our com­bin­ing op­er­a­tion</code></pre>
+<p>I’ve cho­sen the Idris lan­guage as it can be used to de­fine the laws as­so­ciate with a monoid. These are il­lus­trated be­low:</p>
+<pre><code>   mI­dIsIdR         : mPlus mId m = m                           -- mPlussing the Id to any­thing re­turns that thing
+   mI­dIsIdL         : mPlus m mId = m                           -- Same as last, but left­-handed be­cause monoids don't necess­sar­ily com­mute
+   mPlusAs­so­ci­ates : mPlus a (m­Plus b c) = mPlus (m­Plus a b) c  -- mPlus is as­so­cia­tive</code></pre>
+<p>Those who’ve read my pre­vi­ous blog post on al­ge­braic data types might no­tice that these monad laws are be­ing ex­pressed as propo­si­tions as the type of a func­tion. This is a cool as­pect of a few pro­gram­ming lan­guages that en­able you to math­e­mat­i­cally prove as­pects of your pro­gramme (for in­stance, this Idris in­ter­face for monoid forces you to pro­vide a proof for each of the monad laws be­fore you can use it). Proofs are be­yond the scope of this ar­ti­cle, but if you’d like to know more, the wikipedia ar­ti­cle on the <a href="https://en.wikipedia.org/wiki/Curry–Howard_correspondence">Cur­ry-Howard-Lam­bek Iso­mor­phism is a good place ot start.</a></p>
+<p>By this point, you’ve prob­a­bly al­ready thought of a few monoids that we use in daily life. Pos­si­bly the most ubiq­ui­tous ex­am­ple is the monoid of the nat­ural num­bers and ad­di­tion. In this case, mPlus is plain old ad­di­tion and mId is 0. In Idris, this would look some­thing like:</p>
+<pre><code>im­ple­men­ta­tion Monoid Nat where
+  mId = 0       -- The ad­di­tive iden­tity is 0
+  mPlus = (+)   -- The com­bin­ing op­er­a­tor is nor­mal ad­di­tion</code></pre>
+<p>To ham­mer the point home, here are a cou­ple of other well used monoids:</p>
+<pre><code>im­ple­men­ta­tion Monoid Nat­Mult where -- A mul­ti­plica­tive monoid for the nat­ural num­bers
+  mId = 1       -- 1 is the iden­tity
+  mPlus = (*)   -- Mul­ti­pli­ca­tion is the bi­nary op­er­a­tor
 
-implementation Monoid Bool where
-  mId = True    -- True is the identity
-  mPlus = (&amp;&amp;)  -- Boolean AND is the binary operator
+im­ple­men­ta­tion Monoid Bool where
+  mId = True    -- True is the iden­tity
+  mPlus = (&amp;&amp;)  -- Boolean AND is the bi­nary op­er­a­tor
 
-implementation Monoid String where
-  mId = &quot;&quot;      -- The identity is the empty string
-  mPlus = (++)  -- The operator is string concatenation</code></pre>
-<p>The power of knowing what sort of algebraic structure you are playing with is that, almost certainly, mathematicians have shown all sorts of interesting and useful results for that structure. Just by showing that the problem you are facing conforms to a certain algebraic structure gives you a lot of information for free. From a programming point of view it enables us to use the same functional chain for different data types: if the behaviour of our program uses only functions from algebraic structures, we can change the underlying type of data being fed through the “pipeline” without having to modify too much of the functionality. This can also apply to UML and SysML, take the example of the join node in activity diagrams.</p>
-<p>There is a good reason why I started by mentioning the Monoid. Not only is the Monoid possibly the simplest intuitive algebraic structure, it could be used to give meaning to the join node in activity diagrams for object flows.</p>
+im­ple­men­ta­tion Monoid String where
+  mId = &quot;&quot;      -- The iden­tity is the empty string
+  mPlus = (++)  -- The op­er­a­tor is string con­cate­na­tion</code></pre>
+<p>The power of know­ing what sort of al­ge­braic struc­ture you are play­ing with is that, al­most cer­tain­ly, math­e­mati­cians have shown all sorts of in­ter­est­ing and use­ful re­sults for that struc­ture. Just by show­ing that the prob­lem you are fac­ing con­forms to a cer­tain al­ge­braic struc­ture gives you a lot of in­for­ma­tion for free. From a pro­gram­ming point of view it en­ables us to use the same func­tional chain for dif­fer­ent data types: if the be­hav­iour of our pro­gram uses only func­tions from al­ge­braic struc­tures, we can change the un­der­ly­ing type of data be­ing fed through the “pipeline” with­out hav­ing to mod­ify too much of the func­tion­al­i­ty. This can also ap­ply to UML and SysML, take the ex­am­ple of the join node in ac­tiv­ity di­a­grams.</p>
+<p>There is a good rea­son why I started by men­tion­ing the Monoid. Not only is the Monoid pos­si­bly the sim­plest in­tu­itive al­ge­braic struc­ture, it could be used to give mean­ing to the join node in ac­tiv­ity di­a­grams for ob­ject flows.</p>
 <figure>
 <img src="../images/join.png" alt="Activity diagram fragment showing two object flows connecting to a join node" />
-<figcaption aria-hidden="true">Activity diagram fragment showing two object flows connecting to a join node</figcaption>
+<figcaption aria-hidden="true">Ac­tiv­ity di­a­gram frag­ment show­ing two ob­ject flows con­nect­ing to a join node</figcaption>
 </figure>
-<p>In the current UML/SysML interpretation of join nodes, they cannot be used easily with object flows as in the diagram above. This is because if two tokens reach the node, what value do we give the outgoing token? In the current spec, you have to define each join node with a constraint detailing how it combines the inputs Specifying that all of the incoming flows must be of the same type with a defined monoid solves this problem. We simply define the value of the outgoing token as the “mPlus” of the values of the incoming tokens. As a monoid must be associative, this pattern would work for any number of incoming object flows.</p>
-<p>There are far more useful and interesting algebraic structures that embody many patterns that arise in engineering situations. I’ll explore a few in some future blog posts, perhaps I may even try to tackle the dreaded Monad in UML.</p>
-<h2 id="a-uml-implementation-for-algebraic-structures">A UML implementation for Algebraic Structures</h2>
-<p>So how would we implement such thing as an algebraic structure in UML? We’re going to need to work out a way to represent the aspects of the Set, the operations and the laws. We’re also going to have to ensure that one algebraic structure can be applied to multiple different sets possibly multiple times (e.g. multiplication and addition monoids of natural numbers).</p>
+<p>In the cur­rent UM­L/SysML in­ter­pre­ta­tion of join nodes, they can­not be used eas­ily with ob­ject flows as in the di­a­gram above. This is be­cause if two to­kens reach the node, what value do we give the out­go­ing to­ken? In the cur­rent spec, you have to de­fine each join node with a con­straint de­tail­ing how it com­bines the in­puts Spec­i­fy­ing that all of the in­com­ing flows must be of the same type with a de­fined monoid solves this prob­lem. We sim­ply de­fine the value of the out­go­ing to­ken as the “m­Plus” of the val­ues of the in­com­ing to­kens. As a monoid must be as­so­cia­tive, this pat­tern would work for any num­ber of in­com­ing ob­ject flows.</p>
+<p>There are far more use­ful and in­ter­est­ing al­ge­braic struc­tures that em­body many pat­terns that arise in en­gi­neer­ing sit­u­a­tions. I’ll ex­plore a few in some fu­ture blog posts, per­haps I may even try to tackle the dreaded Monad in UML.</p>
+<h2 id="a-uml-implementation-for-algebraic-structures">A UML im­ple­men­ta­tion for Al­ge­braic Struc­tures</h2>
+<p>So how would we im­ple­ment such thing as an al­ge­braic struc­ture in UML? We’re go­ing to need to work out a way to rep­re­sent the as­pects of the Set, the op­er­a­tions and the laws. We’re also go­ing to have to en­sure that one al­ge­braic struc­ture can be ap­plied to mul­ti­ple dif­fer­ent sets pos­si­bly mul­ti­ple times (e.g. mul­ti­pli­ca­tion and ad­di­tion monoids of nat­ural num­ber­s).</p>
 <h3 id="the-set">The Set</h3>
-<p>The set associated with the algebraic structure could be a class, a data type or indeed any classifier. This points towards the well understood idea of “interfaces” in Java where an abstract class (a class that cannot directly type an object) is used to impart certain operations onto a class.</p>
-<p>Therefore, attaching a data type to a algebraic structure is done simply with a generalisation relationship. This scans well as generalisation is an “is a” relationship; any data type that is generalised by the algebraic structure <em>is</em> a specialisation of the algebraic structure.</p>
-<h3 id="the-operations">The Operations</h3>
-<p>The operations of the algebraic structure are just operations. Thanks to the subtyping polymorphism given to us by UML’s generalisation, we only need to define the operations in terms of the algebraic structure. In UML notation, the monoid operation might look something like this:</p>
+<p>The set as­so­ci­ated with the al­ge­braic struc­ture could be a class, a data type or in­deed any clas­si­fi­er. This points to­wards the well un­der­stood idea of “in­ter­faces” in Java where an ab­stract class (a class that can­not di­rectly type an ob­ject) is used to im­part cer­tain op­er­a­tions onto a class.</p>
+<p>There­fore, at­tach­ing a data type to a al­ge­braic struc­ture is done sim­ply with a gen­er­al­i­sa­tion re­la­tion­ship. This scans well as gen­er­al­i­sa­tion is an “is a” re­la­tion­ship; any data type that is gen­er­alised by the al­ge­braic struc­ture <em>is</em> a spe­cial­i­sa­tion of the al­ge­braic struc­ture.</p>
+<h3 id="the-operations">The Op­er­a­tions</h3>
+<p>The op­er­a­tions of the al­ge­braic struc­ture are just op­er­a­tions. Thanks to the sub­typ­ing poly­mor­phism given to us by UM­L’s gen­er­al­i­sa­tion, we only need to de­fine the op­er­a­tions in terms of the al­ge­braic struc­ture. In UML no­ta­tion, the monoid op­er­a­tion might look some­thing like this:</p>
 <pre><code> mplus (a : Monoid, b : Monoid) : Monoid</code></pre>
-<p>Note that with UML, the mZero function becomes an OCL constraint. Interestingly, in Idris all of the operations and laws are, in fact, functions due to the Curry-Howard-Lambek isomorphism where propositions isomorphic to types; the function constructor ’’‘-&gt;’’’ is isomorphic to implication in prepositional logic.</p>
+<p>Note that with UML, the mZero func­tion be­comes an OCL con­straint. In­ter­est­ing­ly, in Idris all of the op­er­a­tions and laws are, in fact, func­tions due to the Cur­ry-Howard-Lam­bek iso­mor­phism where propo­si­tions iso­mor­phic to types; the func­tion con­struc­tor ’’‘-&gt;’’’ is iso­mor­phic to im­pli­ca­tion in prepo­si­tional log­ic.</p>
 <h3 id="the-laws">The Laws</h3>
-<p>Laws are quite easily added to the new classifier in the form of OCL constraints. In fact the monoid laws can be rewritten in OCL as:</p>
-<pre><code> context Monoid
- inv:    self -&gt; forAll(m | exists(mZero | mAdd(mZero, m) == m))
- inv:    self -&gt; forAll(m | exists(mZero | mAdd(m, mZero) == m))
- inv:    self -&gt; forAll(m | forAll (n | forAll (o | mAdd(m, mAdd(n, o)) == mAdd(mAdd(m, n), o))))</code></pre>
-<p>Personally, I find the OCL a lot harder to read than Idris. Its somewhat unfortunate that the UML and OCL developers hadn’t encountered the ML family of languages as OCL could be have been more easily grokkable to the average engineer without losing its formality. Perhaps we’d have had a UML based on category theory; the third part of the Curry-Howard-Lambek Isomorphism.</p>
-<h2 id="conclusion">conclusion</h2>
-<p>In this post, we explored what algebraic structures are and how they can be useful to us as engineers attempting to model systems. This resulted in a proposal for a way of modelling something analogous to type classes in UML using stereotypes as a base. We were, however, left with one aspect of type classes that UML can’t handle: how to implement the laws. Implementing laws and proofs is outside the scope of UML and for now we’ll have to settle for OCL constraints to implement our laws. Wouldn’t it be nice, though, to have one language? To have a graphical equivalent of “Idris”? I’ll explore what makes Idris Idris in another blog post where we’ll explore dependent types and what a modelling language would have to be to include them.</p>
-<h2 id="references">References</h2>
-<p>[1] OMG 2017 <em>OMG™ Unified Modeling Language™ (OMG UML™) Version 2.5.1</em> http://www.omg.org/spec/SysML/1.4/</p>
+<p>Laws are quite eas­ily added to the new clas­si­fier in the form of OCL con­straints. In fact the monoid laws can be rewrit­ten in OCL as:</p>
+<pre><code> con­text Monoid
+ inv:    self -&gt; forAl­l(m | ex­ist­s(mZero | mAd­d(mZe­ro, m) == m))
+ inv:    self -&gt; forAl­l(m | ex­ist­s(mZero | mAd­d(m, mZe­ro) == m))
+ inv:    self -&gt; forAl­l(m | forAll (n | forAll (o | mAd­d(m, mAd­d(n, o)) == mAd­d(­mAd­d(m, n), o))))</code></pre>
+<p>Per­son­al­ly, I find the OCL a lot harder to read than Idris. Its some­what un­for­tu­nate that the UML and OCL de­vel­op­ers had­n’t en­coun­tered the ML fam­ily of lan­guages as OCL could be have been more eas­ily grokkable to the av­er­age en­gi­neer with­out los­ing its for­mal­i­ty. Per­haps we’d have had a UML based on cat­e­gory the­o­ry; the third part of the Cur­ry-Howard-Lam­bek Iso­mor­phism.</p>
+<h2 id="conclusion">con­clu­sion</h2>
+<p>In this post, we ex­plored what al­ge­braic struc­tures are and how they can be use­ful to us as en­gi­neers at­tempt­ing to model sys­tems. This re­sulted in a pro­posal for a way of mod­el­ling some­thing anal­o­gous to type classes in UML us­ing stereo­types as a base. We were, how­ev­er, left with one as­pect of type classes that UML can’t han­dle: how to im­ple­ment the laws. Im­ple­ment­ing laws and proofs is out­side the scope of UML and for now we’ll have to set­tle for OCL con­straints to im­ple­ment our laws. Would­n’t it be nice, though, to have one lan­guage? To have a graph­i­cal equiv­a­lent of “Idris”? I’ll ex­plore what makes Idris Idris in an­other blog post where we’ll ex­plore de­pen­dent types and what a mod­el­ling lan­guage would have to be to in­clude them.</p>
+<h2 id="references">Ref­er­ences</h2>
+<p>[1] OMG 2017 <em>OMG™ Uni­fied Mod­el­ing Lan­guage™ (OMG UM­L™) Ver­sion 2.5.1</em> http://www.omg.org/spec/SysM­L/1.4/</p>
 
 <div id="disqus_thread"></div>
 <script>
@@ -115,9 +143,16 @@ implementation Monoid String where
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

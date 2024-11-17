@@ -3,53 +3,81 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - Cutting Class}</title>
+        <title>A Category of Systems - Cutting Class</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">Cutting Class</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2019-02-11
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-<h1>Cutting Class</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on February 11, 2019
-    
-</div>
-
-<p>Classes (or <em>Blocks</em> as they are known in SysML) are a useful and almost unavoidable concept in UML. They are the modelling concept that allows for object-oriented inheritance in the language and its dialects. In fact it is impossible to utilise inheritance as a pattern for reuse without it. However, classes are not as crucial to object oriented design as you may think. In this post I will make the case for a different form of object orientation which does away with classes altogether.
+<p>Classes (or <em>Blocks</em> as they are known in SysML) are a use­ful and al­most un­avoid­able con­cept in UML. They are the mod­el­ling con­cept that al­lows for ob­jec­t-ori­ented in­her­i­tance in the lan­guage and its di­alects. In fact it is im­pos­si­ble to utilise in­her­i­tance as a pat­tern for reuse with­out it. How­ev­er, classes are not as cru­cial to ob­ject ori­ented de­sign as you may think. In this post I will make the case for a dif­fer­ent form of ob­ject ori­en­ta­tion which does away with classes al­to­geth­er.
 <!--more-->
-In the object-oriented programming paradigm, there are two main patterns for inheritance: classical and prototypal. Classical inheritance requires no introduction. For those who don’t know it, Prototypal inheritance is a very different beast.</p>
-<p>There are no classes in prototypal inheritance systems, <em>objects just link to other objects</em>. Any object can inherit from another. This means that any object can be used as a template for another without the need for a class. If you are entrenched in a classical mindset, it may help to imagine that each object has a “hidden” class behind it that can change as its object is modified.</p>
-<p>One of the elegant things about prototypal inheritance is that it can be used to recreate classical inheritance. By defining an object as constant, you effectively create a class. Though these objects can still be used as inputs to operations. A set of these constant objects could be used to create any inheritance trees that you like. Therefore classical inheritance can be thought of as a pattern within the more abstract prototypal system.</p>
-<p>Attempting to model prototypal inheritance in a classical way is a far messier endeavour. This means that the semantics of UML are not suitable for modelling many of the constructs in prototypal languages such as JavaScript. Having to constrain your solution language to fit your modelling language is a huge no no for abstraction yet UML modellers seem to tolerate this failing. Note that prototypal inheritance is not the only hard to express concept in UML, others are first class functions and generics, but those are topics for exploration in future articles. To understand why classical inheritance is such an integral part of UML we shall look back at the programming languages that shaped UMl’s development.</p>
-<h2 id="class-struggle">Class struggle</h2>
+In the ob­jec­t-ori­ented pro­gram­ming par­a­digm, there are two main pat­terns for in­her­i­tance: clas­si­cal and pro­to­typ­al. Clas­si­cal in­her­i­tance re­quires no in­tro­duc­tion. For those who don’t know it, Pro­to­typal in­her­i­tance is a very dif­fer­ent beast.</p>
+<p>There are no classes in pro­to­typal in­her­i­tance sys­tems, <em>ob­jects just link to other ob­jects</em>. Any ob­ject can in­herit from an­oth­er. This means that any ob­ject can be used as a tem­plate for an­other with­out the need for a class. If you are en­trenched in a clas­si­cal mind­set, it may help to imag­ine that each ob­ject has a “hid­den” class be­hind it that can change as its ob­ject is mod­i­fied.</p>
+<p>One of the el­e­gant things about pro­to­typal in­her­i­tance is that it can be used to recre­ate clas­si­cal in­her­i­tance. By defin­ing an ob­ject as con­stant, you ef­fec­tively cre­ate a class. Though these ob­jects can still be used as in­puts to op­er­a­tions. A set of these con­stant ob­jects could be used to cre­ate any in­her­i­tance trees that you like. There­fore clas­si­cal in­her­i­tance can be thought of as a pat­tern within the more ab­stract pro­to­typal sys­tem.</p>
+<p>At­tempt­ing to model pro­to­typal in­her­i­tance in a clas­si­cal way is a far messier en­deav­our. This means that the se­man­tics of UML are not suit­able for mod­el­ling many of the con­structs in pro­to­typal lan­guages such as JavaScript. Hav­ing to con­strain your so­lu­tion lan­guage to fit your mod­el­ling lan­guage is a huge no no for ab­strac­tion yet UML mod­ellers seem to tol­er­ate this fail­ing. Note that pro­to­typal in­her­i­tance is not the only hard to ex­press con­cept in UML, oth­ers are first class func­tions and gener­ics, but those are top­ics for ex­plo­ration in fu­ture ar­ti­cles. To un­der­stand why clas­si­cal in­her­i­tance is such an in­te­gral part of UML we shall look back at the pro­gram­ming lan­guages that shaped UM­l’s de­vel­op­ment.</p>
+<h2 id="class-struggle">Class strug­gle</h2>
 <blockquote>
-<p><em>The history of all hitherto existing object-oriented design is the history of class struggle</em>
-Karl Marx (paraphrased)</p>
+<p><em>The his­tory of all hith­erto ex­ist­ing ob­jec­t-ori­ented de­sign is the his­tory of class strug­gle</em>
+Karl Marx (para­phrased)</p>
 </blockquote>
-<p>So how come classes became such an integral part of inheritance in programming? The answer is compiler optimisation. Having a class gives the machine a template telling it exactly how much memory to allocate each time it makes a new object. This is why the class pattern came to prominence in C where there were no compiler optimisations for object orientation. The C++ language, which originally transpiled to C, inherited this way of doing things.</p>
-<p>In the essay <a href="http://web.cecs.pdx.edu/~black/publications/ClassesHarmful.pdf">Classes Considered Harmful</a> The author suggests that “class” is a premature optimisation in the code that should be avoided. In the case of modelling languages though, compiler optimisation arguments don’t really cut it as a justification. <em>Modelling languages are of course ultimately human, not machine, consumable.</em> To be fair to the three amigoes in the early UML days, classical inheritance is a sensible choice wnen your language is being used mainly to model things that will be implemented in either Java or C++.</p>
-<p>From experience, one of the hardest notions to teach new systems modellers is the class/object distinction. Most software engineers are comfortable with, sometimes militantly stuck with, thinking in the class/object way. However most new systems engineers are drawn from engineering, physics and maths backgrouds often with their only contact with code being through C, Matlab or Fortran. These people often find the class/object distinction hard to get their head around (I was definitely in this category to begin with).</p>
-<p>An example of this would be not understanding why two SysML Blocks (Classes) could not have their ports connected together on an internal block diagram (structure diagram). It is not immediately obvious why we must instantiate classes as objects before using them and although object oriented folk take this fact for granted, prototypal inheritance forces us to reevaluate this “fact”. The class is almost a <a href="https://en.wikipedia.org/wiki/Platonic_realism"><em>platonic ideal</em></a> of the objects that instantiate it. So what would a modelling language without classes change about the way we work?</p>
-<p>The first major improvement to our workflow that prototypal inheritance provides is a reduction in complexity to class heirarchies in models. We tend to think of class heirarchies in terms of only the classes and forget that each object on the end of it is also part of this hierarchy. For models with large numbers of single use classes, prototypal inheritance would be a natural choice as far fewer model elements would be required.</p>
-<p>UML aggregation also makes more sense under a prototypal system. Aggregation is a rarer weaker form of the composition association in UML. Composition is well understood as if a class is composed of another, it means that the first class contains a property typed by the second. Aggregation, however, is more confusing. an aggregation association from one class to another tells us that the first class uses an object typed by the second. The most we know is that the aggregating class has a “pointer” typed by the aggregate class; we require more information in the instance model to know what’s really going on. In a prototypal model, the class model is the instance model and therefore we know exactly which object each object is linked to.</p>
-<p>Prototypal inheritance has bonuses over classical inheritance from a tool perspective too. Prototypal inheritance is often implemented using delegation. This means that each object only records its deviation from its parent object. When accessing a property called ‘fred’ of a prototypal object, the system will follow the inheritance prototype chain until it finds ‘fred’. This is very similar to the <a href="https://sourcemaking.com/design_patterns/flyweight">‘Flyweight’ GoF pattern</a> which lends itself to efficient use of memory when building large databases of objects.</p>
-<p>To conclude I’ll leave you with a paraphrased story from classical Greece. Plato was once giving a lecture on his ideas of reality. He told the audience how all objects in reality are mere instantiations of divine classes. At that instant the trouble maker Diogenes walked in and pointed at a cup that Plato was holding. “If that’s only an instance of the class Cup” he interjected, “Where is this divine class Cup?”. Plato, coolly replied: “Of course, the class Cup is in the universal source code, not accessable to us mere mortals”. Diogenes, undeterred, walked up onto Plato’s platform and declared: “Your cup is empty, Plato. Please do tell us all here where this concept of emptyness is”. Plato calmly contemplated this for a few seconds and said “The lack of a contents to my cup is an instance of the null object class in the divine source code”. “That’s where you’re wrong” replied Diogenes. “The true emptyness is here” he said as he tapped Plato’s head.</p>
-<p>This post was inspired by the inheritance system in JavaScript. If you want to know more,this site is a good place to start: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
+<p>So how come classes be­came such an in­te­gral part of in­her­i­tance in pro­gram­ming? The an­swer is com­piler op­ti­mi­sa­tion. Hav­ing a class gives the ma­chine a tem­plate telling it ex­actly how much mem­ory to al­lo­cate each time it makes a new ob­ject. This is why the class pat­tern came to promi­nence in C where there were no com­piler op­ti­mi­sa­tions for ob­ject ori­en­ta­tion. The C++ lan­guage, which orig­i­nally tran­spiled to C, in­her­ited this way of do­ing things.</p>
+<p>In the es­say <a href="http://web.cecs.pdx.edu/~black/publications/ClassesHarmful.pdf">Classes Con­sid­ered Harm­ful</a> The au­thor sug­gests that “class” is a pre­ma­ture op­ti­mi­sa­tion in the code that should be avoid­ed. In the case of mod­el­ling lan­guages though, com­piler op­ti­mi­sa­tion ar­gu­ments don’t re­ally cut it as a jus­ti­fi­ca­tion. <em>Mod­el­ling lan­guages are of course ul­ti­mately hu­man, not ma­chine, con­sum­able.</em> To be fair to the three ami­goes in the early UML days, clas­si­cal in­her­i­tance is a sen­si­ble choice wnen your lan­guage is be­ing used mainly to model things that will be im­ple­mented in ei­ther Java or C++.</p>
+<p>From ex­pe­ri­ence, one of the hard­est no­tions to teach new sys­tems mod­ellers is the class/ob­ject dis­tinc­tion. Most soft­ware en­gi­neers are com­fort­able with, some­times mil­i­tantly stuck with, think­ing in the class/ob­ject way. How­ever most new sys­tems en­gi­neers are drawn from en­gi­neer­ing, physics and maths back­grouds of­ten with their only con­tact with code be­ing through C, Mat­lab or For­tran. These peo­ple of­ten find the class/ob­ject dis­tinc­tion hard to get their head around (I was def­i­nitely in this cat­e­gory to be­gin with).</p>
+<p>An ex­am­ple of this would be not un­der­stand­ing why two SysML Blocks (Class­es) could not have their ports con­nected to­gether on an in­ter­nal block di­a­gram (struc­ture di­a­gram). It is not im­me­di­ately ob­vi­ous why we must in­stan­ti­ate classes as ob­jects be­fore us­ing them and al­though ob­ject ori­ented folk take this fact for grant­ed, pro­to­typal in­her­i­tance forces us to reeval­u­ate this “fac­t”. The class is al­most a <a href="https://en.wikipedia.org/wiki/Platonic_realism"><em>pla­tonic ideal</em></a> of the ob­jects that in­stan­ti­ate it. So what would a mod­el­ling lan­guage with­out classes change about the way we work?</p>
+<p>The first ma­jor im­prove­ment to our work­flow that pro­to­typal in­her­i­tance pro­vides is a re­duc­tion in com­plex­ity to class heirar­chies in mod­els. We tend to think of class heirar­chies in terms of only the classes and for­get that each ob­ject on the end of it is also part of this hi­er­ar­chy. For mod­els with large num­bers of sin­gle use class­es, pro­to­typal in­her­i­tance would be a nat­ural choice as far fewer model el­e­ments would be re­quired.</p>
+<p>UML ag­gre­ga­tion also makes more sense un­der a pro­to­typal sys­tem. Ag­gre­ga­tion is a rarer weaker form of the com­po­si­tion as­so­ci­a­tion in UML. Com­po­si­tion is well un­der­stood as if a class is com­posed of an­oth­er, it means that the first class con­tains a prop­erty typed by the sec­ond. Ag­gre­ga­tion, how­ev­er, is more con­fus­ing. an ag­gre­ga­tion as­so­ci­a­tion from one class to an­other tells us that the first class uses an ob­ject typed by the sec­ond. The most we know is that the ag­gre­gat­ing class has a “point­er” typed by the ag­gre­gate class; we re­quire more in­for­ma­tion in the in­stance model to know what’s re­ally go­ing on. In a pro­to­typal mod­el, the class model is the in­stance model and there­fore we know ex­actly which ob­ject each ob­ject is linked to.</p>
+<p>Pro­to­typal in­her­i­tance has bonuses over clas­si­cal in­her­i­tance from a tool per­spec­tive too. Pro­to­typal in­her­i­tance is of­ten im­ple­mented us­ing del­e­ga­tion. This means that each ob­ject only records its de­vi­a­tion from its par­ent ob­ject. When ac­cess­ing a prop­erty called ‘fred’ of a pro­to­typal ob­ject, the sys­tem will fol­low the in­her­i­tance pro­to­type chain un­til it finds ‘fred’. This is very sim­i­lar to the <a href="https://sourcemaking.com/design_patterns/flyweight">‘Fly­weight’ GoF pat­tern</a> which lends it­self to ef­fi­cient use of mem­ory when build­ing large data­bases of ob­jects.</p>
+<p>To con­clude I’ll leave you with a para­phrased story from clas­si­cal Greece. Plato was once giv­ing a lec­ture on his ideas of re­al­i­ty. He told the au­di­ence how all ob­jects in re­al­ity are mere in­stan­ti­a­tions of di­vine class­es. At that in­stant the trou­ble maker Dio­genes walked in and pointed at a cup that Plato was hold­ing. “If that’s only an in­stance of the class Cup” he in­ter­ject­ed, “Where is this di­vine class Cup?”. Pla­to, coolly replied: “Of course, the class Cup is in the uni­ver­sal source code, not ac­cess­able to us mere mor­tal­s”. Dio­genes, un­de­terred, walked up onto Pla­to’s plat­form and de­clared: “Y­our cup is emp­ty, Pla­to. Please do tell us all here where this con­cept of emp­ty­ness is”. Plato calmly con­tem­plated this for a few sec­onds and said “The lack of a con­tents to my cup is an in­stance of the null ob­ject class in the di­vine source code”. “That’s where you’re wrong” replied Dio­genes. “The true emp­ty­ness is here” he said as he tapped Pla­to’s head.</p>
+<p>This post was in­spired by the in­her­i­tance sys­tem in JavaScript. If you want to know more,this site is a good place to start: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">In­her­i­tance and the pro­to­type chain</a>.</p>
 
 <div id="disqus_thread"></div>
 <script>
@@ -73,9 +101,16 @@ Karl Marx (paraphrased)</p>
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

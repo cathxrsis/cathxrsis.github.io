@@ -3,102 +3,130 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - A Machine Named Desire}</title>
+        <title>A Category of Systems - A Machine Named Desire</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">A Machine Named Desire</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2022-06-30
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-<h1>A Machine Named Desire</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on June 30, 2022
-    
-</div>
-
-<p>In this post, I will describe a pattern that I have identified in numerous places during my time as a systems engineer. This pattern sits somewhere between the traditional double-loop learning system and a viable system. I call this pattern the <em>Desiring Machine</em> as a nod to Deleuze as I feel that this pattern <em>feels</em> somewhat like a Deleuzian desiring machine. This post focusses mainly on the derivation of the pattern but I hope to expand on its uses as a framework for understanding and enquiry in future posts. I will add that I do not believe that this pattern is anything new; I have seen aspects of it expressed in various systems thinking texts. However, I don’t think the pattern has been addressed by name or given the recognition as a useful pattern in the way I believe it deserves.</p>
+<p>In this post, I will de­scribe a pat­tern that I have iden­ti­fied in nu­mer­ous places dur­ing my time as a sys­tems en­gi­neer. This pat­tern sits some­where be­tween the tra­di­tional dou­ble-loop learn­ing sys­tem and a vi­able sys­tem. I call this pat­tern the <em>De­sir­ing Ma­chine</em> as a nod to Deleuze as I feel that this pat­tern <em>feels</em> some­what like a Deleuz­ian de­sir­ing ma­chine. This post fo­cusses mainly on the de­riva­tion of the pat­tern but I hope to ex­pand on its uses as a frame­work for un­der­stand­ing and en­quiry in fu­ture posts. I will add that I do not be­lieve that this pat­tern is any­thing new; I have seen as­pects of it ex­pressed in var­i­ous sys­tems think­ing texts. How­ev­er, I don’t think the pat­tern has been ad­dressed by name or given the recog­ni­tion as a use­ful pat­tern in the way I be­lieve it de­serves.</p>
 <!--more-->
-<h1 id="a-brief-aside-into-notation-and-method">A Brief Aside Into Notation and Method</h1>
-<p>To describe the patterns in this post, I will use a minimalist notation that I’ve settled upon for describing dynamic systems. This is a simplified version of stock and flow diagrams used in systems dynamics. Rounded rectangles are used to represent variables and diamonds for processes that evolve them.</p>
-<p>For example, here’s a simple system:</p>
+<h1 id="a-brief-aside-into-notation-and-method">A Brief Aside Into No­ta­tion and Method</h1>
+<p>To de­scribe the pat­terns in this post, I will use a min­i­mal­ist no­ta­tion that I’ve set­tled upon for de­scrib­ing dy­namic sys­tems. This is a sim­pli­fied ver­sion of stock and flow di­a­grams used in sys­tems dy­nam­ics. Rounded rec­tan­gles are used to rep­re­sent vari­ables and di­a­monds for processes that evolve them.</p>
+<p>For ex­am­ple, here’s a sim­ple sys­tem:</p>
 <figure>
 <img src="../images/desire_example.png" width="200" alt="Notational example" />
-<figcaption aria-hidden="true">Notational example</figcaption>
+<figcaption aria-hidden="true">No­ta­tional ex­am­ple</figcaption>
 </figure>
-<p>For the methodology, I’ll be showing my working as subsequent applications of DSRP. Although it is <a href="http://dx.doi.org/10.1016/j.evalprogplan.2008.04.002">disputed</a> whether DSRP is complete, it is a definitely simple framework and good enough for the purposes here. I have also used a few laws from various systems thinkers, a great summary of these laws can be found in the book <a href="https://www.scio.org.uk/resources/grammar-systems-order-chaos-back">The Grammar of Systems: From Order to Chaos &amp; Back</a>.</p>
+<p>For the method­ol­o­gy, I’ll be show­ing my work­ing as sub­se­quent ap­pli­ca­tions of DSRP. Al­though it is <a href="http://dx.doi.org/10.1016/j.evalprogplan.2008.04.002">dis­puted</a> whether DSRP is com­plete, it is a def­i­nitely sim­ple frame­work and good enough for the pur­poses here. I have also used a few laws from var­i­ous sys­tems thinkers, a great sum­mary of these laws can be found in the book <a href="https://www.scio.org.uk/resources/grammar-systems-order-chaos-back">The Gram­mar of Sys­tems: From Or­der to Chaos &amp; Back</a>.</p>
 <h1 id="the-loop">The Loop</h1>
-<p>Initially, we’ll start from the most simple loop of <em>The Real</em> and the process by which it changes which we’ll call <em>Evolution</em>. This leads us to a trivial system looking like this:</p>
+<p>Ini­tial­ly, we’ll start from the most sim­ple loop of <em>The Real</em> and the process by which it changes which we’ll call <em>Evo­lu­tion</em>. This leads us to a triv­ial sys­tem look­ing like this:</p>
 <figure>
 <img src="../images/base.png" width="100" alt="The simplest system" />
-<figcaption aria-hidden="true">The simplest system</figcaption>
+<figcaption aria-hidden="true">The sim­plest sys­tem</figcaption>
 </figure>
-<p>I hope that you’ll agree that this is an incredibly low resolution model of the universe. The reason why I’ve started here is because all systems are inscribed within the real. It’s good to keep in mind that applications of DSRP are all about imposing structure on a Volatile, Unknowable, Complex and Ambiguous reality—everything that exists is already within this model, we just need recursive subsequent applications of DSRP to carve our more subtle patterns from it.</p>
-<p>Ashby’s law of requisite variety states that a good regulator must have at least as much variety as the environment it controls. Therefore, alongside the environment, there must be a model of that environment that we can use to control it. This model is part of <em>the Real</em> so we’ll carve it out of the <em>Real</em> with a distinction. For reasons explained later, we’ll call it <em>Understanding</em>:</p>
+<p>I hope that you’ll agree that this is an in­cred­i­bly low res­o­lu­tion model of the uni­verse. The rea­son why I’ve started here is be­cause all sys­tems are in­scribed within the re­al. It’s good to keep in mind that ap­pli­ca­tions of DSRP are all about im­pos­ing struc­ture on a Volatile, Un­know­able, Com­plex and Am­bigu­ous re­al­i­ty—ev­ery­thing that ex­ists is al­ready within this mod­el, we just need re­cur­sive sub­se­quent ap­pli­ca­tions of DSRP to carve our more sub­tle pat­terns from it.</p>
+<p>Ash­by’s law of req­ui­site va­ri­ety states that a good reg­u­la­tor must have at least as much va­ri­ety as the en­vi­ron­ment it con­trols. There­fore, along­side the en­vi­ron­ment, there must be a model of that en­vi­ron­ment that we can use to con­trol it. This model is part of <em>the Real</em> so we’ll carve it out of the <em>Real</em> with a dis­tinc­tion. For rea­sons ex­plained lat­er, we’ll call it <em>Un­der­stand­ing</em>:</p>
 <figure>
 <img src="../images/desire_understanding.png" width="200" alt="Adding understanding" />
-<figcaption aria-hidden="true">Adding understanding</figcaption>
+<figcaption aria-hidden="true">Adding un­der­stand­ing</figcaption>
 </figure>
-<p>If we were following DSRP to the letter, the creation of a distinction across an element would cause the creation of two new elements within the system of the original. For the simplicity of the diagrams, we’re ignoring the system part for now, as we’re operating from the perspective of the desiring machine that we’re deriving. I hope that this omission will not cause too much confusion.</p>
-<p><em>ERRATUM: I have come to the realisation that the Real should be replaced by the Environment in the following diagrams. The Environment being a small part of the Real that we care about. The Darkness principle (a result of Ashby’s law) prevents us from making a Desiring Machine that can cope with all of the Real despite what the MIT school might attempt</em></p>
-<p>The third part of making a distinction is the creation of the relationships between the two new elements created by the distinction. These relationships are what we used to define the purpose of our distinction so we must interrogate our motives. The reason for this enquiry is to understand a general pattern for systems that seek to modify the environment in the way they see fit, so the first relationship should be <em>Action</em>. <em>Action</em> is a process that takes in <em>The Real</em> and <em>Understanding</em> and modifies <em>The Real</em> towards some goal based on <em>Understanding</em>.</p>
-<h2 id="doubling-the-loop">Doubling the Loop</h2>
-<p>This <em>Understanding</em> model represents our understanding (funny, that) of the laws of physics and/or the environment which the system controls. It allows our feedback loop to become a <em>feedforward</em> loop. This means that instead of course correcting our systems interventions on the current state of the environment, we can predict where the environment will be and make our interventions based on that.</p>
-<p>We must ask ourselves though, where does our <em>Understanding</em> come from? There’s only one place it can come from—<em>the Real</em>. However, our knowledge of <em>the Real</em> is incomplete; there will always be edge behaviours that will surprise us. The fact that we can never <em>completely</em> model a system is known as <em>the darkness principle</em>.</p>
-<p>Because of this, we cannot take our <em>understanding</em> model for granted—we must add another loop that modifies our <em>understanding</em> based on surprises (unencountered phenomena) from <em>the Real</em>. We can call this new process <em>learning</em>.</p>
+<p>If we were fol­low­ing DSRP to the let­ter, the cre­ation of a dis­tinc­tion across an el­e­ment would cause the cre­ation of two new el­e­ments within the sys­tem of the orig­i­nal. For the sim­plic­ity of the di­a­grams, we’re ig­nor­ing the sys­tem part for now, as we’re op­er­at­ing from the per­spec­tive of the de­sir­ing ma­chine that we’re de­riv­ing. I hope that this omis­sion will not cause too much con­fu­sion.</p>
+<p><em>ER­RA­TUM: I have come to the re­al­i­sa­tion that the Real should be re­placed by the En­vi­ron­ment in the fol­low­ing di­a­grams. The En­vi­ron­ment be­ing a small part of the Real that we care about. The Dark­ness prin­ci­ple (a re­sult of Ash­by’s law) pre­vents us from mak­ing a De­sir­ing Ma­chine that can cope with all of the Real de­spite what the MIT school might at­tempt</em></p>
+<p>The third part of mak­ing a dis­tinc­tion is the cre­ation of the re­la­tion­ships be­tween the two new el­e­ments cre­ated by the dis­tinc­tion. These re­la­tion­ships are what we used to de­fine the pur­pose of our dis­tinc­tion so we must in­ter­ro­gate our mo­tives. The rea­son for this en­quiry is to un­der­stand a gen­eral pat­tern for sys­tems that seek to mod­ify the en­vi­ron­ment in the way they see fit, so the first re­la­tion­ship should be <em>Ac­tion</em>. <em>Ac­tion</em> is a process that takes in <em>The Real</em> and <em>Un­der­stand­ing</em> and mod­i­fies <em>The Real</em> to­wards some goal based on <em>Un­der­stand­ing</em>.</p>
+<h2 id="doubling-the-loop">Dou­bling the Loop</h2>
+<p>This <em>Un­der­stand­ing</em> model rep­re­sents our un­der­stand­ing (fun­ny, that) of the laws of physics and/or the en­vi­ron­ment which the sys­tem con­trols. It al­lows our feed­back loop to be­come a <em>feed­for­ward</em> loop. This means that in­stead of course cor­rect­ing our sys­tems in­ter­ven­tions on the cur­rent state of the en­vi­ron­ment, we can pre­dict where the en­vi­ron­ment will be and make our in­ter­ven­tions based on that.</p>
+<p>We must ask our­selves though, where does our <em>Un­der­stand­ing</em> come from? There’s only one place it can come from—<em>the Real</em>. How­ev­er, our knowl­edge of <em>the Real</em> is in­com­plete; there will al­ways be edge be­hav­iours that will sur­prise us. The fact that we can never <em>com­pletely</em> model a sys­tem is known as <em>the dark­ness prin­ci­ple</em>.</p>
+<p>Be­cause of this, we can­not take our <em>un­der­stand­ing</em> model for grant­ed—we must add an­other loop that mod­i­fies our <em>un­der­stand­ing</em> based on sur­prises (unen­coun­tered phe­nom­e­na) from <em>the Real</em>. We can call this new process <em>learn­ing</em>.</p>
 <figure>
 <img src="../images/desire_learning.png" width="250" alt="Adding learning" />
-<figcaption aria-hidden="true">Adding learning</figcaption>
+<figcaption aria-hidden="true">Adding learn­ing</figcaption>
 </figure>
-<p>The pattern that we now have is sometimes called the <em>Double loop learning</em> model. This pattern corresponds to places where we are actively updating our mental model—where we are improving our <em>feedforward</em> with <em>feedback</em>. This is a well understood pattern within Cybernetics and has permeated a lot of modern organisational thinking. It could be said that this pattern is the quintessential Cybernetic pattern. For example, this pattern generalises the ubiquitous OODA loop model.</p>
-<h2 id="the-arrow-of-desire">The Arrow of Desire</h2>
-<p>So far, we’ve developed a standard pattern for an adaptive system. There is a concept, though, that we’ve been implicitly talking about that we haven’t accounted for in our pattern. That concept is the <em>purpose</em> or <em>goal</em> of the system. From this point forward, we will define that only <em>Action</em> and <em>Learning</em> can be used to interact with <em>the Real</em>. This constraint is justified by the assumption that internal processes of a system can only operate upon the <em>understanding</em> of the system.</p>
-<p>To begin with talking about purpose and goals, we should first make a distinction in the <em>Understanding</em> model. If our system has a goal then it must be encoded in the <em>Understanding</em> therefore we can cut part of our <em>Understanding</em> with a distinction and call it <em>the Ideal</em>. However, it is also equally valid to make this distinction out of <em>the Real</em> too—<em>the Ideal</em> could just as easily be outside of the scope of our system’s perspective. This is why I’ve neglected the systems part of DSRP because, depending on the situation, the desiring machine pattern can be cut up by system boundaries in many ways. This new distinction brings with it a new relationship that we’ll call <em>Desire</em>. This new relationship is an input to the <em>Action</em> process.</p>
+<p>The pat­tern that we now have is some­times called the <em>Dou­ble loop learn­ing</em> mod­el. This pat­tern cor­re­sponds to places where we are ac­tively up­dat­ing our men­tal mod­el—where we are im­prov­ing our <em>feed­for­ward</em> with <em>feed­back</em>. This is a well un­der­stood pat­tern within Cy­ber­net­ics and has per­me­ated a lot of mod­ern or­gan­i­sa­tional think­ing. It could be said that this pat­tern is the quin­tes­sen­tial Cy­ber­netic pat­tern. For ex­am­ple, this pat­tern gen­er­alises the ubiq­ui­tous OODA loop mod­el.</p>
+<h2 id="the-arrow-of-desire">The Ar­row of De­sire</h2>
+<p>So far, we’ve de­vel­oped a stan­dard pat­tern for an adap­tive sys­tem. There is a con­cept, though, that we’ve been im­plic­itly talk­ing about that we haven’t ac­counted for in our pat­tern. That con­cept is the <em>pur­pose</em> or <em>goal</em> of the sys­tem. From this point for­ward, we will de­fine that only <em>Ac­tion</em> and <em>Learn­ing</em> can be used to in­ter­act with <em>the Real</em>. This con­straint is jus­ti­fied by the as­sump­tion that in­ter­nal processes of a sys­tem can only op­er­ate upon the <em>un­der­stand­ing</em> of the sys­tem.</p>
+<p>To be­gin with talk­ing about pur­pose and goals, we should first make a dis­tinc­tion in the <em>Un­der­stand­ing</em> mod­el. If our sys­tem has a goal then it must be en­coded in the <em>Un­der­stand­ing</em> there­fore we can cut part of our <em>Un­der­stand­ing</em> with a dis­tinc­tion and call it <em>the Ideal</em>. How­ev­er, it is also equally valid to make this dis­tinc­tion out of <em>the Real</em> too—<em>the Ideal</em> could just as eas­ily be out­side of the scope of our sys­tem’s per­spec­tive. This is why I’ve ne­glected the sys­tems part of DSRP be­cause, de­pend­ing on the sit­u­a­tion, the de­sir­ing ma­chine pat­tern can be cut up by sys­tem bound­aries in many ways. This new dis­tinc­tion brings with it a new re­la­tion­ship that we’ll call <em>De­sire</em>. This new re­la­tion­ship is an in­put to the <em>Ac­tion</em> process.</p>
 <figure>
 <img src="../images/desire_desire.png" width="300" alt="Adding desire" />
-<figcaption aria-hidden="true">Adding desire</figcaption>
+<figcaption aria-hidden="true">Adding de­sire</figcaption>
 </figure>
-<p><em>Desire</em> is the difference between <em>Understanding</em> and <em>the Ideal</em>. It therefore acts as an error signal that drives <em>Action</em>. That is to say that if <em>the Ideal</em> and <em>Understanding</em> do not differ, there will be no desire and therefore <em>Action</em> will not occur. A larger difference between <em>Understanding</em> and <em>the Ideal</em> creates a larger <em>Desire</em> signal and therefore drives greater <em>Action</em>. Depending on the desiring machine, <em>Desire</em> can be a multi-dimensional vector whose basis may not be orthogonal—that is to say, that more complex desiring machines can produce conflicting <em>Desire</em> which is caused by inconsistencies in <em>The ideal</em> and/or <em>Understanding</em>.</p>
-<p><em>Desire</em> is not the only relationship between <em>the Real</em>, <em>Understanding</em> and <em>the Ideal</em>. The <em>Learning</em> process is also guided by the difference between <em>Understanding</em> and <em>the Ideal</em>. This signal is analogous to the idea of attention–it acts as a filter of what information from <em>the Real</em> is worth incorporating into <em>Understanding</em>. For now we will call it <em>Meaning</em>:</p>
+<p><em>De­sire</em> is the dif­fer­ence be­tween <em>Un­der­stand­ing</em> and <em>the Ideal</em>. It there­fore acts as an er­ror sig­nal that dri­ves <em>Ac­tion</em>. That is to say that if <em>the Ideal</em> and <em>Un­der­stand­ing</em> do not dif­fer, there will be no de­sire and there­fore <em>Ac­tion</em> will not oc­cur. A larger dif­fer­ence be­tween <em>Un­der­stand­ing</em> and <em>the Ideal</em> cre­ates a larger <em>De­sire</em> sig­nal and there­fore dri­ves greater <em>Ac­tion</em>. De­pend­ing on the de­sir­ing ma­chine, <em>De­sire</em> can be a mul­ti­-di­men­sional vec­tor whose ba­sis may not be or­thog­o­nal—that is to say, that more com­plex de­sir­ing ma­chines can pro­duce con­flict­ing <em>De­sire</em> which is caused by in­con­sis­ten­cies in <em>The ideal</em> and/or <em>Un­der­stand­ing</em>.</p>
+<p><em>De­sire</em> is not the only re­la­tion­ship be­tween <em>the Real</em>, <em>Un­der­stand­ing</em> and <em>the Ideal</em>. The <em>Learn­ing</em> process is also guided by the dif­fer­ence be­tween <em>Un­der­stand­ing</em> and <em>the Ideal</em>. This sig­nal is anal­o­gous to the idea of at­ten­tion–it acts as a fil­ter of what in­for­ma­tion from <em>the Real</em> is worth in­cor­po­rat­ing into <em>Un­der­stand­ing</em>. For now we will call it <em>Mean­ing</em>:</p>
 <figure>
 <img src="../images/desire_meaning.png" width="300" alt="Adding meaning" />
-<figcaption aria-hidden="true">Adding meaning</figcaption>
+<figcaption aria-hidden="true">Adding mean­ing</figcaption>
 </figure>
-<p><em>Meaning</em> is an important signal within the desiring machine as it ensures that the <em>understanding</em> does not get overwhelmed with information that is not relevant to the goals of the system. Along with <em>Desire</em>, <em>Meaning</em> can be used as a lens to understand many pathologies of systems.</p>
-<h2 id="critique">Critique</h2>
-<p>The final relationship to create on the diagram is the one that changes <em>the Ideal</em>. As a desiring machine only has access to <em>the Real</em> through <em>Learning</em> and <em>Action</em>. This is added as the process that creates and modifies <em>the Ideal</em> and therefore sets the goals of the desiring machine. Without it, there could be no <em>Ideal</em> as this process is the one that creates the distinction internally to the <em>Understanding</em> between what is and what is <em>Ideal</em>. On the diagram, it looks like this:</p>
+<p><em>Mean­ing</em> is an im­por­tant sig­nal within the de­sir­ing ma­chine as it en­sures that the <em>un­der­stand­ing</em> does not get over­whelmed with in­for­ma­tion that is not rel­e­vant to the goals of the sys­tem. Along with <em>De­sire</em>, <em>Mean­ing</em> can be used as a lens to un­der­stand many patholo­gies of sys­tems.</p>
+<h2 id="critique">Cri­tique</h2>
+<p>The fi­nal re­la­tion­ship to cre­ate on the di­a­gram is the one that changes <em>the Ideal</em>. As a de­sir­ing ma­chine only has ac­cess to <em>the Real</em> through <em>Learn­ing</em> and <em>Ac­tion</em>. This is added as the process that cre­ates and mod­i­fies <em>the Ideal</em> and there­fore sets the goals of the de­sir­ing ma­chine. With­out it, there could be no <em>Ideal</em> as this process is the one that cre­ates the dis­tinc­tion in­ter­nally to the <em>Un­der­stand­ing</em> be­tween what is and what is <em>Ideal</em>. On the di­a­gram, it looks like this:</p>
 <figure>
 <img src="../images/desire_machinefull.png" width="300" alt="The whole desiring machine" />
-<figcaption aria-hidden="true">The whole desiring machine</figcaption>
+<figcaption aria-hidden="true">The whole de­sir­ing ma­chine</figcaption>
 </figure>
-<p>This diagram demonstrates the pattern of the desiring machine. In future posts I will explore how this pattern can be used as a lens to understand some pathologies within systems but first we will explore how different desiring machines can interact as different levels of abstraction hierarchy.</p>
-<h2 id="self-similarity">Self Similarity</h2>
-<p>Like many systems, Desiring machines are often self-similar—the processes within desiring machines are often themselves desiring machines. When we’re working as an engineering firm, we embody a desiring machine. Our customers, be they individuals or organisations, also embody desiring machines. From the customer’s perspective, our engineering firm looks like one of their <em>Action</em> processes (remember the part about how each of the processes may be a desiring machine itself). Note that it’s not ‘Desiring Machines all the way down’; the end of the chain of Desire is often just a single or double cybernetic loop acting upon <em>the Real</em>.</p>
-<p>The viewpoint of an <em>Action</em> process as a desiring machine is an interesting one to take—we can think of the example of an engineering firm that’s developing a system for a customer organisation. We can either view the customer’s requirements as a part of our environment or we can distinguish the customer’s desiring machine out of the environment using a new distinction. The following diagram shows what that looks like:</p>
+<p>This di­a­gram demon­strates the pat­tern of the de­sir­ing ma­chine. In fu­ture posts I will ex­plore how this pat­tern can be used as a lens to un­der­stand some patholo­gies within sys­tems but first we will ex­plore how dif­fer­ent de­sir­ing ma­chines can in­ter­act as dif­fer­ent lev­els of ab­strac­tion hi­er­ar­chy.</p>
+<h2 id="self-similarity">Self Sim­i­lar­ity</h2>
+<p>Like many sys­tems, De­sir­ing ma­chines are of­ten self­-sim­i­lar—the processes within de­sir­ing ma­chines are of­ten them­selves de­sir­ing ma­chines. When we’re work­ing as an en­gi­neer­ing firm, we em­body a de­sir­ing ma­chine. Our cus­tomers, be they in­di­vid­u­als or or­gan­i­sa­tions, also em­body de­sir­ing ma­chines. From the cus­tomer’s per­spec­tive, our en­gi­neer­ing firm looks like one of their <em>Ac­tion</em> processes (re­mem­ber the part about how each of the processes may be a de­sir­ing ma­chine it­self). Note that it’s not ‘De­sir­ing Ma­chines all the way down’; the end of the chain of De­sire is of­ten just a sin­gle or dou­ble cy­ber­netic loop act­ing upon <em>the Real</em>.</p>
+<p>The view­point of an <em>Ac­tion</em> process as a de­sir­ing ma­chine is an in­ter­est­ing one to take—we can think of the ex­am­ple of an en­gi­neer­ing firm that’s de­vel­op­ing a sys­tem for a cus­tomer or­gan­i­sa­tion. We can ei­ther view the cus­tomer’s re­quire­ments as a part of our en­vi­ron­ment or we can dis­tin­guish the cus­tomer’s de­sir­ing ma­chine out of the en­vi­ron­ment us­ing a new dis­tinc­tion. The fol­low­ing di­a­gram shows what that looks like:</p>
 <figure>
 <img src="../images/desire_net.png" width="600" alt="Hierarchy of desiring machines" />
-<figcaption aria-hidden="true">Hierarchy of desiring machines</figcaption>
+<figcaption aria-hidden="true">Hi­er­ar­chy of de­sir­ing ma­chines</figcaption>
 </figure>
-<p><em>ERRATA: The Customer Desiring Machine should be connected to the Learning Process of the lower-level Desiring Machine</em></p>
-<p>The primes show the process and parts of the customer desiring machine. We can use this diagram as a lens to understand some of the pathologies caused by the hierarchy of two
-desiring machines. For example, the desire of the customer is filtered through both the customer’s <em>understanding</em>, the engineering firm’s <em>meaning</em> and the engineering firm’s <em>understanding</em>. This means that the less the two understandings match (and the less meaningful engineer’s find the requirements) the less the engineered solution will meet the customer’s desire. This is an effect that I’d like to explore further in a future post.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>I have found the <em>Desiring Machine</em> pattern model useful in my own practice for understanding and diagnosing problems of systems engineering. I hope that I have explained it well enough here for others to understand it and to apply it in their own systems practice. I do not believe that I have added anything new during this inquiry, but I think the pattern is useful enough to warrant being named.</p>
-<p>I’d be especially interested to know where it doesn’t work well and additions/subtractions are greatly appreciated. Please put any thoughts that you might have in the comments below.</p>
-<p>In future posts, I hope to expand on my ideas around the desiring machine, showing how it can be used to understand the viable systems model as well as other concepts in systems engineering. I’d also like to augment my model of the desiring machine with the idea of system cadences or rhythms to gain understanding of how the pattern changes when information flows at different rates around the system. There’s also some interesting insights to be had when the S part of DSRP is put back in so that we have different ways of cutting up the desiring machine with system boundaries.</p>
+<p><em>ER­RATA: The Cus­tomer De­sir­ing Ma­chine should be con­nected to the Learn­ing Process of the low­er-level De­sir­ing Ma­chine</em></p>
+<p>The primes show the process and parts of the cus­tomer de­sir­ing ma­chine. We can use this di­a­gram as a lens to un­der­stand some of the patholo­gies caused by the hi­er­ar­chy of two
+de­sir­ing ma­chines. For ex­am­ple, the de­sire of the cus­tomer is fil­tered through both the cus­tomer’s <em>un­der­stand­ing</em>, the en­gi­neer­ing fir­m’s <em>mean­ing</em> and the en­gi­neer­ing fir­m’s <em>un­der­stand­ing</em>. This means that the less the two un­der­stand­ings match (and the less mean­ing­ful en­gi­neer’s find the re­quire­ments) the less the en­gi­neered so­lu­tion will meet the cus­tomer’s de­sire. This is an ef­fect that I’d like to ex­plore fur­ther in a fu­ture post.</p>
+<h1 id="conclusion">Con­clu­sion</h1>
+<p>I have found the <em>De­sir­ing Ma­chine</em> pat­tern model use­ful in my own prac­tice for un­der­stand­ing and di­ag­nos­ing prob­lems of sys­tems en­gi­neer­ing. I hope that I have ex­plained it well enough here for oth­ers to un­der­stand it and to ap­ply it in their own sys­tems prac­tice. I do not be­lieve that I have added any­thing new dur­ing this in­quiry, but I think the pat­tern is use­ful enough to war­rant be­ing named.</p>
+<p>I’d be es­pe­cially in­ter­ested to know where it does­n’t work well and ad­di­tion­s/­sub­trac­tions are greatly ap­pre­ci­at­ed. Please put any thoughts that you might have in the com­ments be­low.</p>
+<p>In fu­ture posts, I hope to ex­pand on my ideas around the de­sir­ing ma­chine, show­ing how it can be used to un­der­stand the vi­able sys­tems model as well as other con­cepts in sys­tems en­gi­neer­ing. I’d also like to aug­ment my model of the de­sir­ing ma­chine with the idea of sys­tem ca­dences or rhythms to gain un­der­stand­ing of how the pat­tern changes when in­for­ma­tion flows at dif­fer­ent rates around the sys­tem. There’s also some in­ter­est­ing in­sights to be had when the S part of DSRP is put back in so that we have dif­fer­ent ways of cut­ting up the de­sir­ing ma­chine with sys­tem bound­aries.</p>
 
 <div id="disqus_thread"></div>
 <script>
@@ -122,9 +150,16 @@ desiring machines. For example, the desire of the customer is filtered through b
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

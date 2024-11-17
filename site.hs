@@ -56,7 +56,7 @@ main = hakyllWith config $ do
     match "bits/*" $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
     match "posts/*" $ do
@@ -119,7 +119,7 @@ main = hakyllWith config $ do
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
+    dateField "date" "%Y-%m-%d" `mappend`
     defaultContext
 
 teaserCtx = teaserField "teaser" "content" <> postCtx

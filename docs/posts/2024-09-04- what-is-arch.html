@@ -3,161 +3,187 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - What is Architecture?}</title>
+        <title>A Category of Systems - What is Architecture?</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
-<div class="avatar"><img src="../images/arch.png" width="200"></div>
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">What is Architecture?</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+     <div class="avatar"><img src="../images/arch.png" width="200"></div>
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2024-09-04
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-
-<h1>What is Architecture?</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on September  4, 2024
-    
-     |  by Tom Westbury
-    
-</div>
-
-<p>Back in 2021, I interviewed for a job in Model Based systems Engineering. During the interview, one of the interviewers hit me with the question:</p>
+<p>Back in 2021, I in­ter­viewed for a job in Model Based sys­tems En­gi­neer­ing. Dur­ing the in­ter­view, one of the in­ter­view­ers hit me with the ques­tion:</p>
 <blockquote>
-<p>What is system Architecture?</p>
+<p>What is sys­tem Ar­chi­tec­ture?</p>
 </blockquote>
-<p>He clarified by asking what distinguishes architecture from design. A daunting question, especially as the interviewer was the author of a well known primer on systems architecture that I’d not long ago read. I got the job, but I was unhappy with my answer to the question. Three years and a lot of self research into cybernetics later, I think I’m ready to give an answer that I’m happy with. On the way to answer this question we’ll meet a mad major who could build snowmobiles and the Architect (of buildings) whose work paved the way for MBSE.</p>
+<p>He clar­i­fied by ask­ing what dis­tin­guishes ar­chi­tec­ture from de­sign. A daunt­ing ques­tion, es­pe­cially as the in­ter­viewer was the au­thor of a well known primer on sys­tems ar­chi­tec­ture that I’d not long ago read. I got the job, but I was un­happy with my an­swer to the ques­tion. Three years and a lot of self re­search into cy­ber­net­ics lat­er, I think I’m ready to give an an­swer that I’m happy with. On the way to an­swer this ques­tion we’ll meet a mad ma­jor who could build snow­mo­biles and the Ar­chi­tect (of build­ings) whose work paved the way for MB­SE.</p>
 <!--more-->
-<p>Later, the man who interviewed me explained that he saw architecture as a tendency distinct from design but still intrinsically linked—whereas design moves towards solving the problem at hand, architecture abstracts, finds patterns (keep this word in mind!). At the time this was revelatory. Architecture to me before then was a stage before design but somehow less so. You must excuse young Tom—I’d just got my CSEP badge and was locked into a very chronologically strict Vee model in thinking. This thought wedged a crowbar into the cracks in that mental model. I am an engineer and a modeler, so I couldn’t leave this at the level of fuzzy things like ‘tendencies’. I needed a precise model of the dialectic of architecture and design.</p>
-<h2 id="the-architect">The Architect</h2>
-<p>In the 70s the architecture world was dominated by modernism. Driven by advances in art, philosophy, developments in materials and, of course, the necessity of rebuilding from two disastrous world wars, cubic concrete buildings began appearing everywhere. Though some in the architecture world were critical of Brutalism and similar styles. One such dissident was Christopher Alexander.</p>
-<p>Alexander, influenced by nascent cybernetics, began looking for a <em>timeless</em> way to conduct the creation of buildings and towns. His work during this period takes on a Promethean character— Alexander worked to collaborate with and empower the very people who would live, work and use the spaces he architected. This culminated in a transformative project at the University of Oregon. A trilogy of books was produced out of this period:</p>
+<p>Lat­er, the man who in­ter­viewed me ex­plained that he saw ar­chi­tec­ture as a ten­dency dis­tinct from de­sign but still in­trin­si­cally linked—whereas de­sign moves to­wards solv­ing the prob­lem at hand, ar­chi­tec­ture ab­stracts, finds pat­terns (keep this word in mind!). At the time this was rev­e­la­to­ry. Ar­chi­tec­ture to me be­fore then was a stage be­fore de­sign but some­how less so. You must ex­cuse young Tom—I’d just got my CSEP badge and was locked into a very chrono­log­i­cally strict Vee model in think­ing. This thought wedged a crow­bar into the cracks in that men­tal mod­el. I am an en­gi­neer and a mod­el­er, so I could­n’t leave this at the level of fuzzy things like ‘ten­den­cies’. I needed a pre­cise model of the di­alec­tic of ar­chi­tec­ture and de­sign.</p>
+<h2 id="the-architect">The Ar­chi­tect</h2>
+<p>In the 70s the ar­chi­tec­ture world was dom­i­nated by mod­ernism. Dri­ven by ad­vances in art, phi­los­o­phy, de­vel­op­ments in ma­te­ri­als and, of course, the ne­ces­sity of re­build­ing from two dis­as­trous world wars, cu­bic con­crete build­ings be­gan ap­pear­ing every­where. Though some in the ar­chi­tec­ture world were crit­i­cal of Bru­tal­ism and sim­i­lar styles. One such dis­si­dent was Christo­pher Alexan­der.</p>
+<p>Alexan­der, in­flu­enced by nascent cy­ber­net­ics, be­gan look­ing for a <em>time­less</em> way to con­duct the cre­ation of build­ings and towns. His work dur­ing this pe­riod takes on a Promethean char­ac­ter— Alexan­der worked to col­lab­o­rate with and em­power the very peo­ple who would live, work and use the spaces he ar­chi­tect­ed. This cul­mi­nated in a trans­for­ma­tive project at the Uni­ver­sity of Ore­gon. A tril­ogy of books was pro­duced out of this pe­ri­od:</p>
 <dl>
-<dt>The Timeless way of Building</dt>
+<dt>The Time­less way of Build­ing</dt>
 <dd>
-<p>A beautiful and poetic book laying out Alexander’s belief system behind his architecture practice and an attempt at describing and capturing the <em>quality with no name</em> that exudes from certain buildings—a sense of life, belonging &amp; purpose.</p>
+<p>A beau­ti­ful and po­etic book lay­ing out Alexan­der’s be­lief sys­tem be­hind his ar­chi­tec­ture prac­tice and an at­tempt at de­scrib­ing and cap­tur­ing the <em>qual­ity with no name</em> that ex­udes from cer­tain build­ings—a sense of life, be­long­ing &amp; pur­pose.</p>
 </dd>
-<dt>A Pattern Language</dt>
+<dt>A Pat­tern Lan­guage</dt>
 <dd>
-<p>A collaborative effort guided by Alexander to develop a set of patterns that can be used by anyone to design better spaces to exist in.</p>
+<p>A col­lab­o­ra­tive ef­fort guided by Alexan­der to de­velop a set of pat­terns that can be used by any­one to de­sign bet­ter spaces to ex­ist in.</p>
 </dd>
-<dt>The Oregon Experiment</dt>
+<dt>The Ore­gon Ex­per­i­ment</dt>
 <dd>
-<p>An account of how the theory set out in the first two books was put into practice at the University of Oregon.</p>
+<p>An ac­count of how the the­ory set out in the first two books was put into prac­tice at the Uni­ver­sity of Ore­gon.</p>
 </dd>
 </dl>
-<p>Alexander’s treatment of the <em>quality with no name</em> and his later development of this into an idea of <em>life</em> that certain objects and buildings possess deserves a proper treatment elsewhere. Here though, we’re more interested in his pattern language.</p>
-<p>A Pattern Language is a phenomenal work. The book aims to arm normal people and communities with a language with which they can use to design their own spaces. As well as a large collection of patterns, the book contains guidelines for using the patterns and discovering your own.</p>
-<p>Looking at Alexander’s projects, he often achieved his goals. His buildings often do feel timeless, reflecting their environment and the human activities and relationships that they support. However, unlike many famous architects of the period, his buildings do not stand out as <em>his</em>. Perhaps this is the reason that his mark on the modern architectural canon is small.</p>
-<p>However, the software engineering world took Alexander’s ideas and ran with them, especially in the C++/Java/OOP community. This current led to the (in)famous Gang of Four Software Design Patterns book which has become an integral part of the very culture of Java programmers.It was then inherited by the UML and later SysML communities which has resulted in some great work in the discovery of modelling patterns such as those documented by the INCOSE UK MBSE Working Group.</p>
-<p>This idea of finding patterns in design and abstracting up is not new—Alexander often alluded to his work as discovery rather than invention. In the mid-70s, while Alexander was writing his trilogy, an American ex-pilot was beginning his work that would revolutionize war.</p>
-<h2 id="snowmobiles">Snowmobiles</h2>
-<p>As Alexander was developing architectural pattern languages, an Officer in the US Air Force was ruminating on the aftermath of the Vietnam and Korean Wars. John Boyd had already made a name for himself with his development of Energy-Manoeuvrability theory in the 1960s which influenced the design of the F-15. A maverick, he was known for stealing computer time to run simulations of his theory. His nickname, 40 second Boyd, was earned from his application of E-M Theory enabling him to win simulated dog fights by baiting opponents into a tail chase—something that was believed to be a certain kill scenario—before using his opponent’s own energy against them to shoot them down.</p>
-<p>In 1976, Boyd published a paper entitled <a href="https://www.coljohnboyd.com/static/documents/1976-09-03__Boyd_John_R__Destruction_and_Creation.pdf"><em>Destruction and creation</em></a>. This paper was built on his wealth of experience during Korea and Vietnam as well as his keen interest in contemporary science. Boyd’s focus in the paper was to map processes of thinking to improve warfighting. Destruction is Boyd’s process of taking existing solutions and tearing them apart. Creation is the opposite process of building up those parts into new things. Boyd’s later analogy was that winning militaries can build snowmobiles. Militaries already have tanks, boats, motorcycles &amp;c. but, if faced with snow, they get stuck. Yet hidden in their existing equipment are tank tracks, boat bodies, motorcycle engines—all the parts for snowmobiles are there. If that force is empowered to tear apart their vehicles and build snowmobiles.</p>
-<p>Boyd’s Destruction &amp; Creation map to the ideas of Deduction &amp; Induction or Abstraction &amp; Reification. It’s all about continuously building a playbook of moves (Patterns!) which you can use to apply to new situations. Boyd continued this thinking forward into his later work on the OODA loop framework and his patterns of conflict presentation. His contribution to modern Manoeuvre warfare cannot be understated and the use of tactics such as thunder runs with devastating effect in Iraq and Ukraine, draw on Boyd’s legacy.</p>
-<h2 id="modelling-boyd-alexander">Modelling Boyd &amp; Alexander</h2>
-<p>I’m a model based systems engineer—this gives me a drive to give the fuzzy precise definition, especially if done in a pictorial manner. We’ll start, as in previous posts, with the Cybernetic loop model of engineering:</p>
+<p>Alexan­der’s treat­ment of the <em>qual­ity with no name</em> and his later de­vel­op­ment of this into an idea of <em>life</em> that cer­tain ob­jects and build­ings pos­sess de­serves a proper treat­ment else­where. Here though, we’re more in­ter­ested in his pat­tern lan­guage.</p>
+<p>A Pat­tern Lan­guage is a phe­nom­e­nal work. The book aims to arm nor­mal peo­ple and com­mu­ni­ties with a lan­guage with which they can use to de­sign their own spaces. As well as a large col­lec­tion of pat­terns, the book con­tains guide­lines for us­ing the pat­terns and dis­cov­er­ing your own.</p>
+<p>Look­ing at Alexan­der’s pro­jects, he of­ten achieved his goals. His build­ings of­ten do feel time­less, re­flect­ing their en­vi­ron­ment and the hu­man ac­tiv­i­ties and re­la­tion­ships that they sup­port. How­ev­er, un­like many fa­mous ar­chi­tects of the pe­ri­od, his build­ings do not stand out as <em>his</em>. Per­haps this is the rea­son that his mark on the mod­ern ar­chi­tec­tural canon is small.</p>
+<p>How­ev­er, the soft­ware en­gi­neer­ing world took Alexan­der’s ideas and ran with them, es­pe­cially in the C++/­Java/OOP com­mu­ni­ty. This cur­rent led to the (in)­fa­mous Gang of Four Soft­ware De­sign Pat­terns book which has be­come an in­te­gral part of the very cul­ture of Java pro­gram­mer­s.It was then in­her­ited by the UML and later SysML com­mu­ni­ties which has re­sulted in some great work in the dis­cov­ery of mod­el­ling pat­terns such as those doc­u­mented by the IN­COSE UK MBSE Work­ing Group.</p>
+<p>This idea of find­ing pat­terns in de­sign and ab­stract­ing up is not new—Alexan­der of­ten al­luded to his work as dis­cov­ery rather than in­ven­tion. In the mid-70s, while Alexan­der was writ­ing his tril­o­gy, an Amer­i­can ex-pi­lot was be­gin­ning his work that would rev­o­lu­tion­ize war.</p>
+<h2 id="snowmobiles">Snow­mo­biles</h2>
+<p>As Alexan­der was de­vel­op­ing ar­chi­tec­tural pat­tern lan­guages, an Of­fi­cer in the US Air Force was ru­mi­nat­ing on the af­ter­math of the Viet­nam and Ko­rean Wars. John Boyd had al­ready made a name for him­self with his de­vel­op­ment of En­er­gy-­Ma­noeu­vra­bil­ity the­ory in the 1960s which in­flu­enced the de­sign of the F-15. A mav­er­ick, he was known for steal­ing com­puter time to run sim­u­la­tions of his the­o­ry. His nick­name, 40 sec­ond Boyd, was earned from his ap­pli­ca­tion of E-M The­ory en­abling him to win sim­u­lated dog fights by bait­ing op­po­nents into a tail chase—­some­thing that was be­lieved to be a cer­tain kill sce­nar­i­o—be­fore us­ing his op­po­nen­t’s own en­ergy against them to shoot them down.</p>
+<p>In 1976, Boyd pub­lished a pa­per en­ti­tled <a href="https://www.coljohnboyd.com/static/documents/1976-09-03__Boyd_John_R__Destruction_and_Creation.pdf"><em>De­struc­tion and cre­ation</em></a>. This pa­per was built on his wealth of ex­pe­ri­ence dur­ing Ko­rea and Viet­nam as well as his keen in­ter­est in con­tem­po­rary sci­ence. Boy­d’s fo­cus in the pa­per was to map processes of think­ing to im­prove warfight­ing. De­struc­tion is Boy­d’s process of tak­ing ex­ist­ing so­lu­tions and tear­ing them apart. Cre­ation is the op­po­site process of build­ing up those parts into new things. Boy­d’s later anal­ogy was that win­ning mil­i­taries can build snow­mo­biles. Mil­i­taries al­ready have tanks, boats, mo­tor­cy­cles &amp;c. but, if faced with snow, they get stuck. Yet hid­den in their ex­ist­ing equip­ment are tank tracks, boat bod­ies, mo­tor­cy­cle en­gi­nes—all the parts for snow­mo­biles are there. If that force is em­pow­ered to tear apart their ve­hi­cles and build snow­mo­biles.</p>
+<p>Boy­d’s De­struc­tion &amp; Cre­ation map to the ideas of De­duc­tion &amp; In­duc­tion or Ab­strac­tion &amp; Reifi­ca­tion. It’s all about con­tin­u­ously build­ing a play­book of moves (Pat­tern­s!) which you can use to ap­ply to new sit­u­a­tions. Boyd con­tin­ued this think­ing for­ward into his later work on the OODA loop frame­work and his pat­terns of con­flict pre­sen­ta­tion. His con­tri­bu­tion to mod­ern Ma­noeu­vre war­fare can­not be un­der­stated and the use of tac­tics such as thun­der runs with dev­as­tat­ing ef­fect in Iraq and Ukraine, draw on Boy­d’s lega­cy.</p>
+<h2 id="modelling-boyd-alexander">Mod­el­ling Boyd &amp; Alexan­der</h2>
+<p>I’m a model based sys­tems en­gi­neer—this gives me a drive to give the fuzzy pre­cise de­f­i­n­i­tion, es­pe­cially if done in a pic­to­r­ial man­ner. We’ll start, as in pre­vi­ous posts, with the Cy­ber­netic loop model of en­gi­neer­ing:</p>
 <figure>
 <img src="../images/Screenshot_20240816-112645.png" width="300" alt="The Cybernetic Loop" />
-<figcaption aria-hidden="true">The Cybernetic Loop</figcaption>
+<figcaption aria-hidden="true">The Cy­ber­netic Loop</figcaption>
 </figure>
-<p>To recapitulate this model, there are two entities:</p>
+<p>To re­ca­pit­u­late this mod­el, there are two en­ti­ties:</p>
 <dl>
-<dt><strong>The Environment (Env)</strong></dt>
+<dt><strong>The En­vi­ron­ment (Env)</strong></dt>
 <dd>
-<p>Represents the states of the environment that we’re trying to engineer.</p>
+<p>Rep­re­sents the states of the en­vi­ron­ment that we’re try­ing to en­gi­neer.</p>
 </dd>
-<dt><strong>Understanding (Und)</strong></dt>
+<dt><strong>Un­der­stand­ing (Und)</strong></dt>
 <dd>
-<p>Our model of the environment that allows us to navigate the Environment.</p>
+<p>Our model of the en­vi­ron­ment that al­lows us to nav­i­gate the En­vi­ron­ment.</p>
 </dd>
 </dl>
-<p>Then there are the processes, represented as diamonds:</p>
+<p>Then there are the process­es, rep­re­sented as di­a­monds:</p>
 <dl>
-<dt><strong>Evolution</strong></dt>
+<dt><strong>Evo­lu­tion</strong></dt>
 <dd>
-<p>The process of the environment changing.</p>
+<p>The process of the en­vi­ron­ment chang­ing.</p>
 </dd>
-<dt><strong>Learning</strong></dt>
+<dt><strong>Learn­ing</strong></dt>
 <dd>
-<p>The process of updating our understanding by observing the environment.</p>
+<p>The process of up­dat­ing our un­der­stand­ing by ob­serv­ing the en­vi­ron­ment.</p>
 </dd>
-<dt><strong>Action</strong></dt>
+<dt><strong>Ac­tion</strong></dt>
 <dd>
-<p>The process of using our understanding to change our environment.</p>
+<p>The process of us­ing our un­der­stand­ing to change our en­vi­ron­ment.</p>
 </dd>
-<dt><strong>Development</strong></dt>
+<dt><strong>De­vel­op­ment</strong></dt>
 <dd>
-<p>The process of updating our understanding based upon itself.</p>
+<p>The process of up­dat­ing our un­der­stand­ing based upon it­self.</p>
 </dd>
 </dl>
-<p>It is the development loop that we’re going to focus on in this part of the essay.</p>
-<p>Boyd’s Destruction &amp; Creation implies that our development process is actually <em>two</em> processes—one of deduction, destruction or abstraction and one of induction, creation or reification. What are we doing with those abstractions? Well, another name for an abstraction is a <em>Pattern</em>.</p>
-<p>Destruction &amp; creation are the processes of creating/updating and using a <em>Pattern Library</em>.</p>
-<p>Let’s see how that looks as a diagram.</p>
+<p>It is the de­vel­op­ment loop that we’re go­ing to fo­cus on in this part of the es­say.</p>
+<p>Boy­d’s De­struc­tion &amp; Cre­ation im­plies that our de­vel­op­ment process is ac­tu­ally <em>two</em> process­es—one of de­duc­tion, de­struc­tion or ab­strac­tion and one of in­duc­tion, cre­ation or reifi­ca­tion. What are we do­ing with those ab­strac­tions? Well, an­other name for an ab­strac­tion is a <em>Pat­tern</em>.</p>
+<p>De­struc­tion &amp; cre­ation are the processes of cre­at­ing/up­dat­ing and us­ing a <em>Pat­tern Li­brary</em>.</p>
+<p>Let’s see how that looks as a di­a­gram.</p>
 <figure>
 <img src="../images/archloop.png" width="300" alt="The Architecture Loop" />
-<figcaption aria-hidden="true">The Architecture Loop</figcaption>
+<figcaption aria-hidden="true">The Ar­chi­tec­ture Loop</figcaption>
 </figure>
-<p>I’ve given the name <em>wisdom</em> to the Pattern library as a more generic name. It is worth noting that Deduction is not required for an engineering process to build understanding via Induction. I’d like to dig into this at a later date by using this simple model as a diagnostic framework, especially with how it links to the concept of technical debt, but for now we’ll focus on architecture.</p>
-<h2 id="what-is-architecture-vs-design">What is architecture vs design?</h2>
-<p>Before we answer the question originally posed in this essay, we should probably make a point on the descriptive nature of the English Language. The Oxford English Dictionary takes a descriptivist approach to English—it records the English language as it’s used, not how it should be used. Despite what your English teacher told you, there is no correct way to use English, just keep in mind that others need to faithfully understand what you write.</p>
-<p>Using words against their dictionary definitions or constructing non-standard grammatical sentences enables us to express and emphasize thoughts in ways that Academie Français French would forbid. As an English speaker, know that you are empowered to boldly split infinitives whenever you please.</p>
-<p>Given this, Architecture is a loaded word. Yes we have freedom to use it wherever we want, but we’ve got to keep in mind that the usage is loaded with pre-existing meaning. Therefore, using the model constructed in the last section, I’d like to propose a definition of architecture and design based on the deduction-induction loop.</p>
-<p>Architecture is the tendency to exercise the deduction process whereas design is the tendency to exercise the induction process.</p>
-<p>To make this concrete by referring to job roles, a system architect’s job is to facilitate the identification, recording and usage of design patterns within a project whereas system designers focus on the application of patterns to the problem at hand.</p>
-<p>Therefore, a system architecture is a collection of patterns and rules for their application that allows designers to complete their role quickly on subsequent problems. This is embedded in the adage <em>let’s not reinvent the wheel</em>. The wheel is a pattern—without a pattern language/wisdom repository we’re doomed to reinvent it each time we encounter the problem of moving heavy things.</p>
-<p>I believe that the definition proposed here somewhat matches the common usage and that used in the ISO 420XX Series of standards. I’ve certainly found the loop of <em>Understanding-Deduction-Wisdom-Induction</em> a useful diagnostic tool in my work as a Principal Systems Engineer As always, I’m interested in your thoughts on the above—do you agree? Have I missed something important or lost the plot entirely! Drop me an email or comment below.</p>
-<p>Before we finish here, I’d like to leave you with a couple of ways that I incorporate this thinking into my day-to-day work.</p>
-<h2 id="systems-architecture-praxis">Systems Architecture Praxis</h2>
-<p>There are two main ways that I incorporate this idea of architecture into my team’s praxis. The first relies on our use of MBSE, but the second is applicable to any area of engineering (or even life!). Before I explain those though, its worth noting that the documentation of processes, methods &amp; standards is an important part of the Architecture loop—after all a process or standard is a pattern that’s indispensable.</p>
-<p>Otherwise, the two ways that I incorporate architecture into my team’s praxis are a domain specific language and a pattern
-library.</p>
-<h3 id="living-domain-specific-language">Living Domain Specific Language</h3>
-<p>One way to think of a pattern language is as a form of information compression for human communication—a pattern being understood by two individuals allows the short Utterance of a few words to unfold into a whole host of attributes &amp; relationships in the listeners’ head.</p>
-<p>When following Model based systems Engineering (MBSE), stereotypes and/or Metaclasses can be used to encode these patterns. In my current project we use a Domain specific language instead of SysML. This enables us to more precisely define the meanings of each metaclass, their standard attributes and their allowed relationships.</p>
-<p>Our deduction loop comes into play when we find ourselves unable to easily model a concept in the language, or, we find ourselves creating the same pattern of attributes and relationships again and again. We can easily create new metaclasses to cover these cases and adapt our modelling language on the fly.</p>
-<p>If you find yourself using SysML or UML, stereotypes, tags and profiles work well for this purpose. In fact, I have a strongly held opinion of little consequence that profiles are necessary for SysML modelling to reduce ambiguity. The key is to ensure that you are continuously evaluating and updating your profile and refactoring your model as it changes. Otherwise, your profile will become overly constraining and make work harder than it needs to be.</p>
-<h3 id="a-pattern-wiki">A Pattern Wiki</h3>
-<p>Connected to our modelling but to also cover patterns in other areas, we created a pattern wiki. A pattern wiki is a searchable repository for patterns that your team discovers. Any searchable tool is good for this. Common corporate tools that are great for this are Atlassian confluence or Microsoft Office One Note—it just needs to be a searchable, linkable, shared repository of knowledge.</p>
-<p>Each pattern should have its own linkable section or page. Here’s the pattern that I use for patterns (A meta pattern!) as a start point. As Cunningham’s <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> law states, the best way to elicit a correct answer is to present a wrong answer. This metapattern is presented hoping that you’ll adapt it to your own needs.</p>
-<h4 id="a-template-for-patterns">A Template for Patterns</h4>
+<p>I’ve given the name <em>wis­dom</em> to the Pat­tern li­brary as a more generic name. It is worth not­ing that De­duc­tion is not re­quired for an en­gi­neer­ing process to build un­der­stand­ing via In­duc­tion. I’d like to dig into this at a later date by us­ing this sim­ple model as a di­ag­nos­tic frame­work, es­pe­cially with how it links to the con­cept of tech­ni­cal debt, but for now we’ll fo­cus on ar­chi­tec­ture.</p>
+<h2 id="what-is-architecture-vs-design">What is ar­chi­tec­ture vs de­sign?</h2>
+<p>Be­fore we an­swer the ques­tion orig­i­nally posed in this es­say, we should prob­a­bly make a point on the de­scrip­tive na­ture of the Eng­lish Lan­guage. The Ox­ford Eng­lish Dic­tio­nary takes a de­scrip­tivist ap­proach to Eng­lish—it records the Eng­lish lan­guage as it’s used, not how it should be used. De­spite what your Eng­lish teacher told you, there is no cor­rect way to use Eng­lish, just keep in mind that oth­ers need to faith­fully un­der­stand what you write.</p>
+<p>Us­ing words against their dic­tio­nary de­f­i­n­i­tions or con­struct­ing non-­s­tan­dard gram­mat­i­cal sen­tences en­ables us to ex­press and em­pha­size thoughts in ways that Acad­e­mie Français French would for­bid. As an Eng­lish speak­er, know that you are em­pow­ered to boldly split in­fini­tives when­ever you please.</p>
+<p>Given this, Ar­chi­tec­ture is a loaded word. Yes we have free­dom to use it wher­ever we want, but we’ve got to keep in mind that the us­age is loaded with pre-ex­ist­ing mean­ing. There­fore, us­ing the model con­structed in the last sec­tion, I’d like to pro­pose a de­f­i­n­i­tion of ar­chi­tec­ture and de­sign based on the de­duc­tion-in­duc­tion loop.</p>
+<p>Ar­chi­tec­ture is the ten­dency to ex­er­cise the de­duc­tion process whereas de­sign is the ten­dency to ex­er­cise the in­duc­tion process.</p>
+<p>To make this con­crete by re­fer­ring to job roles, a sys­tem ar­chi­tec­t’s job is to fa­cil­i­tate the iden­ti­fi­ca­tion, record­ing and us­age of de­sign pat­terns within a project whereas sys­tem de­sign­ers fo­cus on the ap­pli­ca­tion of pat­terns to the prob­lem at hand.</p>
+<p>There­fore, a sys­tem ar­chi­tec­ture is a col­lec­tion of pat­terns and rules for their ap­pli­ca­tion that al­lows de­sign­ers to com­plete their role quickly on sub­se­quent prob­lems. This is em­bed­ded in the adage <em>let’s not rein­vent the wheel</em>. The wheel is a pat­tern—with­out a pat­tern lan­guage/wis­dom repos­i­tory we’re doomed to rein­vent it each time we en­counter the prob­lem of mov­ing heavy things.</p>
+<p>I be­lieve that the de­f­i­n­i­tion pro­posed here some­what matches the com­mon us­age and that used in the ISO 420XX Se­ries of stan­dards. I’ve cer­tainly found the loop of <em>Un­der­stand­ing-D­e­duc­tion-Wis­dom-In­duc­tion</em> a use­ful di­ag­nos­tic tool in my work as a Prin­ci­pal Sys­tems En­gi­neer As al­ways, I’m in­ter­ested in your thoughts on the above—do you agree? Have I missed some­thing im­por­tant or lost the plot en­tire­ly! Drop me an email or com­ment be­low.</p>
+<p>Be­fore we fin­ish here, I’d like to leave you with a cou­ple of ways that I in­cor­po­rate this think­ing into my day-­to-­day work.</p>
+<h2 id="systems-architecture-praxis">Sys­tems Ar­chi­tec­ture Praxis</h2>
+<p>There are two main ways that I in­cor­po­rate this idea of ar­chi­tec­ture into my team’s prax­is. The first re­lies on our use of MB­SE, but the sec­ond is ap­plic­a­ble to any area of en­gi­neer­ing (or even life!). Be­fore I ex­plain those though, its worth not­ing that the doc­u­men­ta­tion of process­es, meth­ods &amp; stan­dards is an im­por­tant part of the Ar­chi­tec­ture loop—after all a process or stan­dard is a pat­tern that’s in­dis­pens­able.</p>
+<p>Oth­er­wise, the two ways that I in­cor­po­rate ar­chi­tec­ture into my team’s praxis are a do­main spe­cific lan­guage and a pat­tern
+li­brary.</p>
+<h3 id="living-domain-specific-language">Liv­ing Do­main Spe­cific Lan­guage</h3>
+<p>One way to think of a pat­tern lan­guage is as a form of in­for­ma­tion com­pres­sion for hu­man com­mu­ni­ca­tion—a pat­tern be­ing un­der­stood by two in­di­vid­u­als al­lows the short Ut­ter­ance of a few words to un­fold into a whole host of at­trib­utes &amp; re­la­tion­ships in the lis­ten­ers’ head.</p>
+<p>When fol­low­ing Model based sys­tems En­gi­neer­ing (MB­SE), stereo­types and/or Meta­classes can be used to en­code these pat­terns. In my cur­rent project we use a Do­main spe­cific lan­guage in­stead of SysML. This en­ables us to more pre­cisely de­fine the mean­ings of each meta­class, their stan­dard at­trib­utes and their al­lowed re­la­tion­ships.</p>
+<p>Our de­duc­tion loop comes into play when we find our­selves un­able to eas­ily model a con­cept in the lan­guage, or, we find our­selves cre­at­ing the same pat­tern of at­trib­utes and re­la­tion­ships again and again. We can eas­ily cre­ate new meta­classes to cover these cases and adapt our mod­el­ling lan­guage on the fly.</p>
+<p>If you find your­self us­ing SysML or UML, stereo­types, tags and pro­files work well for this pur­pose. In fact, I have a strongly held opin­ion of lit­tle con­se­quence that pro­files are nec­es­sary for SysML mod­el­ling to re­duce am­bi­gu­i­ty. The key is to en­sure that you are con­tin­u­ously eval­u­at­ing and up­dat­ing your pro­file and refac­tor­ing your model as it changes. Oth­er­wise, your pro­file will be­come overly con­strain­ing and make work harder than it needs to be.</p>
+<h3 id="a-pattern-wiki">A Pat­tern Wiki</h3>
+<p>Con­nected to our mod­el­ling but to also cover pat­terns in other ar­eas, we cre­ated a pat­tern wi­ki. A pat­tern wiki is a search­able repos­i­tory for pat­terns that your team dis­cov­ers. Any search­able tool is good for this. Com­mon cor­po­rate tools that are great for this are At­lass­ian con­flu­ence or Mi­crosoft Of­fice One Note—it just needs to be a search­able, link­able, shared repos­i­tory of knowl­edge.</p>
+<p>Each pat­tern should have its own link­able sec­tion or page. Here’s the pat­tern that I use for pat­terns (A meta pat­tern!) as a start point. As Cun­ning­ham’s <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> law states, the best way to elicit a cor­rect an­swer is to present a wrong an­swer. This meta­p­at­tern is pre­sented hop­ing that you’ll adapt it to your own needs.</p>
+<h4 id="a-template-for-patterns">A Tem­plate for Pat­terns</h4>
 <dl>
-<dt>Summary</dt>
+<dt>Sum­mary</dt>
 <dd>
-<p>A short description of the pattern.</p>
+<p>A short de­scrip­tion of the pat­tern.</p>
 </dd>
-<dt>Problem</dt>
+<dt>Prob­lem</dt>
 <dd>
-<p>A description of the problem that the pattern solves, so you know when to apply it.</p>
+<p>A de­scrip­tion of the prob­lem that the pat­tern solves, so you know when to ap­ply it.</p>
 </dd>
-<dt>Description</dt>
+<dt>De­scrip­tion</dt>
 <dd>
-<p>A description of the pattern and how to implement it.</p>
+<p>A de­scrip­tion of the pat­tern and how to im­ple­ment it.</p>
 </dd>
-<dt>Related</dt>
+<dt>Re­lated</dt>
 <dd>
-<p>A set of links to other patterns mentioned in the description and other related patterns.</p>
+<p>A set of links to other pat­terns men­tioned in the de­scrip­tion and other re­lated pat­terns.</p>
 </dd>
 </dl>
-<p>We’ve also categorized our patterns based on whether they are for our work products or whether they cover ways of working. We also link out to collections of patterns that work well in certain circumstances. Examples are TRIZ resources for problem solving or the Grammar of Systems book for systems Thinking.</p>
-<p>Based on this, I’m putting together a project for a systems engineering pattern wiki following the pattern above. I will write more on it once its up and running, but I hope that it will become a collaborative affair for a discipline-wide Architecture loop. If you’d be interested in this endeavour, drop me an email via my about page.</p>
+<p>We’ve also cat­e­go­rized our pat­terns based on whether they are for our work prod­ucts or whether they cover ways of work­ing. We also link out to col­lec­tions of pat­terns that work well in cer­tain cir­cum­stances. Ex­am­ples are TRIZ re­sources for prob­lem solv­ing or the Gram­mar of Sys­tems book for sys­tems Think­ing.</p>
+<p>Based on this, I’m putting to­gether a project for a sys­tems en­gi­neer­ing pat­tern wiki fol­low­ing the pat­tern above. I will write more on it once its up and run­ning, but I hope that it will be­come a col­lab­o­ra­tive af­fair for a dis­ci­pline-wide Ar­chi­tec­ture loop. If you’d be in­ter­ested in this en­deav­our, drop me an email via my about page.</p>
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>the inventor of Wikis<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>the in­ven­tor of Wikis<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -183,9 +209,16 @@ library.</p>
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

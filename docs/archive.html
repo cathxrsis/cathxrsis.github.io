@@ -3,57 +3,98 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - Archives}</title>
+        <title>A Category of Systems - Archives</title>
         <link rel="stylesheet" type="text/css" href="./css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="./">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="./bits/about.html">About</a>
-                <a href="./archive.html">Archive</a>
-                <a href="./bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="./">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="./bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="./archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            <h1>Archive</h1>
-
-<div class="grid-container">
+            
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2024-09-04-%20what-is-arch.html">What is Architecture?</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+     <div class="avatar"><img src="../images/arch.png" width="200"></div>
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2024-09-04
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
     
-    <div class="grid-item">
-        
-           <div class="avatar"><img src="../images/arch.png" width="150px"></div>
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2024-09-04-%20what-is-arch.html"><h2>What is Architecture?</h2></a> 
-            <p>September  4, 2024</p>
-
-            <p><p>Back in 2021, I interviewed for a job in Model Based systems Engineering. During the interview, one of the interviewers hit me with the question:</p>
+    <tr><td colspan="4"><p>Back in 2021, I interviewed for a job in Model Based systems Engineering. During the interview, one of the interviewers hit me with the question:</p>
 <blockquote>
 <p>What is system Architecture?</p>
 </blockquote>
 <p>He clarified by asking what distinguishes architecture from design. A daunting question, especially as the interviewer was the author of a well known primer on systems architecture that I’d not long ago read. I got the job, but I was unhappy with my answer to the question. Three years and a lot of self research into cybernetics later, I think I’m ready to give an answer that I’m happy with. On the way to answer this question we’ll meet a mad major who could build snowmobiles and the Architect (of buildings) whose work paved the way for MBSE.</p>
-</p>
-
-            <a href="./posts/2024-09-04-%20what-is-arch.html"> Read more...</a>
-
-    </div>
+</td></tr>
     
-    <div class="grid-item">
-        
-           <div class="avatar"><img src="../images/risk.png" width="150px"></div>
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2024-08-18-Risk-as-a-Motive.html"><h2>Risk as a motive for systems Engineering</h2></a> 
-            <p>August 18, 2024</p>
+</table>
 
-            <p><blockquote>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2024-08-18-Risk-as-a-Motive.html">Risk as a motive for systems Engineering</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+     <div class="avatar"><img src="../images/risk.png" width="200"></div>
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2024-08-18
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+    
+    <tr><td colspan="4"><blockquote>
 <p><strong>Risk</strong> [noun]—A potential scenario in a project that is recorded in a risk management plan and forgotten about until it manifests as an issue.</p>
 </blockquote>
 <p>I’m being facetious but this doesn’t seem too off the mark as a definition in many engineering organisations. Risk and risk management are fundamental to systems engineering–after all, Risk Management is one of the ISO 15288 processes which defines its purpose as:</p>
@@ -63,195 +104,365 @@
 <p>Risk management as usually practiced certainly fails this definition. This proposes the question: what is risk and how should it be managed? Although following ISO 15288 and the SE handbook will get you through a project’s risk management adequately, I believe treating risk this way alienates the concept from the engineering process.</p>
 <p>In this blog post, I’d like to explore the idea of risk and to Make the point that risk is not just something to be managed on the side of an engineering project but a fundamental part of engineering that provides a motive, measure and direction for an engineering project itself in a way that other measures cannot.</p>
 <p>On the way, we’ll explore concepts from the scrum framework and a contender for the philosophical definition of life itself.</p>
-</p>
-
-            <a href="./posts/2024-08-18-Risk-as-a-Motive.html"> Read more...</a>
-
-    </div>
+</td></tr>
     
-    <div class="grid-item">
-        
-           <div class="avatar"><img src="../images/incfailure.png" width="150px"></div>
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2023-12-28-Incentivising-Failure.html"><h2>How organisations incentivise failure</h2></a> 
-            <p>December 28, 2023</p>
+</table>
 
-            <p><p>This post is a short one about another antipattern that I’ve observed while working. Its technically an instance of a common antipattern of how locally optimised systems often don’t combine into systems that are optimised for the larger-scale goal. The particularly insidious part of this antipattern is that not only does it increase the risk of project failure, it also hurts team morale and individual’s mental health.</p>
-</p>
-
-            <a href="./posts/2023-12-28-Incentivising-Failure.html"> Read more...</a>
-
-    </div>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2023-12-28-Incentivising-Failure.html">How organisations incentivise failure</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+     <div class="avatar"><img src="../images/incfailure.png" width="200"></div>
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2023-12-28
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
     
-    <div class="grid-item">
-        
-           <div class="avatar"><img src="../images/nintofive.png" width="150px"></div>
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2023-02-10-Undedicated-Systems-Engineers.html"><h2>On the Phenomenon of 9-5 Systems Engineers</h2></a> 
-            <p>February 10, 2023</p>
+    <tr><td colspan="4"><p>This post is a short one about another antipattern that I’ve observed while working. Its technically an instance of a common antipattern of how locally optimised systems often don’t combine into systems that are optimised for the larger-scale goal. The particularly insidious part of this antipattern is that not only does it increase the risk of project failure, it also hurts team morale and individual’s mental health.</p>
+</td></tr>
+    
+</table>
 
-            <p><p>This post describes a phenomenon that I and some other systems engineers that I’ve spoken too have noticed about our discipline. This phenomenon is entirely anecdotal so I could be working in outlier companies or completely wrong. If this post rings true or false for you, however, I’d love to hear from you in the comments to help understand whether my experience is universal in this respect.</p>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2023-02-10-Undedicated-Systems-Engineers.html">On the Phenomenon of 9-5 Systems Engineers</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+     <div class="avatar"><img src="../images/nintofive.png" width="200"></div>
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2023-02-10
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+    
+    <tr><td colspan="4"><p>This post describes a phenomenon that I and some other systems engineers that I’ve spoken too have noticed about our discipline. This phenomenon is entirely anecdotal so I could be working in outlier companies or completely wrong. If this post rings true or false for you, however, I’d love to hear from you in the comments to help understand whether my experience is universal in this respect.</p>
 <p>My null hypothesis is this: compared to other disciplines of engineering, there are proportionally far fewer <em>vocational</em> systems engineers. By <em>vocational</em>, I am referring to the idea of engineers who see the subject of their job as more than just what they do 9-5 to pay the bills.</p>
-</p>
-
-            <a href="./posts/2023-02-10-Undedicated-Systems-Engineers.html"> Read more...</a>
-
-    </div>
+</td></tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2023-02-01-Validation-Through-Intimidation.html"><h2>Validation Through Intimidation</h2></a> 
-            <p>February  1, 2023</p>
+</table>
 
-            <p><p>This post is a short one to start the year and is about an anti-pattern that I have observed within systems engineering projects. I sincerely hope that this pattern is not endemic, though I suspect its more prevalent in the discipline than we’d like to admit. This anti-pattern is a possible mechanism to the prevalence of project cost &amp; time overruns and complex systems often being a disappointment to their customers. I call this anti-pattern <strong>Validation Through Intimidation</strong>.</p>
-</p>
-
-            <a href="./posts/2023-02-01-Validation-Through-Intimidation.html"> Read more...</a>
-
-    </div>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2023-02-01-Validation-Through-Intimidation.html">Validation Through Intimidation</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2023-02-01
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2022-08-21-A-Machine-Named-Desire.html"><h2>A Machine Named Desire</h2></a> 
-            <p>June 30, 2022</p>
-
-            <p><p>In this post, I will describe a pattern that I have identified in numerous places during my time as a systems engineer. This pattern sits somewhere between the traditional double-loop learning system and a viable system. I call this pattern the <em>Desiring Machine</em> as a nod to Deleuze as I feel that this pattern <em>feels</em> somewhat like a Deleuzian desiring machine. This post focusses mainly on the derivation of the pattern but I hope to expand on its uses as a framework for understanding and enquiry in future posts. I will add that I do not believe that this pattern is anything new; I have seen aspects of it expressed in various systems thinking texts. However, I don’t think the pattern has been addressed by name or given the recognition as a useful pattern in the way I believe it deserves.</p>
-</p>
-
-            <a href="./posts/2022-08-21-A-Machine-Named-Desire.html"> Read more...</a>
-
-    </div>
+    <tr><td colspan="4"><p>This post is a short one to start the year and is about an anti-pattern that I have observed within systems engineering projects. I sincerely hope that this pattern is not endemic, though I suspect its more prevalent in the discipline than we’d like to admit. This anti-pattern is a possible mechanism to the prevalence of project cost &amp; time overruns and complex systems often being a disappointment to their customers. I call this anti-pattern <strong>Validation Through Intimidation</strong>.</p>
+</td></tr>
     
-    <div class="grid-item">
-        
-           <div class="avatar"><img src="../images/killtree.png" width="150px"></div>
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2022-02-24-On-Agile-and-Hierarchy.html"><h2>Agile Systems Engineering and System Hierarchies</h2></a> 
-            <p>February 24, 2022</p>
+</table>
 
-            <p><p>This post is not here to share a solution to a problem in the same way as my others. Instead, I would like to pose a question around agile and traditional systems architecture and hopefully spark a discussion on a concept that is almost fundamental to modern systems thinking—the systems hierarchy.</p>
-</p>
-
-            <a href="./posts/2022-02-24-On-Agile-and-Hierarchy.html"> Read more...</a>
-
-    </div>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2022-08-21-A-Machine-Named-Desire.html">A Machine Named Desire</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2022-06-30
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2021-11-30-Gaining-Composure.html"><h2>Gaining Composure by Losing Control</h2></a> 
-            <p>November 30, 2021</p>
-
-            <p><p>What follows is a paper that I submitted for INCOSE UK’s ASEC 2021 Conference. Unfortunately, the paper was not accepted which is fair enough as the presentations that made it into the conference were all incredibly interesting, useful and well presented. However, despite my presentation skills, this method brought a lot of benefit when used at Jaguar Land Rover and I present it here so that others can benefit from it too.</p>
-</p>
-
-            <a href="./posts/2021-11-30-Gaining-Composure.html"> Read more...</a>
-
-    </div>
+    <tr><td colspan="4"><p>In this post, I will describe a pattern that I have identified in numerous places during my time as a systems engineer. This pattern sits somewhere between the traditional double-loop learning system and a viable system. I call this pattern the <em>Desiring Machine</em> as a nod to Deleuze as I feel that this pattern <em>feels</em> somewhat like a Deleuzian desiring machine. This post focusses mainly on the derivation of the pattern but I hope to expand on its uses as a framework for understanding and enquiry in future posts. I will add that I do not believe that this pattern is anything new; I have seen aspects of it expressed in various systems thinking texts. However, I don’t think the pattern has been addressed by name or given the recognition as a useful pattern in the way I believe it deserves.</p>
+</td></tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2021-05-06-STM-Considered-Harmful.html"><h2>State Machine Diagram Considered Harmful</h2></a> 
-            <p>May  6, 2021</p>
+</table>
 
-            <p><p>In the grand tradition of computer science bloggers, started by Edsgar Dijkstra himself with <a href="https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf"><em>Go To statement considered harmful</em></a>, it is time to critique a commonly used language feature. This time in UML &amp; SysML (this also applies to simulink, but this is by no means the limits of my quibbles with Matlab). SysML has a few behavioural diagram types: the use case diagram (allegedly), the sequence diagram, the activity diagram, the parametrics diagram (though they’re considered different for some reason?) and the state machine diagram. After the sequence diagram, the state machine diagram is probably the most used diagram for behavioural specification. In this blog post, I’m going to tell you why that’s bad.</p>
-</p>
-
-            <a href="./posts/2021-05-06-STM-Considered-Harmful.html"> Read more...</a>
-
-    </div>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2022-02-24-On-Agile-and-Hierarchy.html">Agile Systems Engineering and System Hierarchies</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+     <div class="avatar"><img src="../images/killtree.png" width="200"></div>
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2022-02-24
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2020-11-29-Type-Theory-As-Basis.html"><h2>Type theory as a basis for MBSE</h2></a> 
-            <p>November 29, 2020</p>
-
-            <p><p>This post is a response to a flurry of activity in systems engineering academia around using category theory as a theoretical basis for SysML. A number of papers exploring this idea have appeared in th literature recently and as someone who is passionate about category theory and systems engineeering, I can’t help but contribute my thoughts on the matter. In this post I’d like to explore the basics of category theory and the closely related type theory and explain the power that this theoretical basis could bring to model based systems engineering.</p>
-</p>
-
-            <a href="./posts/2020-11-29-Type-Theory-As-Basis.html"> Read more...</a>
-
-    </div>
+    <tr><td colspan="4"><p>This post is not here to share a solution to a problem in the same way as my others. Instead, I would like to pose a question around agile and traditional systems architecture and hopefully spark a discussion on a concept that is almost fundamental to modern systems thinking—the systems hierarchy.</p>
+</td></tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2020-09-06-Type-Classes.html"><h2>Patterns for types</h2></a> 
-            <p>September  6, 2020</p>
+</table>
 
-            <p><p>In my last post, I showed how, with a little additional syntax, Data Types can be given a lot more power within a UML/SysML model. In this post I’d like to dial up the power one step further and talk about how we can spot patterns in the usage of certain Data Types and encode this as an addition to UML/SysML that will give us better insight into the correctness of our models and allow us to define patterns we use again and again in an abstract way. This pattern is sometimes called the “trait” (in the Rust language) or the “type class” (in Haskell/Scala/Idris).</p>
-</p>
-
-            <a href="./posts/2020-09-06-Type-Classes.html"> Read more...</a>
-
-    </div>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2021-11-30-Gaining-Composure.html">Gaining Composure by Losing Control</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2021-11-30
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2020-07-18-Algebraic-Data.html"><h2>A better type of type</h2></a> 
-            <p>July 18, 2020</p>
-
-            <p><p>This post is an introduction to an incredibly powerful pattern that is quite well established in the functional programming world but doesn’t seem to have percolated back to the OOP world, let alone modelling. Interestingly enough this pattern is all about abstracting from the way computers handle data values and bringing data description up to a more human friendly level. This pattern is known as the Algebraic Data Type.</p>
-</p>
-
-            <a href="./posts/2020-07-18-Algebraic-Data.html"> Read more...</a>
-
-    </div>
+    <tr><td colspan="4"><p>What follows is a paper that I submitted for INCOSE UK’s ASEC 2021 Conference. Unfortunately, the paper was not accepted which is fair enough as the presentations that made it into the conference were all incredibly interesting, useful and well presented. However, despite my presentation skills, this method brought a lot of benefit when used at Jaguar Land Rover and I present it here so that others can benefit from it too.</p>
+</td></tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2019-07-01-Use-Case-Different.html"><h2>A New Look at Use Cases</h2></a> 
-            <p>July  1, 2019</p>
+</table>
 
-            <p><p>This is the second in a quasi-series of posts in which I moan about bits that I don’t like in SysML/UML. This time, I’m taking a look at the use case diagram and arguing for a different way of modelling the concept to the UML and SysML specs.</p>
-</p>
-
-            <a href="./posts/2019-07-01-Use-Case-Different.html"> Read more...</a>
-
-    </div>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2021-05-06-STM-Considered-Harmful.html">State Machine Diagram Considered Harmful</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2021-05-06
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
     
-    <div class="grid-item">
-        
-    </div>
-    <div class="grid-item">
-            <a href="./posts/2018-11-01-Cutting-Class.html"><h2>Cutting Class</h2></a> 
-            <p>February 11, 2019</p>
-
-            <p><p>Classes (or <em>Blocks</em> as they are known in SysML) are a useful and almost unavoidable concept in UML. They are the modelling concept that allows for object-oriented inheritance in the language and its dialects. In fact it is impossible to utilise inheritance as a pattern for reuse without it. However, classes are not as crucial to object oriented design as you may think. In this post I will make the case for a different form of object orientation which does away with classes altogether.
-</p>
-
-            <a href="./posts/2018-11-01-Cutting-Class.html"> Read more...</a>
-
-    </div>
+    <tr><td colspan="4"><p>In the grand tradition of computer science bloggers, started by Edsgar Dijkstra himself with <a href="https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf"><em>Go To statement considered harmful</em></a>, it is time to critique a commonly used language feature. This time in UML &amp; SysML (this also applies to simulink, but this is by no means the limits of my quibbles with Matlab). SysML has a few behavioural diagram types: the use case diagram (allegedly), the sequence diagram, the activity diagram, the parametrics diagram (though they’re considered different for some reason?) and the state machine diagram. After the sequence diagram, the state machine diagram is probably the most used diagram for behavioural specification. In this blog post, I’m going to tell you why that’s bad.</p>
+</td></tr>
     
-</div>
+</table>
 
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2020-11-29-Type-Theory-As-Basis.html">Type theory as a basis for MBSE</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2020-11-29
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+    
+    <tr><td colspan="4"><p>This post is a response to a flurry of activity in systems engineering academia around using category theory as a theoretical basis for SysML. A number of papers exploring this idea have appeared in th literature recently and as someone who is passionate about category theory and systems engineeering, I can’t help but contribute my thoughts on the matter. In this post I’d like to explore the basics of category theory and the closely related type theory and explain the power that this theoretical basis could bring to model based systems engineering.</p>
+</td></tr>
+    
+</table>
+
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2020-09-06-Type-Classes.html">Patterns for types</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2020-09-06
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+    
+    <tr><td colspan="4"><p>In my last post, I showed how, with a little additional syntax, Data Types can be given a lot more power within a UML/SysML model. In this post I’d like to dial up the power one step further and talk about how we can spot patterns in the usage of certain Data Types and encode this as an addition to UML/SysML that will give us better insight into the correctness of our models and allow us to define patterns we use again and again in an abstract way. This pattern is sometimes called the “trait” (in the Rust language) or the “type class” (in Haskell/Scala/Idris).</p>
+</td></tr>
+    
+</table>
+
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2020-07-18-Algebraic-Data.html">A better type of type</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2020-07-18
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+    
+    <tr><td colspan="4"><p>This post is an introduction to an incredibly powerful pattern that is quite well established in the functional programming world but doesn’t seem to have percolated back to the OOP world, let alone modelling. Interestingly enough this pattern is all about abstracting from the way computers handle data values and bringing data description up to a more human friendly level. This pattern is known as the Algebraic Data Type.</p>
+</td></tr>
+    
+</table>
+
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2019-07-01-Use-Case-Different.html">A New Look at Use Cases</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2019-07-01
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+    
+    <tr><td colspan="4"><p>This is the second in a quasi-series of posts in which I moan about bits that I don’t like in SysML/UML. This time, I’m taking a look at the use case diagram and arguing for a different way of modelling the concept to the UML and SysML specs.</p>
+</td></tr>
+    
+</table>
+
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh"><a href="./posts/2018-11-01-Cutting-Class.html">Cutting Class</a></h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2019-02-11
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+    
+    <tr><td colspan="4"><p>Classes (or <em>Blocks</em> as they are known in SysML) are a useful and almost unavoidable concept in UML. They are the modelling concept that allows for object-oriented inheritance in the language and its dialects. In fact it is impossible to utilise inheritance as a pattern for reuse without it. However, classes are not as crucial to object oriented design as you may think. In this post I will make the case for a different form of object orientation which does away with classes altogether.
+</td></tr>
+    
+</table>
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

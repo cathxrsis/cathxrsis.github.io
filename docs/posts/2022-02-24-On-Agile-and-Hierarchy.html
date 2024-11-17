@@ -3,52 +3,82 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - Agile Systems Engineering and System Hierarchies}</title>
+        <title>A Category of Systems - Agile Systems Engineering and System Hierarchies</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">Agile Systems Engineering and System Hierarchies</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+     <div class="avatar"><img src="../images/killtree.png" width="200"></div>
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2022-02-24
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-<h1>Agile Systems Engineering and System Hierarchies</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on February 24, 2022
-    
-</div>
-
-<p>This post is not here to share a solution to a problem in the same way as my others. Instead, I would like to pose a question around agile and traditional systems architecture and hopefully spark a discussion on a concept that is almost fundamental to modern systems thinking—the systems hierarchy.</p>
+<p>This post is not here to share a so­lu­tion to a prob­lem in the same way as my oth­ers. In­stead, I would like to pose a ques­tion around ag­ile and tra­di­tional sys­tems ar­chi­tec­ture and hope­fully spark a dis­cus­sion on a con­cept that is al­most fun­da­men­tal to mod­ern sys­tems think­ing—the sys­tems hi­er­ar­chy.</p>
 <!--more-->
-<p>To frame my question, I would like to start by making a distinction between ‘tall’ and ‘wide’ systems. Tall systems are those that you tend to encounter in the defense industry. These systems have systems within systems within systems. Usally, the parts of a tall system become more specialised as you go down the abstraction layers requiring more specialised engineers as you get into the lower layers of techology.</p>
-<p>Wide systems, conversely, are those that have many behaviours—in other terms, a large interface. Large software apps are good examples of wide systems where the interface can be incredibly large—think of something like a Microsoft Office app—but only has a frontend and a backend regarding abstraction layers.</p>
-<p>Complex wide systems have many interacting behaviours whereas tall complex systems have many interacting parts. Many complex systems are both tall and wide—think of modern automobiles or aircraft.</p>
-<h1 id="scaling-agile-and-systems">Scaling Agile and Systems</h1>
-<p>The sort of complex systems that we encounter in the systems engineering world are too complex for a standard agile team of 10 engineers. Systems engineering can be thought of as the set of techniques required to deal with problems too great for one team. Therefore, most systems engineering projects require some sort of scaled agile framework if they don’t want to deliver a solution that’s out of date when it gets to the customer.</p>
-<p>There are a number of frameworks for scaling agile. For example, LeSS and Scrum of Scrums. In these frameworks, multiple scrum teams work from a single product backlog. In other words, one set of requirements.</p>
-<p>Ideally, these teams are crossfunctional—they should comprise <em>T-shaped engineers</em>. T-shaped engineers are those who don’t just specialise in one area, but hold enough knowledge outside of their main discipline to collaborate on and scrutinise all of the work being done by the team.</p>
-<p>This is at odds with the traditional hierarchical model where there are multiple requirements documents that act as communications of need between abstraction layers. There is also a tendency for engineers at each layer to be heavily specialised with systems engineers and project managers high up going down to more specialised mechanical, electronic and software engineers as you work your way down the project tree.</p>
-<h1 id="human-hierarchies-and-system-hierarchies">Human Hierarchies and System Hierarchies</h1>
-<p>Conway’s Law states that system architectures mirror the communication structures of the organisations that develop them. The prevalence of hierarchical organisations in the modern world—driven by the norm of capitalism and militaries—may account for the prevalence of tall complex systems in the systems engineering world.</p>
-<p>It is a given necessity that complex systems will have to be broken into smaller problems to be solved. However, the way that we cut up problems has an impact on the complexity of the solution and may even add unnecessary complexity if done badly.</p>
-<p>One thing that I learned whilst at JLR was the impact in engineering of the way that you perform functional analysis. The current ‘textbook’ way of performing functional analysis is to ask what the system does and break that behaviour down hierarchically. This results in functions with large amounts of information flow between them.</p>
-<p>Large amounts of information flow between the boxes of your system hierarchy are a good example of added unnecessary complexity. More information flow between boxes equates not only to larger interfaces inside of the system but also larger interfaces inside of your organisation. These larger interfaces for requirements flow mean that there is more risk associated with miscommunications.</p>
-<p>Cutting up your system in this way also makes for large dependencies inside of your system. The functions on the outer interface of your system are the only ones that can deliver value to your customer. If, in an agile programme, you have cut your system up ‘vertically’—with functions like ‘sense’, ‘validate’, ‘process’ and ‘actuate’—you may find that your product backlog items have large interdependencies that result in an emergent waterfall delivery. If sprint one covers ‘sense’ and sprint 2 ‘validate’ e.t.c. you won’t deliver until the last sprint in exactly the same way that a waterfall delivery works.</p>
-<p>The MISO method (described in my last post on this blog) attempts to cut the functionality along the grain of information flow. This minimises the flow of information between functional blocks. Surprisingly, the functions that were produced by this method were often small enough to be solved by a single team—most of the time a single person. The functions also cut the system ‘horizontally’ meaning that it becomes easier to see functional chans that can be delivered early and give your customer value.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>Traditional hierarchical structures in businesses of highly specialised engineers cause large interdependencies inside organisations. Through Conway’s law, these interdependencies leak into our complex systems making them unnecessarily tall. Unfortunately, this creates something akin to a feedback loop, remaking the organisation in its image by forcing efforts of agile engineering back into a waterfall cadence. For these reasons, I believe that the traditional systems engineering way of working in creating ‘tall’ arborescent hierarchical systems is an antipattern that is causing unnecesary complexity and costs to projects.</p>
+<p>To frame my ques­tion, I would like to start by mak­ing a dis­tinc­tion be­tween ‘tall’ and ‘wide’ sys­tems. Tall sys­tems are those that you tend to en­counter in the de­fense in­dus­try. These sys­tems have sys­tems within sys­tems within sys­tems. Us­al­ly, the parts of a tall sys­tem be­come more spe­cialised as you go down the ab­strac­tion lay­ers re­quir­ing more spe­cialised en­gi­neers as you get into the lower lay­ers of techol­o­gy.</p>
+<p>Wide sys­tems, con­verse­ly, are those that have many be­hav­iours—in other terms, a large in­ter­face. Large soft­ware apps are good ex­am­ples of wide sys­tems where the in­ter­face can be in­cred­i­bly large—­think of some­thing like a Mi­crosoft Of­fice ap­p—but only has a fron­tend and a back­end re­gard­ing ab­strac­tion lay­ers.</p>
+<p>Com­plex wide sys­tems have many in­ter­act­ing be­hav­iours whereas tall com­plex sys­tems have many in­ter­act­ing parts. Many com­plex sys­tems are both tall and wide—­think of mod­ern au­to­mo­biles or air­craft.</p>
+<h1 id="scaling-agile-and-systems">Scal­ing Ag­ile and Sys­tems</h1>
+<p>The sort of com­plex sys­tems that we en­counter in the sys­tems en­gi­neer­ing world are too com­plex for a stan­dard ag­ile team of 10 en­gi­neers. Sys­tems en­gi­neer­ing can be thought of as the set of tech­niques re­quired to deal with prob­lems too great for one team. There­fore, most sys­tems en­gi­neer­ing projects re­quire some sort of scaled ag­ile frame­work if they don’t want to de­liver a so­lu­tion that’s out of date when it gets to the cus­tomer.</p>
+<p>There are a num­ber of frame­works for scal­ing ag­ile. For ex­am­ple, LeSS and Scrum of Scrums. In these frame­works, mul­ti­ple scrum teams work from a sin­gle prod­uct back­log. In other words, one set of re­quire­ments.</p>
+<p>Ide­al­ly, these teams are cross­func­tion­al—they should com­prise <em>T-shaped en­gi­neers</em>. T-shaped en­gi­neers are those who don’t just spe­cialise in one area, but hold enough knowl­edge out­side of their main dis­ci­pline to col­lab­o­rate on and scru­ti­nise all of the work be­ing done by the team.</p>
+<p>This is at odds with the tra­di­tional hi­er­ar­chi­cal model where there are mul­ti­ple re­quire­ments doc­u­ments that act as com­mu­ni­ca­tions of need be­tween ab­strac­tion lay­ers. There is also a ten­dency for en­gi­neers at each layer to be heav­ily spe­cialised with sys­tems en­gi­neers and project man­agers high up go­ing down to more spe­cialised me­chan­i­cal, elec­tronic and soft­ware en­gi­neers as you work your way down the project tree.</p>
+<h1 id="human-hierarchies-and-system-hierarchies">Hu­man Hi­er­ar­chies and Sys­tem Hi­er­ar­chies</h1>
+<p>Con­way’s Law states that sys­tem ar­chi­tec­tures mir­ror the com­mu­ni­ca­tion struc­tures of the or­gan­i­sa­tions that de­velop them. The preva­lence of hi­er­ar­chi­cal or­gan­i­sa­tions in the mod­ern world—­driven by the norm of cap­i­tal­ism and mil­i­taries—­may ac­count for the preva­lence of tall com­plex sys­tems in the sys­tems en­gi­neer­ing world.</p>
+<p>It is a given ne­ces­sity that com­plex sys­tems will have to be bro­ken into smaller prob­lems to be solved. How­ev­er, the way that we cut up prob­lems has an im­pact on the com­plex­ity of the so­lu­tion and may even add un­nec­es­sary com­plex­ity if done bad­ly.</p>
+<p>One thing that I learned whilst at JLR was the im­pact in en­gi­neer­ing of the way that you per­form func­tional analy­sis. The cur­rent ‘text­book’ way of per­form­ing func­tional analy­sis is to ask what the sys­tem does and break that be­hav­iour down hi­er­ar­chi­cal­ly. This re­sults in func­tions with large amounts of in­for­ma­tion flow be­tween them.</p>
+<p>Large amounts of in­for­ma­tion flow be­tween the boxes of your sys­tem hi­er­ar­chy are a good ex­am­ple of added un­nec­es­sary com­plex­i­ty. More in­for­ma­tion flow be­tween boxes equates not only to larger in­ter­faces in­side of the sys­tem but also larger in­ter­faces in­side of your or­gan­i­sa­tion. These larger in­ter­faces for re­quire­ments flow mean that there is more risk as­so­ci­ated with mis­com­mu­ni­ca­tions.</p>
+<p>Cut­ting up your sys­tem in this way also makes for large de­pen­den­cies in­side of your sys­tem. The func­tions on the outer in­ter­face of your sys­tem are the only ones that can de­liver value to your cus­tomer. If, in an ag­ile pro­gram­me, you have cut your sys­tem up ‘ver­ti­cal­ly’—with func­tions like ‘sense’, ‘val­i­date’, ‘process’ and ‘ac­tu­ate’—you may find that your prod­uct back­log items have large in­ter­de­pen­den­cies that re­sult in an emer­gent wa­ter­fall de­liv­ery. If sprint one cov­ers ‘sense’ and sprint 2 ‘val­i­date’ e.t.c. you won’t de­liver un­til the last sprint in ex­actly the same way that a wa­ter­fall de­liv­ery works.</p>
+<p>The MISO method (de­scribed in my last post on this blog) at­tempts to cut the func­tion­al­ity along the grain of in­for­ma­tion flow. This min­imises the flow of in­for­ma­tion be­tween func­tional blocks. Sur­pris­ing­ly, the func­tions that were pro­duced by this method were of­ten small enough to be solved by a sin­gle team—­most of the time a sin­gle per­son. The func­tions also cut the sys­tem ‘hor­i­zon­tal­ly’ mean­ing that it be­comes eas­ier to see func­tional chans that can be de­liv­ered early and give your cus­tomer val­ue.</p>
+<h1 id="conclusion">Con­clu­sion</h1>
+<p>Tra­di­tional hi­er­ar­chi­cal struc­tures in busi­nesses of highly spe­cialised en­gi­neers cause large in­ter­de­pen­den­cies in­side or­gan­i­sa­tions. Through Con­way’s law, these in­ter­de­pen­den­cies leak into our com­plex sys­tems mak­ing them un­nec­es­sar­ily tall. Un­for­tu­nate­ly, this cre­ates some­thing akin to a feed­back loop, re­mak­ing the or­gan­i­sa­tion in its im­age by forc­ing ef­forts of ag­ile en­gi­neer­ing back into a wa­ter­fall ca­dence. For these rea­sons, I be­lieve that the tra­di­tional sys­tems en­gi­neer­ing way of work­ing in cre­at­ing ‘tall’ ar­bores­cent hi­er­ar­chi­cal sys­tems is an an­tipat­tern that is caus­ing un­nece­sary com­plex­ity and costs to pro­jects.</p>
 
 <div id="disqus_thread"></div>
 <script>
@@ -72,9 +102,16 @@
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

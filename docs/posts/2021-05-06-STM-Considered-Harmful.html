@@ -3,44 +3,72 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - State Machine Diagram Considered Harmful}</title>
+        <title>A Category of Systems - State Machine Diagram Considered Harmful</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">State Machine Diagram Considered Harmful</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2021-05-06
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-<h1>State Machine Diagram Considered Harmful</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on May  6, 2021
-    
-</div>
-
-<p>In the grand tradition of computer science bloggers, started by Edsgar Dijkstra himself with <a href="https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf"><em>Go To statement considered harmful</em></a>, it is time to critique a commonly used language feature. This time in UML &amp; SysML (this also applies to simulink, but this is by no means the limits of my quibbles with Matlab). SysML has a few behavioural diagram types: the use case diagram (allegedly), the sequence diagram, the activity diagram, the parametrics diagram (though they’re considered different for some reason?) and the state machine diagram. After the sequence diagram, the state machine diagram is probably the most used diagram for behavioural specification. In this blog post, I’m going to tell you why that’s bad.</p>
+<p>In the grand tra­di­tion of com­puter sci­ence blog­gers, started by Eds­gar Dijk­stra him­self with <a href="https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf"><em>Go To state­ment con­sid­ered harm­ful</em></a>, it is time to cri­tique a com­monly used lan­guage fea­ture. This time in UML &amp; SysML (this also ap­plies to simulink, but this is by no means the lim­its of my quib­bles with Mat­lab). SysML has a few be­hav­ioural di­a­gram types: the use case di­a­gram (al­leged­ly), the se­quence di­a­gram, the ac­tiv­ity di­a­gram, the para­met­rics di­a­gram (though they’re con­sid­ered dif­fer­ent for some rea­son?) and the state ma­chine di­a­gram. Af­ter the se­quence di­a­gram, the state ma­chine di­a­gram is prob­a­bly the most used di­a­gram for be­hav­ioural spec­i­fi­ca­tion. In this blog post, I’m go­ing to tell you why that’s bad.</p>
 <!--more-->
-<p>The state machine diagram is (mostly) a representation of the computer science concept of a <em>Finite State Automaton</em>. This is a model of computation where the computer passes through a number of states. In each state, the computer can accept one of a number of predetermined stimuli which causes the computer to transition into another state. Although not turing complete, finite state machines can be used as a model for any terminating (not running forever) computation. There is nothing wrong with using FSMs for modelling behaviour, but their diagrammatical representation in SysML has a few problems that I shall detail below. Note that an activity diagram with certain constraints applied could also be used to model an FSM.</p>
-<p>We can thank Dave Harel at I-Logix for the state diagram who developed the notation of finite state machines and developed a tool for their execution, StateMate, all the way back in 1987. Even though StateMate was considered defunct in 2006, its influence is still felt through UML/SysML state machine diagrams (1997) and Simulink stateflow (2018). The Rhapsody UML tool, also created by I-Logix, also has a heavy bias towards animation using state machine diagrams, most likely due to I-Logix’s strong pedigree with StateMate. Since their inception, state machine diagrams have become a staple of specifying and describing behaviours of software and systems. This is likely due to the minimal number of langugage elements, their ease of use and the many programs that support their animation.</p>
-<h1 id="the-problems">The Problems</h1>
-<p>When specifying systems, especially continuous systems, a significant portion of functionality usually ends up pure. That is to say that at any point in time, the outputs of the behaviour can be determined entirely from the values of the input variables at that point in time (ignoring lag through the system). We often refer to these purely defined variables as <em>states</em> of the system. An example of this could be the On/Off state of a system. If its input voltage is greater than 5V, then its on, otherwise it is off. The on/off state of the system is purely defined by the input voltage. We call this sort of relationship where the output can be defined by the value(s) of its inputs at any point in time a <em>pure</em> behaviour.</p>
-<p>Defining your behaviours as pure also comes with certain assurances: as there is no internal state or side effects, if you want to add two numbers together, the system will do that and only that and will not fire the missiles in the way to doing it.</p>
-<p>Let’s imagine what a state machine diagram for a pure system would look like. To ensure that the at any point in time, the output is entirely defined by the input values, then we need a transition from each state to every other state to completely specify a pure function.</p>
-<p>This is the crux of why I believe that state machine diagrams are dangerous: <em>missed transitions on a state machine diagram are very hard to spot and can have bad consequences</em>. If a transition is missed, any method used to translate that into requirements is going to inherit that missed transition into a medium where its going to be harder to spot. Of course, state machine diagrams can be executable, but to spot a missed transition, one has to exercise it with test cases that would cover it. As Edsgar Dijkstra famously put it: <em>“Program testing can be used to show the presence of bugs, but never to show their absence!”</em> In the case of pure functions, what can we do?</p>
-<h1 id="the-path-to-totality">The Path to Totality</h1>
-<p>So what would be the best way to totally specify a pure function? One could use a truth table. These are particulary good for simple behaviours as a missed requirement maps to an empty box on the table. Here’s an example of an XOR behaviour:</p>
+<p>The state ma­chine di­a­gram is (most­ly) a rep­re­sen­ta­tion of the com­puter sci­ence con­cept of a <em>Fi­nite State Au­toma­ton</em>. This is a model of com­pu­ta­tion where the com­puter passes through a num­ber of states. In each state, the com­puter can ac­cept one of a num­ber of pre­de­ter­mined stim­uli which causes the com­puter to tran­si­tion into an­other state. Al­though not tur­ing com­plete, fi­nite state ma­chines can be used as a model for any ter­mi­nat­ing (not run­ning forever) com­pu­ta­tion. There is noth­ing wrong with us­ing FSMs for mod­el­ling be­hav­iour, but their di­a­gram­mat­i­cal rep­re­sen­ta­tion in SysML has a few prob­lems that I shall de­tail be­low. Note that an ac­tiv­ity di­a­gram with cer­tain con­straints ap­plied could also be used to model an FSM.</p>
+<p>We can thank Dave Harel at I-Logix for the state di­a­gram who de­vel­oped the no­ta­tion of fi­nite state ma­chines and de­vel­oped a tool for their ex­e­cu­tion, State­M­ate, all the way back in 1987. Even though State­M­ate was con­sid­ered de­funct in 2006, its in­flu­ence is still felt through UM­L/SysML state ma­chine di­a­grams (1997) and Simulink state­flow (2018). The Rhap­sody UML tool, also cre­ated by I-Logix, also has a heavy bias to­wards an­i­ma­tion us­ing state ma­chine di­a­grams, most likely due to I-Logix’s strong pedi­gree with State­M­ate. Since their in­cep­tion, state ma­chine di­a­grams have be­come a sta­ple of spec­i­fy­ing and de­scrib­ing be­hav­iours of soft­ware and sys­tems. This is likely due to the min­i­mal num­ber of lan­gu­gage el­e­ments, their ease of use and the many pro­grams that sup­port their an­i­ma­tion.</p>
+<h1 id="the-problems">The Prob­lems</h1>
+<p>When spec­i­fy­ing sys­tems, es­pe­cially con­tin­u­ous sys­tems, a sig­nif­i­cant por­tion of func­tion­al­ity usu­ally ends up pure. That is to say that at any point in time, the out­puts of the be­hav­iour can be de­ter­mined en­tirely from the val­ues of the in­put vari­ables at that point in time (ig­nor­ing lag through the sys­tem). We of­ten re­fer to these purely de­fined vari­ables as <em>states</em> of the sys­tem. An ex­am­ple of this could be the On/Off state of a sys­tem. If its in­put volt­age is greater than 5V, then its on, oth­er­wise it is off. The on/off state of the sys­tem is purely de­fined by the in­put volt­age. We call this sort of re­la­tion­ship where the out­put can be de­fined by the val­ue(s) of its in­puts at any point in time a <em>pure</em> be­hav­iour.</p>
+<p>Defin­ing your be­hav­iours as pure also comes with cer­tain as­sur­ances: as there is no in­ter­nal state or side ef­fects, if you want to add two num­bers to­geth­er, the sys­tem will do that and only that and will not fire the mis­siles in the way to do­ing it.</p>
+<p>Let’s imag­ine what a state ma­chine di­a­gram for a pure sys­tem would look like. To en­sure that the at any point in time, the out­put is en­tirely de­fined by the in­put val­ues, then we need a tran­si­tion from each state to every other state to com­pletely spec­ify a pure func­tion.</p>
+<p>This is the crux of why I be­lieve that state ma­chine di­a­grams are dan­ger­ous: <em>missed tran­si­tions on a state ma­chine di­a­gram are very hard to spot and can have bad con­se­quences</em>. If a tran­si­tion is missed, any method used to trans­late that into re­quire­ments is go­ing to in­herit that missed tran­si­tion into a medium where its go­ing to be harder to spot. Of course, state ma­chine di­a­grams can be ex­e­cutable, but to spot a missed tran­si­tion, one has to ex­er­cise it with test cases that would cover it. As Eds­gar Dijk­stra fa­mously put it: <em>“Pro­gram test­ing can be used to show the pres­ence of bugs, but never to show their ab­sence!”</em> In the case of pure func­tions, what can we do?</p>
+<h1 id="the-path-to-totality">The Path to To­tal­ity</h1>
+<p>So what would be the best way to to­tally spec­ify a pure func­tion? One could use a truth table. These are par­tic­u­lary good for sim­ple be­hav­iours as a missed re­quire­ment maps to an empty box on the table. Here’s an ex­am­ple of an XOR be­hav­iour:</p>
 <table>
 <thead>
 <tr class="header">
@@ -62,41 +90,41 @@
 </tr>
 </tbody>
 </table>
-<p>As the number of inputs to the function increases, the number of dimensions on the table required to fully specify the function increases to. This makes truth tables unwieldy for pretty much any function with more than two inputs. There are, of course, other ways of totally specifying the output of a function for pure functions. One of these ways is using pattern matching syntax used in some programming languages. Below are some examples of pattern matching written in the language Idris:</p>
+<p>As the num­ber of in­puts to the func­tion in­creas­es, the num­ber of di­men­sions on the ta­ble re­quired to fully spec­ify the func­tion in­creases to. This makes truth ta­bles un­wieldy for pretty much any func­tion with more than two in­puts. There are, of course, other ways of to­tally spec­i­fy­ing the out­put of a func­tion for pure func­tions. One of these ways is us­ing pat­tern match­ing syn­tax used in some pro­gram­ming lan­guages. Be­low are some ex­am­ples of pat­tern match­ing writ­ten in the lan­guage Idris:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getChar</span> <span class="op">:</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Char</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getChar</span> <span class="dv">0</span> <span class="ot">=</span> <span class="ch">'a'</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">getChar</span> <span class="dv">1</span> <span class="ot">=</span> <span class="ch">'b'</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span></code></pre></div>
-<p>Below is the standard recursive form of a fibonacci number generating function:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fibonacci <span class="op">:</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>fibonacci <span class="dv">0</span> <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>fibonacci x <span class="ot">=</span> fibonacci (x<span class="op">-</span><span class="dv">1</span>)</span></code></pre></div>
-<p>Idris is an especially nice language for writing functions in as it also checks for you that your functions are total; that an output is generated for all possible inputs. Note that its not always possible to tell whether a function is total or not; its mathematically proven that there are classes of functions that are total and cannot be proven so and vice versa. This is a case of the halting problem that was shown to be unsolvable by Alan Turing.</p>
-<h2 id="requirements-authoring">Requirements Authoring</h2>
-<p>An interesting outcome of this is the effect that using state machines or pattern matching has on requirements authoring. Sticking to the EARS grammar of requirements writing, we find that we require, at most, one requirement for each possible output of the system. However with a state machine diagram, we require at least one requirement for each transition. Guards on the transitions and the source state become the ‘while’ conditions of the requirement and the trigger, if one exists, becomes the ‘when’ condition. Have a go at specifying a simple pure function with at least 3 output states using both methods if you need convincing.</p>
-<p>Because of the previous points, we can conclude that if a state machine diagram is used to specify a pure function with [n] output values, we will end up writing [n!] requirements. This argument often holds for lines of code too. The reason for this is that requirements authors and software engineers often write to the structure of the input information; it is very rare that an engineer will absorb a state machine diagram, ruminate on it and then produce a nicely refactored piece of work from it. If there is a time pressure involved or the state machine is complex beyond first-glance comprehension, this problem can be exacerbated.</p>
-<h1 id="conclusion-church-state">Conclusion: Church &amp; State</h1>
-<p>Despite my clickbait title, I do not advocate for full removal of state machine diagrams from systems engineering process; instead I urge engineers to take a nuanced approach to understanding where they’re useful and where they’re not the best way to present behaviour. Abstract is a relative term; always remember what parts of reality your are ignoring with your model.</p>
-<p>Using truth tables and pattern matching to describe functional behaviour is great for defining pure functionality but falls down quickly when the value of a function’s output depends on a previously stored value. This is the case where state machine diagrams truly shine. Whenever you have any sort of memory in a system, a state machine diagram will help you express it. I’ve found the following examples to be very common:</p>
+<p>Be­low is the stan­dard re­cur­sive form of a fi­bonacci num­ber gen­er­at­ing func­tion:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fi­bonacci <span class="op">:</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>fi­bonacci <span class="dv">0</span> <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>fi­bonacci x <span class="ot">=</span> fi­bonacci (x<span class="op">-</span><span class="dv">1</span>)</span></code></pre></div>
+<p>Idris is an es­pe­cially nice lan­guage for writ­ing func­tions in as it also checks for you that your func­tions are to­tal; that an out­put is gen­er­ated for all pos­si­ble in­puts. Note that its not al­ways pos­si­ble to tell whether a func­tion is to­tal or not; its math­e­mat­i­cally proven that there are classes of func­tions that are to­tal and can­not be proven so and vice ver­sa. This is a case of the halt­ing prob­lem that was shown to be un­solv­able by Alan Tur­ing.</p>
+<h2 id="requirements-authoring">Re­quire­ments Au­thor­ing</h2>
+<p>An in­ter­est­ing out­come of this is the ef­fect that us­ing state ma­chines or pat­tern match­ing has on re­quire­ments au­thor­ing. Stick­ing to the EARS gram­mar of re­quire­ments writ­ing, we find that we re­quire, at most, one re­quire­ment for each pos­si­ble out­put of the sys­tem. How­ever with a state ma­chine di­a­gram, we re­quire at least one re­quire­ment for each tran­si­tion. Guards on the tran­si­tions and the source state be­come the ‘while’ con­di­tions of the re­quire­ment and the trig­ger, if one ex­ists, be­comes the ‘when’ con­di­tion. Have a go at spec­i­fy­ing a sim­ple pure func­tion with at least 3 out­put states us­ing both meth­ods if you need con­vinc­ing.</p>
+<p>Be­cause of the pre­vi­ous points, we can con­clude that if a state ma­chine di­a­gram is used to spec­ify a pure func­tion with [n] out­put val­ues, we will end up writ­ing [n!] re­quire­ments. This ar­gu­ment of­ten holds for lines of code too. The rea­son for this is that re­quire­ments au­thors and soft­ware en­gi­neers of­ten write to the struc­ture of the in­put in­for­ma­tion; it is very rare that an en­gi­neer will ab­sorb a state ma­chine di­a­gram, ru­mi­nate on it and then pro­duce a nicely refac­tored piece of work from it. If there is a time pres­sure in­volved or the state ma­chine is com­plex be­yond first-glance com­pre­hen­sion, this prob­lem can be ex­ac­er­bat­ed.</p>
+<h1 id="conclusion-church-state">Con­clu­sion: Church &amp; State</h1>
+<p>De­spite my click­bait ti­tle, I do not ad­vo­cate for full re­moval of state ma­chine di­a­grams from sys­tems en­gi­neer­ing process; in­stead I urge en­gi­neers to take a nu­anced ap­proach to un­der­stand­ing where they’re use­ful and where they’re not the best way to present be­hav­iour. Ab­stract is a rel­a­tive term; al­ways re­mem­ber what parts of re­al­ity your are ig­nor­ing with your mod­el.</p>
+<p>Us­ing truth ta­bles and pat­tern match­ing to de­scribe func­tional be­hav­iour is great for defin­ing pure func­tion­al­ity but falls down quickly when the value of a func­tion’s out­put de­pends on a pre­vi­ously stored val­ue. This is the case where state ma­chine di­a­grams truly shine. When­ever you have any sort of mem­ory in a sys­tem, a state ma­chine di­a­gram will help you ex­press it. I’ve found the fol­low­ing ex­am­ples to be very com­mon:</p>
 <ul>
-<li>Systems with Hysteresis; where the mathematical relationships between variables are different depending on the ‘direction of travel’ of the overall system state.</li>
-<li>Places where you want to interpret a user mashing a button as a request rather than rapid successive changes of mind.</li>
-<li>Anywhere where a delay is required.</li>
-<li>Anywhere where event based behaviours cause a ‘latching’ effect.</li>
+<li>Sys­tems with Hys­tere­sis; where the math­e­mat­i­cal re­la­tion­ships be­tween vari­ables are dif­fer­ent de­pend­ing on the ‘di­rec­tion of trav­el’ of the over­all sys­tem state.</li>
+<li>Places where you want to in­ter­pret a user mash­ing a but­ton as a re­quest rather than rapid suc­ces­sive changes of mind.</li>
+<li>Any­where where a de­lay is re­quired.</li>
+<li>Any­where where event based be­hav­iours cause a ‘latch­ing’ ef­fect.</li>
 </ul>
-<p>The catch is that we must ensure that our state machines remain small and comprehensible to reviewers and consumers. A 5 storey deep nested state machine with 100 transitions may animate as valid against your customer requirements but your poor suppliers are not going to make head nor tail of it. For this reason I have put together a few best practice guidelines for the safer use of state machines in behavioural models:</p>
-<h2 id="expose-the-state">Expose the state</h2>
-<p>Design your functionality so that the output value of your stateful functions <em>is</em> the state of the function. Model further behaviour as downstream functions. This will make errors in your state transitions far easier to spot. To see how to stitch the exposed states together see my third point of tying behaviour together with activities.</p>
-<h2 id="break-up-nested-or-parallelised-state-machines">Break up nested or parallelised state machines</h2>
-<p>This point is an extension of the previous one; if states are nested or are in parallel, which off the states do you expose and how? This question is easily avoided by disallowing nested states and parallel states. This is easy enough to say but sometimes there is no other simple way to specify the functionality. To answer this, we need a simple way to break up larger behaviours into smaller ones using the state machine definition of their behaviour.</p>
-<p>With nested states, the encompassing level of states becomes an “upstream” behaviours of the state machines nested inside of them. Another valid method could be to flatten the states by keeping only the innermost layers of nesting and prepend the names of the mother state to those of the daughter states. Parallel state machines are easily separated into different, interdependent behaviours by seperating down the dotted line.</p>
-<p>Following these methods of splitting out a big state machine into a set of smaller interconnected state machines is also a great way of creating a broken down set of functions for allocations to subsystems if you’ve defined your overall system’s behaviour with a state machine. Performing these methods, however, leaves us with an interesting problem: how do we tie these behaviours back together in SysML so that a user can understand the interdependencies?</p>
-<h2 id="tie-it-all-together-with-activities">Tie it all together with activities</h2>
-<p>Activity diagrams are my favourite diagrams in SysML. This bias is not without reason; activity diagrams are a great way to connect behaviours together. I plan to do a blog post about extending the power of activity diagrams in the future, so for now I will just talk about them in reference to state machines. Call behaviour elements in activities can be used as a way of calling out to state machines.</p>
-<p>There are no semantics currently in the UML or SysML specs about how a state machine behaviour interacts with object flow within an as a called behaviour. In fact, state machines are left out of the xUML standard! Here are a few extra semantics that “make sense” to me to tie these different representations together:</p>
+<p>The catch is that we must en­sure that our state ma­chines re­main small and com­pre­hen­si­ble to re­view­ers and con­sumers. A 5 storey deep nested state ma­chine with 100 tran­si­tions may an­i­mate as valid against your cus­tomer re­quire­ments but your poor sup­pli­ers are not go­ing to make head nor tail of it. For this rea­son I have put to­gether a few best prac­tice guide­lines for the safer use of state ma­chines in be­hav­ioural mod­els:</p>
+<h2 id="expose-the-state">Ex­pose the state</h2>
+<p>De­sign your func­tion­al­ity so that the out­put value of your state­ful func­tions <em>is</em> the state of the func­tion. Model fur­ther be­hav­iour as down­stream func­tions. This will make er­rors in your state tran­si­tions far eas­ier to spot. To see how to stitch the ex­posed states to­gether see my third point of ty­ing be­hav­iour to­gether with ac­tiv­i­ties.</p>
+<h2 id="break-up-nested-or-parallelised-state-machines">Break up nested or par­al­lelised state ma­chines</h2>
+<p>This point is an ex­ten­sion of the pre­vi­ous one; if states are nested or are in par­al­lel, which off the states do you ex­pose and how? This ques­tion is eas­ily avoided by dis­al­low­ing nested states and par­al­lel states. This is easy enough to say but some­times there is no other sim­ple way to spec­ify the func­tion­al­i­ty. To an­swer this, we need a sim­ple way to break up larger be­hav­iours into smaller ones us­ing the state ma­chine de­f­i­n­i­tion of their be­hav­iour.</p>
+<p>With nested states, the en­com­pass­ing level of states be­comes an “up­stream” be­hav­iours of the state ma­chines nested in­side of them. An­other valid method could be to flat­ten the states by keep­ing only the in­ner­most lay­ers of nest­ing and prepend the names of the mother state to those of the daugh­ter states. Par­al­lel state ma­chines are eas­ily sep­a­rated into dif­fer­ent, in­ter­de­pen­dent be­hav­iours by seper­at­ing down the dot­ted line.</p>
+<p>Fol­low­ing these meth­ods of split­ting out a big state ma­chine into a set of smaller in­ter­con­nected state ma­chines is also a great way of cre­at­ing a bro­ken down set of func­tions for al­lo­ca­tions to sub­sys­tems if you’ve de­fined your over­all sys­tem’s be­hav­iour with a state ma­chine. Per­form­ing these meth­ods, how­ev­er, leaves us with an in­ter­est­ing prob­lem: how do we tie these be­hav­iours back to­gether in SysML so that a user can un­der­stand the in­ter­de­pen­den­cies?</p>
+<h2 id="tie-it-all-together-with-activities">Tie it all to­gether with ac­tiv­i­ties</h2>
+<p>Ac­tiv­ity di­a­grams are my favourite di­a­grams in SysML. This bias is not with­out rea­son; ac­tiv­ity di­a­grams are a great way to con­nect be­hav­iours to­geth­er. I plan to do a blog post about ex­tend­ing the power of ac­tiv­ity di­a­grams in the fu­ture, so for now I will just talk about them in ref­er­ence to state ma­chines. Call be­hav­iour el­e­ments in ac­tiv­i­ties can be used as a way of call­ing out to state ma­chines.</p>
+<p>There are no se­man­tics cur­rently in the UML or SysML specs about how a state ma­chine be­hav­iour in­ter­acts with ob­ject flow within an as a called be­hav­iour. In fact, state ma­chines are left out of the xUML stan­dard! Here are a few ex­tra se­man­tics that “make sense” to me to tie these dif­fer­ent rep­re­sen­ta­tions to­geth­er:</p>
 <ul>
-<li>Interpret the state as the RETURN value of a «stream» object flow from the called behaviour. (Animation of this can be achieved in many SysML tools by adding an action on entry to a state to set the functions output.).</li>
-<li>Use object flow to link stateful functions. This has the added bonus of allowing you to spoof activities with internal block diagrams if your SysML tool doesn’t support the standard well enough.</li>
+<li>In­ter­pret the state as the RE­TURN value of a «stream» ob­ject flow from the called be­hav­iour. (An­i­ma­tion of this can be achieved in many SysML tools by adding an ac­tion on en­try to a state to set the func­tions out­put.).</li>
+<li>Use ob­ject flow to link state­ful func­tions. This has the added bonus of al­low­ing you to spoof ac­tiv­i­ties with in­ter­nal block di­a­grams if your SysML tool does­n’t sup­port the stan­dard well enough.</li>
 </ul>
 
 <div id="disqus_thread"></div>
@@ -121,9 +149,16 @@
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

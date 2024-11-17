@@ -3,136 +3,164 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{A Category of Systems - Type theory as a basis for MBSE}</title>
+        <title>A Category of Systems - Type theory as a basis for MBSE</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">A Category of Systems</a>
-            </div>
-            <div id="navigation">
-                <a href="../bits/about.html">About</a>
-                <a href="../archive.html">Archive</a>
-                <a href="../bits/antipatterns.html">Antipatterns</a>
-            </div>
-        </div>
-
+        <table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <a href="../">
+      <img src="../images/mono.svg" height="32pt">
+      <h1 class="title">A Category of Systems</h1>
+      </a>
+      <span class="subtitle">Exploring the consequences of Systems & Cybernetics in Engineering</span>
+    </td>
+    <th><button onclick="toggleDarkMode()"> Dark  </button> </th>
+    <td class="width-min">
+    <button><a href="../bits/antipatterns.html">Patterns</a></button>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="../atom.xml"><button>Atom </button> </a> </th>
+    <td class="width-min"><button><a href="../archive.html">Archive</a></button></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="../bits/about.html">Tom Westbury</a></td>
+    <th class="width-min">License</th>
+    <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></td>
+  </tr>
+</table>
         <div id="content">
 
-            
+            <table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">Type theory as a basis for MBSE</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        2020-11-29
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
-<h1>Type theory as a basis for MBSE</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on November 29, 2020
-    
-</div>
-
-<p>This post is a response to a flurry of activity in systems engineering academia around using category theory as a theoretical basis for SysML. A number of papers exploring this idea have appeared in th literature recently and as someone who is passionate about category theory and systems engineeering, I can’t help but contribute my thoughts on the matter. In this post I’d like to explore the basics of category theory and the closely related type theory and explain the power that this theoretical basis could bring to model based systems engineering.</p>
+<p>This post is a re­sponse to a flurry of ac­tiv­ity in sys­tems en­gi­neer­ing acad­e­mia around us­ing cat­e­gory the­ory as a the­o­ret­i­cal ba­sis for SysML. A num­ber of pa­pers ex­plor­ing this idea have ap­peared in th lit­er­a­ture re­cently and as some­one who is pas­sion­ate about cat­e­gory the­ory and sys­tems en­gi­neeer­ing, I can’t help but con­tribute my thoughts on the mat­ter. In this post I’d like to ex­plore the ba­sics of cat­e­gory the­ory and the closely re­lated type the­ory and ex­plain the power that this the­o­ret­i­cal ba­sis could bring to model based sys­tems en­gi­neer­ing.</p>
 <!--more-->
-<h2 id="what-is-category-theory">What is Category Theory?</h2>
-<p>Category theory is a field of mathematical study that has received a lot of attention in recent times (and the inspiration for this blog’s title). It is, funnily enough, the study of categories. Mathematicians have used category theory to discover many abstract theorems about the underlying structure of maths; category theory is one of the most abstract fields of mathematical study, so proving a theorem in category theory means that theory is now proven across many other fields of mathematics.</p>
-<p>So what is a category? Let’s explore that now. A category is a collection of two types of thing: objects and morphisms. Objects are points with an identifier. Morphisms are arrows that go between two objects. Objects have no structure whatsoever; they’re basically just labels for the ends of morphisms. On top of these things there are also a few rules:</p>
+<h2 id="what-is-category-theory">What is Cat­e­gory The­o­ry?</h2>
+<p>Cat­e­gory the­ory is a field of math­e­mat­i­cal study that has re­ceived a lot of at­ten­tion in re­cent times (and the in­spi­ra­tion for this blog’s ti­tle). It is, fun­nily enough, the study of cat­e­gories. Math­e­mati­cians have used cat­e­gory the­ory to dis­cover many ab­stract the­o­rems about the un­der­ly­ing struc­ture of maths; cat­e­gory the­ory is one of the most ab­stract fields of math­e­mat­i­cal study, so prov­ing a the­o­rem in cat­e­gory the­ory means that the­ory is now proven across many other fields of math­e­mat­ics.</p>
+<p>So what is a cat­e­go­ry? Let’s ex­plore that now. A cat­e­gory is a col­lec­tion of two types of thing: ob­jects and mor­phisms. Ob­jects are points with an iden­ti­fi­er. Mor­phisms are ar­rows that go be­tween two ob­jects. Ob­jects have no struc­ture what­so­ev­er; they’re ba­si­cally just la­bels for the ends of mor­phisms. On top of these things there are also a few rules:</p>
 <ul>
-<li><p>All objects in the category must have at least one morphism from themselves to themselves (usually called <em>id</em>).</p>
-<pre><code>id : (a : Object) -&gt; ( a -&gt; a )</code></pre></li>
-<li><p>If there is a morphism from any object <code>a</code> to any object <code>b</code> and and a morphism from <code>b</code> to <code>c</code>, these morphisms can be composed to create a third morphism from <code>a</code> to <code>c</code>:</p>
-<pre><code>compose : (a : Object, b : Object, c : Object) -&gt; (a -&gt; b) -&gt; (b -&gt; c) -&gt; (a -&gt; c)</code></pre></li>
-<li><p>This composition of morphisms is associative:</p>
-<pre><code>association : compose f (compose g h) = compose (compose f g) h</code></pre></li>
-<li><p>Finally, composing a morphism with <code>id</code> gets you back the original morphism:</p>
-<pre><code>composeIdL : compose id f = f
+<li><p>All ob­jects in the cat­e­gory must have at least one mor­phism from them­selves to them­selves (usu­ally called <em>id</em>).</p>
+<pre><code>id : (a : Ob­ject) -&gt; ( a -&gt; a )</code></pre></li>
+<li><p>If there is a mor­phism from any ob­ject <code>a</code> to any ob­ject <code>b</code> and and a mor­phism from <code>b</code> to <code>c</code>, these mor­phisms can be com­posed to cre­ate a third mor­phism from <code>a</code> to <code>c</code>:</p>
+<pre><code>com­pose : (a : Ob­ject, b : Ob­ject, c : Ob­ject) -&gt; (a -&gt; b) -&gt; (b -&gt; c) -&gt; (a -&gt; c)</code></pre></li>
+<li><p>This com­po­si­tion of mor­phisms is as­so­cia­tive:</p>
+<pre><code>as­so­ci­a­tion : com­pose f (com­pose g h) = com­pose (com­pose f g) h</code></pre></li>
+<li><p>Fi­nal­ly, com­pos­ing a mor­phism with <code>id</code> gets you back the orig­i­nal mor­phism:</p>
+<pre><code>com­po­seIdL : com­pose id f = f
 
-composeIdR : compose f id = f</code></pre></li>
+com­po­seIdR : com­pose f id = f</code></pre></li>
 </ul>
-<p>By playing within these rules and constructing various categories, mathematicians have found ways to construct category theory analogues of many different fields of maths which has enabled them to discover surprising links between supposedly unrelated fields. For more on the ins and outs of category theory, see Bartosz Milewski’s <a href="https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/">Category Theory for Programmers</a>. Hold this section in your head for now as we’re going to explore the current state of specification in UML/SysML.</p>
-<h2 id="provability-in-models">Provability in models</h2>
-<p>UML (and therefore SysML) are not complete specification languages. This point is made by the researcher Jordi Cabot in <a href="https://modeling-languages.com/why-you-need-to-learn-ocl/">his OCL tutorial</a>. Tldr; UML and SysML can only define the structure of the system you’re designing. A constraint language is required to reason about a UML model and to give a complete specification of a system. For example, we could “prove” a model through exhaustively testing the model. Though this is still a valid approach to ‘proving’ a model, it is somewhat time consuming and often incomplete; their may be a set of conditions that you may not have tried that would contravene the constraints. As Edsgar Dijkstra said:</p>
+<p>By play­ing within these rules and con­struct­ing var­i­ous cat­e­gories, math­e­mati­cians have found ways to con­struct cat­e­gory the­ory ana­logues of many dif­fer­ent fields of maths which has en­abled them to dis­cover sur­pris­ing links be­tween sup­pos­edly un­re­lated fields. For more on the ins and outs of cat­e­gory the­o­ry, see Bar­tosz Milewski’s <a href="https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/">Cat­e­gory The­ory for Pro­gram­mers</a>. Hold this sec­tion in your head for now as we’re go­ing to ex­plore the cur­rent state of spec­i­fi­ca­tion in UM­L/SysML.</p>
+<h2 id="provability-in-models">Prov­abil­ity in mod­els</h2>
+<p>UML (and there­fore SysML) are not com­plete spec­i­fi­ca­tion lan­guages. This point is made by the re­searcher Jordi Cabot in <a href="https://modeling-languages.com/why-you-need-to-learn-ocl/">his OCL tu­to­r­ial</a>. Tl­dr; UML and SysML can only de­fine the struc­ture of the sys­tem you’re de­sign­ing. A con­straint lan­guage is re­quired to rea­son about a UML model and to give a com­plete spec­i­fi­ca­tion of a sys­tem. For ex­am­ple, we could “prove” a model through ex­haus­tively test­ing the mod­el. Though this is still a valid ap­proach to ‘prov­ing’ a mod­el, it is some­what time con­sum­ing and of­ten in­com­plete; their may be a set of con­di­tions that you may not have tried that would con­tra­vene the con­straints. As Eds­gar Dijk­stra said:</p>
 <blockquote>
-<p>Program testing can be used to show the presence of bugs, but never to show their absence!</p>
+<p>Pro­gram test­ing can be used to show the pres­ence of bugs, but never to show their ab­sence!</p>
 </blockquote>
-<p>This isn’t just a problem with UML though, it actually covers pretty much all programming languages. To solve this problem, it has been a goal for many years in industry to use the language of logic to reason about programmes. The holy grail has been to produce code that is mathematically proven to not be able to fail in certain ways. If you can encode the concept of ‘For All’ into a true statement about your code, you can prove that certain properties hold for all possible inputs for example. The benefits to such techniques to functional safety and cyber security are obvious. Languages that allow programmers to formally reason about code have been available for a while. Notable examples are VDM-SL, Z notation, OCL and Spark Ada. These languages have one thing in common that may have led to their limited adoption in industry: they’re all based on set theory.</p>
+<p>This is­n’t just a prob­lem with UML though, it ac­tu­ally cov­ers pretty much all pro­gram­ming lan­guages. To solve this prob­lem, it has been a goal for many years in in­dus­try to use the lan­guage of logic to rea­son about pro­grammes. The holy grail has been to pro­duce code that is math­e­mat­i­cally proven to not be able to fail in cer­tain ways. If you can en­code the con­cept of ‘For All’ into a true state­ment about your code, you can prove that cer­tain prop­er­ties hold for all pos­si­ble in­puts for ex­am­ple. The ben­e­fits to such tech­niques to func­tional safety and cy­ber se­cu­rity are ob­vi­ous. Lan­guages that al­low pro­gram­mers to for­mally rea­son about code have been avail­able for a while. No­table ex­am­ples are VD­M-SL, Z no­ta­tion, OCL and Spark Ada. These lan­guages have one thing in com­mon that may have led to their lim­ited adop­tion in in­dus­try: they’re all based on set the­o­ry.</p>
 <h2 id="sets-and-logic">Sets and Logic</h2>
-<p>Set theory (or more formally Zermelo-Frankel Set Theory with Choice (ZFC)) is a foundational theory of maths; that is to say that all proven maths can be proven within the axioms and objects presented by ZFC. The base objects of ZFC are sets and predicates. A set is a unique collection of objects that can be reasoned with using logic and a predicate is a logical statement that reasons about sets and other predicates. Therefore set theory has two parts, sets and logic. Z and OCL are good examples of languages that are based on ZFC logic. Therefore, ZFC set theory has this basic dichotomy built into it, the construction of sets and reasoning in ZFC logic are two different languages. This is also compounded by the fact that <a href="https://vals.lri.fr/languages.html">OCL has been found to be logically inconsistent</a>. To use these languages, first you must write your code or build your model and then you must use a seperate language to reason about it.</p>
-<h2 id="correct-by-construction">Correct by construction</h2>
-<p>To find ourselves an alternative to ZFC based languages, we’re going to have to explore a different interpretation of the idea of proof and truth. For this, we will turn to constructivism. Constructivism is a school of mathematical thought that states that to prove a theorem, you must produce evidence of that theorem. In particular, you cannot use the law of the excluded middle in a constructivist proof. This is because a constructivist proof will only allow you to state something as true if you can provide an example that satisfies your predicate.</p>
-<p>Constructivism was seen as a bit of a fringe idea until Haskell Curry discovered a correspondence between constructivist logic and programming. Curry discovered that the standard operators of constructivist logic had analogues in the typed lambda calculus. This meant that any constructive logical proposition can be converted into an equivalent computer programme and vice-versa. This effectively showed that constructivist maths corresponds with maths that is computable; if you can prove a theorem constructively, you can also compute all things that satisfy that theorem. A few corresponding concepts between logic and programming are shown in the table below:</p>
+<p>Set the­ory (or more for­mally Zer­melo-Frankel Set The­ory with Choice (ZFC)) is a foun­da­tional the­ory of maths; that is to say that all proven maths can be proven within the ax­ioms and ob­jects pre­sented by ZFC. The base ob­jects of ZFC are sets and pred­i­cates. A set is a unique col­lec­tion of ob­jects that can be rea­soned with us­ing logic and a pred­i­cate is a log­i­cal state­ment that rea­sons about sets and other pred­i­cates. There­fore set the­ory has two parts, sets and log­ic. Z and OCL are good ex­am­ples of lan­guages that are based on ZFC log­ic. There­fore, ZFC set the­ory has this ba­sic di­chotomy built into it, the con­struc­tion of sets and rea­son­ing in ZFC logic are two dif­fer­ent lan­guages. This is also com­pounded by the fact that <a href="https://vals.lri.fr/languages.html">OCL has been found to be log­i­cally in­con­sis­tent</a>. To use these lan­guages, first you must write your code or build your model and then you must use a seper­ate lan­guage to rea­son about it.</p>
+<h2 id="correct-by-construction">Cor­rect by con­struc­tion</h2>
+<p>To find our­selves an al­ter­na­tive to ZFC based lan­guages, we’re go­ing to have to ex­plore a dif­fer­ent in­ter­pre­ta­tion of the idea of proof and truth. For this, we will turn to con­struc­tivism. Con­struc­tivism is a school of math­e­mat­i­cal thought that states that to prove a the­o­rem, you must pro­duce ev­i­dence of that the­o­rem. In par­tic­u­lar, you can­not use the law of the ex­cluded mid­dle in a con­struc­tivist proof. This is be­cause a con­struc­tivist proof will only al­low you to state some­thing as true if you can pro­vide an ex­am­ple that sat­is­fies your pred­i­cate.</p>
+<p>Con­struc­tivism was seen as a bit of a fringe idea un­til Haskell Curry dis­cov­ered a cor­re­spon­dence be­tween con­struc­tivist logic and pro­gram­ming. Curry dis­cov­ered that the stan­dard op­er­a­tors of con­struc­tivist logic had ana­logues in the typed lambda cal­cu­lus. This meant that any con­struc­tive log­i­cal propo­si­tion can be con­verted into an equiv­a­lent com­puter pro­gramme and vice-ver­sa. This ef­fec­tively showed that con­struc­tivist maths cor­re­sponds with maths that is com­putable; if you can prove a the­o­rem con­struc­tive­ly, you can also com­pute all things that sat­isfy that the­o­rem. A few cor­re­spond­ing con­cepts be­tween logic and pro­gram­ming are shown in the ta­ble be­low:</p>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Logical Concept</th>
-<th style="text-align: center;">Symbol</th>
-<th style="text-align: center;">Programming Concept</th>
-<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Log­i­cal Con­cept</th>
+<th style="text-align: center;">Sym­bol</th>
+<th style="text-align: center;">Pro­gram­ming Con­cept</th>
+<th style="text-align: center;">Sym­bol</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Implication</td>
+<td style="text-align: center;">Im­pli­ca­tion</td>
 <td style="text-align: center;">⇒</td>
-<td style="text-align: center;">Function Arrow</td>
+<td style="text-align: center;">Func­tion Ar­row</td>
 <td style="text-align: center;">-&gt;</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Conjunction</td>
+<td style="text-align: center;">Con­junc­tion</td>
 <td style="text-align: center;">∧</td>
-<td style="text-align: center;">Product Type (tuple)</td>
+<td style="text-align: center;">Prod­uct Type (tu­ple)</td>
 <td style="text-align: center;">(a,b)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">Disjunction</td>
+<td style="text-align: center;">Dis­junc­tion</td>
 <td style="text-align: center;">∨</td>
 <td style="text-align: center;">Sum Type</td>
-<td style="text-align: center;">Either</td>
+<td style="text-align: center;">Ei­ther</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">Truth</td>
 <td style="text-align: center;">⊤</td>
-<td style="text-align: center;">An inhabited type</td>
+<td style="text-align: center;">An in­hab­ited type</td>
 <td style="text-align: center;">e.g. Int</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">Falsehood</td>
+<td style="text-align: center;">False­hood</td>
 <td style="text-align: center;">⊥</td>
 <td style="text-align: center;">The empty type</td>
 <td style="text-align: center;">Void</td>
 </tr>
 </tbody>
 </table>
-<p>This means that any type declaration in a programming languge with a compatible type system (such as Haskell or Idris) can be read as a logical proposition. The type signature of a generic function <code>a -&gt; b</code> can be read as “If you can give me proof of <code>a</code>, I can give you back a proof of <code>b</code>. Here are some function declarations and their meanings to illustrate the point:</p>
-<pre><code> im : Either a b -&gt; c</code></pre>
+<p>This means that any type de­c­la­ra­tion in a pro­gram­ming lan­guge with a com­pat­i­ble type sys­tem (such as Haskell or Idris) can be read as a log­i­cal propo­si­tion. The type sig­na­ture of a generic func­tion <code>a -&gt; b</code> can be read as “If you can give me proof of <code>a</code>, I can give you back a proof of <code>b</code>. Here are some func­tion de­c­la­ra­tions and their mean­ings to il­lus­trate the point:</p>
+<pre><code> im : Ei­ther a b -&gt; c</code></pre>
 <p>If you can give <code>im</code> proof of <code>a</code> or proof of <code>b</code>, <code>im</code> can give you proof of <code>c</code></p>
 <pre><code> con : (a, b) -&gt; c</code></pre>
-<p>If you can give <code>con</code> a proof of <code>a</code> and a proof of <code>b</code>, <code>con</code> can give you a proof of <code>c</code>. Interestingly, this is equivalent to the type <code>a -&gt; b -&gt; c</code>:</p>
+<p>If you can give <code>con</code> a proof of <code>a</code> and a proof of <code>b</code>, <code>con</code> can give you a proof of <code>c</code>. In­ter­est­ing­ly, this is equiv­a­lent to the type <code>a -&gt; b -&gt; c</code>:</p>
 <pre><code> curry : ((a, b) -&gt; c) -&gt; a -&gt; b -&gt; c
- uncurry : (a -&gt; b -&gt; c) -&gt; (a,b) -&gt; c</code></pre>
-<p>This process of using this equivalence is known as <em>currying</em> after Haskell Curry. It becomes incredibly useful for reuse purposes. I’ll explore usages of currying in SysML in a future blog post. For now, we can appreciate that it is somewhat of a tautology; the logical interpretation of <code>a -&gt; b -&gt; c</code> is: If you can give me a proof of <code>a</code>, I can give you a proof of <code>b -&gt; c</code>.</p>
+ un­curry : (a -&gt; b -&gt; c) -&gt; (a,b) -&gt; c</code></pre>
+<p>This process of us­ing this equiv­a­lence is known as <em>cur­ry­ing</em> af­ter Haskell Cur­ry. It be­comes in­cred­i­bly use­ful for reuse pur­pos­es. I’ll ex­plore us­ages of cur­ry­ing in SysML in a fu­ture blog post. For now, we can ap­pre­ci­ate that it is some­what of a tau­tol­ogy; the log­i­cal in­ter­pre­ta­tion of <code>a -&gt; b -&gt; c</code> is: If you can give me a proof of <code>a</code>, I can give you a proof of <code>b -&gt; c</code>.</p>
 <pre><code> efq : Void -&gt; a</code></pre>
-<p>If you can give <code>efq</code> a member of the Void type, <code>efq</code> can give you anything. The logical principle of explosion. Effectively, this statement means that you can prove anything true if you start from a lie.</p>
+<p>If you can give <code>efq</code> a mem­ber of the Void type, <code>efq</code> can give you any­thing. The log­i­cal prin­ci­ple of ex­plo­sion. Ef­fec­tive­ly, this state­ment means that you can prove any­thing true if you start from a lie.</p>
 <pre><code>not : a -&gt; Void</code></pre>
-<p>If you can give <code>not</code> a value of <code>a</code>, <code>not</code> will give you a value of <code>Void</code>. Since this is is impossible, <code>not</code> represents the logical Not operator: being able to obtain a value of <code>a -&gt; Void</code> (find a mapping from an inhabited type to the empty type) is an absurd proposition. Therefore, if <code>a</code> contains values, <code>Not a</code> will not.</p>
-<p>Some programming languages (Such as Idris, Coq and Agda) give you a really useful type called equality that allows you to prove that two propositions are equal:</p>
-<pre><code>Equality : a -&gt; b -&gt; Type where
-  reflex : Equality x x</code></pre>
-<p>This statement uses a new notational semantic, the <code>where</code> keyword, that tells us that <code>reflex</code> is a constructor function for <code>Equality</code>. <code>Equality</code> itself is a type that states: If you can give me two values one of type <code>a</code> and one of type <code>b</code>, I can give you back a new type, but only if the two values that you give me are the same (The <code>reflex</code> constructor is only defined for values that are the same). Therefore, type theory gives us a way to express equality in type signatures within programmes! You may have already noticed the use of equality (in its symbolic guise ‘<code>=</code>’) in the earlier rules for categories.</p>
-<p>We already know that UML (especially the executable subset fUML) gives us a specification for structure and behaviour, adding the additional ability to express propositions in UML without having to resort to the complexities of OCL would mean that we wouldn’t have to learn two languages to fully specify our designs and domain specific languages in MBSE.</p>
-<p><strong>A type theoretical basis would mean that a modelling language could specify both structure and constraints in one unified package!</strong></p>
-<p>Interestingly, whilst researching this post, I stumbled across a paper online where researchers had used Haskell to encode both the structure of UML models but also a constraints language. The paper can be found <a href="http://ceur-ws.org/Vol-1756/paper03.pdf">here.</a> Although this paper does not touch on the points in this post, it does show the power of a lnguage like Haskell to encode both languages.</p>
-<h2 id="so-where-does-category-theory-fit-into-all-of-this">So where does category theory fit into all of this?</h2>
-<p>It just so turns out that there is a strong correspondence between type theory and category theory: type theories are the internal languages of categories. This means that the objects of a certain category correspond to the types in a certain type theory. The keen-eyed reader will probably have noticed how the notation that I used for morphisms in the section on the rules for category theory was the same notation used for type signatures in the logic section; that’s because <em>they are the same thing!</em></p>
-<p>Category theory is missing a key part of what makes type theory though: the ability to work with elements of types. Technically, there is a way in category theory of inspecting which elements exist in which types but its far easier to play with these elements within a type theory.</p>
-<h3 id="the-holy-trinity">The holy trinity</h3>
-<p>The approach to maths and computer science of using propositions as types, programmes as proofs and using category theory &amp; type theories together is known as computational trinitarianism. Category theory can only give us the “propositions as types” part of the equation but once we get type theory involved, we can express programmes that can act as proofs!</p>
-<p>Therefore, focussing solely on category theory for the basis of MBSE is not seeing the wood for the trees. Category theory may be the study of mathematical abstraction but type theory is the fire that breathes truth and interpretation into a category.</p>
-<p>So here is where I state the manifesto inherent in the title of this blog: I am calling for an end to the dichotomy between structure and proof; an end to the reliance on set theory as the basis of “truth” in the MBSE world. Let’s replace our logic with judgements and evidence. I am calling for the construction of a category of systems!</p>
-<p>If you’ve stuck with me this far, you’re probably the sort who’s interested in learning further. I wholeheartedly recommend diving into the Haskell and Idris programming languages which ignited my interest in this area of study. If you feel that you’re ready for the bleeding edge of maths, I recommend the <a href="https://homotopytypetheory.org/2013/06/20/the-hott-book/">Homotopy Type Theory book</a>. It’s a free download and I’m currently working my way through it (determinedly but slowly, I must admit) to see what treasures can be found inside for the future of systems engineering.</p>
-<h2 id="conclusion-what-needs-to-change">Conclusion: what needs to change?</h2>
-<p>First of all, its my belief that we could use a language like Idris to express our systems models completely and conherently in a way that could be easily validated. With a suitable base library (or a prelude as is called in Haskell descendents), Idris could easily be used as a specification language with mathematical proofs built in. The problem, of course, is that engineers like pictures, so Idris would need a graphical notation on top of it that could be something very UML or SysML like.</p>
-<p>UML and SysML, despite being supposedly language agnostic, are heavily Java oriented languages. A lot of the more imperative parts of UML could be transformed into a type theoretic setting but UML is so bloated with disconnected concepts that it might not be worth it. The constructs of UML and SysML mean that there are many ways to represent a single concept and this fact leads to huge disparities in modelling philosophies and practices across the MBSE world even within individual teams! A future language would ensure that you could express anything that you’d want to design but with minimal overlap of concepts.</p>
-<p>Functional programming languages since early LISPs have taught us that many complex constructs can be expressed in a clean simple syntax. This point has definitely been reached with Haskell and its descendants. UML, like Java, has a bloated syntactical structure, requiring you to individual create and name loads of elements to express simple ideas. A simple test of this is seeing how many elements you have to create and name if you were to create a simple object flow based activity diagram. Every single pin on every function requires creation, a name and a type. There has to be a better way.</p>
-<p>Therefore, as systems engineers, we should start exploring the exciting world that a type theoretic basis to MBSE could be. There are many bonuses to using a type theoretic and functional approach to modelling languages that I hope to explore in future blog posts. For now, I hope that I have put forward a convincing enough argument to entice you into wanting to know more about type theory and functional programming. If you have any thoughts yourself on the matter, please pop them in the comments below. If you’ve made it this far, thank you for reading!</p>
+<p>If you can give <code>not</code> a value of <code>a</code>, <code>not</code> will give you a value of <code>Void</code>. Since this is is im­pos­si­ble, <code>not</code> rep­re­sents the log­i­cal Not op­er­a­tor: be­ing able to ob­tain a value of <code>a -&gt; Void</code> (find a map­ping from an in­hab­ited type to the empty type) is an ab­surd propo­si­tion. There­fore, if <code>a</code> con­tains val­ues, <code>Not a</code> will not.</p>
+<p>Some pro­gram­ming lan­guages (Such as Idris, Coq and Ag­da) give you a re­ally use­ful type called equal­ity that al­lows you to prove that two propo­si­tions are equal:</p>
+<pre><code>Equal­ity : a -&gt; b -&gt; Type where
+  re­flex : Equal­ity x x</code></pre>
+<p>This state­ment uses a new no­ta­tional se­man­tic, the <code>where</code> key­word, that tells us that <code>re­flex</code> is a con­struc­tor func­tion for <code>Equal­ity</code>. <code>Equal­ity</code> it­self is a type that states: If you can give me two val­ues one of type <code>a</code> and one of type <code>b</code>, I can give you back a new type, but only if the two val­ues that you give me are the same (The <code>re­flex</code> con­struc­tor is only de­fined for val­ues that are the same). There­fore, type the­ory gives us a way to ex­press equal­ity in type sig­na­tures within pro­grammes! You may have al­ready no­ticed the use of equal­ity (in its sym­bolic guise ‘<code>=</code>’) in the ear­lier rules for cat­e­gories.</p>
+<p>We al­ready know that UML (e­spe­cially the ex­e­cutable sub­set fUML) gives us a spec­i­fi­ca­tion for struc­ture and be­hav­iour, adding the ad­di­tional abil­ity to ex­press propo­si­tions in UML with­out hav­ing to re­sort to the com­plex­i­ties of OCL would mean that we would­n’t have to learn two lan­guages to fully spec­ify our de­signs and do­main spe­cific lan­guages in MB­SE.</p>
+<p><strong>A type the­o­ret­i­cal ba­sis would mean that a mod­el­ling lan­guage could spec­ify both struc­ture and con­straints in one uni­fied pack­age!</strong></p>
+<p>In­ter­est­ing­ly, whilst re­search­ing this post, I stum­bled across a pa­per on­line where re­searchers had used Haskell to en­code both the struc­ture of UML mod­els but also a con­straints lan­guage. The pa­per can be found <a href="http://ceur-ws.org/Vol-1756/paper03.pdf">here.</a> Al­though this pa­per does not touch on the points in this post, it does show the power of a lnguage like Haskell to en­code both lan­guages.</p>
+<h2 id="so-where-does-category-theory-fit-into-all-of-this">So where does cat­e­gory the­ory fit into all of this?</h2>
+<p>It just so turns out that there is a strong cor­re­spon­dence be­tween type the­ory and cat­e­gory the­o­ry: type the­o­ries are the in­ter­nal lan­guages of cat­e­gories. This means that the ob­jects of a cer­tain cat­e­gory cor­re­spond to the types in a cer­tain type the­o­ry. The keen-eyed reader will prob­a­bly have no­ticed how the no­ta­tion that I used for mor­phisms in the sec­tion on the rules for cat­e­gory the­ory was the same no­ta­tion used for type sig­na­tures in the logic sec­tion; that’s be­cause <em>they are the same thing!</em></p>
+<p>Cat­e­gory the­ory is miss­ing a key part of what makes type the­ory though: the abil­ity to work with el­e­ments of types. Tech­ni­cal­ly, there is a way in cat­e­gory the­ory of in­spect­ing which el­e­ments ex­ist in which types but its far eas­ier to play with these el­e­ments within a type the­o­ry.</p>
+<h3 id="the-holy-trinity">The holy trin­ity</h3>
+<p>The ap­proach to maths and com­puter sci­ence of us­ing propo­si­tions as types, pro­grammes as proofs and us­ing cat­e­gory the­ory &amp; type the­o­ries to­gether is known as com­pu­ta­tional trini­tar­i­an­ism. Cat­e­gory the­ory can only give us the “propo­si­tions as types” part of the equa­tion but once we get type the­ory in­volved, we can ex­press pro­grammes that can act as proofs!</p>
+<p>There­fore, fo­cussing solely on cat­e­gory the­ory for the ba­sis of MBSE is not see­ing the wood for the trees. Cat­e­gory the­ory may be the study of math­e­mat­i­cal ab­strac­tion but type the­ory is the fire that breathes truth and in­ter­pre­ta­tion into a cat­e­go­ry.</p>
+<p>So here is where I state the man­i­festo in­her­ent in the ti­tle of this blog: I am call­ing for an end to the di­chotomy be­tween struc­ture and proof; an end to the re­liance on set the­ory as the ba­sis of “truth” in the MBSE world. Let’s re­place our logic with judge­ments and ev­i­dence. I am call­ing for the con­struc­tion of a cat­e­gory of sys­tems!</p>
+<p>If you’ve stuck with me this far, you’re prob­a­bly the sort who’s in­ter­ested in learn­ing fur­ther. I whole­heart­edly rec­om­mend div­ing into the Haskell and Idris pro­gram­ming lan­guages which ig­nited my in­ter­est in this area of study. If you feel that you’re ready for the bleed­ing edge of maths, I rec­om­mend the <a href="https://homotopytypetheory.org/2013/06/20/the-hott-book/">Ho­mo­topy Type The­ory book</a>. It’s a free down­load and I’m cur­rently work­ing my way through it (de­ter­minedly but slow­ly, I must ad­mit) to see what trea­sures can be found in­side for the fu­ture of sys­tems en­gi­neer­ing.</p>
+<h2 id="conclusion-what-needs-to-change">Con­clu­sion: what needs to change?</h2>
+<p>First of all, its my be­lief that we could use a lan­guage like Idris to ex­press our sys­tems mod­els com­pletely and con­her­ently in a way that could be eas­ily val­i­dat­ed. With a suit­able base li­brary (or a pre­lude as is called in Haskell de­scen­dents), Idris could eas­ily be used as a spec­i­fi­ca­tion lan­guage with math­e­mat­i­cal proofs built in. The prob­lem, of course, is that en­gi­neers like pic­tures, so Idris would need a graph­i­cal no­ta­tion on top of it that could be some­thing very UML or SysML like.</p>
+<p>UML and SysML, de­spite be­ing sup­pos­edly lan­guage ag­nos­tic, are heav­ily Java ori­ented lan­guages. A lot of the more im­per­a­tive parts of UML could be trans­formed into a type the­o­retic set­ting but UML is so bloated with dis­con­nected con­cepts that it might not be worth it. The con­structs of UML and SysML mean that there are many ways to rep­re­sent a sin­gle con­cept and this fact leads to huge dis­par­i­ties in mod­el­ling philoso­phies and prac­tices across the MBSE world even within in­di­vid­ual teams! A fu­ture lan­guage would en­sure that you could ex­press any­thing that you’d want to de­sign but with min­i­mal over­lap of con­cepts.</p>
+<p>Func­tional pro­gram­ming lan­guages since early LISPs have taught us that many com­plex con­structs can be ex­pressed in a clean sim­ple syn­tax. This point has def­i­nitely been reached with Haskell and its de­scen­dants. UML, like Java, has a bloated syn­tac­ti­cal struc­ture, re­quir­ing you to in­di­vid­ual cre­ate and name loads of el­e­ments to ex­press sim­ple ideas. A sim­ple test of this is see­ing how many el­e­ments you have to cre­ate and name if you were to cre­ate a sim­ple ob­ject flow based ac­tiv­ity di­a­gram. Every sin­gle pin on every func­tion re­quires cre­ation, a name and a type. There has to be a bet­ter way.</p>
+<p>There­fore, as sys­tems en­gi­neers, we should start ex­plor­ing the ex­cit­ing world that a type the­o­retic ba­sis to MBSE could be. There are many bonuses to us­ing a type the­o­retic and func­tional ap­proach to mod­el­ling lan­guages that I hope to ex­plore in fu­ture blog posts. For now, I hope that I have put for­ward a con­vinc­ing enough ar­gu­ment to en­tice you into want­ing to know more about type the­ory and func­tional pro­gram­ming. If you have any thoughts your­self on the mat­ter, please pop them in the com­ments be­low. If you’ve made it this far, thank you for read­ing!</p>
 
 <div id="disqus_thread"></div>
 <script>
@@ -156,9 +184,16 @@ composeIdR : compose f id = f</code></pre></li>
 
         </div>
         <div id="footer">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
             Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a> | 
+            Theme based on <a href="https://wickstrom.tech"><cite>Oskar
+Wickström's</cite></a> <a href="https://owickstrom.github.io/the-monospace-web/">Monospace Web.</a>
         </div>
     </body>
+    <script>
+        function toggleDarkMode(){
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
 </html>

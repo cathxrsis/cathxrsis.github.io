@@ -1,16 +1,28 @@
-$if(icon)$
-<div class="avatar"><img src="$icon$" width="200"></div>
-$endif$
-
-<h1>$title$</h1>
-
-<div class="info">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="inline" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-     | Posted on $date$
-    $if(author)$
-     |  by $author$
-    $endif$
-</div>
+<table>
+    <tr>
+    <th rowspan="2">
+<h1 class="tabulatedh">$title$</h1>
+    </th>
+    <td class="width-min" rowspan="2">
+     $if(icon)$
+     <div class="avatar"><img src="$icon$" width="200"></div>
+     $endif$
+    </td>
+    <th>
+        Date
+    </th>
+    <td>
+        $date$
+    </td>
+    <tr>
+    <th>
+        Tags
+    </th>
+    <td>
+    </td>
+    </tr>
+    </tr>
+</table>
 
 $body$
 
