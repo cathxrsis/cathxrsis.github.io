@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2rem;
   line-height: calc(2 * var(--line-height));
-  margin-bottom: var(--line-height);
+  margin-bottom: calc(0 * var(--line-height));
   text-transform: uppercase;
 }
 
@@ -87,7 +87,7 @@ h1.tabulatedh {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
@@ -193,11 +193,10 @@ p {
 img {
   font-style: italic;
   color: var(--text-color-alt);
-  filter: sepia(100%);
 }
 
 img.light-mode {
-  filter: revert;
+  filter: grayscale(100%);
 } 
 
 img.inline {

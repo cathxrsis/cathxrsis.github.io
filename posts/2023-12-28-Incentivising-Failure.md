@@ -1,6 +1,6 @@
 ---
 title: "How organisations incentivise failure"
-icon: "../images/incfailure.png"
+icon: "../images/incfailure.jpeg"
 ---
 
 This post is a short one about another antipattern that I've observed while working. Its technically an instance of a common antipattern of how locally optimised systems often don't combine into systems that are optimised for the larger-scale goal. The particularly insidious part of this antipattern is that not only does it increase the risk of project failure, it also hurts team morale and individual's mental health.

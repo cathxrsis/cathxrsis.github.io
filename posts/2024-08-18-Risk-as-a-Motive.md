@@ -2,7 +2,7 @@
 title: "Risk as a motive for systems Engineering"
 author: "Tom Westbury"
 layout: post
-icon: "../images/risk.png"
+icon: "../images/riskor.png"
 ---
 
 >**Risk** [noun]---A potential scenario in a project that is recorded in a risk management plan and forgotten about until it manifests as an issue.

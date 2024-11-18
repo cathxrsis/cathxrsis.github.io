@@ -1,7 +1,7 @@
 ---
 title: "What is Architecture?"
 author: "Tom Westbury"
-icon: "../images/arch.png"
+icon: "../images/archor.jpeg"
 ---
 
 Back in 2021, I interviewed for a job in Model Based systems Engineering. During the interview, one of the interviewers hit me with the question:
