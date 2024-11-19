@@ -98,10 +98,21 @@
 <p>Boyd’s Destruction &amp; Creation map to the ideas of Deduction &amp; Induction or Abstraction &amp; Reification. It’s all about continuously building a playbook of moves (Patterns!) which you can use to apply to new situations. Boyd continued this thinking forward into his later work on the OODA loop framework and his patterns of conflict presentation. His contribution to modern Manoeuvre warfare cannot be understated and the use of tactics such as thunder runs with devastating effect in Iraq and Ukraine, draw on Boyd’s legacy.</p>
 <h2 id="modelling-boyd-alexander">Modelling Boyd &amp; Alexander</h2>
 <p>I’m a model based systems engineer—this gives me a drive to give the fuzzy precise definition, especially if done in a pictorial manner. We’ll start, as in previous posts, with the Cybernetic loop model of engineering:</p>
-<figure>
-<img src="../images/Screenshot_20240816-112645.png" width="300" alt="The Cybernetic Loop" />
-<figcaption aria-hidden="true">The Cybernetic Loop</figcaption>
-</figure>
+<pre><code>                     ┌───────────┐          ┌───┐
+             ┌───────┤  LEARNING ├──────┬───┤DEV│
+             │       └─────┬─────┘      │   └──┬┘
+        ┌────┴────┐        │       ┌────┴────┐ │ 
+        │         │        │       │         │ │ 
+        │         │        │       │         │◄┘ 
+    ┌──►│   ENV   │◄──────┐└──────►│   UND   │   
+    │   │         │       │        │         │   
+    │   │         │       │        │         │   
+    │   └────┬────┘       │        └────┬────┘   
+┌───┴─────┐  │      ┌─────┴────┐        │        
+│EVOLUTION├──┴──────┤  ACTION  ├────────┘        
+└─────────┘         └──────────┘                 
+
+FIGURE 1: THE CYBERNETIC LOOP</code></pre>
 <p>To recapitulate this model, there are two entities:</p>
 <dl>
 <dt><strong>The Environment (Env)</strong></dt>
@@ -113,7 +124,7 @@
 <p>Our model of the environment that allows us to navigate the Environment.</p>
 </dd>
 </dl>
-<p>Then there are the processes, represented as diamonds:</p>
+<p>Then there are the processes:</p>
 <dl>
 <dt><strong>Evolution</strong></dt>
 <dd>
@@ -135,11 +146,22 @@
 <p>It is the development loop that we’re going to focus on in this part of the essay.</p>
 <p>Boyd’s Destruction &amp; Creation implies that our development process is actually <em>two</em> processes—one of deduction, destruction or abstraction and one of induction, creation or reification. What are we doing with those abstractions? Well, another name for an abstraction is a <em>Pattern</em>.</p>
 <p>Destruction &amp; creation are the processes of creating/updating and using a <em>Pattern Library</em>.</p>
-<p>Let’s see how that looks as a diagram.</p>
-<figure>
-<img src="../images/archloop.png" width="300" alt="The Architecture Loop" />
-<figcaption aria-hidden="true">The Architecture Loop</figcaption>
-</figure>
+<p>Let’s see how that looks as a diagram:</p>
+<pre><code>             ┌───────────┐            
+     ┌───────┤ DEDUCTION ├──────┐     
+     │       └─────┬─────┘      │     
+┌────┴────┐        │       ┌────┴────┐
+│         │        │       │         │
+│         │        │       │         │
+│   UND   │◄──────┐└──────►│   WIS   │
+│         │       │        │   DOM   │
+│         │       │        │         │
+└────┬────┘       │        └────┬────┘
+     │      ┌─────┴────┐        │     
+     └──────┤ INDUCTION├────────┘     
+            └──────────┘               
+
+FIGURE 2: THE ARCHITECTURE LOOP</code></pre>
 <p>I’ve given the name <em>wisdom</em> to the Pattern library as a more generic name. It is worth noting that Deduction is not required for an engineering process to build understanding via Induction. I’d like to dig into this at a later date by using this simple model as a diagnostic framework, especially with how it links to the concept of technical debt, but for now we’ll focus on architecture.</p>
 <h2 id="what-is-architecture-vs-design">What is architecture vs design?</h2>
 <p>Before we answer the question originally posed in this essay, we should probably make a point on the descriptive nature of the English Language. The Oxford English Dictionary takes a descriptivist approach to English—it records the English language as it’s used, not how it should be used. Despite what your English teacher told you, there is no correct way to use English, just keep in mind that others need to faithfully understand what you write.</p>

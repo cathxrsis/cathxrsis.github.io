@@ -95,10 +95,21 @@
 <p>Boy­d’s De­struc­tion &amp; Cre­ation map to the ideas of De­duc­tion &amp; In­duc­tion or Ab­strac­tion &amp; Reifi­ca­tion. It’s all about con­tin­u­ously build­ing a play­book of moves (Pat­tern­s!) which you can use to ap­ply to new sit­u­a­tions. Boyd con­tin­ued this think­ing for­ward into his later work on the OODA loop frame­work and his pat­terns of con­flict pre­sen­ta­tion. His con­tri­bu­tion to mod­ern Ma­noeu­vre war­fare can­not be un­der­stated and the use of tac­tics such as thun­der runs with dev­as­tat­ing ef­fect in Iraq and Ukraine, draw on Boy­d’s lega­cy.</p>
 <h2 id="modelling-boyd-alexander">Mod­el­ling Boyd &amp; Alexan­der</h2>
 <p>I’m a model based sys­tems en­gi­neer—this gives me a drive to give the fuzzy pre­cise de­f­i­n­i­tion, es­pe­cially if done in a pic­to­r­ial man­ner. We’ll start, as in pre­vi­ous posts, with the Cy­ber­netic loop model of en­gi­neer­ing:</p>
-<figure>
-<img src="../images/Screenshot_20240816-112645.png" width="300" alt="The Cybernetic Loop" />
-<figcaption aria-hidden="true">The Cy­ber­netic Loop</figcaption>
-</figure>
+<pre><code>                     ┌───────────┐          ┌───┐
+             ┌───────┤  LEARN­ING ├──────┬───┤DEV│
+             │       └─────┬─────┘      │   └──┬┘
+        ┌────┴────┐        │       ┌────┴────┐ │ 
+        │         │        │       │         │ │ 
+        │         │        │       │         │◄┘ 
+    ┌──►│   ENV   │◄──────┐└──────►│   UND   │   
+    │   │         │       │        │         │   
+    │   │         │       │        │         │   
+    │   └────┬────┘       │        └────┬────┘   
+┌───┴─────┐  │      ┌─────┴────┐        │        
+│EVO­LU­TION├──┴──────┤  AC­TION  ├────────┘        
+└─────────┘         └──────────┘                 
+
+FIG­URE 1: THE CY­BER­NETIC LOOP</code></pre>
 <p>To re­ca­pit­u­late this mod­el, there are two en­ti­ties:</p>
 <dl>
 <dt><strong>The En­vi­ron­ment (Env)</strong></dt>
@@ -110,7 +121,7 @@
 <p>Our model of the en­vi­ron­ment that al­lows us to nav­i­gate the En­vi­ron­ment.</p>
 </dd>
 </dl>
-<p>Then there are the process­es, rep­re­sented as di­a­monds:</p>
+<p>Then there are the process­es:</p>
 <dl>
 <dt><strong>Evo­lu­tion</strong></dt>
 <dd>
@@ -132,11 +143,22 @@
 <p>It is the de­vel­op­ment loop that we’re go­ing to fo­cus on in this part of the es­say.</p>
 <p>Boy­d’s De­struc­tion &amp; Cre­ation im­plies that our de­vel­op­ment process is ac­tu­ally <em>two</em> process­es—one of de­duc­tion, de­struc­tion or ab­strac­tion and one of in­duc­tion, cre­ation or reifi­ca­tion. What are we do­ing with those ab­strac­tions? Well, an­other name for an ab­strac­tion is a <em>Pat­tern</em>.</p>
 <p>De­struc­tion &amp; cre­ation are the processes of cre­at­ing/up­dat­ing and us­ing a <em>Pat­tern Li­brary</em>.</p>
-<p>Let’s see how that looks as a di­a­gram.</p>
-<figure>
-<img src="../images/archloop.png" width="300" alt="The Architecture Loop" />
-<figcaption aria-hidden="true">The Ar­chi­tec­ture Loop</figcaption>
-</figure>
+<p>Let’s see how that looks as a di­a­gram:</p>
+<pre><code>             ┌───────────┐            
+     ┌───────┤ DE­DUC­TION ├──────┐     
+     │       └─────┬─────┘      │     
+┌────┴────┐        │       ┌────┴────┐
+│         │        │       │         │
+│         │        │       │         │
+│   UND   │◄──────┐└──────►│   WIS   │
+│         │       │        │   DOM   │
+│         │       │        │         │
+└────┬────┘       │        └────┬────┘
+     │      ┌─────┴────┐        │     
+     └──────┤ IN­DUC­TION├────────┘     
+            └──────────┘               
+
+FIG­URE 2: THE AR­CHI­TEC­TURE LOOP</code></pre>
 <p>I’ve given the name <em>wis­dom</em> to the Pat­tern li­brary as a more generic name. It is worth not­ing that De­duc­tion is not re­quired for an en­gi­neer­ing process to build un­der­stand­ing via In­duc­tion. I’d like to dig into this at a later date by us­ing this sim­ple model as a di­ag­nos­tic frame­work, es­pe­cially with how it links to the con­cept of tech­ni­cal debt, but for now we’ll fo­cus on ar­chi­tec­ture.</p>
 <h2 id="what-is-architecture-vs-design">What is ar­chi­tec­ture vs de­sign?</h2>
 <p>Be­fore we an­swer the ques­tion orig­i­nally posed in this es­say, we should prob­a­bly make a point on the de­scrip­tive na­ture of the Eng­lish Lan­guage. The Ox­ford Eng­lish Dic­tio­nary takes a de­scrip­tivist ap­proach to Eng­lish—it records the Eng­lish lan­guage as it’s used, not how it should be used. De­spite what your Eng­lish teacher told you, there is no cor­rect way to use Eng­lish, just keep in mind that oth­ers need to faith­fully un­der­stand what you write.</p>

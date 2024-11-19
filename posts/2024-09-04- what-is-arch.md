@@ -54,7 +54,23 @@ Boyd's Destruction & Creation map to the ideas of Deduction & Induction or Abstr
 
 I'm a model based systems engineer---this gives me a drive to give the fuzzy precise definition, especially if done in a pictorial manner. We'll start, as in previous posts, with the Cybernetic loop model of engineering:
 
-![The Cybernetic Loop](../images/Screenshot_20240816-112645.png){width=300px}
+```
+                     ┌───────────┐          ┌───┐
+             ┌───────┤  LEARNING ├──────┬───┤DEV│
+             │       └─────┬─────┘      │   └──┬┘
+        ┌────┴────┐        │       ┌────┴────┐ │ 
+        │         │        │       │         │ │ 
+        │         │        │       │         │◄┘ 
+    ┌──►│   ENV   │◄──────┐└──────►│   UND   │   
+    │   │         │       │        │         │   
+    │   │         │       │        │         │   
+    │   └────┬────┘       │        └────┬────┘   
+┌───┴─────┐  │      ┌─────┴────┐        │        
+│EVOLUTION├──┴──────┤  ACTION  ├────────┘        
+└─────────┘         └──────────┘                 
+
+FIGURE 1: THE CYBERNETIC LOOP
+```
 
 To recapitulate this model, there are two entities:
 
@@ -66,7 +82,7 @@ To recapitulate this model, there are two entities:
 
 : Our model of the environment that allows us to navigate the Environment.
 
-Then there are the processes, represented as diamonds:
+Then there are the processes:
 
 **Evolution**
 
@@ -90,9 +106,25 @@ Boyd's Destruction & Creation implies that our development process is actually *
 
 Destruction & creation are the processes of creating/updating and using a *Pattern Library*.
 
-Let's see how that looks as a diagram.
+Let's see how that looks as a diagram:
 
-![The Architecture Loop](../images/archloop.png){width=300px}
+```
+             ┌───────────┐            
+     ┌───────┤ DEDUCTION ├──────┐     
+     │       └─────┬─────┘      │     
+┌────┴────┐        │       ┌────┴────┐
+│         │        │       │         │
+│         │        │       │         │
+│   UND   │◄──────┐└──────►│   WIS   │
+│         │       │        │   DOM   │
+│         │       │        │         │
+└────┬────┘       │        └────┬────┘
+     │      ┌─────┴────┐        │     
+     └──────┤ INDUCTION├────────┘     
+            └──────────┘               
+
+FIGURE 2: THE ARCHITECTURE LOOP
+```
 
 I've given the name *wisdom* to the Pattern library as a more generic name. It is worth noting that Deduction is not required for an engineering process to build understanding via Induction. I'd like to dig into this at a later date by using this simple model as a diagnostic framework, especially with how it links to the concept of technical debt, but for now we'll focus on architecture.
 
