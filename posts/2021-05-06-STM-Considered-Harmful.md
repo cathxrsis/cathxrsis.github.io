@@ -3,6 +3,7 @@ layout: post
 title: "State Machine Diagram Considered Harmful"
 date: 2021-05-06
 description: The state machine diagram is one of the most popular diagrams for behaviour in SysML/UML & Simulink. It's dangerous and here's why.
+icon: "../images/generic.png"
 tags:
 - Systems Engineering
 - Modelling

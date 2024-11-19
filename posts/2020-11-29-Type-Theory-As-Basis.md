@@ -3,6 +3,7 @@ layout: post
 title: "Type theory as a basis for MBSE"
 date: 2020-11-29
 description: What is type theory? How does it relate to category theory? How does this all relate to MBSE?
+icon: "../images/generic.png"
 tags:
 - Systems Engineering
 - Modelling

@@ -4,6 +4,7 @@ title: "A better type of type"
 date: 2020-07-18
 description: The third in a series on critiquing and improving SysML/UML. This time we take a look at modern programming languages for inspiration on improving data types.
 effort: 20min
+icon: "../images/generic.png"
 tags:
 - Systems Engineering
 - modelling

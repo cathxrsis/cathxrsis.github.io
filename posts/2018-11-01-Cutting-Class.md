@@ -4,6 +4,7 @@ title: "Cutting Class"
 date: 2019-02-11
 description: An exploration into a classless society for UML and SysML modellers.
 effort: 4min
+icon: "../images/generic.png"
 tags:
 - Systems Engineering
 - modelling

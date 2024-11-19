@@ -3,6 +3,7 @@ layout: post
 title: Gaining Composure by Losing Control
 date: 2021-11-30
 description: A novel method for functional architecture that enables composition of features into a larger whole.
+icon: "../images/generic.png"
 comments: true
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "A Machine Named Desire"
 date: 2022-06-30
 description: A general pattern for understanding whether you're seeing the whole picture
+icon: "../images/generic.png"
 tags:
 - Systems Engineering
 - modelling

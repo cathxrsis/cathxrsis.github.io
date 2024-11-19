@@ -4,6 +4,7 @@ title: "A New Look at Use Cases"
 date: 2019-07-01
 description: A few thoughts on a different way of modelling Use Cases using SysML/UML.
 effort: 10min
+icon: "../images/generic.png"
 tags:
 - Systems Engineering
 - modelling

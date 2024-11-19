@@ -3,6 +3,7 @@ layout: post
 title: "Patterns for types"
 date: 2020-09-06
 description: 
+icon: "../images/generic.png"
 tags:
 - Systems Engineering
 - modelling

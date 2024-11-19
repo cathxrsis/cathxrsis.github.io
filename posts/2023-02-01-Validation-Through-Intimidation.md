@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Validation Through Intimidation"
+icon: "../images/generic.png"
 ---
 
 This post is a short one to start the year and is about an anti-pattern that I have observed within systems engineering projects. I sincerely hope that this pattern is not endemic, though I suspect its more prevalent in the discipline than we'd like to admit. This anti-pattern is a possible mechanism to the prevalence of project cost & time overruns and complex systems often being a disappointment to their customers. I call this anti-pattern **Validation Through Intimidation**.
