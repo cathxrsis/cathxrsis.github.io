@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Anti Taylor
+author: Cathxrsis
+date: 2023-03-30
 ---
 
 This is an essay about the way business is conducted in the modern world; about the division of labour; about the ideology that dominates our way of organising as a society. This is an essay about Taylorism^[Note that this essay uses Taylorism to name the current ].
@@ -21,9 +23,13 @@ As the products of human labour have evolved, longer and more complex supply cha
 
 ## The Contradictions
 
+The 
+
 ### The Planning Problem
 
-The acronym VUCA has been coined to explain the world of politics &c. it stands for Volatile, Uncertain, Complex and Ambiguous.
+The acronym VUCA has been coined to explain the world of politics &c. it stands for Volatile, Uncertain, Complex and Ambiguous[@@]. Taylorist planning is 
+
+However, Taylorist intervention can often be disciplinary.
 
 ### The Variety Problem
 
@@ -46,12 +52,13 @@ According to INCOSE, the International Council Of Systems Engineers, sytems engi
 
 ### Lean
 
+Lean is a term given to an umbrella 
 
 Unfortuneately, lean is often misinterpreted as just Just In Time. This leads to fragile systems.
 
 ### Agile
 
-Agile is a the name given to a set of organisational practices that adhere to the principles and values of the Agile Manifesto.
+Agile is a the name given to a set of organisational practices that adhere to the principles and values of the Agile Manifesto. These build on top of Lean practices
 
 However, Taylorism fights back against Agile by reasserting itself in various ways. A common form of the Taylorist reassertion over an Agile process is so-called *Dark Scrum*.
 
