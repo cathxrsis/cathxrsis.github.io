@@ -115,6 +115,14 @@ main = hakyllWith config $ do
 
             renderAtom myFeedConfiguration feedCtx posts
 
+    create ["rss.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx <> constField "description" "This is the post description"
+
+            posts <- fmap(take 10) . recentFirst =<< loadAllSnapshots "posts/*" "content"
+
+            renderRss myFeedConfiguration feedCtx posts
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
