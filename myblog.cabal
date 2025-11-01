@@ -19,4 +19,5 @@ executable myblog
   ghc-options:         -threaded
   build-depends:       base >= 4.7 && < 5,
                        hakyll,
-                       hakyll-contrib-hyphenation
+                       hakyll-contrib-hyphenation,
+                       pandoc-plantuml-diagrams

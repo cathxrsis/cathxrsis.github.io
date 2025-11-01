@@ -36,6 +36,8 @@ packages:
 #
 extra-deps:
 - hakyll-contrib-hyphenation-0.1.0.3
+- pandoc-plantuml-diagrams-0.1.1.0
+
 # - acme-missiles-0.3
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a

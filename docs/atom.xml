@@ -8,8 +8,16 @@
         <name>Tom Westbury</name>
         <email>tomwestbury@protonmail.com</email>
     </author>
-    <updated>2024-09-04T00:00:00Z</updated>
+    <updated>2025-11-30T00:00:00Z</updated>
     <entry>
+    <title>FRAG: A Functional Approach to Requirements</title>
+    <link href="https://categoryofsystems.co.uk/posts/2025-11-30-Functional-Requirements.html" />
+    <id>https://categoryofsystems.co.uk/posts/2025-11-30-Functional-Requirements.html</id>
+    <published>2025-11-30T00:00:00Z</published>
+    <updated>2025-11-30T00:00:00Z</updated>
+    <summary type="html"><![CDATA[]]></summary>
+</entry>
+<entry>
     <title>What is Architecture?</title>
     <link href="https://categoryofsystems.co.uk/posts/2024-09-04-%20what-is-arch.html" />
     <id>https://categoryofsystems.co.uk/posts/2024-09-04-%20what-is-arch.html</id>
@@ -80,14 +88,6 @@
     <published>2021-05-06T00:00:00Z</published>
     <updated>2021-05-06T00:00:00Z</updated>
     <summary type="html"><![CDATA[The state machine diagram is one of the most popular diagrams for behaviour in SysML/UML & Simulink. It's dangerous and here's why.]]></summary>
-</entry>
-<entry>
-    <title>Type theory as a basis for MBSE</title>
-    <link href="https://categoryofsystems.co.uk/posts/2020-11-29-Type-Theory-As-Basis.html" />
-    <id>https://categoryofsystems.co.uk/posts/2020-11-29-Type-Theory-As-Basis.html</id>
-    <published>2020-11-29T00:00:00Z</published>
-    <updated>2020-11-29T00:00:00Z</updated>
-    <summary type="html"><![CDATA[What is type theory? How does it relate to category theory? How does this all relate to MBSE?]]></summary>
 </entry>
 
 </feed>
