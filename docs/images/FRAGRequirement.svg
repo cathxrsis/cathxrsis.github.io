@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="745" height="103">
+   <defs>
+      <style type="text/css">
+    @namespace "http://www.w3.org/2000/svg";
+    .line                 {fill: none; stroke: #332200; stroke-width: 1;}
+    .bold-line            {stroke: #140E00; shape-rendering: crispEdges; stroke-width: 2;}
+    .thin-line            {stroke: #1F1400; shape-rendering: crispEdges}
+    .filled               {fill: #332200; stroke: none;}
+    text.terminal         {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #140E00;
+                            font-weight: bold;
+                          }
+    text.nonterminal      {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #1A1100;
+                            font-weight: normal;
+                          }
+    text.regexp           {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #1F1400;
+                            font-weight: normal;
+                          }
+    rect, circle, polygon {fill: #332200; stroke: #332200;}
+    rect.terminal         {fill: #FFC34D; stroke: #332200; stroke-width: 1;}
+    rect.nonterminal      {fill: #FFDF9E; stroke: #332200; stroke-width: 1;}
+    rect.text             {fill: none; stroke: none;}
+    polygon.regexp        {fill: #FFECC7; stroke: #332200; stroke-width: 1;}
+  </style>
+   </defs>
+   <polygon points="9 51 1 47 1 55"/>
+   <polygon points="17 51 9 47 9 55"/>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+      xlink:href="#Preconditions"
+      xlink:title="Preconditions">
+      <rect x="51" y="3" width="106" height="32"/>
+      <rect x="49" y="1" width="106" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="59" y="21">Preconditions</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+      xlink:href="#Trigger"
+      xlink:title="Trigger">
+      <rect x="217" y="69" width="64" height="32"/>
+      <rect x="215" y="67" width="64" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="225" y="87">Trigger</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+      xlink:href="#Subject"
+      xlink:title="Subject">
+      <rect x="321" y="37" width="66" height="32"/>
+      <rect x="319" y="35" width="66" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="329" y="55">Subject</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+      xlink:href="#Operator"
+      xlink:title="Operator">
+      <rect x="407" y="37" width="76" height="32"/>
+      <rect x="405" y="35" width="76" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="415" y="55">Operator</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+      xlink:href="#Action"
+      xlink:title="Action">
+      <rect x="503" y="37" width="58" height="32"/>
+      <rect x="501" y="35" width="58" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="511" y="55">Action</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+      xlink:href="#Constraints"
+      xlink:title="Constraints">
+      <rect x="581" y="37" width="92" height="32"/>
+      <rect x="579" y="35" width="92" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="589" y="55">Constraints</text>
+   </a>
+   <rect x="693" y="37" width="24" height="32" rx="10"/>
+   <rect x="691"
+         y="35"
+         width="24"
+         height="32"
+         class="terminal"
+         rx="10"/>
+   <text class="terminal" x="701" y="55">.</text>
+   <path class="line"
+         d="m17 51 h2 m20 0 h10 m0 0 h116 m-146 0 l20 0 m-1 0 q-9 0 -9 -10 l0 -14 q0 -10 10 -10 m126 34 l20 0 m-20 0 q10 0 10 -10 l0 -14 q0 -10 -10 -10 m-126 0 h10 m106 0 h10 m40 34 h10 m0 0 h74 m-104 0 h20 m84 0 h20 m-124 0 q10 0 10 10 m104 0 q0 -10 10 -10 m-114 10 v12 m104 0 v-12 m-104 12 q0 10 10 10 m84 0 q10 0 10 -10 m-94 10 h10 m64 0 h10 m20 -32 h10 m66 0 h10 m0 0 h10 m76 0 h10 m0 0 h10 m58 0 h10 m0 0 h10 m92 0 h10 m0 0 h10 m24 0 h10 m3 0 h-3"/>
+   <polygon points="735 51 743 47 743 55"/>
+   <polygon points="735 51 727 47 727 55"/>
+</svg>
